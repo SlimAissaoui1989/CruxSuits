@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CruxSuits.Front.BlazorWASM</title>
+    <base href="/" />
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="CruxSuits.Front.BlazorWASM.styles.css" rel="stylesheet" />
+    <link href="manifest.webmanifest" rel="manifest" />
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
+</head>
+
+<body>
+    <div id="app">
+        <div class="crux-loader-page">
+            <div class="crux-logo-loader">
+                <div class="crux-logo-fill">
+                    <div class="crux-water-mask">
+                        <div class="crux-water-reveal">
+                            <div class="crux-water-wave crux-water-wave1"></div>
+                            <div class="crux-water-wave crux-water-wave2"></div>
+                            <div class="crux-water-wave crux-water-wave3"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="images/CxSuits-ws.png" alt="Crux-Suits" class="crux-logo-base" />
+            </div>
+
+            <div class="loading-progress-text">0%</div>
+        </div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="." class="reload">Reload</a>
+        <span class="dismiss">🗙</span>
+    </div>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script>navigator.serviceWorker.register('service-worker.js');</script>
+    <script>
+        (function () {
+            const root = document.documentElement;
+            const fill = document.querySelector('.crux-logo-fill');
+            const text = document.querySelector('.loading-progress-text');
+
+            const sync = () => {
+                const raw = getComputedStyle(root)
+                    .getPropertyValue('--blazor-load-percentage')
+                    .trim();
+
+                const value = Math.max(0, Math.min(100, Math.round(parseFloat(raw) || 0)));
+                const visual = value + '%';
+
+                if (fill) {
+                    fill.style.setProperty('--progress', visual);
+                    fill.style.setProperty('--crux-wave-progress', value);
+                }
+
+                if (text) {
+                    text.textContent = visual;
+                }
+
+                if (value < 100) {
+                    requestAnimationFrame(sync);
+                }
+            };
+
+            sync();
+        })();
+    </script>
+</body>
+
+</html>

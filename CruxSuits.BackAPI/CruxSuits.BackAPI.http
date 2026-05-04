@@ -1,0 +1,6 @@
+@CruxSuits.BackAPI_HostAddress = http://localhost:5008
+
+GET {{CruxSuits.BackAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

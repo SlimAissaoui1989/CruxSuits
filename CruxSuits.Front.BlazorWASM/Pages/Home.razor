@@ -1,0 +1,94 @@
+@page "/"
+@layout BlankLayout
+
+@using System.ComponentModel.DataAnnotations
+
+<PageTitle>Login</PageTitle>
+
+<div class="login-shell">
+    <section class="login-hero">
+        <div class="login-hero__content">
+            <div class="login-badge">Crux Suits</div>
+            <h1>Tailored control for every order.</h1>
+            <p>
+                Sign in to follow production, validate measurements, and keep your workshop flow moving from request to delivery.
+            </p>
+
+            @if (!string.IsNullOrWhiteSpace(StatusMessage))
+            {
+                <div class="login-status">@StatusMessage</div>
+            }
+        </div>
+    </section>
+
+    <section class="login-panel">
+        <EditForm Model="@Model" OnValidSubmit="@HandleLogin">
+            <DataAnnotationsValidator />
+
+            <div class="login-card">
+                <div class="login-card__header">
+                    <h2>Sign in</h2>
+                    <p>Use your account to access the Crux Suits workspace.</p>
+                </div>
+
+                <div class="login-field">
+                    <label for="email">Email</label>
+                    <DxTextBox Id="email"
+                               @bind-Text="Model.Email"
+                               NullText="name@company.com"
+                               BindValueMode="BindValueMode.OnInput"
+                               SizeMode="SizeMode.Large"
+                               CssClass="login-editor" />
+                    <ValidationMessage For="@(() => Model.Email)" />
+                </div>
+
+                <div class="login-field">
+                    <label for="password">Password</label>
+                    <DxTextBox Id="password"
+                               @bind-Text="Model.Password"
+                               Password="true"
+                               NullText="Enter your password"
+                               BindValueMode="BindValueMode.OnInput"
+                               SizeMode="SizeMode.Large"
+                               CssClass="login-editor" />
+                    <ValidationMessage For="@(() => Model.Password)" />
+                </div>
+
+                <div class="login-options">
+                    <DxCheckBox @bind-Checked="Model.RememberMe">Remember me</DxCheckBox>
+                    <a href="/">Forgot password?</a>
+                </div>
+
+                <DxButton Text="Sign in"
+                          SubmitFormOnClick="true"
+                          RenderStyle="ButtonRenderStyle.Primary"
+                          RenderStyleMode="ButtonRenderStyleMode.Contained"
+                          SizeMode="SizeMode.Large"
+                          CssClass="login-submit" />
+            </div>
+        </EditForm>
+    </section>
+</div>
+
+@code {
+    private LoginModel Model { get; } = new();
+    private string? StatusMessage { get; set; }
+
+    private void HandleLogin()
+    {
+        StatusMessage = $"Ready to sign in as {Model.Email}.";
+    }
+
+    private sealed class LoginModel
+    {
+        [Required(ErrorMessage = "Email is required.")]
+        [EmailAddress(ErrorMessage = "Enter a valid email address.")]
+        public string Email { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Password is required.")]
+        [MinLength(6, ErrorMessage = "Password must contain at least 6 characters.")]
+        public string Password { get; set; } = string.Empty;
+
+        public bool RememberMe { get; set; } = true;
+    }
+}
