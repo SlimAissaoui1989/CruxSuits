@@ -1,0 +1,6 @@
+@CruxSuits.Services.Person_HostAddress = http://localhost:5271
+
+GET {{CruxSuits.Services.Person_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -361,3 +361,12 @@ MigrationBackup/
 FodyWeavers.xsd
 
 
+
+## CruxSuits local configuration and uploaded files
+**/appsettings*.json
+!**/appsettings.example.json
+**/.keys/
+*.pem
+**/UploadedFiles/
+**/secrets.json
+**/secrets.*.json

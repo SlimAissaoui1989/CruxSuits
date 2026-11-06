@@ -1,0 +1,6 @@
+@CruxSuits.Services.ReferenceData_HostAddress = http://localhost:5185
+
+GET {{CruxSuits.Services.ReferenceData_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

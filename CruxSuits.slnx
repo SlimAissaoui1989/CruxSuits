@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Services/" />
+  <Folder Name="/Services/SRC/">
+    <Project Path="CruxSuits.Services.Identity/CruxSuits.Services.Identity.csproj" />
+    <Project Path="CruxSuits.Services.Files/CruxSuits.Services.Files.csproj" />
+    <Project Path="CruxSuits.Services.Person/CruxSuits.Services.Person.csproj" />
+    <Project Path="CruxSuits.Services.ReferenceData/CruxSuits.Services.ReferenceData.csproj" Id="9a792708-41ff-4c24-aed8-a3ce9cdfd98c" />
+    <Project Path="CruxSuits.Services.Shared/CruxSuits.Services.Shared.csproj" />
+    <Project Path="CruxSuits.Services.Gateway/CruxSuits.Services.Gateway.csproj" />
+  </Folder>
+  <Project Path="CruxSuits.Shared/CruxSuits.Shared.csproj" Id="472ae956-22e2-4592-abbb-29c8af019bc7" />
+</Solution>
