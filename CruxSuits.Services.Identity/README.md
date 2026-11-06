@@ -11,7 +11,7 @@ The discovery document is used by the APIs to retrieve signing keys. This does n
 
 ## Service-to-service credentials
 
-Identity also exposes a limited OAuth-style client credentials endpoint at `POST /api/v1/connect/token` (through the Gateway: `POST /identity/api/v1/connect/token`). A registered service sends `grant_type=client_credentials`, its client credentials, and the scopes it needs. Identity returns a five-minute RSA-signed access token. The secret is never returned in the token.
+Identity also exposes a limited OAuth-style client credentials endpoint at `POST /api/v1/connect/token` (through the Gateway: `POST /identity/connect/token`). A registered service sends `grant_type=client_credentials`, its client credentials, and the scopes it needs. Identity returns a five-minute RSA-signed access token. The secret is never returned in the token.
 
 Register each calling service in Identity configuration using environment variables or a secret store. For example, to let the Files service call Person endpoints protected with the `ServiceToService` policy, configure:
 
@@ -28,7 +28,7 @@ The API policy is opt-in: add `[Authorize(Policy = "ServiceToService")]` only to
 Example token request (use the Gateway's HTTPS URL in production):
 
 ```http
-POST /identity/api/v1/connect/token HTTP/1.1
+POST /identity/connect/token HTTP/1.1
 Host: localhost:5200
 Content-Type: application/x-www-form-urlencoded
 

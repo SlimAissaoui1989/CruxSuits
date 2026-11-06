@@ -1,0 +1,40 @@
+name: Bug report
+description: Report a reproducible problem in CruxSuits.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include passwords, tokens, private keys, personal information, or production file contents.
+  - type: input
+    id: service
+    attributes:
+      label: Affected service
+      placeholder: Identity, Files, Person, ReferenceData, or Gateway
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include a minimal request or sample data with secrets removed.
+    validations:
+      required: true
