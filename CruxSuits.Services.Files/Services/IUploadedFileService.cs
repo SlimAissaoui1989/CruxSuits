@@ -9,5 +9,6 @@ namespace CruxSuits.Services.Files.Services
         Task<UploadFileResponse> UpdateAsync(Guid id, UpdateFileRequest request, CancellationToken cancellationToken = default);
         Task RemoveAsync(Guid id, CancellationToken cancellationToken = default);
         Task<FileDownloadResult> DownloadAsync(Guid id, CancellationToken cancellationToken = default);
+        Task<FileDownloadResult> DownloadPrivateAsync(Guid id, CancellationToken cancellationToken = default);
     }
 }

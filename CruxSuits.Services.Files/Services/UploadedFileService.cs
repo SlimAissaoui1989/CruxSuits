@@ -42,7 +42,23 @@ namespace CruxSuits.Services.Files.Services
             Guid id,
             CancellationToken cancellationToken = default)
         {
-            var uploadedFile = await _unitofwork.UploadedFile.GetForDownloadAsync(id, cancellationToken);
+            var uploadedFile = await _unitofwork.UploadedFile.GetPublicForDownloadAsync(id, cancellationToken);
+            if (uploadedFile is null)
+            {
+                throw new CxException(CxExceptionTypes.NotFound);
+            }
+
+            return new FileDownloadResult(
+                new MemoryStream(uploadedFile.Content!, writable: false),
+                uploadedFile.FileType,
+                uploadedFile.OriginalFileName);
+        }
+
+        public async Task<FileDownloadResult> DownloadPrivateAsync(
+            Guid id,
+            CancellationToken cancellationToken = default)
+        {
+            var uploadedFile = await _unitofwork.UploadedFile.GetPrivateForDownloadAsync(id, cancellationToken);
             if (uploadedFile is null)
             {
                 throw new CxException(CxExceptionTypes.NotFound);

@@ -159,10 +159,20 @@ namespace CruxSuits.Services.Files.Infrastructure.RepositoryPattern.Repositories
             }
         }
 
-        public async Task<UploadedFile?> GetForDownloadAsync(Guid id, CancellationToken cancellationToken = default)
+        public Task<UploadedFile?> GetPublicForDownloadAsync(Guid id, CancellationToken cancellationToken = default)
+        {
+            return GetFileForDownloadAsync(id, true, cancellationToken);
+        }
+
+        public Task<UploadedFile?> GetPrivateForDownloadAsync(Guid id, CancellationToken cancellationToken = default)
+        {
+            return GetFileForDownloadAsync(id, false, cancellationToken);
+        }
+
+        private async Task<UploadedFile?> GetFileForDownloadAsync(Guid id, bool isPublic, CancellationToken cancellationToken = default)
         {
             var uploadedFile = await this.AsNoTracking()
-                .GetFirstOrDefaultAsync(file => file.Id == id, cancellationToken);
+                .GetFirstOrDefaultAsync(file => file.Id == id && file.IsPublic == isPublic, cancellationToken);
 
             if (uploadedFile is null) return null;
             await NormalizeStorageContentAsync(uploadedFile, cancellationToken);

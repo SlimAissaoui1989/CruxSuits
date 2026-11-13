@@ -4,6 +4,7 @@ namespace CruxSuits.Services.Files.Infrastructure.RepositoryPattern.Repositories
 {
     public interface IUploadedFileRepository : IFilesEntityRepository<Guid, UploadedFile>
     {
-        Task<UploadedFile?> GetForDownloadAsync(Guid id, CancellationToken cancellationToken = default);
+        Task<UploadedFile?> GetPublicForDownloadAsync(Guid id, CancellationToken cancellationToken = default);
+        Task<UploadedFile?> GetPrivateForDownloadAsync(Guid id, CancellationToken cancellationToken = default);
     }
 }
