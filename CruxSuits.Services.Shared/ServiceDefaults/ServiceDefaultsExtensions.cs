@@ -1,10 +1,12 @@
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using CruxIT.Library.API;
+using CruxIT.Library.API.Middlewares;
+using CruxIT.Library.API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 
 namespace CruxSuits.Services.Shared.ServiceDefaults;
 
@@ -23,7 +25,7 @@ public static class ServiceDefaultsExtensions
 
         builder.AddCorpsDefaultPolicyAllowAny();
         builder.IgnoreCyclesJsonAndSavePropertyNamingPolicy();
-        builder.UseGC();
+        //builder.UseGC();
 
         var authority = builder.Configuration[jwtAuthorityConfigurationKey]
             ?? throw new InvalidOperationException(

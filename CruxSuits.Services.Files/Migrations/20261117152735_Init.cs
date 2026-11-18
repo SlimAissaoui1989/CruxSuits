@@ -53,17 +53,14 @@ namespace CruxSuits.Services.Files.Migrations
                     SizeInBytes = table.Column<long>(type: "bigint", nullable: false),
                     AbsolutePath = table.Column<string>(type: "nvarchar(2048)", maxLength: 2048, nullable: true),
                     Content = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
+                    IsPublic = table.Column<bool>(type: "bit", nullable: false),
                     IsSavedInDatabase = table.Column<bool>(type: "bit", nullable: false),
                     CreatedUserId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     CreatedUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     LastUpdatedUserId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     LastUpdatedUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LastUpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DeletedUserId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    DeletedUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                    LastUpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -82,11 +79,19 @@ namespace CruxSuits.Services.Files.Migrations
                     FileType = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Extension = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IsPublic = table.Column<bool>(type: "bit", nullable: false),
+                    IsSavedInDatabase = table.Column<bool>(type: "bit", nullable: false),
                     UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ActionDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ActionType = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    UploadedFileId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    UploadedFileId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    CreatedUserId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    CreatedUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastUpdatedUserId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    LastUpdatedUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastUpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {

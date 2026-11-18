@@ -13,7 +13,7 @@ using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
 using Xunit;
 
-namespace CruxSuits.Services.Files.Tests.Controllers;
+namespace CruxSuits.Services.Files.Tests.UnitTests.Controllers;
 
 public sealed class FileControllerTests
 {
@@ -61,13 +61,25 @@ public sealed class FileControllerTests
     }
 
     [Fact]
-    public void PrivateFilesController_RequiresServiceToServicePolicy()
+    public void ProtectedFileActions_RequireServiceToServicePolicy()
     {
-        var authorization = Assert.Single(typeof(PrivateFilesController)
-            .GetCustomAttributes(typeof(AuthorizeAttribute), inherit: true)
-            .Cast<AuthorizeAttribute>());
+        var protectedActions = new[]
+        {
+            nameof(FilesController.Upload),
+            nameof(FilesController.Update),
+            nameof(FilesController.Remove),
+            nameof(FilesController.DownloadPrivate),
+            nameof(FilesController.PreviewPrivate)
+        };
 
-        Assert.Equal("ServiceToService", authorization.Policy);
+        foreach (var actionName in protectedActions)
+        {
+            var method = typeof(FilesController).GetMethod(actionName);
+            Assert.NotNull(method);
+            var authorization = Assert.Single(method.GetCustomAttributes(typeof(AuthorizeAttribute), inherit: true)
+                .Cast<AuthorizeAttribute>());
+            Assert.Equal("ServiceToService", authorization.Policy);
+        }
     }
 
     [Fact]
@@ -77,7 +89,7 @@ public sealed class FileControllerTests
         var service = new Mock<IUploadedFileService>();
         service.Setup(fileService => fileService.DownloadPrivateAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new FileDownloadResult(stream, "image/png", "private.png"));
-        var controller = CreatePrivateController(service.Object);
+        var controller = CreatePublicController(service.Object);
 
         var result = await controller.PreviewPrivate(Guid.NewGuid(), CancellationToken.None);
 
@@ -98,15 +110,4 @@ public sealed class FileControllerTests
         return controller;
     }
 
-    private static PrivateFilesController CreatePrivateController(IUploadedFileService service)
-    {
-        var controller = new PrivateFilesController(
-            new ConfigurationBuilder().Build(),
-            NullLogger<CxControllerBase<FilesContext, IFilesUnitOfWork>>.Instance,
-            Mock.Of<IFilesUnitOfWork>(),
-            Mock.Of<IMapper>(),
-            service);
-        controller.ControllerContext = new ControllerContext { HttpContext = new DefaultHttpContext() };
-        return controller;
-    }
 }

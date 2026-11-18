@@ -12,7 +12,7 @@ using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
 using Xunit;
 
-namespace CruxSuits.Services.Files.Tests.Repositories;
+namespace CruxSuits.Services.Files.Tests.UnitTests.Repositories;
 
 public sealed class UploadedFileRepositoryTests
 {

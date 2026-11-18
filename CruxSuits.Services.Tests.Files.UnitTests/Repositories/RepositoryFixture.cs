@@ -12,7 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
 
-namespace CruxSuits.Services.Files.Tests.Repositories;
+namespace CruxSuits.Services.Files.Tests.UnitTests.Repositories;
 
 internal sealed class RepositoryFixture : IDisposable
 {

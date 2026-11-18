@@ -2,7 +2,7 @@ using CruxSuits.Services.Files.Infrastructure.EntityFramework.Interceptors;
 using Microsoft.Extensions.Logging.Abstractions;
 using Xunit;
 
-namespace CruxSuits.Services.Files.Tests.Infrastructure;
+namespace CruxSuits.Services.Files.Tests.UnitTests.Infrastructure;
 
 public sealed class PendingFileStorageOperationsTests : IDisposable
 {

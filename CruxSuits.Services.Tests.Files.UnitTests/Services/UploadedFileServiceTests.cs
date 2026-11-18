@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Http;
 using Moq;
 using Xunit;
 
-namespace CruxSuits.Services.Files.Tests.Services;
+namespace CruxSuits.Services.Files.Tests.UnitTests.Services;
 
 public sealed class UploadedFileServiceTests
 {
@@ -110,9 +110,9 @@ public sealed class UploadedFileServiceTests
 
         _repository.Setup(repository => repository.GetByIdOrDefaultAsync(id))
             .ReturnsAsync(existing);
-        _mapper.Setup(mapper => mapper.Map(request, existing)).Returns(existing);
         _repository.Setup(repository => repository.UpdateAsync(existing, It.IsAny<CancellationToken>()))
             .ReturnsAsync(existing);
+        _mapper.Setup(mapper => mapper.Map<UploadedFile>(request)).Returns(existing);
         _mapper.Setup(mapper => mapper.Map<UploadFileResponse>(existing)).Returns(response);
 
         var result = await _service.UpdateAsync(id, request);

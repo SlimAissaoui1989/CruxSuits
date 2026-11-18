@@ -30,6 +30,7 @@ namespace CruxSuits.Services.Files.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy = "ServiceToService")]
         [Consumes("multipart/form-data")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -66,6 +67,31 @@ namespace CruxSuits.Services.Files.Controllers
             return CreatePreviewResult(preview);
         }
 
+        [HttpGet("~/internal/files/{id:guid}/download")]
+        [Authorize(Policy = "ServiceToService")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        public async Task<IActionResult> DownloadPrivate(Guid id, CancellationToken cancellationToken)
+        {
+            var download = await _uploadedFileService.DownloadPrivateAsync(id, cancellationToken);
+            return File(download.Content, download.ContentType, download.FileName);
+        }
+
+        [HttpGet("~/internal/files/{id:guid}/preview")]
+        [Authorize(Policy = "ServiceToService")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status415UnsupportedMediaType)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        public async Task<IActionResult> PreviewPrivate(Guid id, CancellationToken cancellationToken)
+        {
+            var preview = await _uploadedFileService.DownloadPrivateAsync(id, cancellationToken);
+            return CreatePreviewResult(preview);
+        }
+
         private IActionResult CreatePreviewResult(FileDownloadResult preview)
         {
             if (!CxMimeTypeHelper.CanVisualizeInBrowser(preview.ContentType))
@@ -84,6 +110,7 @@ namespace CruxSuits.Services.Files.Controllers
         }
 
         [HttpPut("{id:guid}")]
+        [Authorize(Policy = "ServiceToService")]
         [ProducesResponseType(typeof(UploadFileResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Update(Guid id, [FromBody] UpdateFileRequest request, CancellationToken cancellationToken)
@@ -93,6 +120,7 @@ namespace CruxSuits.Services.Files.Controllers
         }
 
         [HttpDelete("{id:guid}")]
+        [Authorize(Policy = "ServiceToService")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Remove(Guid id, CancellationToken cancellationToken)

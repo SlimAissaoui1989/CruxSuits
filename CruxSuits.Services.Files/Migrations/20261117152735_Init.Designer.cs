@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CruxSuits.Services.Files.Migrations
 {
     [DbContext(typeof(FilesContext))]
-    [Migration("20261104181218_Init")]
+    [Migration("20261117152735_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -124,15 +124,6 @@ namespace CruxSuits.Services.Files.Migrations
                     b.Property<string>("CreatedUserName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("DeletedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("DeletedUserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("DeletedUserName")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
@@ -146,7 +137,7 @@ namespace CruxSuits.Services.Files.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<bool>("IsDeleted")
+                    b.Property<bool>("IsPublic")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsSavedInDatabase")
@@ -195,6 +186,15 @@ namespace CruxSuits.Services.Files.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("CreatedUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedUserName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
@@ -210,6 +210,21 @@ namespace CruxSuits.Services.Files.Migrations
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool>("IsPublic")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsSavedInDatabase")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastUpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("LastUpdatedUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("LastUpdatedUserName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("OriginalFileName")
                         .IsRequired()

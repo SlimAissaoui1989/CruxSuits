@@ -8,8 +8,10 @@
     <Project Path="CruxSuits.Services.Shared/CruxSuits.Services.Shared.csproj" />
     <Project Path="CruxSuits.Services.Gateway/CruxSuits.Services.Gateway.csproj" />
   </Folder>
-  <Folder Name="/Services/Tests/">
-    <Project Path="Services/Tests/CruxSuits.Services.Files.Tests/CruxSuits.Services.Files.Tests.csproj" />
+  <Folder Name="/Services/Tests/" />
+  <Folder Name="/Services/Tests/Files/">
+    <Project Path="CruxSuits.Services.Tests.Files.IntegrationTests/CruxSuits.Services.Tests.Files.IntegrationTests.csproj" />
+    <Project Path="CruxSuits.Services.Tests.Files.UnitTests/CruxSuits.Services.Tests.Files.UnitTests.csproj" />
   </Folder>
   <Project Path="CruxSuits.Shared/CruxSuits.Shared.csproj" Id="472ae956-22e2-4592-abbb-29c8af019bc7" />
 </Solution>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <RunConfiguration>
+    <EnvironmentVariables>
+      <FILES_INTEGRATION_TEST_DATABASE_PROVIDER>Local</FILES_INTEGRATION_TEST_DATABASE_PROVIDER>
+      <FILES_INTEGRATION_TEST_CONNECTION_STRING>Server=localhost;Database=master;Integrated Security=True;TrustServerCertificate=True</FILES_INTEGRATION_TEST_CONNECTION_STRING>
+    </EnvironmentVariables>
+  </RunConfiguration>
+</RunSettings>

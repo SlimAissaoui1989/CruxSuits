@@ -31,3 +31,12 @@ jobs:
 
       - name: Build
         run: dotnet build CruxSuits.slnx --configuration Release --no-restore
+
+      - name: Run Files integration tests
+        run: >-
+          dotnet test CruxSuits.Services.Tests.Files.IntegrationTests/CruxSuits.Services.Tests.Files.IntegrationTests.csproj
+          --configuration Release
+          --no-build
+          --no-restore
+          --settings files.docker.runsettings
+          --logger "trx;LogFileName=files-integration-tests.trx"

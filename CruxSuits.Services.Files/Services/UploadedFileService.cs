@@ -79,9 +79,10 @@ namespace CruxSuits.Services.Files.Services
             if (existingEntity is null)
                 throw new CxException(CxExceptionTypes.NotFound);
 
-            UploadedFile MergingEntity = _mapper.Map(request, existingEntity);
+            var mergingEntity = _mapper.Map<UploadedFile>(request);
+            mergingEntity.Id = existingEntity.Id;
 
-            var updatedFile = await _unitofwork.UploadedFile.UpdateAsync(MergingEntity, cancellationToken);
+            var updatedFile = await _unitofwork.UploadedFile.UpdateAsync(mergingEntity, cancellationToken);
             await _unitofwork.SaveChangesAsync(cancellationToken);
 
             return _mapper.Map<UploadFileResponse>(updatedFile);

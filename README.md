@@ -22,6 +22,7 @@ The solution file is [`CruxSuits.slnx`](CruxSuits.slnx).
 
 - .NET 10 SDK
 - SQL Server for the Identity, Person, Files, and ReferenceData databases
+- Docker Desktop for running the Files integration tests with their SQL Server container
 - HTTPS development certificate for the Gateway's local HTTPS destinations
 
 ## Build
@@ -33,7 +34,27 @@ dotnet restore CruxSuits.slnx
 dotnet build CruxSuits.slnx --configuration Release --no-restore
 ```
 
-The GitHub Actions workflow builds the solution on pushes and pull requests. Add automated tests as test projects are introduced.
+The GitHub Actions workflow builds the solution on pushes and pull requests. Unit tests and service integration tests are kept in separate projects under `CruxSuits.Services.Tests.Files.*`.
+
+### Files integration tests
+
+The integration test fixture starts an isolated SQL Server with Testcontainers by default. Start Docker Desktop before running the tests:
+
+```powershell
+dotnet test CruxSuits.Services.Tests.Files.IntegrationTests/CruxSuits.Services.Tests.Files.IntegrationTests.csproj --configuration Release
+```
+
+If you prefer to run SQL Server with Docker Compose, start Docker Desktop and run this from the repository root:
+
+```powershell
+$env:FILES_TEST_SQL_PASSWORD = "CruxSuits_Local_Only!2026"
+docker compose -f compose.files-integration.yaml up -d --wait
+$env:FILES_INTEGRATION_TEST_CONNECTION_STRING = "Server=localhost,14333;Database=master;User Id=sa;Password=$env:FILES_TEST_SQL_PASSWORD;Encrypt=False;TrustServerCertificate=True"
+dotnet test CruxSuits.Services.Tests.Files.IntegrationTests/CruxSuits.Services.Tests.Files.IntegrationTests.csproj --configuration Release
+docker compose -f compose.files-integration.yaml down
+```
+
+The test creates and removes its own database on the Compose SQL Server instance. The Compose password is for local test use only; set a different value for your machine if needed. When `FILES_INTEGRATION_TEST_CONNECTION_STRING` is set, the fixture uses that SQL Server instead of trying to create another container.
 
 ## Local configuration
 
