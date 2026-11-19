@@ -1,3 +1,5 @@
+using CruxSuits.Services.Shared.ServiceDefaults;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
@@ -5,6 +7,8 @@ builder.Services
     .LoadFromConfig(builder.Configuration.GetSection("ReverseProxy"));
 
 var app = builder.Build();
+
+app.UseCruxSuitsServiceDefaults();
 
 app.MapGet("/", () => Results.Ok(new
 {

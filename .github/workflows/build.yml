@@ -32,6 +32,14 @@ jobs:
       - name: Build
         run: dotnet build CruxSuits.slnx --configuration Release --no-restore
 
+      - name: Run Files unit tests
+        run: >-
+          dotnet test CruxSuits.Services.Tests.Files.UnitTests/CruxSuits.Services.Tests.Files.UnitTests.csproj
+          --configuration Release
+          --no-build
+          --no-restore
+          --logger "trx;LogFileName=files-unit-tests.trx"
+
       - name: Run Files integration tests
         run: >-
           dotnet test CruxSuits.Services.Tests.Files.IntegrationTests/CruxSuits.Services.Tests.Files.IntegrationTests.csproj

@@ -5,7 +5,6 @@ using CruxSuits.Services.Files.Infrastructure.RepositoryPattern.Repositories;
 using CruxSuits.Services.Files.Profiles;
 using CruxSuits.Services.Files.Services;
 using CruxSuits.Services.Shared.ServiceDefaults;
-using CruxIT.Library.API.Middlewares;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 
@@ -34,7 +33,7 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-app.UseMiddleware<ExceptionLogging>();
+app.UseCruxSuitsServiceDefaults();
 
 if (app.Environment.IsDevelopment())
 {

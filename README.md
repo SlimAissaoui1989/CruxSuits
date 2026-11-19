@@ -9,10 +9,10 @@ CruxSuits is a .NET microservices application for identity, people and companies
 | Project | Responsibility |
 |---|---|
 | `CruxSuits.Services.Gateway` | Routes external HTTP requests to backend services with YARP. |
-| `CruxSuits.Services.Identity` | User login, RSA-signed JWT access tokens, JWKS discovery, and service client credentials. |
-| `CruxSuits.Services.Person` | People, companies, and their contact and identity information. |
+| `CruxSuits.Services.Identities` | User login, RSA-signed JWT access tokens, JWKS discovery, and service client credentials. |
+| `CruxSuits.Services.Persons` | People, companies, and their contact and identity information. |
 | `CruxSuits.Services.Files` | Upload, download, update, and removal of files stored in SQL Server or on disk. |
-| `CruxSuits.Services.ReferenceData` | Shared country, currency, language, and localized-name data. |
+| `CruxSuits.Services.ReferenceDatas` | Shared country, currency, language, and localized-name data. |
 | `CruxSuits.Services.Shared` | Shared service defaults, EF Core converters, and common infrastructure. |
 | `CruxSuits.Shared` | Shared application contracts and DTOs. |
 
@@ -82,10 +82,10 @@ Identity creates a persistent development signing key under `.keys/`. Keep that 
 Start Identity, Person, Files, ReferenceData, and then Gateway in separate terminals. From the repository root, for example:
 
 ```powershell
-dotnet run --project CruxSuits.Services.Identity --launch-profile https
-dotnet run --project CruxSuits.Services.Person --launch-profile https
+dotnet run --project CruxSuits.Services.Identities --launch-profile https
+dotnet run --project CruxSuits.Services.Persons --launch-profile https
 dotnet run --project CruxSuits.Services.Files --launch-profile https
-dotnet run --project CruxSuits.Services.ReferenceData --launch-profile https
+dotnet run --project CruxSuits.Services.ReferenceDatas --launch-profile https
 dotnet run --project CruxSuits.Services.Gateway --launch-profile https
 ```
 

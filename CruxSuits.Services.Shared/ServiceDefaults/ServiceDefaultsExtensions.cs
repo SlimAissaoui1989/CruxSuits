@@ -12,6 +12,12 @@ namespace CruxSuits.Services.Shared.ServiceDefaults;
 
 public static class ServiceDefaultsExtensions
 {
+    public static WebApplication UseCruxSuitsServiceDefaults(this WebApplication app)
+    {
+        app.UseMiddleware<ExceptionLogging>();
+        return app;
+    }
+
     public static WebApplicationBuilder AddCruxSuitsServiceDefaults(
         this WebApplicationBuilder builder,
         string jwtAuthorityConfigurationKey = "Jwt:Authority",
