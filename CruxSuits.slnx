@@ -10,10 +10,12 @@
   </Folder>
   <Folder Name="/Services/Tests/" />
   <Folder Name="/Services/Tests/Files/">
+    <Project Path="CruxSuits.Services.Tests.Files.BddTests/CruxSuits.Services.Tests.Files.BddTests.csproj" />
     <Project Path="CruxSuits.Services.Tests.Files.IntegrationTests/CruxSuits.Services.Tests.Files.IntegrationTests.csproj" />
     <Project Path="CruxSuits.Services.Tests.Files.UnitTests/CruxSuits.Services.Tests.Files.UnitTests.csproj" />
   </Folder>
   <Folder Name="/Services/Tests/ReferenceDatas/">
+    <Project Path="CruxSuits.Services.Tests.ReferenceDatas.BddTests/CruxSuits.Services.Tests.ReferenceDatas.BddTests.csproj" />
     <Project Path="CruxSuits.Services.Tests.ReferenceDatas.IntegrationTests/CruxSuits.Services.Tests.ReferenceDatas.IntegrationTests.csproj" />
     <Project Path="CruxSuits.Services.Tests.ReferenceDatas.UnitTests/CruxSuits.Services.Tests.ReferenceDatas.UnitTests.csproj" />
   </Folder>

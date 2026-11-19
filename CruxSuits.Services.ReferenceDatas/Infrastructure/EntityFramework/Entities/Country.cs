@@ -22,6 +22,6 @@ namespace CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entit
 
         public Currency? Currency { get; set; }
 
-        public ICollection<CountryName> CountryNames { get; set; } = new List<CountryName>();
+        public ICollection<CountryName> Names { get; set; } = new List<CountryName>();
     }
 }

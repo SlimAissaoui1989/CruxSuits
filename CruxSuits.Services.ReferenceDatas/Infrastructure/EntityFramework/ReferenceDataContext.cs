@@ -1,6 +1,8 @@
 using CruxIT.Library.DataToolkit.EntityFramework;
+using CruxIT.Library.DataToolkit.EntityFramework.BaseTypes;
 using CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework
 {
@@ -19,6 +21,37 @@ namespace CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework
         public ReferenceDataContext(string connectionString)
             : base(connectionString)
         {
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+            {
+                if (entityType.BaseType is null && InheritsSoftDeleteEntity(entityType.ClrType))
+                {
+                    var parameter = Expression.Parameter(entityType.ClrType, "entity");
+                    var isDeleted = Expression.Property(parameter, nameof(SoftDeleteEntity<string>.IsDeleted));
+                    var filter = Expression.Lambda(Expression.Not(isDeleted), parameter);
+
+                    modelBuilder.Entity(entityType.ClrType).HasQueryFilter(filter);
+                }
+            }
+        }
+
+        private static bool InheritsSoftDeleteEntity(Type type)
+        {
+            for (var current = type; current is not null; current = current.BaseType)
+            {
+                if (current.IsGenericType &&
+                    current.GetGenericTypeDefinition() == typeof(SoftDeleteEntity<>))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

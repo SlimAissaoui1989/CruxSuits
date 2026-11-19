@@ -1,5 +1,6 @@
 using AutoMapper;
 using CruxIT.Library;
+using CruxIT.Library.DataToolkit.RepositoryPattern.Repositories;
 using CruxIT.Library.Exceptions;
 using CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities;
 using CruxSuits.Services.ReferenceDatas.Infrastructure.RepositoryPattern;
@@ -20,12 +21,12 @@ namespace CruxSuits.Services.ReferenceDatas.Services
 
         public async Task<List<CountryResponse>> GetAllAsync(string languageId, CancellationToken cancellationToken = default)
         {
-            return await _unitOfWork.CountryName.GetAllAsync<CountryResponse>(countryName => countryName.LanguageId == languageId, cancellationToken);
+            return await _unitOfWork.Country.GetAllLocalizedAsync<CountryResponse>(languageId, cancellationToken);
         }
 
         public async Task<List<CountryPhoneCodeResponse>> GetPhoneCodeOptionsAsync(string languageId, CancellationToken cancellationToken = default)
         {
-            return await _unitOfWork.CountryName.GetAllAsync<CountryPhoneCodeResponse>(countryName => countryName.LanguageId == languageId, cancellationToken);
+            return await _unitOfWork.Country.GetAllLocalizedAsync<CountryPhoneCodeResponse>(languageId, cancellationToken);
         }
 
         public async Task<CountryDetailsResponse> GetByIdAsync(string id, CancellationToken cancellationToken = default)

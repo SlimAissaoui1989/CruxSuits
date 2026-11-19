@@ -12,7 +12,7 @@ namespace CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Confi
                 .IsUnique();
 
             builder.HasOne(name => name.Country)
-                .WithMany(country => country.CountryNames)
+                .WithMany(country => country.Names)
                 .HasForeignKey(name => name.CountryId)
                 .OnDelete(DeleteBehavior.Restrict);
 

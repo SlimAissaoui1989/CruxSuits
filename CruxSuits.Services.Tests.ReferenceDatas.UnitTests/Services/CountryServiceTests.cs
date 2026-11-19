@@ -1,4 +1,3 @@
-using System.Linq.Expressions;
 using AutoMapper;
 using CruxIT.Library.Exceptions;
 using CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities;
@@ -14,14 +13,12 @@ namespace CruxSuits.Services.ReferenceDatas.Tests.UnitTests.Services;
 public sealed class CountryServiceTests
 {
     private readonly Mock<IReferenceDataUnitOfWork> _unitOfWork = new();
-    private readonly Mock<ICountryNameRepository> _countryNameRepository = new();
     private readonly Mock<ICountryRepository> _countryRepository = new();
     private readonly Mock<IMapper> _mapper = new();
     private readonly CountryService _service;
 
     public CountryServiceTests()
     {
-        _unitOfWork.SetupGet(unitOfWork => unitOfWork.CountryName).Returns(_countryNameRepository.Object);
         _unitOfWork.SetupGet(unitOfWork => unitOfWork.Country).Returns(_countryRepository.Object);
         _service = new CountryService(_unitOfWork.Object, _mapper.Object);
     }
@@ -38,30 +35,23 @@ public sealed class CountryServiceTests
             new() { Id = "US", Name = "United States", Alpha3Code = "USA", NumericCode = "840", CurrencyId = "USD" },
             new() { Id = "CA", Name = "Canada", Alpha3Code = "CAN", NumericCode = "124", CurrencyId = "CAD" }
         };
-        Expression<Func<CountryName, bool>>? capturedFilter = null;
-        _countryNameRepository
-            .Setup(repository => repository.GetAllAsync<CountryResponse>(
-                It.IsAny<Expression<Func<CountryName, bool>>>(), cancellation.Token))
-            .Callback<Expression<Func<CountryName, bool>>, CancellationToken>((filter, _) => capturedFilter = filter)
+        _countryRepository
+            .Setup(repository => repository.GetAllLocalizedAsync<CountryResponse>(languageId, cancellation.Token))
             .ReturnsAsync(countries);
 
         var result = await _service.GetAllAsync(languageId, cancellation.Token);
 
         Assert.Same(countries, result);
-        Assert.NotNull(capturedFilter);
-        Assert.True(capturedFilter.Compile()(new CountryName { LanguageId = languageId }));
-        Assert.False(capturedFilter.Compile()(new CountryName { LanguageId = "fr" }));
-        _countryNameRepository.Verify(repository => repository.GetAllAsync<CountryResponse>(
-            It.IsAny<Expression<Func<CountryName, bool>>>(), cancellation.Token), Times.Once);
+        _countryRepository.Verify(repository => repository.GetAllLocalizedAsync<CountryResponse>(languageId, cancellation.Token), Times.Once);
     }
 
     [Fact]
     public async Task GetAllAsync_ReturnsEmptyListWhenRepositoryHasNoCountries()
     {
         var countries = new List<CountryResponse>();
-        _countryNameRepository
-            .Setup(repository => repository.GetAllAsync<CountryResponse>(
-                It.IsAny<Expression<Func<CountryName, bool>>>(), It.IsAny<CancellationToken>()))
+        _countryRepository
+            .Setup(repository => repository.GetAllLocalizedAsync<CountryResponse>(
+                It.IsAny<string>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(countries);
 
         var result = await _service.GetAllAsync("en");
@@ -83,30 +73,23 @@ public sealed class CountryServiceTests
             new() { Id = "US", Name = "United States", PhoneCode = "+1" },
             new() { Id = "CA", Name = "Canada", PhoneCode = "+1" }
         };
-        Expression<Func<CountryName, bool>>? capturedFilter = null;
-        _countryNameRepository
-            .Setup(repository => repository.GetAllAsync<CountryPhoneCodeResponse>(
-                It.IsAny<Expression<Func<CountryName, bool>>>(), cancellation.Token))
-            .Callback<Expression<Func<CountryName, bool>>, CancellationToken>((filter, _) => capturedFilter = filter)
+        _countryRepository
+            .Setup(repository => repository.GetAllLocalizedAsync<CountryPhoneCodeResponse>(languageId, cancellation.Token))
             .ReturnsAsync(options);
 
         var result = await _service.GetPhoneCodeOptionsAsync(languageId, cancellation.Token);
 
         Assert.Same(options, result);
-        Assert.NotNull(capturedFilter);
-        Assert.True(capturedFilter.Compile()(new CountryName { LanguageId = languageId }));
-        Assert.False(capturedFilter.Compile()(new CountryName { LanguageId = "fr" }));
-        _countryNameRepository.Verify(repository => repository.GetAllAsync<CountryPhoneCodeResponse>(
-            It.IsAny<Expression<Func<CountryName, bool>>>(), cancellation.Token), Times.Once);
+        _countryRepository.Verify(repository => repository.GetAllLocalizedAsync<CountryPhoneCodeResponse>(languageId, cancellation.Token), Times.Once);
     }
 
     [Fact]
     public async Task GetPhoneCodeOptionsAsync_ReturnsEmptyListWhenRepositoryHasNoOptions()
     {
         var options = new List<CountryPhoneCodeResponse>();
-        _countryNameRepository
-            .Setup(repository => repository.GetAllAsync<CountryPhoneCodeResponse>(
-                It.IsAny<Expression<Func<CountryName, bool>>>(), It.IsAny<CancellationToken>()))
+        _countryRepository
+            .Setup(repository => repository.GetAllLocalizedAsync<CountryPhoneCodeResponse>(
+                It.IsAny<string>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(options);
 
         var result = await _service.GetPhoneCodeOptionsAsync("en");

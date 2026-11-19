@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities
 {
-    public class CountryName : EntityBase<long>
+    public class CountryName : EntityBase<int>
     {
         [MaxLength(2)]
         public string CountryId { get; set; } = null!;
