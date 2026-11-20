@@ -1,6 +1,6 @@
 # CruxSuits
 
-CruxSuits is a .NET microservices application for identity, people and companies, uploaded files, and shared reference data. The repository includes a YARP API Gateway and shared libraries for common service and application code.
+CruxSuits is an enterprise resource planning (ERP) platform in development. This repository contains its core .NET microservices, which handle identity, people and companies, file management, and shared reference data. It also includes a YARP API Gateway and shared libraries for the services.
 
 > This repository is under active development. Review the configuration and security notes before exposing a deployment publicly.
 
@@ -127,7 +127,7 @@ In production:
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for branch, change, and pull request guidance. Report vulnerabilities privately as described in [SECURITY.md](SECURITY.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md) for branch, change, and pull request guidance and the [code of conduct](CODE_OF_CONDUCT.md) for community expectations. Report vulnerabilities privately as described in [SECURITY.md](SECURITY.md).
 
 ## License
 

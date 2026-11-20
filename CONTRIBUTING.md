@@ -6,7 +6,7 @@ Thank you for helping improve CruxSuits. Please keep changes focused and explain
 
 1. Check open issues and pull requests for related work.
 2. For larger changes, open an issue first to agree on the approach.
-3. Create a short-lived branch from `microservices`, for example `feature/files-stream-download` or `fix/identity-token-validation`.
+3. Create a short-lived branch from `main`, for example `feature/files-stream-download` or `fix/identity-token-validation`.
 
 ## Development
 
@@ -23,7 +23,7 @@ Thank you for helping improve CruxSuits. Please keep changes focused and explain
 
 ## Pull requests
 
-- Target the `microservices` branch for changes to this version.
+- Target the `main` branch for changes to this version.
 - Explain the problem, the change, and any configuration or migration steps.
 - Include screenshots only when a visual change needs them; for API work, include example requests and responses instead.
 - Call out breaking API or database changes.
