@@ -1,4 +1,5 @@
 using CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace CruxSuits.Services.ReferenceDatas.Infrastructure.RepositoryPattern.Repositories
 {

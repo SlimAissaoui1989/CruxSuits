@@ -1,4 +1,4 @@
-using CruxSuits.Shared.DTOs.ReferenceDatas;
+using CruxSuits.Shared.DTOs.ReferenceDatas.Country;
 
 namespace CruxSuits.Services.ReferenceDatas.Services
 {

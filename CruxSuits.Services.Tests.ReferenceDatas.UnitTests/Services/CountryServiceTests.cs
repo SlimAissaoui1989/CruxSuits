@@ -4,8 +4,9 @@ using CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities;
 using CruxSuits.Services.ReferenceDatas.Infrastructure.RepositoryPattern;
 using CruxSuits.Services.ReferenceDatas.Infrastructure.RepositoryPattern.Repositories;
 using CruxSuits.Services.ReferenceDatas.Services;
-using CruxSuits.Shared.DTOs.ReferenceDatas;
+using CruxSuits.Shared.DTOs.ReferenceDatas.Country;
 using Moq;
+using System.Linq.Expressions;
 using Xunit;
 
 namespace CruxSuits.Services.ReferenceDatas.Tests.UnitTests.Services;
@@ -14,12 +15,14 @@ public sealed class CountryServiceTests
 {
     private readonly Mock<IReferenceDataUnitOfWork> _unitOfWork = new();
     private readonly Mock<ICountryRepository> _countryRepository = new();
+    private readonly Mock<ICurrencyRepository> _currencyRepository = new();
     private readonly Mock<IMapper> _mapper = new();
     private readonly CountryService _service;
 
     public CountryServiceTests()
     {
         _unitOfWork.SetupGet(unitOfWork => unitOfWork.Country).Returns(_countryRepository.Object);
+        _unitOfWork.SetupGet(unitOfWork => unitOfWork.Currency).Returns(_currencyRepository.Object);
         _service = new CountryService(_unitOfWork.Object, _mapper.Object);
     }
 
@@ -174,6 +177,9 @@ public sealed class CountryServiceTests
             PhoneCode = country.PhoneCode,
             CurrencyId = country.CurrencyId
         };
+        _currencyRepository
+            .Setup(repository => repository.GetByIdOrDefaultAsync(country.CurrencyId, cancellation.Token))
+            .ReturnsAsync(new Currency { Id = country.CurrencyId });
         _mapper.Setup(mapper => mapper.Map<Country>(request)).Returns(country);
         _countryRepository.Setup(repository => repository.AddAsync(country, cancellation.Token)).ReturnsAsync(country);
         _mapper.Setup(mapper => mapper.Map<CountryResponse>(country)).Returns(response);
@@ -215,6 +221,9 @@ public sealed class CountryServiceTests
         _countryRepository
             .Setup(repository => repository.GetByIdOrDefaultAsync(countryId, cancellation.Token))
             .ReturnsAsync(country);
+        _currencyRepository
+            .Setup(repository => repository.GetByIdOrDefaultAsync(country.CurrencyId, cancellation.Token))
+            .ReturnsAsync(new Currency { Id = country.CurrencyId });
         _mapper.Setup(mapper => mapper.Map(request, country)).Returns(country);
         _countryRepository.Setup(repository => repository.UpdateAsync(country, cancellation.Token)).ReturnsAsync(country);
         _mapper.Setup(mapper => mapper.Map<CountryResponse>(country)).Returns(response);
@@ -242,6 +251,143 @@ public sealed class CountryServiceTests
 
         _countryRepository.Verify(repository => repository.GetByIdOrDefaultAsync(countryId, It.IsAny<CancellationToken>()), Times.Once);
         _mapper.Verify(mapper => mapper.Map(It.IsAny<UpdateCountryRequest>(), It.IsAny<Country>()), Times.Never);
+        _countryRepository.Verify(repository => repository.UpdateAsync(It.IsAny<Country>(), It.IsAny<CancellationToken>()), Times.Never);
+        _unitOfWork.Verify(unitOfWork => unitOfWork.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    #endregion
+
+    #region Validation
+
+    [Theory]
+    [InlineData("USA", "USA", "840", "USD")]
+    [InlineData("US", "US", "840", "USD")]
+    [InlineData("US", "USA", "84A", "USD")]
+    [InlineData("US", "USA", "840", " ")]
+    public async Task CreateAsync_WhenCountryDataIsInvalid_ThrowsWithoutAdding(
+        string id, string alpha3Code, string numericCode, string currencyId)
+    {
+        var request = new CountryRequest { Id = id, Alpha3Code = alpha3Code, NumericCode = numericCode, CurrencyId = currencyId };
+        var country = new Country { Id = id, Alpha3Code = alpha3Code, NumericCode = numericCode, CurrencyId = currencyId };
+        _mapper.Setup(mapper => mapper.Map<Country>(request)).Returns(country);
+
+        await Assert.ThrowsAsync<CxException>(() => _service.CreateAsync(request));
+
+        _countryRepository.Verify(repository => repository.AddAsync(It.IsAny<Country>(), It.IsAny<CancellationToken>()), Times.Never);
+        _unitOfWork.Verify(unitOfWork => unitOfWork.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
+    public async Task CreateAsync_WhenCurrencyDoesNotExist_ThrowsWithoutAdding()
+    {
+        var request = new CountryRequest { Id = "US", Alpha3Code = "USA", NumericCode = "840", CurrencyId = "ZZZ" };
+        _mapper.Setup(mapper => mapper.Map<Country>(request)).Returns(new Country
+        {
+            Id = request.Id, Alpha3Code = request.Alpha3Code, NumericCode = request.NumericCode, CurrencyId = request.CurrencyId
+        });
+        _currencyRepository.Setup(repository => repository.GetByIdOrDefaultAsync("ZZZ", It.IsAny<CancellationToken>()))
+            .ReturnsAsync((Currency?)null);
+
+        await Assert.ThrowsAsync<CxException>(() => _service.CreateAsync(request));
+
+        _countryRepository.Verify(repository => repository.AddAsync(It.IsAny<Country>(), It.IsAny<CancellationToken>()), Times.Never);
+        _unitOfWork.Verify(unitOfWork => unitOfWork.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
+    public async Task CreateAsync_WhenCountryIdAlreadyExists_ThrowsWithoutAdding()
+    {
+        var request = new CountryRequest { Id = "US", Alpha3Code = "USA", NumericCode = "840", CurrencyId = "USD" };
+        var country = new Country { Id = request.Id, Alpha3Code = request.Alpha3Code, NumericCode = request.NumericCode, CurrencyId = request.CurrencyId };
+        _mapper.Setup(mapper => mapper.Map<Country>(request)).Returns(country);
+        _countryRepository.Setup(repository => repository.GetByIdOrDefaultAsync("US", It.IsAny<CancellationToken>())).ReturnsAsync(country);
+
+        await Assert.ThrowsAsync<CxException>(() => _service.CreateAsync(request));
+
+        _countryRepository.Verify(repository => repository.AddAsync(It.IsAny<Country>(), It.IsAny<CancellationToken>()), Times.Never);
+        _unitOfWork.Verify(unitOfWork => unitOfWork.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Theory]
+    [InlineData("US", "840", "USD")]
+    [InlineData("USA", "84A", "USD")]
+    [InlineData("USA", "840", " ")]
+    public async Task UpdateAsync_WhenCountryCodeIsInvalid_ThrowsWithoutUpdating(string alpha3Code, string numericCode, string currencyId)
+    {
+        var existing = new Country { Id = "US", Alpha3Code = "USA", NumericCode = "840", CurrencyId = "USD" };
+        var request = new UpdateCountryRequest { Alpha3Code = alpha3Code, NumericCode = numericCode, CurrencyId = currencyId };
+        _countryRepository.Setup(repository => repository.GetByIdOrDefaultAsync("US", It.IsAny<CancellationToken>())).ReturnsAsync(existing);
+        _mapper.Setup(mapper => mapper.Map(request, existing)).Callback(() =>
+        {
+            existing.Alpha3Code = alpha3Code;
+            existing.NumericCode = numericCode;
+            existing.CurrencyId = currencyId;
+        });
+
+        await Assert.ThrowsAsync<CxException>(() => _service.UpdateAsync("US", request));
+
+        _countryRepository.Verify(repository => repository.UpdateAsync(It.IsAny<Country>(), It.IsAny<CancellationToken>()), Times.Never);
+        _unitOfWork.Verify(unitOfWork => unitOfWork.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Theory]
+    [InlineData("USA", "124")]
+    [InlineData("CAN", "840")]
+    public async Task CreateAsync_WhenCountryCodeIsAlreadyAssigned_ThrowsConflictWithoutAdding(string alpha3Code, string numericCode)
+    {
+        var request = new CountryRequest { Id = "CA", Alpha3Code = alpha3Code, NumericCode = numericCode, CurrencyId = "USD" };
+        var country = new Country { Id = "CA", Alpha3Code = alpha3Code, NumericCode = numericCode, CurrencyId = "USD" };
+        var existing = new Country { Id = "US", Alpha3Code = "USA", NumericCode = "840", CurrencyId = "USD" };
+        _mapper.Setup(mapper => mapper.Map<Country>(request)).Returns(country);
+        _currencyRepository.Setup(repository => repository.GetByIdOrDefaultAsync("USD", It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new Currency { Id = "USD" });
+        _countryRepository
+            .Setup(repository => repository.GetFirstOrDefaultAsync(It.IsAny<Expression<Func<Country, bool>>>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync((Expression<Func<Country, bool>> predicate, CancellationToken _) => predicate.Compile()(existing) ? existing : null);
+
+        await Assert.ThrowsAsync<CxException>(() => _service.CreateAsync(request));
+
+        _countryRepository.Verify(repository => repository.AddAsync(It.IsAny<Country>(), It.IsAny<CancellationToken>()), Times.Never);
+        _unitOfWork.Verify(unitOfWork => unitOfWork.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Theory]
+    [InlineData("USA", "124")]
+    [InlineData("CAN", "840")]
+    public async Task UpdateAsync_WhenCountryCodeIsAlreadyAssigned_ThrowsConflictWithoutUpdating(string alpha3Code, string numericCode)
+    {
+        var country = new Country { Id = "CA", Alpha3Code = "CAN", NumericCode = "124", CurrencyId = "USD" };
+        var otherCountry = new Country { Id = "US", Alpha3Code = "USA", NumericCode = "840", CurrencyId = "USD" };
+        var request = new UpdateCountryRequest { Alpha3Code = alpha3Code, NumericCode = numericCode, CurrencyId = "USD" };
+        _countryRepository.Setup(repository => repository.GetByIdOrDefaultAsync("CA", It.IsAny<CancellationToken>())).ReturnsAsync(country);
+        _mapper.Setup(mapper => mapper.Map(request, country)).Callback(() =>
+        {
+            country.Alpha3Code = alpha3Code;
+            country.NumericCode = numericCode;
+        });
+        _currencyRepository.Setup(repository => repository.GetByIdOrDefaultAsync("USD", It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new Currency { Id = "USD" });
+        _countryRepository
+            .Setup(repository => repository.GetFirstOrDefaultAsync(It.IsAny<Expression<Func<Country, bool>>>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync((Expression<Func<Country, bool>> predicate, CancellationToken _) => predicate.Compile()(otherCountry) ? otherCountry : null);
+
+        await Assert.ThrowsAsync<CxException>(() => _service.UpdateAsync("CA", request));
+
+        _countryRepository.Verify(repository => repository.UpdateAsync(It.IsAny<Country>(), It.IsAny<CancellationToken>()), Times.Never);
+        _unitOfWork.Verify(unitOfWork => unitOfWork.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
+    public async Task UpdateAsync_WhenCurrencyDoesNotExist_ThrowsWithoutUpdating()
+    {
+        var existing = new Country { Id = "US", Alpha3Code = "USA", NumericCode = "840", CurrencyId = "USD" };
+        var request = new UpdateCountryRequest { Alpha3Code = "USA", NumericCode = "840", CurrencyId = "ZZZ" };
+        _countryRepository.Setup(repository => repository.GetByIdOrDefaultAsync("US", It.IsAny<CancellationToken>())).ReturnsAsync(existing);
+        _mapper.Setup(mapper => mapper.Map(request, existing)).Callback(() => existing.CurrencyId = "ZZZ");
+        _currencyRepository.Setup(repository => repository.GetByIdOrDefaultAsync("ZZZ", It.IsAny<CancellationToken>())).ReturnsAsync((Currency?)null);
+
+        await Assert.ThrowsAsync<CxException>(() => _service.UpdateAsync("US", request));
+
         _countryRepository.Verify(repository => repository.UpdateAsync(It.IsAny<Country>(), It.IsAny<CancellationToken>()), Times.Never);
         _unitOfWork.Verify(unitOfWork => unitOfWork.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Never);
     }

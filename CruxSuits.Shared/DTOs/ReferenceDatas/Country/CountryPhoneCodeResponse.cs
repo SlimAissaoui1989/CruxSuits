@@ -1,4 +1,4 @@
-namespace CruxSuits.Shared.DTOs.ReferenceDatas;
+namespace CruxSuits.Shared.DTOs.ReferenceDatas.Country;
 
 public sealed record CountryPhoneCodeResponse
 {

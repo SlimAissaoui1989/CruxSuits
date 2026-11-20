@@ -14,15 +14,16 @@ public sealed partial class CountryNamesSteps
     private ReferenceDatasBddFixture _fixture = null!;
     private HttpResponseMessage? _response;
     private readonly List<ExpectedCountryName> _expectedNames = [];
+    private static readonly JsonSerializerOptions ApiJsonOptions = new() { PropertyNamingPolicy = null };
 
-    [BeforeScenario("country_names_listing")]
+    [BeforeScenario("country_names_listing", "country_name_details", "country_name_deletion", "country_name_creation", "country_name_update")]
     public async Task StartApi()
     {
         _fixture = new ReferenceDatasBddFixture();
         await _fixture.InitializeAsync();
     }
 
-    [AfterScenario("country_names_listing")]
+    [AfterScenario("country_names_listing", "country_name_details", "country_name_deletion", "country_name_creation", "country_name_update")]
     public async Task StopApi()
     {
         _response?.Dispose();

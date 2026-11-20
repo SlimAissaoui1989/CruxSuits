@@ -54,7 +54,7 @@ jobs:
           --no-restore
           --logger "trx;LogFileName=referencedatas-integration-tests.trx"
 
-      - name: Run ReferenceDatas country BDD tests
+      - name: Run ReferenceDatas BDD tests
         env:
           ConnectionStrings__DefaultConnection: Server=localhost,14333;Initial Catalog=ReferenceDataBddTests;User Id=sa;Password=${{ secrets.FILES_TEST_SQL_PASSWORD || 'CruxSuits_Local_Only!2026' }};Encrypt=False;TrustServerCertificate=True
         run: >-
@@ -62,7 +62,6 @@ jobs:
           --configuration Release
           --no-build
           --no-restore
-          --filter "FullyQualifiedName!~CountryName"
           --logger "trx;LogFileName=referencedatas-bdd-tests.trx"
 
       - name: Run Files unit tests

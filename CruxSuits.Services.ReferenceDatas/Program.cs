@@ -21,8 +21,13 @@ builder.Services.AddScoped<ILanguageRepository, LanguageRepository>();
 builder.Services.AddScoped<ILocalizedNameRepository, LocalizedNameRepository>();
 builder.Services.AddScoped<IReferenceDataUnitOfWork, ReferenceDataUnitOfWork>();
 builder.Services.AddScoped<ICountryService, CountryService>();
+builder.Services.AddScoped<ICountryNameService, CountryNameService>();
 
-builder.Services.AddAutoMapper(cfg => cfg.AddProfile<CountryProfile>());
+builder.Services.AddAutoMapper(cfg =>
+{
+    cfg.AddProfile<CountryProfile>();
+    cfg.AddProfile<CountryNameProfile>();
+});
 
 builder.Services.AddOpenApi();
 

@@ -73,7 +73,7 @@ namespace CruxSuits.Services.Identities.Services
             }
 
             if (!(user?.IsEnabled ?? false))
-                throw new CxException(CxExceptionTypes.Unauthorized);
+                throw new CxException(CxHttpStatusCode.Unauthorized);
 
             string accessToken = GetAccessToken(user);
             string refreshToken = await GetRefreshTokenAsync(user, accessToken, deviceId);

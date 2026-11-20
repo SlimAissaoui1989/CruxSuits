@@ -3,7 +3,7 @@ using CruxIT.Library.API.Controller;
 using CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework;
 using CruxSuits.Services.ReferenceDatas.Infrastructure.RepositoryPattern;
 using CruxSuits.Services.ReferenceDatas.Services;
-using CruxSuits.Shared.DTOs.ReferenceDatas;
+using CruxSuits.Shared.DTOs.ReferenceDatas.Country;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

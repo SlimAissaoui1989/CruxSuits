@@ -80,6 +80,51 @@ public sealed class CountriesApiIntegrationTests
         Assert.Equal("997", countryJson.RootElement.GetProperty("NumericCode").GetString());
     }
 
+    [Theory]
+    [InlineData("1S", "USA", "840")]
+    [InlineData("QV", "US1", "840")]
+    [InlineData("QW", "QWX", "84A")]
+    public async Task Create_ReturnsBadRequestWhenCountryCodeFormatIsInvalid(string id, string alpha3Code, string numericCode)
+    {
+        using var response = await CreateCountryAsync(id, alpha3Code, numericCode, "USD");
+
+        Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+    }
+
+    [Theory]
+    [InlineData(" ")]
+    [InlineData("ZZZ")]
+    public async Task Create_ReturnsBadRequestWhenCurrencyIsMissingOrUnknown(string currencyId)
+    {
+        using var response = await CreateCountryAsync("QV", "QVX", "995", currencyId);
+
+        Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+    }
+
+    [Fact]
+    public async Task Create_ReturnsConflictWhenCountryIdAlreadyExists()
+    {
+        using var response = await CreateCountryAsync("US", "QVS", "995", "USD");
+
+        Assert.Equal(HttpStatusCode.Conflict, response.StatusCode);
+    }
+
+    [Fact]
+    public async Task Create_ReturnsConflictWhenAlpha3CodeIsAlreadyAssigned()
+    {
+        using var response = await CreateCountryAsync("QV", "USA", "995", "USD");
+
+        Assert.Equal(HttpStatusCode.Conflict, response.StatusCode);
+    }
+
+    [Fact]
+    public async Task Create_ReturnsConflictWhenNumericCodeIsAlreadyAssigned()
+    {
+        using var response = await CreateCountryAsync("QV", "QVX", "840", "USD");
+
+        Assert.Equal(HttpStatusCode.Conflict, response.StatusCode);
+    }
+
     [Fact]
     public async Task Update_ReturnsOkAndPersistsCountryChanges()
     {
@@ -122,6 +167,34 @@ public sealed class CountriesApiIntegrationTests
             new JsonSerializerOptions { PropertyNamingPolicy = null });
 
         Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+    }
+
+    [Theory]
+    [InlineData("US1", "840", "USD")]
+    [InlineData("USA", "84A", "USD")]
+    [InlineData("USA", "840", " ")]
+    [InlineData("USA", "840", "ZZZ")]
+    public async Task Update_ReturnsBadRequestWhenCountryDataIsInvalid(string alpha3Code, string numericCode, string currencyId)
+    {
+        using var response = await UpdateCountryAsync("US", alpha3Code, numericCode, currencyId);
+
+        Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+    }
+
+    [Fact]
+    public async Task Update_ReturnsConflictWhenAlpha3CodeIsAssignedToAnotherCountry()
+    {
+        using var response = await UpdateCountryAsync("US", "CAN", "840", "USD");
+
+        Assert.Equal(HttpStatusCode.Conflict, response.StatusCode);
+    }
+
+    [Fact]
+    public async Task Update_ReturnsConflictWhenNumericCodeIsAssignedToAnotherCountry()
+    {
+        using var response = await UpdateCountryAsync("US", "USA", "124", "USD");
+
+        Assert.Equal(HttpStatusCode.Conflict, response.StatusCode);
     }
 
     [Fact]
@@ -180,4 +253,16 @@ public sealed class CountriesApiIntegrationTests
 
         Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
     }
+
+    private Task<HttpResponseMessage> CreateCountryAsync(string id, string alpha3Code, string numericCode, string currencyId) =>
+        _fixture.Client.PostAsJsonAsync(
+            "/api/v1/Countries",
+            new { Id = id, Alpha3Code = alpha3Code, NumericCode = numericCode, PhoneCode = "+999", CurrencyId = currencyId },
+            new JsonSerializerOptions { PropertyNamingPolicy = null });
+
+    private Task<HttpResponseMessage> UpdateCountryAsync(string id, string alpha3Code, string numericCode, string currencyId) =>
+        _fixture.Client.PutAsJsonAsync(
+            $"/api/v1/Countries/{id}",
+            new { Alpha3Code = alpha3Code, NumericCode = numericCode, PhoneCode = "+999", CurrencyId = currencyId },
+            new JsonSerializerOptions { PropertyNamingPolicy = null });
 }

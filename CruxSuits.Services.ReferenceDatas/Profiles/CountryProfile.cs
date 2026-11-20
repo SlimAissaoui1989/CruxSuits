@@ -1,6 +1,6 @@
 using AutoMapper;
 using CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities;
-using CruxSuits.Shared.DTOs.ReferenceDatas;
+using CruxSuits.Shared.DTOs.ReferenceDatas.Country;
 
 namespace CruxSuits.Services.ReferenceDatas.Profiles
 {

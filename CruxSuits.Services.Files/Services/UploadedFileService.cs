@@ -45,7 +45,7 @@ namespace CruxSuits.Services.Files.Services
             var uploadedFile = await _unitofwork.UploadedFile.GetPublicForDownloadAsync(id, cancellationToken);
             if (uploadedFile is null)
             {
-                throw new CxException(CxExceptionTypes.NotFound);
+                throw new CxException(CxHttpStatusCode.NotFound);
             }
 
             return new FileDownloadResult(
@@ -61,7 +61,7 @@ namespace CruxSuits.Services.Files.Services
             var uploadedFile = await _unitofwork.UploadedFile.GetPrivateForDownloadAsync(id, cancellationToken);
             if (uploadedFile is null)
             {
-                throw new CxException(CxExceptionTypes.NotFound);
+                throw new CxException(CxHttpStatusCode.NotFound);
             }
 
             return new FileDownloadResult(
@@ -77,7 +77,7 @@ namespace CruxSuits.Services.Files.Services
         {
             UploadedFile? existingEntity = await _unitofwork.UploadedFile.GetByIdOrDefaultAsync(id);
             if (existingEntity is null)
-                throw new CxException(CxExceptionTypes.NotFound);
+                throw new CxException(CxHttpStatusCode.NotFound);
 
             var mergingEntity = _mapper.Map<UploadedFile>(request);
             mergingEntity.Id = existingEntity.Id;
@@ -92,7 +92,7 @@ namespace CruxSuits.Services.Files.Services
         {
             UploadedFile? entity = await _unitofwork.UploadedFile.GetByIdOrDefaultAsync(id);
             if (entity is null)
-                throw new CxException(CxExceptionTypes.NotFound);
+                throw new CxException(CxHttpStatusCode.NotFound);
 
             await _unitofwork.UploadedFile.RemoveAsync(entity, cancellationToken);
 

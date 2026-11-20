@@ -16,7 +16,20 @@ Feature: Country name reading
     And the response contains 3 country names
     And each country name contains its language, name and nationality
 
-  @ignore @country_name_details
+  @country_names_listing
+  Scenario: Return not found when the country does not exist
+    Given country "XX" does not exist
+    When the client requests all names for country "XX"
+    Then the response status is 404
+
+  @country_names_listing
+  Scenario: Return an empty list when the country has no translations
+    Given country "QX" exists without translations
+    When the client requests all names for country "QX"
+    Then the response status is 200
+    And the response contains 0 country names
+
+  @country_name_details
   Scenario Outline: Get a country name in a specific language
     Given country "US" has a translation in language "<language>"
     When the client requests the name for country "US" and language "<language>"
@@ -26,10 +39,10 @@ Feature: Country name reading
     Examples:
       | language | name              | nationality |
       | en       | United States     | American    |
-      | fr       | États-Unis        | Américaine  |
+      | fr       | États-Unis        | Américain   |
       | ar       | الولايات المتحدة | أمريكي      |
 
-  @ignore @country_name_details
+  @country_name_details
   Scenario: Return not found when a translation does not exist
     Given country "US" has no translation in language "fr"
     When the client requests the name for country "US" and language "fr"

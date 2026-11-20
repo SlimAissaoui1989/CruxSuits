@@ -1,10 +1,12 @@
 using AutoMapper;
 using CruxIT.Library.API.Controller;
+using CruxIT.Library.Exceptions;
 using CruxSuits.Services.ReferenceDatas.Controllers;
 using CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework;
 using CruxSuits.Services.ReferenceDatas.Infrastructure.RepositoryPattern;
 using CruxSuits.Services.ReferenceDatas.Services;
 using CruxSuits.Shared.DTOs.ReferenceDatas;
+using CruxSuits.Shared.DTOs.ReferenceDatas.Country;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -144,6 +146,27 @@ public sealed class CountriesControllerTests
         Assert.Equal(request.Id, createdResult.RouteValues!["id"]);
         Assert.Same(response, createdResult.Value);
         countryService.Verify(service => service.CreateAsync(request, cancellation.Token), Times.Once);
+    }
+
+    [Fact]
+    public async Task Create_WhenRequestValidationFails_PropagatesBadRequestException()
+    {
+        var request = new CountryRequest
+        {
+            Id = "U",
+            Alpha3Code = "USA",
+            NumericCode = "840",
+            CurrencyId = "USD"
+        };
+        var countryService = new Mock<ICountryService>();
+        countryService
+            .Setup(service => service.CreateAsync(request, It.IsAny<CancellationToken>()))
+            .ThrowsAsync(new CxException(CxHttpStatusCode.BadRequest, "Country ID must contain exactly two ASCII letters."));
+        var controller = CreateController(countryService.Object);
+
+        await Assert.ThrowsAsync<CxException>(() => controller.Create(request, CancellationToken.None));
+
+        countryService.Verify(service => service.CreateAsync(request, CancellationToken.None), Times.Once);
     }
 
     [Fact]

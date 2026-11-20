@@ -1,6 +1,7 @@
 using System.Net;
 using System.Text.Json;
 using CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework;
+using CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Reqnroll;
@@ -10,6 +11,40 @@ namespace CruxSuits.Services.ReferenceDatas.Tests.BddTests.Features.CountryNames
 
 public sealed partial class CountryNamesSteps
 {
+    [Given("country \"(.*)\" does not exist")]
+    public async Task GivenCountryDoesNotExist(string countryId)
+    {
+        await using var scope = _fixture.Factory.Services.CreateAsyncScope();
+        var context = scope.ServiceProvider.GetRequiredService<ReferenceDataContext>();
+
+        Assert.False(await context.Countries.AnyAsync(country => country.Id == countryId));
+    }
+
+    [Given("country \"(.*)\" exists without translations")]
+    public async Task GivenCountryExistsWithoutTranslations(string countryId)
+    {
+        await using var scope = _fixture.Factory.Services.CreateAsyncScope();
+        var context = scope.ServiceProvider.GetRequiredService<ReferenceDataContext>();
+        var country = await context.Countries.SingleOrDefaultAsync(country => country.Id == countryId);
+
+        if (country is null)
+        {
+            context.Countries.Add(new Country
+            {
+                Id = countryId,
+                Alpha3Code = "QXZ",
+                NumericCode = "997",
+                CurrencyId = "USD"
+            });
+        }
+
+        var translations = await context.CountryNames
+            .Where(name => name.CountryId == countryId)
+            .ToListAsync();
+        context.CountryNames.RemoveRange(translations);
+        await context.SaveChangesAsync();
+    }
+
     [Given("country \"(.*)\" has the following translations:")]
     public async Task GivenCountryHasFollowingTranslations(string countryId, Table translations)
     {
@@ -41,6 +76,12 @@ public sealed partial class CountryNamesSteps
         _response = await _fixture.Client.GetAsync($"/api/v1/Countries/{countryId}/names");
     }
 
+    [When("the client requests the name for country \"(.*)\" and language \"(.*)\"")]
+    public async Task WhenClientRequestsCountryName(string countryId, string languageId)
+    {
+        _response = await _fixture.Client.GetAsync($"/api/v1/Countries/{countryId}/names/{languageId}");
+    }
+
     [Then("the response status is (.*)")]
     public async Task ThenResponseStatusIs(int expectedStatusCode)
     {
@@ -69,5 +110,13 @@ public sealed partial class CountryNamesSteps
 
         foreach (var expectedName in _expectedNames)
             Assert.Contains(expectedName, returnedNames);
+    }
+
+    [Then("the response contains the expected name \"(.*)\" and nationality \"(.*)\"")]
+    public async Task ThenResponseContainsExpectedCountryName(string expectedName, string expectedNationality)
+    {
+        using var json = JsonDocument.Parse(await _response!.Content.ReadAsStringAsync());
+        Assert.Equal(expectedName, GetString(json.RootElement, "Name"));
+        Assert.Equal(expectedNationality, GetString(json.RootElement, "Nationality"));
     }
 }
