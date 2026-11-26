@@ -47,6 +47,7 @@ jobs:
 
       - name: Run ReferenceDatas integration tests
         env:
+          Localization__DefaultLanguageId: en
           ConnectionStrings__DefaultConnection: Server=localhost,14333;Initial Catalog=ReferenceDataBddTests;User Id=sa;Password=${{ secrets.FILES_TEST_SQL_PASSWORD || 'CruxSuits_Local_Only!2026' }};Encrypt=False;TrustServerCertificate=True
         run: >-
           dotnet test CruxSuits.Services.Tests.ReferenceDatas.IntegrationTests/CruxSuits.Services.Tests.ReferenceDatas.IntegrationTests.csproj
@@ -58,6 +59,7 @@ jobs:
 
       - name: Run ReferenceDatas BDD tests
         env:
+          Localization__DefaultLanguageId: en
           ConnectionStrings__DefaultConnection: Server=localhost,14333;Initial Catalog=ReferenceDataBddTests;User Id=sa;Password=${{ secrets.FILES_TEST_SQL_PASSWORD || 'CruxSuits_Local_Only!2026' }};Encrypt=False;TrustServerCertificate=True
         run: >-
           dotnet test CruxSuits.Services.Tests.ReferenceDatas.BddTests/CruxSuits.Services.Tests.ReferenceDatas.BddTests.csproj
