@@ -6,10 +6,14 @@ namespace CruxSuits.Services.ReferenceDatas.Infrastructure.RepositoryPattern
 {
     public interface IReferenceDataUnitOfWork : IUnitOfWork<ReferenceDataContext>
     {
+        IAdministrativeAreaRepository AdministrativeArea { get; }
+        IAdministrativeAreaNameRepository AdministrativeAreaName { get; }
         ICountryRepository Country { get; }
         ICountryNameRepository CountryName { get; }
         ICurrencyRepository Currency { get; }
         ICurrencyNameRepository CurrencyName { get; }
         ILanguageRepository Language { get; }
+        ILocalityRepository Locality { get; }
+        ILocalityNameRepository LocalityName { get; }
     }
 }

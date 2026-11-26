@@ -16,6 +16,7 @@ public sealed class CountryServiceTests
     private readonly Mock<IReferenceDataUnitOfWork> _unitOfWork = new();
     private readonly Mock<ICountryRepository> _countryRepository = new();
     private readonly Mock<ICurrencyRepository> _currencyRepository = new();
+    private readonly Mock<IAdministrativeAreaService> _administrativeAreaService = new();
     private readonly Mock<IMapper> _mapper = new();
     private readonly CountryService _service;
 
@@ -23,7 +24,48 @@ public sealed class CountryServiceTests
     {
         _unitOfWork.SetupGet(unitOfWork => unitOfWork.Country).Returns(_countryRepository.Object);
         _unitOfWork.SetupGet(unitOfWork => unitOfWork.Currency).Returns(_currencyRepository.Object);
-        _service = new CountryService(_unitOfWork.Object, _mapper.Object);
+        _service = new CountryService(_unitOfWork.Object, _mapper.Object, _administrativeAreaService.Object);
+    }
+
+    // Contract check: verifies removal delegates descendant deletion before saving;
+    // A pass confirms that the shared unit of work commits once;
+    // Failure signals a missing cascade step or an early commit.
+    [Fact]
+    public async Task RemoveAsync_StagesHierarchyAndCommitsOnce()
+    {
+        using var cancellation = new CancellationTokenSource();
+        var country = new Country { Id = "TN" };
+        var operations = new List<string>();
+        _countryRepository.Setup(repository => repository.GetByIdOrDefaultAsync("TN", cancellation.Token)).ReturnsAsync(country);
+        _administrativeAreaService.Setup(service => service.RemoveByCountryIdAsync("TN", cancellation.Token))
+            .Callback(() => operations.Add("areas")).Returns(Task.CompletedTask);
+        _countryRepository.Setup(repository => repository.RemoveAsync(country, cancellation.Token))
+            .Callback(() => operations.Add("country")).Returns(Task.CompletedTask);
+        _unitOfWork.Setup(work => work.SaveChangesAsync(cancellation.Token))
+            .Callback(() => operations.Add("commit"));
+
+        await _service.RemoveAsync("TN", cancellation.Token);
+
+        Assert.Equal(new[] { "areas", "country", "commit" }, operations);
+        _unitOfWork.Verify(work => work.SaveChangesAsync(cancellation.Token), Times.Once);
+    }
+
+    // Contract check: verifies a cascade failure prevents the commit;
+    // A pass confirms that pending changes are not saved;
+    // Failure signals that a partial hierarchy could be persisted.
+    [Fact]
+    public async Task RemoveAsync_WhenCascadeFails_DoesNotCommit()
+    {
+        var country = new Country { Id = "TN" };
+        _countryRepository.Setup(repository => repository.GetByIdOrDefaultAsync("TN", CancellationToken.None)).ReturnsAsync(country);
+        _administrativeAreaService.Setup(service => service.RemoveByCountryIdAsync("TN", CancellationToken.None))
+            .ThrowsAsync(new InvalidOperationException("Cascade failed."));
+
+        await Assert.ThrowsAsync<InvalidOperationException>(() => _service.RemoveAsync("TN"));
+
+        _administrativeAreaService.Verify(service => service.RemoveByCountryIdAsync("TN", CancellationToken.None), Times.Once);
+        _countryRepository.Verify(repository => repository.RemoveAsync(country, CancellationToken.None), Times.Never);
+        _unitOfWork.Verify(work => work.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Never);
     }
 
     #region GetAllAsync

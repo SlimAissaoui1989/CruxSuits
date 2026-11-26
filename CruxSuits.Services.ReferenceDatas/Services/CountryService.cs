@@ -13,10 +13,13 @@ namespace CruxSuits.Services.ReferenceDatas.Services
         private readonly IReferenceDataUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public CountryService(IReferenceDataUnitOfWork unitOfWork, IMapper mapper)
+        private readonly IAdministrativeAreaService _administrativeAreaService;
+
+        public CountryService(IReferenceDataUnitOfWork unitOfWork, IMapper mapper, IAdministrativeAreaService administrativeAreaService)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _administrativeAreaService = administrativeAreaService;
         }
 
         public async Task<List<CountryResponse>> GetAllAsync(string languageId, CancellationToken cancellationToken = default)
@@ -66,6 +69,7 @@ namespace CruxSuits.Services.ReferenceDatas.Services
             if (country is null)
                 throw new CxException(CxHttpStatusCode.NotFound);
 
+            await _administrativeAreaService.RemoveByCountryIdAsync(country.Id, cancellationToken);
             await _unitOfWork.Country.RemoveAsync(country, cancellationToken);
             await _unitOfWork.SaveChangesAsync(cancellationToken);
         }

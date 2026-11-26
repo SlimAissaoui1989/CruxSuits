@@ -70,6 +70,10 @@ namespace CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework
 #endif
         }
 
+        public DbSet<AdministrativeArea> AdministrativeAreas { get; set; } = null!;
+        public DbSet<AdministrativeAreaName> AdministrativeAreaNames { get; set; } = null!;
+        public DbSet<Locality> Localities { get; set; } = null!;
+        public DbSet<LocalityName> LocalityNames { get; set; } = null!;
         public DbSet<Country> Countries { get; set; } = null!;
         public DbSet<CountryName> CountryNames { get; set; } = null!;
         public DbSet<Currency> Currencies { get; set; } = null!;

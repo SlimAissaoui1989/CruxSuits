@@ -8,11 +8,15 @@ namespace CruxSuits.Services.ReferenceDatas.Infrastructure.RepositoryPattern
     public class ReferenceDataUnitOfWork : UnitOfWork<ReferenceDataContext>, IReferenceDataUnitOfWork
     {
         private readonly IServiceProvider _serviceProvider;
+        private IAdministrativeAreaRepository? _administrativeArea;
+        private IAdministrativeAreaNameRepository? _administrativeAreaName;
         private ICountryRepository? _country;
         private ICountryNameRepository? _countryName;
         private ICurrencyRepository? _currency;
         private ICurrencyNameRepository? _currencyName;
         private ILanguageRepository? _language;
+        private ILocalityRepository? _locality;
+        private ILocalityNameRepository? _localityName;
 
         public ReferenceDataUnitOfWork(ReferenceDataContext context, IServiceProvider serviceProvider)
             : base(context)
@@ -22,6 +26,12 @@ namespace CruxSuits.Services.ReferenceDatas.Infrastructure.RepositoryPattern
 #endif
             _serviceProvider = serviceProvider;
         }
+
+        public IAdministrativeAreaRepository AdministrativeArea =>
+            _administrativeArea ??= _serviceProvider.GetRequiredService<IAdministrativeAreaRepository>();
+
+        public IAdministrativeAreaNameRepository AdministrativeAreaName =>
+            _administrativeAreaName ??= _serviceProvider.GetRequiredService<IAdministrativeAreaNameRepository>();
 
         public ICountryRepository Country =>
             _country ??= _serviceProvider.GetRequiredService<ICountryRepository>();
@@ -37,6 +47,12 @@ namespace CruxSuits.Services.ReferenceDatas.Infrastructure.RepositoryPattern
 
         public ILanguageRepository Language =>
             _language ??= _serviceProvider.GetRequiredService<ILanguageRepository>();
+
+        public ILocalityRepository Locality =>
+            _locality ??= _serviceProvider.GetRequiredService<ILocalityRepository>();
+
+        public ILocalityNameRepository LocalityName =>
+            _localityName ??= _serviceProvider.GetRequiredService<ILocalityNameRepository>();
 
     }
 }

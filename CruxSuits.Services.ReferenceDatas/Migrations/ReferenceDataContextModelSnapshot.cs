@@ -99,6 +99,793 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                     b.ToTable("Traces");
                 });
 
+            modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.AdministrativeArea", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasMaxLength(6)
+                        .HasColumnType("nvarchar(6)");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(3)
+                        .HasColumnType("nvarchar(3)");
+
+                    b.Property<string>("CountryId")
+                        .IsRequired()
+                        .HasMaxLength(2)
+                        .HasColumnType("nvarchar(2)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("CreatedUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedUserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("DeletedUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("DeletedUserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastUpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("LastUpdatedUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("LastUpdatedUserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CountryId", "Code")
+                        .IsUnique();
+
+                    b.ToTable("AdministrativeAreas");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "TN-TU",
+                            Code = "TU",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-AR",
+                            Code = "AR",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BA",
+                            Code = "BA",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MN",
+                            Code = "MN",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB",
+                            Code = "NB",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-ZG",
+                            Code = "ZG",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BZ",
+                            Code = "BZ",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BJ",
+                            Code = "BJ",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-JE",
+                            Code = "JE",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KF",
+                            Code = "KF",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SL",
+                            Code = "SL",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KR",
+                            Code = "KR",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KS",
+                            Code = "KS",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SB",
+                            Code = "SB",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SS",
+                            Code = "SS",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS",
+                            Code = "MS",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MH",
+                            Code = "MH",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF",
+                            Code = "SF",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GF",
+                            Code = "GF",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TZ",
+                            Code = "TZ",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KB",
+                            Code = "KB",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GA",
+                            Code = "GA",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MD",
+                            Code = "MD",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TT",
+                            Code = "TT",
+                            CountryId = "TN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        });
+                });
+
+            modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.AdministrativeAreaName", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AdministrativeAreaId")
+                        .IsRequired()
+                        .HasMaxLength(6)
+                        .HasColumnType("nvarchar(6)");
+
+                    b.Property<string>("LanguageId")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LanguageId");
+
+                    b.HasIndex("AdministrativeAreaId", "LanguageId")
+                        .IsUnique();
+
+                    b.ToTable("AdministrativeAreaNames");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AdministrativeAreaId = "TN-TU",
+                            LanguageId = "en",
+                            Name = "Tunis Governorate"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AdministrativeAreaId = "TN-TU",
+                            LanguageId = "ar",
+                            Name = "ولاية تونس"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AdministrativeAreaId = "TN-TU",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Tunis"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            AdministrativeAreaId = "TN-AR",
+                            LanguageId = "en",
+                            Name = "Ariana Governorate"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            AdministrativeAreaId = "TN-AR",
+                            LanguageId = "ar",
+                            Name = "ولاية أريانة"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            AdministrativeAreaId = "TN-AR",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de l'Ariana"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            AdministrativeAreaId = "TN-BA",
+                            LanguageId = "en",
+                            Name = "Ben Arous Governorate"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            AdministrativeAreaId = "TN-BA",
+                            LanguageId = "ar",
+                            Name = "ولاية بن عروس"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            AdministrativeAreaId = "TN-BA",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Ben Arous"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            AdministrativeAreaId = "TN-MN",
+                            LanguageId = "en",
+                            Name = "Manouba Governorate"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            AdministrativeAreaId = "TN-MN",
+                            LanguageId = "ar",
+                            Name = "ولاية منوبة"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            AdministrativeAreaId = "TN-MN",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de la Manouba"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            AdministrativeAreaId = "TN-NB",
+                            LanguageId = "en",
+                            Name = "Nabeul Governorate"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            AdministrativeAreaId = "TN-NB",
+                            LanguageId = "ar",
+                            Name = "ولاية نابل"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            AdministrativeAreaId = "TN-NB",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Nabeul"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            AdministrativeAreaId = "TN-ZG",
+                            LanguageId = "en",
+                            Name = "Zaghouan Governorate"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            AdministrativeAreaId = "TN-ZG",
+                            LanguageId = "ar",
+                            Name = "ولاية زغوان"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            AdministrativeAreaId = "TN-ZG",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Zaghouan"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            AdministrativeAreaId = "TN-BZ",
+                            LanguageId = "en",
+                            Name = "Bizerte Governorate"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            AdministrativeAreaId = "TN-BZ",
+                            LanguageId = "ar",
+                            Name = "ولاية بنزرت"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            AdministrativeAreaId = "TN-BZ",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Bizerte"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            AdministrativeAreaId = "TN-BJ",
+                            LanguageId = "en",
+                            Name = "Beja Governorate"
+                        },
+                        new
+                        {
+                            Id = 23,
+                            AdministrativeAreaId = "TN-BJ",
+                            LanguageId = "ar",
+                            Name = "ولاية باجة"
+                        },
+                        new
+                        {
+                            Id = 24,
+                            AdministrativeAreaId = "TN-BJ",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Béja"
+                        },
+                        new
+                        {
+                            Id = 25,
+                            AdministrativeAreaId = "TN-JE",
+                            LanguageId = "en",
+                            Name = "Jendouba Governorate"
+                        },
+                        new
+                        {
+                            Id = 26,
+                            AdministrativeAreaId = "TN-JE",
+                            LanguageId = "ar",
+                            Name = "ولاية جندوبة"
+                        },
+                        new
+                        {
+                            Id = 27,
+                            AdministrativeAreaId = "TN-JE",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Jendouba"
+                        },
+                        new
+                        {
+                            Id = 28,
+                            AdministrativeAreaId = "TN-KF",
+                            LanguageId = "en",
+                            Name = "Kef Governorate"
+                        },
+                        new
+                        {
+                            Id = 29,
+                            AdministrativeAreaId = "TN-KF",
+                            LanguageId = "ar",
+                            Name = "ولاية الكاف"
+                        },
+                        new
+                        {
+                            Id = 30,
+                            AdministrativeAreaId = "TN-KF",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat du Kef"
+                        },
+                        new
+                        {
+                            Id = 31,
+                            AdministrativeAreaId = "TN-SL",
+                            LanguageId = "en",
+                            Name = "Siliana Governorate"
+                        },
+                        new
+                        {
+                            Id = 32,
+                            AdministrativeAreaId = "TN-SL",
+                            LanguageId = "ar",
+                            Name = "ولاية سليانة"
+                        },
+                        new
+                        {
+                            Id = 33,
+                            AdministrativeAreaId = "TN-SL",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Siliana"
+                        },
+                        new
+                        {
+                            Id = 34,
+                            AdministrativeAreaId = "TN-KR",
+                            LanguageId = "en",
+                            Name = "Kairouan Governorate"
+                        },
+                        new
+                        {
+                            Id = 35,
+                            AdministrativeAreaId = "TN-KR",
+                            LanguageId = "ar",
+                            Name = "ولاية القيروان"
+                        },
+                        new
+                        {
+                            Id = 36,
+                            AdministrativeAreaId = "TN-KR",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Kairouan"
+                        },
+                        new
+                        {
+                            Id = 37,
+                            AdministrativeAreaId = "TN-KS",
+                            LanguageId = "en",
+                            Name = "Kasserine Governorate"
+                        },
+                        new
+                        {
+                            Id = 38,
+                            AdministrativeAreaId = "TN-KS",
+                            LanguageId = "ar",
+                            Name = "ولاية القصرين"
+                        },
+                        new
+                        {
+                            Id = 39,
+                            AdministrativeAreaId = "TN-KS",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Kasserine"
+                        },
+                        new
+                        {
+                            Id = 40,
+                            AdministrativeAreaId = "TN-SB",
+                            LanguageId = "en",
+                            Name = "Sidi Bouzid Governorate"
+                        },
+                        new
+                        {
+                            Id = 41,
+                            AdministrativeAreaId = "TN-SB",
+                            LanguageId = "ar",
+                            Name = "ولاية سيدي بوزيد"
+                        },
+                        new
+                        {
+                            Id = 42,
+                            AdministrativeAreaId = "TN-SB",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Sidi Bouzid"
+                        },
+                        new
+                        {
+                            Id = 43,
+                            AdministrativeAreaId = "TN-SS",
+                            LanguageId = "en",
+                            Name = "Sousse Governorate"
+                        },
+                        new
+                        {
+                            Id = 44,
+                            AdministrativeAreaId = "TN-SS",
+                            LanguageId = "ar",
+                            Name = "ولاية سوسة"
+                        },
+                        new
+                        {
+                            Id = 45,
+                            AdministrativeAreaId = "TN-SS",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Sousse"
+                        },
+                        new
+                        {
+                            Id = 46,
+                            AdministrativeAreaId = "TN-MS",
+                            LanguageId = "en",
+                            Name = "Monastir Governorate"
+                        },
+                        new
+                        {
+                            Id = 47,
+                            AdministrativeAreaId = "TN-MS",
+                            LanguageId = "ar",
+                            Name = "ولاية المنستير"
+                        },
+                        new
+                        {
+                            Id = 48,
+                            AdministrativeAreaId = "TN-MS",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Monastir"
+                        },
+                        new
+                        {
+                            Id = 49,
+                            AdministrativeAreaId = "TN-MH",
+                            LanguageId = "en",
+                            Name = "Mahdia Governorate"
+                        },
+                        new
+                        {
+                            Id = 50,
+                            AdministrativeAreaId = "TN-MH",
+                            LanguageId = "ar",
+                            Name = "ولاية المهدية"
+                        },
+                        new
+                        {
+                            Id = 51,
+                            AdministrativeAreaId = "TN-MH",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Mahdia"
+                        },
+                        new
+                        {
+                            Id = 52,
+                            AdministrativeAreaId = "TN-SF",
+                            LanguageId = "en",
+                            Name = "Sfax Governorate"
+                        },
+                        new
+                        {
+                            Id = 53,
+                            AdministrativeAreaId = "TN-SF",
+                            LanguageId = "ar",
+                            Name = "ولاية صفاقس"
+                        },
+                        new
+                        {
+                            Id = 54,
+                            AdministrativeAreaId = "TN-SF",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Sfax"
+                        },
+                        new
+                        {
+                            Id = 55,
+                            AdministrativeAreaId = "TN-GF",
+                            LanguageId = "en",
+                            Name = "Gafsa Governorate"
+                        },
+                        new
+                        {
+                            Id = 56,
+                            AdministrativeAreaId = "TN-GF",
+                            LanguageId = "ar",
+                            Name = "ولاية قفصة"
+                        },
+                        new
+                        {
+                            Id = 57,
+                            AdministrativeAreaId = "TN-GF",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Gafsa"
+                        },
+                        new
+                        {
+                            Id = 58,
+                            AdministrativeAreaId = "TN-TZ",
+                            LanguageId = "en",
+                            Name = "Tozeur Governorate"
+                        },
+                        new
+                        {
+                            Id = 59,
+                            AdministrativeAreaId = "TN-TZ",
+                            LanguageId = "ar",
+                            Name = "ولاية توزر"
+                        },
+                        new
+                        {
+                            Id = 60,
+                            AdministrativeAreaId = "TN-TZ",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Tozeur"
+                        },
+                        new
+                        {
+                            Id = 61,
+                            AdministrativeAreaId = "TN-KB",
+                            LanguageId = "en",
+                            Name = "Kebili Governorate"
+                        },
+                        new
+                        {
+                            Id = 62,
+                            AdministrativeAreaId = "TN-KB",
+                            LanguageId = "ar",
+                            Name = "ولاية قبلي"
+                        },
+                        new
+                        {
+                            Id = 63,
+                            AdministrativeAreaId = "TN-KB",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Kébili"
+                        },
+                        new
+                        {
+                            Id = 64,
+                            AdministrativeAreaId = "TN-GA",
+                            LanguageId = "en",
+                            Name = "Gabes Governorate"
+                        },
+                        new
+                        {
+                            Id = 65,
+                            AdministrativeAreaId = "TN-GA",
+                            LanguageId = "ar",
+                            Name = "ولاية قابس"
+                        },
+                        new
+                        {
+                            Id = 66,
+                            AdministrativeAreaId = "TN-GA",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Gabès"
+                        },
+                        new
+                        {
+                            Id = 67,
+                            AdministrativeAreaId = "TN-MD",
+                            LanguageId = "en",
+                            Name = "Medenine Governorate"
+                        },
+                        new
+                        {
+                            Id = 68,
+                            AdministrativeAreaId = "TN-MD",
+                            LanguageId = "ar",
+                            Name = "ولاية مدنين"
+                        },
+                        new
+                        {
+                            Id = 69,
+                            AdministrativeAreaId = "TN-MD",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Médenine"
+                        },
+                        new
+                        {
+                            Id = 70,
+                            AdministrativeAreaId = "TN-TT",
+                            LanguageId = "en",
+                            Name = "Tataouine Governorate"
+                        },
+                        new
+                        {
+                            Id = 71,
+                            AdministrativeAreaId = "TN-TT",
+                            LanguageId = "ar",
+                            Name = "ولاية تطاوين"
+                        },
+                        new
+                        {
+                            Id = 72,
+                            AdministrativeAreaId = "TN-TT",
+                            LanguageId = "fr",
+                            Name = "Gouvernorat de Tataouine"
+                        });
+                });
+
             modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.Country", b =>
                 {
                     b.Property<string>("Id")
@@ -14169,6 +14956,10277 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.Locality", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
+
+                    b.Property<string>("AdministrativeAreaId")
+                        .IsRequired()
+                        .HasMaxLength(6)
+                        .HasColumnType("nvarchar(6)");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(4)
+                        .HasColumnType("nvarchar(4)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("CreatedUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedUserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("DeletedUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("DeletedUserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastUpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("LastUpdatedUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("LastUpdatedUserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AdministrativeAreaId", "Code")
+                        .IsUnique();
+
+                    b.ToTable("Localities");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "TN-TU-TUN",
+                            AdministrativeAreaId = "TN-TU",
+                            Code = "TUN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TU-BRD",
+                            AdministrativeAreaId = "TN-TU",
+                            Code = "BRD",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TU-KRM",
+                            AdministrativeAreaId = "TN-TU",
+                            Code = "KRM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TU-GLT",
+                            AdministrativeAreaId = "TN-TU",
+                            Code = "GLT",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TU-CRT",
+                            AdministrativeAreaId = "TN-TU",
+                            Code = "CRT",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TU-SDB",
+                            AdministrativeAreaId = "TN-TU",
+                            Code = "SDB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TU-MRS",
+                            AdministrativeAreaId = "TN-TU",
+                            Code = "MRS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TU-SDH",
+                            AdministrativeAreaId = "TN-TU",
+                            Code = "SDH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-AR-ARN",
+                            AdministrativeAreaId = "TN-AR",
+                            Code = "ARN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-AR-SKR",
+                            AdministrativeAreaId = "TN-AR",
+                            Code = "SKR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-AR-RAO",
+                            AdministrativeAreaId = "TN-AR",
+                            Code = "RAO",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-AR-KLT",
+                            AdministrativeAreaId = "TN-AR",
+                            Code = "KLT",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-AR-SDT",
+                            AdministrativeAreaId = "TN-AR",
+                            Code = "SDT",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-AR-ETT",
+                            AdministrativeAreaId = "TN-AR",
+                            Code = "ETT",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-AR-MNH",
+                            AdministrativeAreaId = "TN-AR",
+                            Code = "MNH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BA-BNR",
+                            AdministrativeAreaId = "TN-BA",
+                            Code = "BNR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BA-MRJ",
+                            AdministrativeAreaId = "TN-BA",
+                            Code = "MRJ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BA-HMM",
+                            AdministrativeAreaId = "TN-BA",
+                            Code = "HMM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BA-HAM",
+                            AdministrativeAreaId = "TN-BA",
+                            Code = "HAM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BA-BMH",
+                            AdministrativeAreaId = "TN-BA",
+                            Code = "BMH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BA-EZZ",
+                            AdministrativeAreaId = "TN-BA",
+                            Code = "EZZ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BA-RDS",
+                            AdministrativeAreaId = "TN-BA",
+                            Code = "RDS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BA-MGR",
+                            AdministrativeAreaId = "TN-BA",
+                            Code = "MGR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BA-MHM",
+                            AdministrativeAreaId = "TN-BA",
+                            Code = "MHM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BA-MRN",
+                            AdministrativeAreaId = "TN-BA",
+                            Code = "MRN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BA-KHL",
+                            AdministrativeAreaId = "TN-BA",
+                            Code = "KHL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BA-FCH",
+                            AdministrativeAreaId = "TN-BA",
+                            Code = "FCH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BA-NSS",
+                            AdministrativeAreaId = "TN-BA",
+                            Code = "NSS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MN-MNB",
+                            AdministrativeAreaId = "TN-MN",
+                            Code = "MNB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MN-DND",
+                            AdministrativeAreaId = "TN-MN",
+                            Code = "DND",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MN-DRH",
+                            AdministrativeAreaId = "TN-MN",
+                            Code = "DRH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MN-ODL",
+                            AdministrativeAreaId = "TN-MN",
+                            Code = "ODL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MN-MRN",
+                            AdministrativeAreaId = "TN-MN",
+                            Code = "MRN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MN-BRJ",
+                            AdministrativeAreaId = "TN-MN",
+                            Code = "BRJ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MN-DJD",
+                            AdministrativeAreaId = "TN-MN",
+                            Code = "DJD",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MN-TBR",
+                            AdministrativeAreaId = "TN-MN",
+                            Code = "TBR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MN-BTN",
+                            AdministrativeAreaId = "TN-MN",
+                            Code = "BTN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MN-BSS",
+                            AdministrativeAreaId = "TN-MN",
+                            Code = "BSS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-NBL",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "NBL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-DRC",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "DRC",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-BNK",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "BNK",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-MMR",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "MMR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-SOM",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "SOM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-KRB",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "KRB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-TZR",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "TZR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-MNZ",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "MNZ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-MEN",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "MEN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-MID",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "MID",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-KLB",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "KLB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-AZM",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "AZM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-HMM",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "HMM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-DRL",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "DRL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-HAO",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "HAO",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-TKL",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "TKL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-SLM",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "SLM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-KOR",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "KOR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-MEZ",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "MEZ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-BEN",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "BEN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-ZTD",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "ZTD",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-GRM",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "GRM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-BRG",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "BRG",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-HAM",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "HAM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-FND",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "FND",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-TZG",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "TZG",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-SDD",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "SDD",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-NB-CHR",
+                            AdministrativeAreaId = "TN-NB",
+                            Code = "CHR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-ZG-ZGH",
+                            AdministrativeAreaId = "TN-ZG",
+                            Code = "ZGH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-ZG-ZRB",
+                            AdministrativeAreaId = "TN-ZG",
+                            Code = "ZRB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-ZG-BRM",
+                            AdministrativeAreaId = "TN-ZG",
+                            Code = "BRM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-ZG-DJB",
+                            AdministrativeAreaId = "TN-ZG",
+                            Code = "DJB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-ZG-FHS",
+                            AdministrativeAreaId = "TN-ZG",
+                            Code = "FHS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-ZG-NDH",
+                            AdministrativeAreaId = "TN-ZG",
+                            Code = "NDH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-ZG-SAO",
+                            AdministrativeAreaId = "TN-ZG",
+                            Code = "SAO",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-ZG-AMM",
+                            AdministrativeAreaId = "TN-ZG",
+                            Code = "AMM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BZ-BZR",
+                            AdministrativeAreaId = "TN-BZ",
+                            Code = "BZR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BZ-SJN",
+                            AdministrativeAreaId = "TN-BZ",
+                            Code = "SJN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BZ-MTR",
+                            AdministrativeAreaId = "TN-BZ",
+                            Code = "MTR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BZ-MNZ",
+                            AdministrativeAreaId = "TN-BZ",
+                            Code = "MNZ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BZ-TNJ",
+                            AdministrativeAreaId = "TN-BZ",
+                            Code = "TNJ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BZ-GHR",
+                            AdministrativeAreaId = "TN-BZ",
+                            Code = "GHR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BZ-ASJ",
+                            AdministrativeAreaId = "TN-BZ",
+                            Code = "ASJ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BZ-MEN",
+                            AdministrativeAreaId = "TN-BZ",
+                            Code = "MEN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BZ-MEZ",
+                            AdministrativeAreaId = "TN-BZ",
+                            Code = "MEZ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BZ-ALI",
+                            AdministrativeAreaId = "TN-BZ",
+                            Code = "ALI",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BZ-RSJ",
+                            AdministrativeAreaId = "TN-BZ",
+                            Code = "RSJ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BZ-MTL",
+                            AdministrativeAreaId = "TN-BZ",
+                            Code = "MTL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BZ-RFR",
+                            AdministrativeAreaId = "TN-BZ",
+                            Code = "RFR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BZ-UTQ",
+                            AdministrativeAreaId = "TN-BZ",
+                            Code = "UTQ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BZ-JMN",
+                            AdministrativeAreaId = "TN-BZ",
+                            Code = "JMN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BZ-GHZ",
+                            AdministrativeAreaId = "TN-BZ",
+                            Code = "GHZ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BZ-HCH",
+                            AdministrativeAreaId = "TN-BZ",
+                            Code = "HCH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BJ-BEJ",
+                            AdministrativeAreaId = "TN-BJ",
+                            Code = "BEJ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BJ-MGL",
+                            AdministrativeAreaId = "TN-BJ",
+                            Code = "MGL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BJ-AMD",
+                            AdministrativeAreaId = "TN-BJ",
+                            Code = "AMD",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BJ-NFZ",
+                            AdministrativeAreaId = "TN-BJ",
+                            Code = "NFZ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BJ-TBR",
+                            AdministrativeAreaId = "TN-BJ",
+                            Code = "TBR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BJ-TST",
+                            AdministrativeAreaId = "TN-BJ",
+                            Code = "TST",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BJ-GBL",
+                            AdministrativeAreaId = "TN-BJ",
+                            Code = "GBL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BJ-MDJ",
+                            AdministrativeAreaId = "TN-BJ",
+                            Code = "MDJ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BJ-THB",
+                            AdministrativeAreaId = "TN-BJ",
+                            Code = "THB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BJ-OCH",
+                            AdministrativeAreaId = "TN-BJ",
+                            Code = "OCH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BJ-SDS",
+                            AdministrativeAreaId = "TN-BJ",
+                            Code = "SDS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-BJ-SLG",
+                            AdministrativeAreaId = "TN-BJ",
+                            Code = "SLG",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-JE-JND",
+                            AdministrativeAreaId = "TN-JE",
+                            Code = "JND",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-JE-BSL",
+                            AdministrativeAreaId = "TN-JE",
+                            Code = "BSL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-JE-TBR",
+                            AdministrativeAreaId = "TN-JE",
+                            Code = "TBR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-JE-AND",
+                            AdministrativeAreaId = "TN-JE",
+                            Code = "AND",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-JE-FRN",
+                            AdministrativeAreaId = "TN-JE",
+                            Code = "FRN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-JE-BNM",
+                            AdministrativeAreaId = "TN-JE",
+                            Code = "BNM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-JE-GHR",
+                            AdministrativeAreaId = "TN-JE",
+                            Code = "GHR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-JE-ODM",
+                            AdministrativeAreaId = "TN-JE",
+                            Code = "ODM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-JE-BLT",
+                            AdministrativeAreaId = "TN-JE",
+                            Code = "BLT",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-JE-SKS",
+                            AdministrativeAreaId = "TN-JE",
+                            Code = "SKS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-JE-KLM",
+                            AdministrativeAreaId = "TN-JE",
+                            Code = "KLM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-JE-JOU",
+                            AdministrativeAreaId = "TN-JE",
+                            Code = "JOU",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-JE-ANS",
+                            AdministrativeAreaId = "TN-JE",
+                            Code = "ANS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-JE-KHM",
+                            AdministrativeAreaId = "TN-JE",
+                            Code = "KHM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KF-KEF",
+                            AdministrativeAreaId = "TN-KF",
+                            Code = "KEF",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KF-NBR",
+                            AdministrativeAreaId = "TN-KF",
+                            Code = "NBR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KF-TRF",
+                            AdministrativeAreaId = "TN-KF",
+                            Code = "TRF",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KF-SKT",
+                            AdministrativeAreaId = "TN-KF",
+                            Code = "SKT",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KF-TJR",
+                            AdministrativeAreaId = "TN-KF",
+                            Code = "TJR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KF-MNZ",
+                            AdministrativeAreaId = "TN-KF",
+                            Code = "MNZ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KF-KLT",
+                            AdministrativeAreaId = "TN-KF",
+                            Code = "KLT",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KF-KAL",
+                            AdministrativeAreaId = "TN-KF",
+                            Code = "KAL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KF-JRS",
+                            AdministrativeAreaId = "TN-KF",
+                            Code = "JRS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KF-KSR",
+                            AdministrativeAreaId = "TN-KF",
+                            Code = "KSR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KF-DHM",
+                            AdministrativeAreaId = "TN-KF",
+                            Code = "DHM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KF-SRS",
+                            AdministrativeAreaId = "TN-KF",
+                            Code = "SRS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KF-ZFR",
+                            AdministrativeAreaId = "TN-KF",
+                            Code = "ZFR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KF-BHR",
+                            AdministrativeAreaId = "TN-KF",
+                            Code = "BHR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KF-MRJ",
+                            AdministrativeAreaId = "TN-KF",
+                            Code = "MRJ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SL-SLN",
+                            AdministrativeAreaId = "TN-SL",
+                            Code = "SLN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SL-BOU",
+                            AdministrativeAreaId = "TN-SL",
+                            Code = "BOU",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SL-GFR",
+                            AdministrativeAreaId = "TN-SL",
+                            Code = "GFR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SL-KRB",
+                            AdministrativeAreaId = "TN-SL",
+                            Code = "KRB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SL-SDB",
+                            AdministrativeAreaId = "TN-SL",
+                            Code = "SDB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SL-MKT",
+                            AdministrativeAreaId = "TN-SL",
+                            Code = "MKT",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SL-ROU",
+                            AdministrativeAreaId = "TN-SL",
+                            Code = "ROU",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SL-KSR",
+                            AdministrativeAreaId = "TN-SL",
+                            Code = "KSR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SL-BRG",
+                            AdministrativeAreaId = "TN-SL",
+                            Code = "BRG",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SL-ARS",
+                            AdministrativeAreaId = "TN-SL",
+                            Code = "ARS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SL-SDM",
+                            AdministrativeAreaId = "TN-SL",
+                            Code = "SDM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SL-HBB",
+                            AdministrativeAreaId = "TN-SL",
+                            Code = "HBB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SS-SSS",
+                            AdministrativeAreaId = "TN-SS",
+                            Code = "SSS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SS-KSB",
+                            AdministrativeAreaId = "TN-SS",
+                            Code = "KSB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SS-EZZ",
+                            AdministrativeAreaId = "TN-SS",
+                            Code = "EZZ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SS-ZTS",
+                            AdministrativeAreaId = "TN-SS",
+                            Code = "ZTS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SS-HMM",
+                            AdministrativeAreaId = "TN-SS",
+                            Code = "HMM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SS-AKD",
+                            AdministrativeAreaId = "TN-SS",
+                            Code = "AKD",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SS-KLK",
+                            AdministrativeAreaId = "TN-SS",
+                            Code = "KLK",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SS-SDB",
+                            AdministrativeAreaId = "TN-SS",
+                            Code = "SDB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SS-HRG",
+                            AdministrativeAreaId = "TN-SS",
+                            Code = "HRG",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SS-ENF",
+                            AdministrativeAreaId = "TN-SS",
+                            Code = "ENF",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SS-BFC",
+                            AdministrativeAreaId = "TN-SS",
+                            Code = "BFC",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SS-SDH",
+                            AdministrativeAreaId = "TN-SS",
+                            Code = "SDH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SS-MSK",
+                            AdministrativeAreaId = "TN-SS",
+                            Code = "MSK",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SS-KLS",
+                            AdministrativeAreaId = "TN-SS",
+                            Code = "KLS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SS-MSS",
+                            AdministrativeAreaId = "TN-SS",
+                            Code = "MSS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SS-KND",
+                            AdministrativeAreaId = "TN-SS",
+                            Code = "KND",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SS-GRM",
+                            AdministrativeAreaId = "TN-SS",
+                            Code = "GRM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SS-CHT",
+                            AdministrativeAreaId = "TN-SS",
+                            Code = "CHT",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-MNS",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "MNS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-KHN",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "KHN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-ORD",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "ORD",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-SHL",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "SHL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-SDM",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "SDM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-ZRM",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "ZRM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-BNH",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "BNH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-GHN",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "GHN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-JMM",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "JMM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-MNZ",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "MNZ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-ZTK",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "ZTK",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-BMB",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "BMB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-MEN",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "MEN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-MSD",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "MSD",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-MKN",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "MKN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-SDB",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "SDB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-MEZ",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "MEZ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-AMR",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "AMR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-AMI",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "AMI",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-AME",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "AME",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-CHR",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "CHR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-BKL",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "BKL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-TBL",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "TBL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-KSR",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "KSR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-KSB",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "KSB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-BNN",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "BNN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-TOU",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "TOU",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-SAY",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "SAY",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-LMT",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "LMT",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-BHJ",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "BHJ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MS-MEE",
+                            AdministrativeAreaId = "TN-MS",
+                            Code = "MEE",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MH-MHD",
+                            AdministrativeAreaId = "TN-MH",
+                            Code = "MHD",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MH-RJC",
+                            AdministrativeAreaId = "TN-MH",
+                            Code = "RJC",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MH-BMR",
+                            AdministrativeAreaId = "TN-MH",
+                            Code = "BMR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MH-OLD",
+                            AdministrativeAreaId = "TN-MH",
+                            Code = "OLD",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MH-CHR",
+                            AdministrativeAreaId = "TN-MH",
+                            Code = "CHR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MH-HBR",
+                            AdministrativeAreaId = "TN-MH",
+                            Code = "HBR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MH-ESS",
+                            AdministrativeAreaId = "TN-MH",
+                            Code = "ESS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MH-JEM",
+                            AdministrativeAreaId = "TN-MH",
+                            Code = "JEM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MH-KRK",
+                            AdministrativeAreaId = "TN-MH",
+                            Code = "KRK",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MH-CHB",
+                            AdministrativeAreaId = "TN-MH",
+                            Code = "CHB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MH-MLL",
+                            AdministrativeAreaId = "TN-MH",
+                            Code = "MLL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MH-SDL",
+                            AdministrativeAreaId = "TN-MH",
+                            Code = "SDL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MH-KSR",
+                            AdministrativeAreaId = "TN-MH",
+                            Code = "KSR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MH-BRA",
+                            AdministrativeAreaId = "TN-MH",
+                            Code = "BRA",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MH-SDZ",
+                            AdministrativeAreaId = "TN-MH",
+                            Code = "SDZ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MH-HKM",
+                            AdministrativeAreaId = "TN-MH",
+                            Code = "HKM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MH-TLL",
+                            AdministrativeAreaId = "TN-MH",
+                            Code = "TLL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MH-ZLB",
+                            AdministrativeAreaId = "TN-MH",
+                            Code = "ZLB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-SFX",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "SFX",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-SKT",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "SKT",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-CHH",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "CHH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-SAK",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "SAK",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-GRM",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "GRM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-AIN",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "AIN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-THN",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "THN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-AGR",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "AGR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-JBN",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "JBN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-HNC",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "HNC",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-MNZ",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "MNZ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-GRB",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "GRB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-BRL",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "BRL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-SKH",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "SKH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-MHR",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "MHR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-KRK",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "KRK",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-AMR",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "AMR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-OBD",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "OBD",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-NDH",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "NDH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-HDJ",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "HDJ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-HZG",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "HZG",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-ACH",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "ACH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SF-NSR",
+                            AdministrativeAreaId = "TN-SF",
+                            Code = "NSR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KR-KRN",
+                            AdministrativeAreaId = "TN-KR",
+                            Code = "KRN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KR-CHB",
+                            AdministrativeAreaId = "TN-KR",
+                            Code = "CHB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KR-SBK",
+                            AdministrativeAreaId = "TN-KR",
+                            Code = "SBK",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KR-OSL",
+                            AdministrativeAreaId = "TN-KR",
+                            Code = "OSL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KR-AND",
+                            AdministrativeAreaId = "TN-KR",
+                            Code = "AND",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KR-HFF",
+                            AdministrativeAreaId = "TN-KR",
+                            Code = "HFF",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KR-ALA",
+                            AdministrativeAreaId = "TN-KR",
+                            Code = "ALA",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KR-HJB",
+                            AdministrativeAreaId = "TN-KR",
+                            Code = "HJB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KR-NSR",
+                            AdministrativeAreaId = "TN-KR",
+                            Code = "NSR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KR-MNZ",
+                            AdministrativeAreaId = "TN-KR",
+                            Code = "MNZ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KR-ECH",
+                            AdministrativeAreaId = "TN-KR",
+                            Code = "ECH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KR-BHJ",
+                            AdministrativeAreaId = "TN-KR",
+                            Code = "BHJ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KR-SSS",
+                            AdministrativeAreaId = "TN-KR",
+                            Code = "SSS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KR-JHN",
+                            AdministrativeAreaId = "TN-KR",
+                            Code = "JHN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KR-RQQ",
+                            AdministrativeAreaId = "TN-KR",
+                            Code = "RQQ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KR-ABD",
+                            AdministrativeAreaId = "TN-KR",
+                            Code = "ABD",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KR-CHC",
+                            AdministrativeAreaId = "TN-KR",
+                            Code = "CHC",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KR-ANB",
+                            AdministrativeAreaId = "TN-KR",
+                            Code = "ANB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KR-CHR",
+                            AdministrativeAreaId = "TN-KR",
+                            Code = "CHR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KS-KSS",
+                            AdministrativeAreaId = "TN-KS",
+                            Code = "KSS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KS-SBT",
+                            AdministrativeAreaId = "TN-KS",
+                            Code = "SBT",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KS-SBB",
+                            AdministrativeAreaId = "TN-KS",
+                            Code = "SBB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KS-JDL",
+                            AdministrativeAreaId = "TN-KS",
+                            Code = "JDL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KS-THL",
+                            AdministrativeAreaId = "TN-KS",
+                            Code = "THL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KS-HDR",
+                            AdministrativeAreaId = "TN-KS",
+                            Code = "HDR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KS-FSS",
+                            AdministrativeAreaId = "TN-KS",
+                            Code = "FSS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KS-FRN",
+                            AdministrativeAreaId = "TN-KS",
+                            Code = "FRN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KS-THE",
+                            AdministrativeAreaId = "TN-KS",
+                            Code = "THE",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KS-MJL",
+                            AdministrativeAreaId = "TN-KS",
+                            Code = "MJL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KS-AYO",
+                            AdministrativeAreaId = "TN-KS",
+                            Code = "AYO",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KS-HSS",
+                            AdministrativeAreaId = "TN-KS",
+                            Code = "HSS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KS-EZZ",
+                            AdministrativeAreaId = "TN-KS",
+                            Code = "EZZ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KS-ENN",
+                            AdministrativeAreaId = "TN-KS",
+                            Code = "ENN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KS-CHR",
+                            AdministrativeAreaId = "TN-KS",
+                            Code = "CHR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KS-RKH",
+                            AdministrativeAreaId = "TN-KS",
+                            Code = "RKH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KS-ANK",
+                            AdministrativeAreaId = "TN-KS",
+                            Code = "ANK",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KS-KHM",
+                            AdministrativeAreaId = "TN-KS",
+                            Code = "KHM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KS-BZG",
+                            AdministrativeAreaId = "TN-KS",
+                            Code = "BZG",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SB-SDB",
+                            AdministrativeAreaId = "TN-SB",
+                            Code = "SDB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SB-JLM",
+                            AdministrativeAreaId = "TN-SB",
+                            Code = "JLM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SB-CBB",
+                            AdministrativeAreaId = "TN-SB",
+                            Code = "CBB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SB-BRH",
+                            AdministrativeAreaId = "TN-SB",
+                            Code = "BRH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SB-SDL",
+                            AdministrativeAreaId = "TN-SB",
+                            Code = "SDL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SB-MNZ",
+                            AdministrativeAreaId = "TN-SB",
+                            Code = "MNZ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SB-MKN",
+                            AdministrativeAreaId = "TN-SB",
+                            Code = "MKN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SB-MZZ",
+                            AdministrativeAreaId = "TN-SB",
+                            Code = "MZZ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SB-RGB",
+                            AdministrativeAreaId = "TN-SB",
+                            Code = "RGB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SB-OLD",
+                            AdministrativeAreaId = "TN-SB",
+                            Code = "OLD",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SB-ESS",
+                            AdministrativeAreaId = "TN-SB",
+                            Code = "ESS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SB-SKJ",
+                            AdministrativeAreaId = "TN-SB",
+                            Code = "SKJ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SB-ASS",
+                            AdministrativeAreaId = "TN-SB",
+                            Code = "ASS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SB-FDH",
+                            AdministrativeAreaId = "TN-SB",
+                            Code = "FDH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SB-BTN",
+                            AdministrativeAreaId = "TN-SB",
+                            Code = "BTN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SB-RHL",
+                            AdministrativeAreaId = "TN-SB",
+                            Code = "RHL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-SB-MNS",
+                            AdministrativeAreaId = "TN-SB",
+                            Code = "MNS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GA-GBS",
+                            AdministrativeAreaId = "TN-GA",
+                            Code = "GBS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GA-CHN",
+                            AdministrativeAreaId = "TN-GA",
+                            Code = "CHN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GA-GHN",
+                            AdministrativeAreaId = "TN-GA",
+                            Code = "GHN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GA-MET",
+                            AdministrativeAreaId = "TN-GA",
+                            Code = "MET",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GA-ODH",
+                            AdministrativeAreaId = "TN-GA",
+                            Code = "ODH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GA-HMM",
+                            AdministrativeAreaId = "TN-GA",
+                            Code = "HMM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GA-MTM",
+                            AdministrativeAreaId = "TN-GA",
+                            Code = "MTM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GA-NVL",
+                            AdministrativeAreaId = "TN-GA",
+                            Code = "NVL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GA-MRT",
+                            AdministrativeAreaId = "TN-GA",
+                            Code = "MRT",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GA-ZRT",
+                            AdministrativeAreaId = "TN-GA",
+                            Code = "ZRT",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GA-MNZ",
+                            AdministrativeAreaId = "TN-GA",
+                            Code = "MNZ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GA-BCH",
+                            AdministrativeAreaId = "TN-GA",
+                            Code = "BCH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GA-TBL",
+                            AdministrativeAreaId = "TN-GA",
+                            Code = "TBL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GA-HBB",
+                            AdministrativeAreaId = "TN-GA",
+                            Code = "HBB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GA-KTT",
+                            AdministrativeAreaId = "TN-GA",
+                            Code = "KTT",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GA-DKH",
+                            AdministrativeAreaId = "TN-GA",
+                            Code = "DKH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MD-MDN",
+                            AdministrativeAreaId = "TN-MD",
+                            Code = "MDN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MD-BNK",
+                            AdministrativeAreaId = "TN-MD",
+                            Code = "BNK",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MD-BNG",
+                            AdministrativeAreaId = "TN-MD",
+                            Code = "BNG",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MD-ZRZ",
+                            AdministrativeAreaId = "TN-MD",
+                            Code = "ZRZ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MD-DJR",
+                            AdministrativeAreaId = "TN-MD",
+                            Code = "DJR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MD-DJE",
+                            AdministrativeAreaId = "TN-MD",
+                            Code = "DJE",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MD-DJB",
+                            AdministrativeAreaId = "TN-MD",
+                            Code = "DJB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MD-SDM",
+                            AdministrativeAreaId = "TN-MD",
+                            Code = "SDM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MD-ZAR",
+                            AdministrativeAreaId = "TN-MD",
+                            Code = "ZAR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-MD-BGH",
+                            AdministrativeAreaId = "TN-MD",
+                            Code = "BGH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TT-TTN",
+                            AdministrativeAreaId = "TN-TT",
+                            Code = "TTN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TT-BRL",
+                            AdministrativeAreaId = "TN-TT",
+                            Code = "BRL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TT-GHM",
+                            AdministrativeAreaId = "TN-TT",
+                            Code = "GHM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TT-DHB",
+                            AdministrativeAreaId = "TN-TT",
+                            Code = "DHB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TT-RMD",
+                            AdministrativeAreaId = "TN-TT",
+                            Code = "RMD",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TT-SMR",
+                            AdministrativeAreaId = "TN-TT",
+                            Code = "SMR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TT-TAT",
+                            AdministrativeAreaId = "TN-TT",
+                            Code = "TAT",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GF-GFS",
+                            AdministrativeAreaId = "TN-GF",
+                            Code = "GFS",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GF-KSR",
+                            AdministrativeAreaId = "TN-GF",
+                            Code = "KSR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GF-MLR",
+                            AdministrativeAreaId = "TN-GF",
+                            Code = "MLR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GF-RDF",
+                            AdministrativeAreaId = "TN-GF",
+                            Code = "RDF",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GF-MTL",
+                            AdministrativeAreaId = "TN-GF",
+                            Code = "MTL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GF-MDH",
+                            AdministrativeAreaId = "TN-GF",
+                            Code = "MDH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GF-GTT",
+                            AdministrativeAreaId = "TN-GF",
+                            Code = "GTT",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GF-SND",
+                            AdministrativeAreaId = "TN-GF",
+                            Code = "SND",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GF-BLK",
+                            AdministrativeAreaId = "TN-GF",
+                            Code = "BLK",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GF-SDC",
+                            AdministrativeAreaId = "TN-GF",
+                            Code = "SDC",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GF-LLL",
+                            AdministrativeAreaId = "TN-GF",
+                            Code = "LLL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GF-SDB",
+                            AdministrativeAreaId = "TN-GF",
+                            Code = "SDB",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-GF-ZNN",
+                            AdministrativeAreaId = "TN-GF",
+                            Code = "ZNN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TZ-TZR",
+                            AdministrativeAreaId = "TN-TZ",
+                            Code = "TZR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TZ-DGC",
+                            AdministrativeAreaId = "TN-TZ",
+                            Code = "DGC",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TZ-HMM",
+                            AdministrativeAreaId = "TN-TZ",
+                            Code = "HMM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TZ-NFT",
+                            AdministrativeAreaId = "TN-TZ",
+                            Code = "NFT",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TZ-TMR",
+                            AdministrativeAreaId = "TN-TZ",
+                            Code = "TMR",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-TZ-HAZ",
+                            AdministrativeAreaId = "TN-TZ",
+                            Code = "HAZ",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KB-KBL",
+                            AdministrativeAreaId = "TN-KB",
+                            Code = "KBL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KB-JMN",
+                            AdministrativeAreaId = "TN-KB",
+                            Code = "JMN",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KB-DOU",
+                            AdministrativeAreaId = "TN-KB",
+                            Code = "DOU",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KB-GOL",
+                            AdministrativeAreaId = "TN-KB",
+                            Code = "GOL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KB-SKL",
+                            AdministrativeAreaId = "TN-KB",
+                            Code = "SKL",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KB-FAO",
+                            AdministrativeAreaId = "TN-KB",
+                            Code = "FAO",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KB-RJM",
+                            AdministrativeAreaId = "TN-KB",
+                            Code = "RJM",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KB-BCH",
+                            AdministrativeAreaId = "TN-KB",
+                            Code = "BCH",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        },
+                        new
+                        {
+                            Id = "TN-KB-BEC",
+                            AdministrativeAreaId = "TN-KB",
+                            Code = "BEC",
+                            CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false
+                        });
+                });
+
+            modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.LocalityName", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("LanguageId")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("LocalityId")
+                        .IsRequired()
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LanguageId");
+
+                    b.HasIndex("LocalityId", "LanguageId")
+                        .IsUnique();
+
+                    b.ToTable("LocalityNames");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            LanguageId = "en",
+                            LocalityId = "TN-TU-TUN",
+                            Name = "Tunis"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TU-TUN",
+                            Name = "تونس"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TU-TUN",
+                            Name = "Tunis"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            LanguageId = "en",
+                            LocalityId = "TN-TU-BRD",
+                            Name = "Le Bardo"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TU-BRD",
+                            Name = "باردو"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TU-BRD",
+                            Name = "Le Bardo"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            LanguageId = "en",
+                            LocalityId = "TN-TU-KRM",
+                            Name = "Le Kram"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TU-KRM",
+                            Name = "الكرم"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TU-KRM",
+                            Name = "Le Kram"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            LanguageId = "en",
+                            LocalityId = "TN-TU-GLT",
+                            Name = "La Goulette"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TU-GLT",
+                            Name = "حلق الوادي"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TU-GLT",
+                            Name = "La Goulette"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            LanguageId = "en",
+                            LocalityId = "TN-TU-CRT",
+                            Name = "Carthage"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TU-CRT",
+                            Name = "قرطاج"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TU-CRT",
+                            Name = "Carthage"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            LanguageId = "en",
+                            LocalityId = "TN-TU-SDB",
+                            Name = "Sidi Bou Saïd"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TU-SDB",
+                            Name = "سيدي بوسعيد"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TU-SDB",
+                            Name = "Sidi Bou Saïd"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            LanguageId = "en",
+                            LocalityId = "TN-TU-MRS",
+                            Name = "La Marsa"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TU-MRS",
+                            Name = "المرسى"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TU-MRS",
+                            Name = "La Marsa"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            LanguageId = "en",
+                            LocalityId = "TN-TU-SDH",
+                            Name = "Sidi Hassine"
+                        },
+                        new
+                        {
+                            Id = 23,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TU-SDH",
+                            Name = "سيدي حسين"
+                        },
+                        new
+                        {
+                            Id = 24,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TU-SDH",
+                            Name = "Sidi Hassine"
+                        },
+                        new
+                        {
+                            Id = 25,
+                            LanguageId = "en",
+                            LocalityId = "TN-AR-ARN",
+                            Name = "Ariana"
+                        },
+                        new
+                        {
+                            Id = 26,
+                            LanguageId = "ar",
+                            LocalityId = "TN-AR-ARN",
+                            Name = "أريانة"
+                        },
+                        new
+                        {
+                            Id = 27,
+                            LanguageId = "fr",
+                            LocalityId = "TN-AR-ARN",
+                            Name = "Ariana"
+                        },
+                        new
+                        {
+                            Id = 28,
+                            LanguageId = "en",
+                            LocalityId = "TN-AR-SKR",
+                            Name = "La Soukra"
+                        },
+                        new
+                        {
+                            Id = 29,
+                            LanguageId = "ar",
+                            LocalityId = "TN-AR-SKR",
+                            Name = "سكرة"
+                        },
+                        new
+                        {
+                            Id = 30,
+                            LanguageId = "fr",
+                            LocalityId = "TN-AR-SKR",
+                            Name = "La Soukra"
+                        },
+                        new
+                        {
+                            Id = 31,
+                            LanguageId = "en",
+                            LocalityId = "TN-AR-RAO",
+                            Name = "Raoued"
+                        },
+                        new
+                        {
+                            Id = 32,
+                            LanguageId = "ar",
+                            LocalityId = "TN-AR-RAO",
+                            Name = "رواد"
+                        },
+                        new
+                        {
+                            Id = 33,
+                            LanguageId = "fr",
+                            LocalityId = "TN-AR-RAO",
+                            Name = "Raoued"
+                        },
+                        new
+                        {
+                            Id = 34,
+                            LanguageId = "en",
+                            LocalityId = "TN-AR-KLT",
+                            Name = "Kalâat El Andalous"
+                        },
+                        new
+                        {
+                            Id = 35,
+                            LanguageId = "ar",
+                            LocalityId = "TN-AR-KLT",
+                            Name = "قلعة الأندلس"
+                        },
+                        new
+                        {
+                            Id = 36,
+                            LanguageId = "fr",
+                            LocalityId = "TN-AR-KLT",
+                            Name = "Kalâat El Andalous"
+                        },
+                        new
+                        {
+                            Id = 37,
+                            LanguageId = "en",
+                            LocalityId = "TN-AR-SDT",
+                            Name = "Sidi Thabet"
+                        },
+                        new
+                        {
+                            Id = 38,
+                            LanguageId = "ar",
+                            LocalityId = "TN-AR-SDT",
+                            Name = "سيدي ثابت"
+                        },
+                        new
+                        {
+                            Id = 39,
+                            LanguageId = "fr",
+                            LocalityId = "TN-AR-SDT",
+                            Name = "Sidi Thabet"
+                        },
+                        new
+                        {
+                            Id = 40,
+                            LanguageId = "en",
+                            LocalityId = "TN-AR-ETT",
+                            Name = "Ettadhamen"
+                        },
+                        new
+                        {
+                            Id = 41,
+                            LanguageId = "ar",
+                            LocalityId = "TN-AR-ETT",
+                            Name = "التضامن"
+                        },
+                        new
+                        {
+                            Id = 42,
+                            LanguageId = "fr",
+                            LocalityId = "TN-AR-ETT",
+                            Name = "Ettadhamen"
+                        },
+                        new
+                        {
+                            Id = 43,
+                            LanguageId = "en",
+                            LocalityId = "TN-AR-MNH",
+                            Name = "Mnihla"
+                        },
+                        new
+                        {
+                            Id = 44,
+                            LanguageId = "ar",
+                            LocalityId = "TN-AR-MNH",
+                            Name = "المنيهلة"
+                        },
+                        new
+                        {
+                            Id = 45,
+                            LanguageId = "fr",
+                            LocalityId = "TN-AR-MNH",
+                            Name = "Mnihla"
+                        },
+                        new
+                        {
+                            Id = 46,
+                            LanguageId = "en",
+                            LocalityId = "TN-BA-BNR",
+                            Name = "Ben Arous"
+                        },
+                        new
+                        {
+                            Id = 47,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BA-BNR",
+                            Name = "بن عروس"
+                        },
+                        new
+                        {
+                            Id = 48,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BA-BNR",
+                            Name = "Ben Arous"
+                        },
+                        new
+                        {
+                            Id = 49,
+                            LanguageId = "en",
+                            LocalityId = "TN-BA-MRJ",
+                            Name = "El Mourouj"
+                        },
+                        new
+                        {
+                            Id = 50,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BA-MRJ",
+                            Name = "المروج"
+                        },
+                        new
+                        {
+                            Id = 51,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BA-MRJ",
+                            Name = "El Mourouj"
+                        },
+                        new
+                        {
+                            Id = 52,
+                            LanguageId = "en",
+                            LocalityId = "TN-BA-HMM",
+                            Name = "Hammam Lif"
+                        },
+                        new
+                        {
+                            Id = 53,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BA-HMM",
+                            Name = "حمام الأنف"
+                        },
+                        new
+                        {
+                            Id = 54,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BA-HMM",
+                            Name = "Hammam Lif"
+                        },
+                        new
+                        {
+                            Id = 55,
+                            LanguageId = "en",
+                            LocalityId = "TN-BA-HAM",
+                            Name = "Hammam Chott"
+                        },
+                        new
+                        {
+                            Id = 56,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BA-HAM",
+                            Name = "حمام الشط"
+                        },
+                        new
+                        {
+                            Id = 57,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BA-HAM",
+                            Name = "Hammam Chott"
+                        },
+                        new
+                        {
+                            Id = 58,
+                            LanguageId = "en",
+                            LocalityId = "TN-BA-BMH",
+                            Name = "Bou Mhel El Bassatine"
+                        },
+                        new
+                        {
+                            Id = 59,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BA-BMH",
+                            Name = "بومهل البساتين"
+                        },
+                        new
+                        {
+                            Id = 60,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BA-BMH",
+                            Name = "Bou Mhel El Bassatine"
+                        },
+                        new
+                        {
+                            Id = 61,
+                            LanguageId = "en",
+                            LocalityId = "TN-BA-EZZ",
+                            Name = "Ezzahra"
+                        },
+                        new
+                        {
+                            Id = 62,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BA-EZZ",
+                            Name = "الزهراء"
+                        },
+                        new
+                        {
+                            Id = 63,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BA-EZZ",
+                            Name = "Ezzahra"
+                        },
+                        new
+                        {
+                            Id = 64,
+                            LanguageId = "en",
+                            LocalityId = "TN-BA-RDS",
+                            Name = "Radès"
+                        },
+                        new
+                        {
+                            Id = 65,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BA-RDS",
+                            Name = "رادس"
+                        },
+                        new
+                        {
+                            Id = 66,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BA-RDS",
+                            Name = "Radès"
+                        },
+                        new
+                        {
+                            Id = 67,
+                            LanguageId = "en",
+                            LocalityId = "TN-BA-MGR",
+                            Name = "Mégrine"
+                        },
+                        new
+                        {
+                            Id = 68,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BA-MGR",
+                            Name = "مقرين"
+                        },
+                        new
+                        {
+                            Id = 69,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BA-MGR",
+                            Name = "Mégrine"
+                        },
+                        new
+                        {
+                            Id = 70,
+                            LanguageId = "en",
+                            LocalityId = "TN-BA-MHM",
+                            Name = "Mohamedia"
+                        },
+                        new
+                        {
+                            Id = 71,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BA-MHM",
+                            Name = "المحمدية"
+                        },
+                        new
+                        {
+                            Id = 72,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BA-MHM",
+                            Name = "Mohamedia"
+                        },
+                        new
+                        {
+                            Id = 73,
+                            LanguageId = "en",
+                            LocalityId = "TN-BA-MRN",
+                            Name = "Mornag"
+                        },
+                        new
+                        {
+                            Id = 74,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BA-MRN",
+                            Name = "مرناق"
+                        },
+                        new
+                        {
+                            Id = 75,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BA-MRN",
+                            Name = "Mornag"
+                        },
+                        new
+                        {
+                            Id = 76,
+                            LanguageId = "en",
+                            LocalityId = "TN-BA-KHL",
+                            Name = "Khalidia"
+                        },
+                        new
+                        {
+                            Id = 77,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BA-KHL",
+                            Name = "الخليدية"
+                        },
+                        new
+                        {
+                            Id = 78,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BA-KHL",
+                            Name = "Khalidia"
+                        },
+                        new
+                        {
+                            Id = 79,
+                            LanguageId = "en",
+                            LocalityId = "TN-BA-FCH",
+                            Name = "Fouchana"
+                        },
+                        new
+                        {
+                            Id = 80,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BA-FCH",
+                            Name = "فوشانة"
+                        },
+                        new
+                        {
+                            Id = 81,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BA-FCH",
+                            Name = "Fouchana"
+                        },
+                        new
+                        {
+                            Id = 82,
+                            LanguageId = "en",
+                            LocalityId = "TN-BA-NSS",
+                            Name = "Naassen"
+                        },
+                        new
+                        {
+                            Id = 83,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BA-NSS",
+                            Name = "نعسان"
+                        },
+                        new
+                        {
+                            Id = 84,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BA-NSS",
+                            Name = "Naassen"
+                        },
+                        new
+                        {
+                            Id = 85,
+                            LanguageId = "en",
+                            LocalityId = "TN-MN-MNB",
+                            Name = "Manouba"
+                        },
+                        new
+                        {
+                            Id = 86,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MN-MNB",
+                            Name = "منوبة"
+                        },
+                        new
+                        {
+                            Id = 87,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MN-MNB",
+                            Name = "Manouba"
+                        },
+                        new
+                        {
+                            Id = 88,
+                            LanguageId = "en",
+                            LocalityId = "TN-MN-DND",
+                            Name = "Den Den"
+                        },
+                        new
+                        {
+                            Id = 89,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MN-DND",
+                            Name = "الدندان"
+                        },
+                        new
+                        {
+                            Id = 90,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MN-DND",
+                            Name = "Den Den"
+                        },
+                        new
+                        {
+                            Id = 91,
+                            LanguageId = "en",
+                            LocalityId = "TN-MN-DRH",
+                            Name = "Douar Hicher"
+                        },
+                        new
+                        {
+                            Id = 92,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MN-DRH",
+                            Name = "دوار هيشر"
+                        },
+                        new
+                        {
+                            Id = 93,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MN-DRH",
+                            Name = "Douar Hicher"
+                        },
+                        new
+                        {
+                            Id = 94,
+                            LanguageId = "en",
+                            LocalityId = "TN-MN-ODL",
+                            Name = "Oued Ellil"
+                        },
+                        new
+                        {
+                            Id = 95,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MN-ODL",
+                            Name = "وادي الليل"
+                        },
+                        new
+                        {
+                            Id = 96,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MN-ODL",
+                            Name = "Oued Ellil"
+                        },
+                        new
+                        {
+                            Id = 97,
+                            LanguageId = "en",
+                            LocalityId = "TN-MN-MRN",
+                            Name = "Mornaguia"
+                        },
+                        new
+                        {
+                            Id = 98,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MN-MRN",
+                            Name = "المرناقية"
+                        },
+                        new
+                        {
+                            Id = 99,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MN-MRN",
+                            Name = "Mornaguia"
+                        },
+                        new
+                        {
+                            Id = 100,
+                            LanguageId = "en",
+                            LocalityId = "TN-MN-BRJ",
+                            Name = "Borj El Amri"
+                        },
+                        new
+                        {
+                            Id = 101,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MN-BRJ",
+                            Name = "برج العامري"
+                        },
+                        new
+                        {
+                            Id = 102,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MN-BRJ",
+                            Name = "Borj El Amri"
+                        },
+                        new
+                        {
+                            Id = 103,
+                            LanguageId = "en",
+                            LocalityId = "TN-MN-DJD",
+                            Name = "Djedeida"
+                        },
+                        new
+                        {
+                            Id = 104,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MN-DJD",
+                            Name = "الجديدة"
+                        },
+                        new
+                        {
+                            Id = 105,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MN-DJD",
+                            Name = "Djedeida"
+                        },
+                        new
+                        {
+                            Id = 106,
+                            LanguageId = "en",
+                            LocalityId = "TN-MN-TBR",
+                            Name = "Tebourba"
+                        },
+                        new
+                        {
+                            Id = 107,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MN-TBR",
+                            Name = "طبربة"
+                        },
+                        new
+                        {
+                            Id = 108,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MN-TBR",
+                            Name = "Tebourba"
+                        },
+                        new
+                        {
+                            Id = 109,
+                            LanguageId = "en",
+                            LocalityId = "TN-MN-BTN",
+                            Name = "El Batan"
+                        },
+                        new
+                        {
+                            Id = 110,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MN-BTN",
+                            Name = "البطان"
+                        },
+                        new
+                        {
+                            Id = 111,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MN-BTN",
+                            Name = "El Batan"
+                        },
+                        new
+                        {
+                            Id = 112,
+                            LanguageId = "en",
+                            LocalityId = "TN-MN-BSS",
+                            Name = "El Bassatine"
+                        },
+                        new
+                        {
+                            Id = 113,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MN-BSS",
+                            Name = "البساتين"
+                        },
+                        new
+                        {
+                            Id = 114,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MN-BSS",
+                            Name = "El Bassatine"
+                        },
+                        new
+                        {
+                            Id = 115,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-NBL",
+                            Name = "Nabeul"
+                        },
+                        new
+                        {
+                            Id = 116,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-NBL",
+                            Name = "نابل"
+                        },
+                        new
+                        {
+                            Id = 117,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-NBL",
+                            Name = "Nabeul"
+                        },
+                        new
+                        {
+                            Id = 118,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-DRC",
+                            Name = "Dar Châabane El Fehri"
+                        },
+                        new
+                        {
+                            Id = 119,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-DRC",
+                            Name = "دار شعبان الفهري"
+                        },
+                        new
+                        {
+                            Id = 120,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-DRC",
+                            Name = "Dar Châabane El Fehri"
+                        },
+                        new
+                        {
+                            Id = 121,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-BNK",
+                            Name = "Béni Khiar"
+                        },
+                        new
+                        {
+                            Id = 122,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-BNK",
+                            Name = "بني خيار"
+                        },
+                        new
+                        {
+                            Id = 123,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-BNK",
+                            Name = "Béni Khiar"
+                        },
+                        new
+                        {
+                            Id = 124,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-MMR",
+                            Name = "El Maâmoura"
+                        },
+                        new
+                        {
+                            Id = 125,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-MMR",
+                            Name = "المعمورة"
+                        },
+                        new
+                        {
+                            Id = 126,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-MMR",
+                            Name = "El Maâmoura"
+                        },
+                        new
+                        {
+                            Id = 127,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-SOM",
+                            Name = "Somâa"
+                        },
+                        new
+                        {
+                            Id = 128,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-SOM",
+                            Name = "الصمعة"
+                        },
+                        new
+                        {
+                            Id = 129,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-SOM",
+                            Name = "Somâa"
+                        },
+                        new
+                        {
+                            Id = 130,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-KRB",
+                            Name = "Korba"
+                        },
+                        new
+                        {
+                            Id = 131,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-KRB",
+                            Name = "قربة"
+                        },
+                        new
+                        {
+                            Id = 132,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-KRB",
+                            Name = "Korba"
+                        },
+                        new
+                        {
+                            Id = 133,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-TZR",
+                            Name = "Tazarka"
+                        },
+                        new
+                        {
+                            Id = 134,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-TZR",
+                            Name = "تازركة"
+                        },
+                        new
+                        {
+                            Id = 135,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-TZR",
+                            Name = "Tazarka"
+                        },
+                        new
+                        {
+                            Id = 136,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-MNZ",
+                            Name = "Menzel Temime"
+                        },
+                        new
+                        {
+                            Id = 137,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-MNZ",
+                            Name = "منزل تميم"
+                        },
+                        new
+                        {
+                            Id = 138,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-MNZ",
+                            Name = "Menzel Temime"
+                        },
+                        new
+                        {
+                            Id = 139,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-MEN",
+                            Name = "Menzel Horr"
+                        },
+                        new
+                        {
+                            Id = 140,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-MEN",
+                            Name = "منزل حر"
+                        },
+                        new
+                        {
+                            Id = 141,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-MEN",
+                            Name = "Menzel Horr"
+                        },
+                        new
+                        {
+                            Id = 142,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-MID",
+                            Name = "El Mida"
+                        },
+                        new
+                        {
+                            Id = 143,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-MID",
+                            Name = "الميدة"
+                        },
+                        new
+                        {
+                            Id = 144,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-MID",
+                            Name = "El Mida"
+                        },
+                        new
+                        {
+                            Id = 145,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-KLB",
+                            Name = "Kélibia"
+                        },
+                        new
+                        {
+                            Id = 146,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-KLB",
+                            Name = "قليبية"
+                        },
+                        new
+                        {
+                            Id = 147,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-KLB",
+                            Name = "Kélibia"
+                        },
+                        new
+                        {
+                            Id = 148,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-AZM",
+                            Name = "Azmour"
+                        },
+                        new
+                        {
+                            Id = 149,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-AZM",
+                            Name = "أزمور"
+                        },
+                        new
+                        {
+                            Id = 150,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-AZM",
+                            Name = "Azmour"
+                        },
+                        new
+                        {
+                            Id = 151,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-HMM",
+                            Name = "Hammam Ghezèze"
+                        },
+                        new
+                        {
+                            Id = 152,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-HMM",
+                            Name = "حمام الأغزاز"
+                        },
+                        new
+                        {
+                            Id = 153,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-HMM",
+                            Name = "Hammam Ghezèze"
+                        },
+                        new
+                        {
+                            Id = 154,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-DRL",
+                            Name = "Dar Allouch"
+                        },
+                        new
+                        {
+                            Id = 155,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-DRL",
+                            Name = "دار علوش"
+                        },
+                        new
+                        {
+                            Id = 156,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-DRL",
+                            Name = "Dar Allouch"
+                        },
+                        new
+                        {
+                            Id = 157,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-HAO",
+                            Name = "El Haouaria"
+                        },
+                        new
+                        {
+                            Id = 158,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-HAO",
+                            Name = "الهوارية"
+                        },
+                        new
+                        {
+                            Id = 159,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-HAO",
+                            Name = "El Haouaria"
+                        },
+                        new
+                        {
+                            Id = 160,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-TKL",
+                            Name = "Takelsa"
+                        },
+                        new
+                        {
+                            Id = 161,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-TKL",
+                            Name = "تاكلسة"
+                        },
+                        new
+                        {
+                            Id = 162,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-TKL",
+                            Name = "Takelsa"
+                        },
+                        new
+                        {
+                            Id = 163,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-SLM",
+                            Name = "Soliman"
+                        },
+                        new
+                        {
+                            Id = 164,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-SLM",
+                            Name = "سليمان"
+                        },
+                        new
+                        {
+                            Id = 165,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-SLM",
+                            Name = "Soliman"
+                        },
+                        new
+                        {
+                            Id = 166,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-KOR",
+                            Name = "Korbous"
+                        },
+                        new
+                        {
+                            Id = 167,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-KOR",
+                            Name = "قربص"
+                        },
+                        new
+                        {
+                            Id = 168,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-KOR",
+                            Name = "Korbous"
+                        },
+                        new
+                        {
+                            Id = 169,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-MEZ",
+                            Name = "Menzel Bouzelfa"
+                        },
+                        new
+                        {
+                            Id = 170,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-MEZ",
+                            Name = "منزل بوزلفة"
+                        },
+                        new
+                        {
+                            Id = 171,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-MEZ",
+                            Name = "Menzel Bouzelfa"
+                        },
+                        new
+                        {
+                            Id = 172,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-BEN",
+                            Name = "Béni Khalled"
+                        },
+                        new
+                        {
+                            Id = 173,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-BEN",
+                            Name = "بني خلاد"
+                        },
+                        new
+                        {
+                            Id = 174,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-BEN",
+                            Name = "Béni Khalled"
+                        },
+                        new
+                        {
+                            Id = 175,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-ZTD",
+                            Name = "Zaouiet Djedidi"
+                        },
+                        new
+                        {
+                            Id = 176,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-ZTD",
+                            Name = "زاوية الجديدي"
+                        },
+                        new
+                        {
+                            Id = 177,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-ZTD",
+                            Name = "Zaouiet Djedidi"
+                        },
+                        new
+                        {
+                            Id = 178,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-GRM",
+                            Name = "Grombalia"
+                        },
+                        new
+                        {
+                            Id = 179,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-GRM",
+                            Name = "قرمبالية"
+                        },
+                        new
+                        {
+                            Id = 180,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-GRM",
+                            Name = "Grombalia"
+                        },
+                        new
+                        {
+                            Id = 181,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-BRG",
+                            Name = "Bou Argoub"
+                        },
+                        new
+                        {
+                            Id = 182,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-BRG",
+                            Name = "بوعرقوب"
+                        },
+                        new
+                        {
+                            Id = 183,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-BRG",
+                            Name = "Bou Argoub"
+                        },
+                        new
+                        {
+                            Id = 184,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-HAM",
+                            Name = "Hammamet"
+                        },
+                        new
+                        {
+                            Id = 185,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-HAM",
+                            Name = "الحمامات"
+                        },
+                        new
+                        {
+                            Id = 186,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-HAM",
+                            Name = "Hammamet"
+                        },
+                        new
+                        {
+                            Id = 187,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-FND",
+                            Name = "Fondouk Jedid - Seltene"
+                        },
+                        new
+                        {
+                            Id = 188,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-FND",
+                            Name = "فندق الجديد - سلتان"
+                        },
+                        new
+                        {
+                            Id = 189,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-FND",
+                            Name = "Fondouk Jedid - Seltene"
+                        },
+                        new
+                        {
+                            Id = 190,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-TZG",
+                            Name = "Tazougrane - Boukrim - Zaouiet El Mgaies"
+                        },
+                        new
+                        {
+                            Id = 191,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-TZG",
+                            Name = "تزغران بوكريم زاوية المقايز"
+                        },
+                        new
+                        {
+                            Id = 192,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-TZG",
+                            Name = "Tazougrane - Boukrim - Zaouiet El Mgaies"
+                        },
+                        new
+                        {
+                            Id = 193,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-SDD",
+                            Name = "Sidi Djedidi"
+                        },
+                        new
+                        {
+                            Id = 194,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-SDD",
+                            Name = "سيدي الجديدي"
+                        },
+                        new
+                        {
+                            Id = 195,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-SDD",
+                            Name = "Sidi Djedidi"
+                        },
+                        new
+                        {
+                            Id = 196,
+                            LanguageId = "en",
+                            LocalityId = "TN-NB-CHR",
+                            Name = "Chrifet - Boucharray"
+                        },
+                        new
+                        {
+                            Id = 197,
+                            LanguageId = "ar",
+                            LocalityId = "TN-NB-CHR",
+                            Name = "الشريفات بوشراي"
+                        },
+                        new
+                        {
+                            Id = 198,
+                            LanguageId = "fr",
+                            LocalityId = "TN-NB-CHR",
+                            Name = "Chrifet - Boucharray"
+                        },
+                        new
+                        {
+                            Id = 199,
+                            LanguageId = "en",
+                            LocalityId = "TN-ZG-ZGH",
+                            Name = "Zaghouan"
+                        },
+                        new
+                        {
+                            Id = 200,
+                            LanguageId = "ar",
+                            LocalityId = "TN-ZG-ZGH",
+                            Name = "زغوان"
+                        },
+                        new
+                        {
+                            Id = 201,
+                            LanguageId = "fr",
+                            LocalityId = "TN-ZG-ZGH",
+                            Name = "Zaghouan"
+                        },
+                        new
+                        {
+                            Id = 202,
+                            LanguageId = "en",
+                            LocalityId = "TN-ZG-ZRB",
+                            Name = "Zriba"
+                        },
+                        new
+                        {
+                            Id = 203,
+                            LanguageId = "ar",
+                            LocalityId = "TN-ZG-ZRB",
+                            Name = "الزريبة"
+                        },
+                        new
+                        {
+                            Id = 204,
+                            LanguageId = "fr",
+                            LocalityId = "TN-ZG-ZRB",
+                            Name = "Zriba"
+                        },
+                        new
+                        {
+                            Id = 205,
+                            LanguageId = "en",
+                            LocalityId = "TN-ZG-BRM",
+                            Name = "Bir Mcherga"
+                        },
+                        new
+                        {
+                            Id = 206,
+                            LanguageId = "ar",
+                            LocalityId = "TN-ZG-BRM",
+                            Name = "بئر مشارقة"
+                        },
+                        new
+                        {
+                            Id = 207,
+                            LanguageId = "fr",
+                            LocalityId = "TN-ZG-BRM",
+                            Name = "Bir Mcherga"
+                        },
+                        new
+                        {
+                            Id = 208,
+                            LanguageId = "en",
+                            LocalityId = "TN-ZG-DJB",
+                            Name = "Djebel Oust"
+                        },
+                        new
+                        {
+                            Id = 209,
+                            LanguageId = "ar",
+                            LocalityId = "TN-ZG-DJB",
+                            Name = "جبل الوسط"
+                        },
+                        new
+                        {
+                            Id = 210,
+                            LanguageId = "fr",
+                            LocalityId = "TN-ZG-DJB",
+                            Name = "Djebel Oust"
+                        },
+                        new
+                        {
+                            Id = 211,
+                            LanguageId = "en",
+                            LocalityId = "TN-ZG-FHS",
+                            Name = "El Fahs"
+                        },
+                        new
+                        {
+                            Id = 212,
+                            LanguageId = "ar",
+                            LocalityId = "TN-ZG-FHS",
+                            Name = "الفحص"
+                        },
+                        new
+                        {
+                            Id = 213,
+                            LanguageId = "fr",
+                            LocalityId = "TN-ZG-FHS",
+                            Name = "El Fahs"
+                        },
+                        new
+                        {
+                            Id = 214,
+                            LanguageId = "en",
+                            LocalityId = "TN-ZG-NDH",
+                            Name = "Nadhour"
+                        },
+                        new
+                        {
+                            Id = 215,
+                            LanguageId = "ar",
+                            LocalityId = "TN-ZG-NDH",
+                            Name = "الناظور"
+                        },
+                        new
+                        {
+                            Id = 216,
+                            LanguageId = "fr",
+                            LocalityId = "TN-ZG-NDH",
+                            Name = "Nadhour"
+                        },
+                        new
+                        {
+                            Id = 217,
+                            LanguageId = "en",
+                            LocalityId = "TN-ZG-SAO",
+                            Name = "Saouaf"
+                        },
+                        new
+                        {
+                            Id = 218,
+                            LanguageId = "ar",
+                            LocalityId = "TN-ZG-SAO",
+                            Name = "صواف"
+                        },
+                        new
+                        {
+                            Id = 219,
+                            LanguageId = "fr",
+                            LocalityId = "TN-ZG-SAO",
+                            Name = "Saouaf"
+                        },
+                        new
+                        {
+                            Id = 220,
+                            LanguageId = "en",
+                            LocalityId = "TN-ZG-AMM",
+                            Name = "El Amaiem"
+                        },
+                        new
+                        {
+                            Id = 221,
+                            LanguageId = "ar",
+                            LocalityId = "TN-ZG-AMM",
+                            Name = "العمايم"
+                        },
+                        new
+                        {
+                            Id = 222,
+                            LanguageId = "fr",
+                            LocalityId = "TN-ZG-AMM",
+                            Name = "El Amaiem"
+                        },
+                        new
+                        {
+                            Id = 223,
+                            LanguageId = "en",
+                            LocalityId = "TN-BZ-BZR",
+                            Name = "Bizerte"
+                        },
+                        new
+                        {
+                            Id = 224,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BZ-BZR",
+                            Name = "بنزرت"
+                        },
+                        new
+                        {
+                            Id = 225,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BZ-BZR",
+                            Name = "Bizerte"
+                        },
+                        new
+                        {
+                            Id = 226,
+                            LanguageId = "en",
+                            LocalityId = "TN-BZ-SJN",
+                            Name = "Sejnane"
+                        },
+                        new
+                        {
+                            Id = 227,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BZ-SJN",
+                            Name = "سجنان"
+                        },
+                        new
+                        {
+                            Id = 228,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BZ-SJN",
+                            Name = "Sejnane"
+                        },
+                        new
+                        {
+                            Id = 229,
+                            LanguageId = "en",
+                            LocalityId = "TN-BZ-MTR",
+                            Name = "Mateur"
+                        },
+                        new
+                        {
+                            Id = 230,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BZ-MTR",
+                            Name = "ماطر"
+                        },
+                        new
+                        {
+                            Id = 231,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BZ-MTR",
+                            Name = "Mateur"
+                        },
+                        new
+                        {
+                            Id = 232,
+                            LanguageId = "en",
+                            LocalityId = "TN-BZ-MNZ",
+                            Name = "Menzel Bourguiba"
+                        },
+                        new
+                        {
+                            Id = 233,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BZ-MNZ",
+                            Name = "منزل بورقيبة"
+                        },
+                        new
+                        {
+                            Id = 234,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BZ-MNZ",
+                            Name = "Menzel Bourguiba"
+                        },
+                        new
+                        {
+                            Id = 235,
+                            LanguageId = "en",
+                            LocalityId = "TN-BZ-TNJ",
+                            Name = "Tinja"
+                        },
+                        new
+                        {
+                            Id = 236,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BZ-TNJ",
+                            Name = "تينجة"
+                        },
+                        new
+                        {
+                            Id = 237,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BZ-TNJ",
+                            Name = "Tinja"
+                        },
+                        new
+                        {
+                            Id = 238,
+                            LanguageId = "en",
+                            LocalityId = "TN-BZ-GHR",
+                            Name = "Ghar El Melh"
+                        },
+                        new
+                        {
+                            Id = 239,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BZ-GHR",
+                            Name = "غار الملح"
+                        },
+                        new
+                        {
+                            Id = 240,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BZ-GHR",
+                            Name = "Ghar El Melh"
+                        },
+                        new
+                        {
+                            Id = 241,
+                            LanguageId = "en",
+                            LocalityId = "TN-BZ-ASJ",
+                            Name = "Aousja"
+                        },
+                        new
+                        {
+                            Id = 242,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BZ-ASJ",
+                            Name = "عوسجة"
+                        },
+                        new
+                        {
+                            Id = 243,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BZ-ASJ",
+                            Name = "Aousja"
+                        },
+                        new
+                        {
+                            Id = 244,
+                            LanguageId = "en",
+                            LocalityId = "TN-BZ-MEN",
+                            Name = "Menzel Jemil"
+                        },
+                        new
+                        {
+                            Id = 245,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BZ-MEN",
+                            Name = "منزل جميل"
+                        },
+                        new
+                        {
+                            Id = 246,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BZ-MEN",
+                            Name = "Menzel Jemil"
+                        },
+                        new
+                        {
+                            Id = 247,
+                            LanguageId = "en",
+                            LocalityId = "TN-BZ-MEZ",
+                            Name = "Menzel Abderrahmane"
+                        },
+                        new
+                        {
+                            Id = 248,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BZ-MEZ",
+                            Name = "منزل عبد الرحمان"
+                        },
+                        new
+                        {
+                            Id = 249,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BZ-MEZ",
+                            Name = "Menzel Abderrahmane"
+                        },
+                        new
+                        {
+                            Id = 250,
+                            LanguageId = "en",
+                            LocalityId = "TN-BZ-ALI",
+                            Name = "El Alia"
+                        },
+                        new
+                        {
+                            Id = 251,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BZ-ALI",
+                            Name = "العالية"
+                        },
+                        new
+                        {
+                            Id = 252,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BZ-ALI",
+                            Name = "El Alia"
+                        },
+                        new
+                        {
+                            Id = 253,
+                            LanguageId = "en",
+                            LocalityId = "TN-BZ-RSJ",
+                            Name = "Ras Jebel"
+                        },
+                        new
+                        {
+                            Id = 254,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BZ-RSJ",
+                            Name = "رأس الجبل"
+                        },
+                        new
+                        {
+                            Id = 255,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BZ-RSJ",
+                            Name = "Ras Jebel"
+                        },
+                        new
+                        {
+                            Id = 256,
+                            LanguageId = "en",
+                            LocalityId = "TN-BZ-MTL",
+                            Name = "Metline"
+                        },
+                        new
+                        {
+                            Id = 257,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BZ-MTL",
+                            Name = "الماتلين"
+                        },
+                        new
+                        {
+                            Id = 258,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BZ-MTL",
+                            Name = "Metline"
+                        },
+                        new
+                        {
+                            Id = 259,
+                            LanguageId = "en",
+                            LocalityId = "TN-BZ-RFR",
+                            Name = "Raf Raf"
+                        },
+                        new
+                        {
+                            Id = 260,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BZ-RFR",
+                            Name = "رفراف"
+                        },
+                        new
+                        {
+                            Id = 261,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BZ-RFR",
+                            Name = "Raf Raf"
+                        },
+                        new
+                        {
+                            Id = 262,
+                            LanguageId = "en",
+                            LocalityId = "TN-BZ-UTQ",
+                            Name = "Utique"
+                        },
+                        new
+                        {
+                            Id = 263,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BZ-UTQ",
+                            Name = "أوتيك"
+                        },
+                        new
+                        {
+                            Id = 264,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BZ-UTQ",
+                            Name = "Utique"
+                        },
+                        new
+                        {
+                            Id = 265,
+                            LanguageId = "en",
+                            LocalityId = "TN-BZ-JMN",
+                            Name = "Joumine"
+                        },
+                        new
+                        {
+                            Id = 266,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BZ-JMN",
+                            Name = "جومين"
+                        },
+                        new
+                        {
+                            Id = 267,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BZ-JMN",
+                            Name = "Joumine"
+                        },
+                        new
+                        {
+                            Id = 268,
+                            LanguageId = "en",
+                            LocalityId = "TN-BZ-GHZ",
+                            Name = "Ghezala"
+                        },
+                        new
+                        {
+                            Id = 269,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BZ-GHZ",
+                            Name = "غزالة"
+                        },
+                        new
+                        {
+                            Id = 270,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BZ-GHZ",
+                            Name = "Ghezala"
+                        },
+                        new
+                        {
+                            Id = 271,
+                            LanguageId = "en",
+                            LocalityId = "TN-BZ-HCH",
+                            Name = "El Hachachna"
+                        },
+                        new
+                        {
+                            Id = 272,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BZ-HCH",
+                            Name = "الحشاشنة"
+                        },
+                        new
+                        {
+                            Id = 273,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BZ-HCH",
+                            Name = "El Hachachna"
+                        },
+                        new
+                        {
+                            Id = 274,
+                            LanguageId = "en",
+                            LocalityId = "TN-BJ-BEJ",
+                            Name = "Béja"
+                        },
+                        new
+                        {
+                            Id = 275,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BJ-BEJ",
+                            Name = "باجة"
+                        },
+                        new
+                        {
+                            Id = 276,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BJ-BEJ",
+                            Name = "Béja"
+                        },
+                        new
+                        {
+                            Id = 277,
+                            LanguageId = "en",
+                            LocalityId = "TN-BJ-MGL",
+                            Name = "El Maâgoula"
+                        },
+                        new
+                        {
+                            Id = 278,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BJ-MGL",
+                            Name = "المعقولة"
+                        },
+                        new
+                        {
+                            Id = 279,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BJ-MGL",
+                            Name = "El Maâgoula"
+                        },
+                        new
+                        {
+                            Id = 280,
+                            LanguageId = "en",
+                            LocalityId = "TN-BJ-AMD",
+                            Name = "Amdoun"
+                        },
+                        new
+                        {
+                            Id = 281,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BJ-AMD",
+                            Name = "زهرة مدين"
+                        },
+                        new
+                        {
+                            Id = 282,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BJ-AMD",
+                            Name = "Amdoun"
+                        },
+                        new
+                        {
+                            Id = 283,
+                            LanguageId = "en",
+                            LocalityId = "TN-BJ-NFZ",
+                            Name = "Nefza"
+                        },
+                        new
+                        {
+                            Id = 284,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BJ-NFZ",
+                            Name = "نفزة"
+                        },
+                        new
+                        {
+                            Id = 285,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BJ-NFZ",
+                            Name = "Nefza"
+                        },
+                        new
+                        {
+                            Id = 286,
+                            LanguageId = "en",
+                            LocalityId = "TN-BJ-TBR",
+                            Name = "Téboursouk"
+                        },
+                        new
+                        {
+                            Id = 287,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BJ-TBR",
+                            Name = "تبرسق"
+                        },
+                        new
+                        {
+                            Id = 288,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BJ-TBR",
+                            Name = "Téboursouk"
+                        },
+                        new
+                        {
+                            Id = 289,
+                            LanguageId = "en",
+                            LocalityId = "TN-BJ-TST",
+                            Name = "Testour"
+                        },
+                        new
+                        {
+                            Id = 290,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BJ-TST",
+                            Name = "تستور"
+                        },
+                        new
+                        {
+                            Id = 291,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BJ-TST",
+                            Name = "Testour"
+                        },
+                        new
+                        {
+                            Id = 292,
+                            LanguageId = "en",
+                            LocalityId = "TN-BJ-GBL",
+                            Name = "Goubellat"
+                        },
+                        new
+                        {
+                            Id = 293,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BJ-GBL",
+                            Name = "قبلاط"
+                        },
+                        new
+                        {
+                            Id = 294,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BJ-GBL",
+                            Name = "Goubellat"
+                        },
+                        new
+                        {
+                            Id = 295,
+                            LanguageId = "en",
+                            LocalityId = "TN-BJ-MDJ",
+                            Name = "Medjez El Bab"
+                        },
+                        new
+                        {
+                            Id = 296,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BJ-MDJ",
+                            Name = "مجاز الباب"
+                        },
+                        new
+                        {
+                            Id = 297,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BJ-MDJ",
+                            Name = "Medjez El Bab"
+                        },
+                        new
+                        {
+                            Id = 298,
+                            LanguageId = "en",
+                            LocalityId = "TN-BJ-THB",
+                            Name = "Thibar"
+                        },
+                        new
+                        {
+                            Id = 299,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BJ-THB",
+                            Name = "تيبار"
+                        },
+                        new
+                        {
+                            Id = 300,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BJ-THB",
+                            Name = "Thibar"
+                        },
+                        new
+                        {
+                            Id = 301,
+                            LanguageId = "en",
+                            LocalityId = "TN-BJ-OCH",
+                            Name = "Ouchtata - Jmila"
+                        },
+                        new
+                        {
+                            Id = 302,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BJ-OCH",
+                            Name = "وشتاتة الجميلة"
+                        },
+                        new
+                        {
+                            Id = 303,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BJ-OCH",
+                            Name = "Ouchtata - Jmila"
+                        },
+                        new
+                        {
+                            Id = 304,
+                            LanguageId = "en",
+                            LocalityId = "TN-BJ-SDS",
+                            Name = "Sidi Ismaïl"
+                        },
+                        new
+                        {
+                            Id = 305,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BJ-SDS",
+                            Name = "سيدي إسماعيل"
+                        },
+                        new
+                        {
+                            Id = 306,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BJ-SDS",
+                            Name = "Sidi Ismaïl"
+                        },
+                        new
+                        {
+                            Id = 307,
+                            LanguageId = "en",
+                            LocalityId = "TN-BJ-SLG",
+                            Name = "Slouguia"
+                        },
+                        new
+                        {
+                            Id = 308,
+                            LanguageId = "ar",
+                            LocalityId = "TN-BJ-SLG",
+                            Name = "السلوقية"
+                        },
+                        new
+                        {
+                            Id = 309,
+                            LanguageId = "fr",
+                            LocalityId = "TN-BJ-SLG",
+                            Name = "Slouguia"
+                        },
+                        new
+                        {
+                            Id = 310,
+                            LanguageId = "en",
+                            LocalityId = "TN-JE-JND",
+                            Name = "Jendouba"
+                        },
+                        new
+                        {
+                            Id = 311,
+                            LanguageId = "ar",
+                            LocalityId = "TN-JE-JND",
+                            Name = "جندوبة"
+                        },
+                        new
+                        {
+                            Id = 312,
+                            LanguageId = "fr",
+                            LocalityId = "TN-JE-JND",
+                            Name = "Jendouba"
+                        },
+                        new
+                        {
+                            Id = 313,
+                            LanguageId = "en",
+                            LocalityId = "TN-JE-BSL",
+                            Name = "Bou Salem"
+                        },
+                        new
+                        {
+                            Id = 314,
+                            LanguageId = "ar",
+                            LocalityId = "TN-JE-BSL",
+                            Name = "بوسالم"
+                        },
+                        new
+                        {
+                            Id = 315,
+                            LanguageId = "fr",
+                            LocalityId = "TN-JE-BSL",
+                            Name = "Bou Salem"
+                        },
+                        new
+                        {
+                            Id = 316,
+                            LanguageId = "en",
+                            LocalityId = "TN-JE-TBR",
+                            Name = "Tabarka"
+                        },
+                        new
+                        {
+                            Id = 317,
+                            LanguageId = "ar",
+                            LocalityId = "TN-JE-TBR",
+                            Name = "طبرقة"
+                        },
+                        new
+                        {
+                            Id = 318,
+                            LanguageId = "fr",
+                            LocalityId = "TN-JE-TBR",
+                            Name = "Tabarka"
+                        },
+                        new
+                        {
+                            Id = 319,
+                            LanguageId = "en",
+                            LocalityId = "TN-JE-AND",
+                            Name = "Aïn Draham"
+                        },
+                        new
+                        {
+                            Id = 320,
+                            LanguageId = "ar",
+                            LocalityId = "TN-JE-AND",
+                            Name = "عين دراهم"
+                        },
+                        new
+                        {
+                            Id = 321,
+                            LanguageId = "fr",
+                            LocalityId = "TN-JE-AND",
+                            Name = "Aïn Draham"
+                        },
+                        new
+                        {
+                            Id = 322,
+                            LanguageId = "en",
+                            LocalityId = "TN-JE-FRN",
+                            Name = "Fernana"
+                        },
+                        new
+                        {
+                            Id = 323,
+                            LanguageId = "ar",
+                            LocalityId = "TN-JE-FRN",
+                            Name = "فرنانة"
+                        },
+                        new
+                        {
+                            Id = 324,
+                            LanguageId = "fr",
+                            LocalityId = "TN-JE-FRN",
+                            Name = "Fernana"
+                        },
+                        new
+                        {
+                            Id = 325,
+                            LanguageId = "en",
+                            LocalityId = "TN-JE-BNM",
+                            Name = "Beni M'Tir"
+                        },
+                        new
+                        {
+                            Id = 326,
+                            LanguageId = "ar",
+                            LocalityId = "TN-JE-BNM",
+                            Name = "بني مطير"
+                        },
+                        new
+                        {
+                            Id = 327,
+                            LanguageId = "fr",
+                            LocalityId = "TN-JE-BNM",
+                            Name = "Beni M'Tir"
+                        },
+                        new
+                        {
+                            Id = 328,
+                            LanguageId = "en",
+                            LocalityId = "TN-JE-GHR",
+                            Name = "Ghardimaou"
+                        },
+                        new
+                        {
+                            Id = 329,
+                            LanguageId = "ar",
+                            LocalityId = "TN-JE-GHR",
+                            Name = "غار الدماء"
+                        },
+                        new
+                        {
+                            Id = 330,
+                            LanguageId = "fr",
+                            LocalityId = "TN-JE-GHR",
+                            Name = "Ghardimaou"
+                        },
+                        new
+                        {
+                            Id = 331,
+                            LanguageId = "en",
+                            LocalityId = "TN-JE-ODM",
+                            Name = "Oued Meliz"
+                        },
+                        new
+                        {
+                            Id = 332,
+                            LanguageId = "ar",
+                            LocalityId = "TN-JE-ODM",
+                            Name = "وادي مليز"
+                        },
+                        new
+                        {
+                            Id = 333,
+                            LanguageId = "fr",
+                            LocalityId = "TN-JE-ODM",
+                            Name = "Oued Meliz"
+                        },
+                        new
+                        {
+                            Id = 334,
+                            LanguageId = "en",
+                            LocalityId = "TN-JE-BLT",
+                            Name = "Balta - Bou Aouane"
+                        },
+                        new
+                        {
+                            Id = 335,
+                            LanguageId = "ar",
+                            LocalityId = "TN-JE-BLT",
+                            Name = "بلطة بوعوان"
+                        },
+                        new
+                        {
+                            Id = 336,
+                            LanguageId = "fr",
+                            LocalityId = "TN-JE-BLT",
+                            Name = "Balta - Bou Aouane"
+                        },
+                        new
+                        {
+                            Id = 337,
+                            LanguageId = "en",
+                            LocalityId = "TN-JE-SKS",
+                            Name = "Souk Sebt"
+                        },
+                        new
+                        {
+                            Id = 338,
+                            LanguageId = "ar",
+                            LocalityId = "TN-JE-SKS",
+                            Name = "سوق السبت"
+                        },
+                        new
+                        {
+                            Id = 339,
+                            LanguageId = "fr",
+                            LocalityId = "TN-JE-SKS",
+                            Name = "Souk Sebt"
+                        },
+                        new
+                        {
+                            Id = 340,
+                            LanguageId = "en",
+                            LocalityId = "TN-JE-KLM",
+                            Name = "Kalaa - Maaden - Farksan"
+                        },
+                        new
+                        {
+                            Id = 341,
+                            LanguageId = "ar",
+                            LocalityId = "TN-JE-KLM",
+                            Name = "القلعة - المعدن - فرقصان"
+                        },
+                        new
+                        {
+                            Id = 342,
+                            LanguageId = "fr",
+                            LocalityId = "TN-JE-KLM",
+                            Name = "Kalaa - Maaden - Farksan"
+                        },
+                        new
+                        {
+                            Id = 343,
+                            LanguageId = "en",
+                            LocalityId = "TN-JE-JOU",
+                            Name = "Jouaouda"
+                        },
+                        new
+                        {
+                            Id = 344,
+                            LanguageId = "ar",
+                            LocalityId = "TN-JE-JOU",
+                            Name = "الجواودة"
+                        },
+                        new
+                        {
+                            Id = 345,
+                            LanguageId = "fr",
+                            LocalityId = "TN-JE-JOU",
+                            Name = "Jouaouda"
+                        },
+                        new
+                        {
+                            Id = 346,
+                            LanguageId = "en",
+                            LocalityId = "TN-JE-ANS",
+                            Name = "Aïn Sobh - Nadhour"
+                        },
+                        new
+                        {
+                            Id = 347,
+                            LanguageId = "ar",
+                            LocalityId = "TN-JE-ANS",
+                            Name = "عين الصبح - الناظور"
+                        },
+                        new
+                        {
+                            Id = 348,
+                            LanguageId = "fr",
+                            LocalityId = "TN-JE-ANS",
+                            Name = "Aïn Sobh - Nadhour"
+                        },
+                        new
+                        {
+                            Id = 349,
+                            LanguageId = "en",
+                            LocalityId = "TN-JE-KHM",
+                            Name = "Khmairia"
+                        },
+                        new
+                        {
+                            Id = 350,
+                            LanguageId = "ar",
+                            LocalityId = "TN-JE-KHM",
+                            Name = "الخمايرية"
+                        },
+                        new
+                        {
+                            Id = 351,
+                            LanguageId = "fr",
+                            LocalityId = "TN-JE-KHM",
+                            Name = "Khmairia"
+                        },
+                        new
+                        {
+                            Id = 352,
+                            LanguageId = "en",
+                            LocalityId = "TN-KF-KEF",
+                            Name = "Kef"
+                        },
+                        new
+                        {
+                            Id = 353,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KF-KEF",
+                            Name = "الكاف"
+                        },
+                        new
+                        {
+                            Id = 354,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KF-KEF",
+                            Name = "Kef"
+                        },
+                        new
+                        {
+                            Id = 355,
+                            LanguageId = "en",
+                            LocalityId = "TN-KF-NBR",
+                            Name = "Nebeur"
+                        },
+                        new
+                        {
+                            Id = 356,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KF-NBR",
+                            Name = "نبر"
+                        },
+                        new
+                        {
+                            Id = 357,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KF-NBR",
+                            Name = "Nebeur"
+                        },
+                        new
+                        {
+                            Id = 358,
+                            LanguageId = "en",
+                            LocalityId = "TN-KF-TRF",
+                            Name = "Touiref"
+                        },
+                        new
+                        {
+                            Id = 359,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KF-TRF",
+                            Name = "الطويرف"
+                        },
+                        new
+                        {
+                            Id = 360,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KF-TRF",
+                            Name = "Touiref"
+                        },
+                        new
+                        {
+                            Id = 361,
+                            LanguageId = "en",
+                            LocalityId = "TN-KF-SKT",
+                            Name = "Sakiet Sidi Youssef"
+                        },
+                        new
+                        {
+                            Id = 362,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KF-SKT",
+                            Name = "ساقية سيدي يوسف"
+                        },
+                        new
+                        {
+                            Id = 363,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KF-SKT",
+                            Name = "Sakiet Sidi Youssef"
+                        },
+                        new
+                        {
+                            Id = 364,
+                            LanguageId = "en",
+                            LocalityId = "TN-KF-TJR",
+                            Name = "Tajerouine"
+                        },
+                        new
+                        {
+                            Id = 365,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KF-TJR",
+                            Name = "تاجروين"
+                        },
+                        new
+                        {
+                            Id = 366,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KF-TJR",
+                            Name = "Tajerouine"
+                        },
+                        new
+                        {
+                            Id = 367,
+                            LanguageId = "en",
+                            LocalityId = "TN-KF-MNZ",
+                            Name = "Menzel Salem"
+                        },
+                        new
+                        {
+                            Id = 368,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KF-MNZ",
+                            Name = "منزل سالم"
+                        },
+                        new
+                        {
+                            Id = 369,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KF-MNZ",
+                            Name = "Menzel Salem"
+                        },
+                        new
+                        {
+                            Id = 370,
+                            LanguageId = "en",
+                            LocalityId = "TN-KF-KLT",
+                            Name = "Kalaat Senan"
+                        },
+                        new
+                        {
+                            Id = 371,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KF-KLT",
+                            Name = "قلعة سنان"
+                        },
+                        new
+                        {
+                            Id = 372,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KF-KLT",
+                            Name = "Kalaat Senan"
+                        },
+                        new
+                        {
+                            Id = 373,
+                            LanguageId = "en",
+                            LocalityId = "TN-KF-KAL",
+                            Name = "Kalâat Khasba"
+                        },
+                        new
+                        {
+                            Id = 374,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KF-KAL",
+                            Name = "القلعة الخصبة"
+                        },
+                        new
+                        {
+                            Id = 375,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KF-KAL",
+                            Name = "Kalâat Khasba"
+                        },
+                        new
+                        {
+                            Id = 376,
+                            LanguageId = "en",
+                            LocalityId = "TN-KF-JRS",
+                            Name = "Jérissa"
+                        },
+                        new
+                        {
+                            Id = 377,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KF-JRS",
+                            Name = "الجريصة"
+                        },
+                        new
+                        {
+                            Id = 378,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KF-JRS",
+                            Name = "Jérissa"
+                        },
+                        new
+                        {
+                            Id = 379,
+                            LanguageId = "en",
+                            LocalityId = "TN-KF-KSR",
+                            Name = "El Ksour"
+                        },
+                        new
+                        {
+                            Id = 380,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KF-KSR",
+                            Name = "القصور"
+                        },
+                        new
+                        {
+                            Id = 381,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KF-KSR",
+                            Name = "El Ksour"
+                        },
+                        new
+                        {
+                            Id = 382,
+                            LanguageId = "en",
+                            LocalityId = "TN-KF-DHM",
+                            Name = "Dahmani"
+                        },
+                        new
+                        {
+                            Id = 383,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KF-DHM",
+                            Name = "الدهماني"
+                        },
+                        new
+                        {
+                            Id = 384,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KF-DHM",
+                            Name = "Dahmani"
+                        },
+                        new
+                        {
+                            Id = 385,
+                            LanguageId = "en",
+                            LocalityId = "TN-KF-SRS",
+                            Name = "Sers"
+                        },
+                        new
+                        {
+                            Id = 386,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KF-SRS",
+                            Name = "السرس"
+                        },
+                        new
+                        {
+                            Id = 387,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KF-SRS",
+                            Name = "Sers"
+                        },
+                        new
+                        {
+                            Id = 388,
+                            LanguageId = "en",
+                            LocalityId = "TN-KF-ZFR",
+                            Name = "Zaafrane - Dir Kef"
+                        },
+                        new
+                        {
+                            Id = 389,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KF-ZFR",
+                            Name = "الزعفران - دير الكاف"
+                        },
+                        new
+                        {
+                            Id = 390,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KF-ZFR",
+                            Name = "Zaafrane - Dir Kef"
+                        },
+                        new
+                        {
+                            Id = 391,
+                            LanguageId = "en",
+                            LocalityId = "TN-KF-BHR",
+                            Name = "Bahra"
+                        },
+                        new
+                        {
+                            Id = 392,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KF-BHR",
+                            Name = "بهرة"
+                        },
+                        new
+                        {
+                            Id = 393,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KF-BHR",
+                            Name = "Bahra"
+                        },
+                        new
+                        {
+                            Id = 394,
+                            LanguageId = "en",
+                            LocalityId = "TN-KF-MRJ",
+                            Name = "El Marja"
+                        },
+                        new
+                        {
+                            Id = 395,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KF-MRJ",
+                            Name = "المرجى"
+                        },
+                        new
+                        {
+                            Id = 396,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KF-MRJ",
+                            Name = "El Marja"
+                        },
+                        new
+                        {
+                            Id = 397,
+                            LanguageId = "en",
+                            LocalityId = "TN-SL-SLN",
+                            Name = "Siliana"
+                        },
+                        new
+                        {
+                            Id = 398,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SL-SLN",
+                            Name = "سليانة"
+                        },
+                        new
+                        {
+                            Id = 399,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SL-SLN",
+                            Name = "Siliana"
+                        },
+                        new
+                        {
+                            Id = 400,
+                            LanguageId = "en",
+                            LocalityId = "TN-SL-BOU",
+                            Name = "Bou Arada"
+                        },
+                        new
+                        {
+                            Id = 401,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SL-BOU",
+                            Name = "بوعرادة"
+                        },
+                        new
+                        {
+                            Id = 402,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SL-BOU",
+                            Name = "Bou Arada"
+                        },
+                        new
+                        {
+                            Id = 403,
+                            LanguageId = "en",
+                            LocalityId = "TN-SL-GFR",
+                            Name = "Gaâfour"
+                        },
+                        new
+                        {
+                            Id = 404,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SL-GFR",
+                            Name = "قعفور"
+                        },
+                        new
+                        {
+                            Id = 405,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SL-GFR",
+                            Name = "Gaâfour"
+                        },
+                        new
+                        {
+                            Id = 406,
+                            LanguageId = "en",
+                            LocalityId = "TN-SL-KRB",
+                            Name = "El Krib"
+                        },
+                        new
+                        {
+                            Id = 407,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SL-KRB",
+                            Name = "الكريب"
+                        },
+                        new
+                        {
+                            Id = 408,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SL-KRB",
+                            Name = "El Krib"
+                        },
+                        new
+                        {
+                            Id = 409,
+                            LanguageId = "en",
+                            LocalityId = "TN-SL-SDB",
+                            Name = "Sidi Bou Rouis"
+                        },
+                        new
+                        {
+                            Id = 410,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SL-SDB",
+                            Name = "سيدي بورويس"
+                        },
+                        new
+                        {
+                            Id = 411,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SL-SDB",
+                            Name = "Sidi Bou Rouis"
+                        },
+                        new
+                        {
+                            Id = 412,
+                            LanguageId = "en",
+                            LocalityId = "TN-SL-MKT",
+                            Name = "Makthar"
+                        },
+                        new
+                        {
+                            Id = 413,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SL-MKT",
+                            Name = "مكثر"
+                        },
+                        new
+                        {
+                            Id = 414,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SL-MKT",
+                            Name = "Makthar"
+                        },
+                        new
+                        {
+                            Id = 415,
+                            LanguageId = "en",
+                            LocalityId = "TN-SL-ROU",
+                            Name = "Rouhia"
+                        },
+                        new
+                        {
+                            Id = 416,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SL-ROU",
+                            Name = "الروحية"
+                        },
+                        new
+                        {
+                            Id = 417,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SL-ROU",
+                            Name = "Rouhia"
+                        },
+                        new
+                        {
+                            Id = 418,
+                            LanguageId = "en",
+                            LocalityId = "TN-SL-KSR",
+                            Name = "Kesra"
+                        },
+                        new
+                        {
+                            Id = 419,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SL-KSR",
+                            Name = "كسرى"
+                        },
+                        new
+                        {
+                            Id = 420,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SL-KSR",
+                            Name = "Kesra"
+                        },
+                        new
+                        {
+                            Id = 421,
+                            LanguageId = "en",
+                            LocalityId = "TN-SL-BRG",
+                            Name = "Bargou"
+                        },
+                        new
+                        {
+                            Id = 422,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SL-BRG",
+                            Name = "برقو"
+                        },
+                        new
+                        {
+                            Id = 423,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SL-BRG",
+                            Name = "Bargou"
+                        },
+                        new
+                        {
+                            Id = 424,
+                            LanguageId = "en",
+                            LocalityId = "TN-SL-ARS",
+                            Name = "El Aroussa"
+                        },
+                        new
+                        {
+                            Id = 425,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SL-ARS",
+                            Name = "العروسة"
+                        },
+                        new
+                        {
+                            Id = 426,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SL-ARS",
+                            Name = "El Aroussa"
+                        },
+                        new
+                        {
+                            Id = 427,
+                            LanguageId = "en",
+                            LocalityId = "TN-SL-SDM",
+                            Name = "Sidi Morched"
+                        },
+                        new
+                        {
+                            Id = 428,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SL-SDM",
+                            Name = "سيدي مرشد"
+                        },
+                        new
+                        {
+                            Id = 429,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SL-SDM",
+                            Name = "Sidi Morched"
+                        },
+                        new
+                        {
+                            Id = 430,
+                            LanguageId = "en",
+                            LocalityId = "TN-SL-HBB",
+                            Name = "El Hababsa"
+                        },
+                        new
+                        {
+                            Id = 431,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SL-HBB",
+                            Name = "الحبابسة"
+                        },
+                        new
+                        {
+                            Id = 432,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SL-HBB",
+                            Name = "El Hababsa"
+                        },
+                        new
+                        {
+                            Id = 433,
+                            LanguageId = "en",
+                            LocalityId = "TN-SS-SSS",
+                            Name = "Sousse"
+                        },
+                        new
+                        {
+                            Id = 434,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SS-SSS",
+                            Name = "سوسة"
+                        },
+                        new
+                        {
+                            Id = 435,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SS-SSS",
+                            Name = "Sousse"
+                        },
+                        new
+                        {
+                            Id = 436,
+                            LanguageId = "en",
+                            LocalityId = "TN-SS-KSB",
+                            Name = "Ksibet Thrayet"
+                        },
+                        new
+                        {
+                            Id = 437,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SS-KSB",
+                            Name = "قصيبة سوسة والثريات"
+                        },
+                        new
+                        {
+                            Id = 438,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SS-KSB",
+                            Name = "Ksibet Thrayet"
+                        },
+                        new
+                        {
+                            Id = 439,
+                            LanguageId = "en",
+                            LocalityId = "TN-SS-EZZ",
+                            Name = "Ezzouhour"
+                        },
+                        new
+                        {
+                            Id = 440,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SS-EZZ",
+                            Name = "الزهور"
+                        },
+                        new
+                        {
+                            Id = 441,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SS-EZZ",
+                            Name = "Ezzouhour"
+                        },
+                        new
+                        {
+                            Id = 442,
+                            LanguageId = "en",
+                            LocalityId = "TN-SS-ZTS",
+                            Name = "Zaouiet Sousse"
+                        },
+                        new
+                        {
+                            Id = 443,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SS-ZTS",
+                            Name = "زاوية سوسة"
+                        },
+                        new
+                        {
+                            Id = 444,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SS-ZTS",
+                            Name = "Zaouiet Sousse"
+                        },
+                        new
+                        {
+                            Id = 445,
+                            LanguageId = "en",
+                            LocalityId = "TN-SS-HMM",
+                            Name = "Hammam Sousse"
+                        },
+                        new
+                        {
+                            Id = 446,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SS-HMM",
+                            Name = "حمام سوسة"
+                        },
+                        new
+                        {
+                            Id = 447,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SS-HMM",
+                            Name = "Hammam Sousse"
+                        },
+                        new
+                        {
+                            Id = 448,
+                            LanguageId = "en",
+                            LocalityId = "TN-SS-AKD",
+                            Name = "Akouda"
+                        },
+                        new
+                        {
+                            Id = 449,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SS-AKD",
+                            Name = "أكودة"
+                        },
+                        new
+                        {
+                            Id = 450,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SS-AKD",
+                            Name = "Akouda"
+                        },
+                        new
+                        {
+                            Id = 451,
+                            LanguageId = "en",
+                            LocalityId = "TN-SS-KLK",
+                            Name = "Kalâa Kebira"
+                        },
+                        new
+                        {
+                            Id = 452,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SS-KLK",
+                            Name = "القلعة الكبرى"
+                        },
+                        new
+                        {
+                            Id = 453,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SS-KLK",
+                            Name = "Kalâa Kebira"
+                        },
+                        new
+                        {
+                            Id = 454,
+                            LanguageId = "en",
+                            LocalityId = "TN-SS-SDB",
+                            Name = "Sidi Bou Ali"
+                        },
+                        new
+                        {
+                            Id = 455,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SS-SDB",
+                            Name = "سيدي بوعلي"
+                        },
+                        new
+                        {
+                            Id = 456,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SS-SDB",
+                            Name = "Sidi Bou Ali"
+                        },
+                        new
+                        {
+                            Id = 457,
+                            LanguageId = "en",
+                            LocalityId = "TN-SS-HRG",
+                            Name = "Hergla"
+                        },
+                        new
+                        {
+                            Id = 458,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SS-HRG",
+                            Name = "هرقلة"
+                        },
+                        new
+                        {
+                            Id = 459,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SS-HRG",
+                            Name = "Hergla"
+                        },
+                        new
+                        {
+                            Id = 460,
+                            LanguageId = "en",
+                            LocalityId = "TN-SS-ENF",
+                            Name = "Enfida"
+                        },
+                        new
+                        {
+                            Id = 461,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SS-ENF",
+                            Name = "النفيضة"
+                        },
+                        new
+                        {
+                            Id = 462,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SS-ENF",
+                            Name = "Enfida"
+                        },
+                        new
+                        {
+                            Id = 463,
+                            LanguageId = "en",
+                            LocalityId = "TN-SS-BFC",
+                            Name = "Bouficha"
+                        },
+                        new
+                        {
+                            Id = 464,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SS-BFC",
+                            Name = "بوفيشة"
+                        },
+                        new
+                        {
+                            Id = 465,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SS-BFC",
+                            Name = "Bouficha"
+                        },
+                        new
+                        {
+                            Id = 466,
+                            LanguageId = "en",
+                            LocalityId = "TN-SS-SDH",
+                            Name = "Sidi El Hani"
+                        },
+                        new
+                        {
+                            Id = 467,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SS-SDH",
+                            Name = "سيدي الهاني"
+                        },
+                        new
+                        {
+                            Id = 468,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SS-SDH",
+                            Name = "Sidi El Hani"
+                        },
+                        new
+                        {
+                            Id = 469,
+                            LanguageId = "en",
+                            LocalityId = "TN-SS-MSK",
+                            Name = "M'saken"
+                        },
+                        new
+                        {
+                            Id = 470,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SS-MSK",
+                            Name = "مساكن"
+                        },
+                        new
+                        {
+                            Id = 471,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SS-MSK",
+                            Name = "M'saken"
+                        },
+                        new
+                        {
+                            Id = 472,
+                            LanguageId = "en",
+                            LocalityId = "TN-SS-KLS",
+                            Name = "Kalâa Seghira"
+                        },
+                        new
+                        {
+                            Id = 473,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SS-KLS",
+                            Name = "القلعة الصغرى"
+                        },
+                        new
+                        {
+                            Id = 474,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SS-KLS",
+                            Name = "Kalâa Seghira"
+                        },
+                        new
+                        {
+                            Id = 475,
+                            LanguageId = "en",
+                            LocalityId = "TN-SS-MSS",
+                            Name = "Messaadine"
+                        },
+                        new
+                        {
+                            Id = 476,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SS-MSS",
+                            Name = "المسعدين"
+                        },
+                        new
+                        {
+                            Id = 477,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SS-MSS",
+                            Name = "Messaadine"
+                        },
+                        new
+                        {
+                            Id = 478,
+                            LanguageId = "en",
+                            LocalityId = "TN-SS-KND",
+                            Name = "Kondar"
+                        },
+                        new
+                        {
+                            Id = 479,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SS-KND",
+                            Name = "كندار"
+                        },
+                        new
+                        {
+                            Id = 480,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SS-KND",
+                            Name = "Kondar"
+                        },
+                        new
+                        {
+                            Id = 481,
+                            LanguageId = "en",
+                            LocalityId = "TN-SS-GRM",
+                            Name = "Grimet - Hicher"
+                        },
+                        new
+                        {
+                            Id = 482,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SS-GRM",
+                            Name = "القريمات هيشر"
+                        },
+                        new
+                        {
+                            Id = 483,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SS-GRM",
+                            Name = "Grimet - Hicher"
+                        },
+                        new
+                        {
+                            Id = 484,
+                            LanguageId = "en",
+                            LocalityId = "TN-SS-CHT",
+                            Name = "Chott Meriem"
+                        },
+                        new
+                        {
+                            Id = 485,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SS-CHT",
+                            Name = "شط مريم"
+                        },
+                        new
+                        {
+                            Id = 486,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SS-CHT",
+                            Name = "Chott Meriem"
+                        },
+                        new
+                        {
+                            Id = 487,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-MNS",
+                            Name = "Monastir"
+                        },
+                        new
+                        {
+                            Id = 488,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-MNS",
+                            Name = "المنستير"
+                        },
+                        new
+                        {
+                            Id = 489,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-MNS",
+                            Name = "Monastir"
+                        },
+                        new
+                        {
+                            Id = 490,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-KHN",
+                            Name = "Khniss"
+                        },
+                        new
+                        {
+                            Id = 491,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-KHN",
+                            Name = "خنيس"
+                        },
+                        new
+                        {
+                            Id = 492,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-KHN",
+                            Name = "Khniss"
+                        },
+                        new
+                        {
+                            Id = 493,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-ORD",
+                            Name = "Ouerdanine"
+                        },
+                        new
+                        {
+                            Id = 494,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-ORD",
+                            Name = "الوردانين"
+                        },
+                        new
+                        {
+                            Id = 495,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-ORD",
+                            Name = "Ouerdanine"
+                        },
+                        new
+                        {
+                            Id = 496,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-SHL",
+                            Name = "Sahline Moôtmar"
+                        },
+                        new
+                        {
+                            Id = 497,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-SHL",
+                            Name = "الساحلين معتمر"
+                        },
+                        new
+                        {
+                            Id = 498,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-SHL",
+                            Name = "Sahline Moôtmar"
+                        },
+                        new
+                        {
+                            Id = 499,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-SDM",
+                            Name = "Sidi Ameur"
+                        },
+                        new
+                        {
+                            Id = 500,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-SDM",
+                            Name = "سيدي عامر"
+                        },
+                        new
+                        {
+                            Id = 501,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-SDM",
+                            Name = "Sidi Ameur"
+                        },
+                        new
+                        {
+                            Id = 502,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-ZRM",
+                            Name = "Zéramdine"
+                        },
+                        new
+                        {
+                            Id = 503,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-ZRM",
+                            Name = "زرمدين"
+                        },
+                        new
+                        {
+                            Id = 504,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-ZRM",
+                            Name = "Zéramdine"
+                        },
+                        new
+                        {
+                            Id = 505,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-BNH",
+                            Name = "Beni Hassen"
+                        },
+                        new
+                        {
+                            Id = 506,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-BNH",
+                            Name = "بني حسان"
+                        },
+                        new
+                        {
+                            Id = 507,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-BNH",
+                            Name = "Beni Hassen"
+                        },
+                        new
+                        {
+                            Id = 508,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-GHN",
+                            Name = "Ghnada"
+                        },
+                        new
+                        {
+                            Id = 509,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-GHN",
+                            Name = "غنادة"
+                        },
+                        new
+                        {
+                            Id = 510,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-GHN",
+                            Name = "Ghnada"
+                        },
+                        new
+                        {
+                            Id = 511,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-JMM",
+                            Name = "Jemmal"
+                        },
+                        new
+                        {
+                            Id = 512,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-JMM",
+                            Name = "جمال"
+                        },
+                        new
+                        {
+                            Id = 513,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-JMM",
+                            Name = "Jemmal"
+                        },
+                        new
+                        {
+                            Id = 514,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-MNZ",
+                            Name = "Menzel Kamel"
+                        },
+                        new
+                        {
+                            Id = 515,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-MNZ",
+                            Name = "منزل كامل"
+                        },
+                        new
+                        {
+                            Id = 516,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-MNZ",
+                            Name = "Menzel Kamel"
+                        },
+                        new
+                        {
+                            Id = 517,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-ZTK",
+                            Name = "Zaouiet Kontoch"
+                        },
+                        new
+                        {
+                            Id = 518,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-ZTK",
+                            Name = "زاوية قنطش"
+                        },
+                        new
+                        {
+                            Id = 519,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-ZTK",
+                            Name = "Zaouiet Kontoch"
+                        },
+                        new
+                        {
+                            Id = 520,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-BMB",
+                            Name = "Bembla et Mnara"
+                        },
+                        new
+                        {
+                            Id = 521,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-BMB",
+                            Name = "بنبلة والمنارة"
+                        },
+                        new
+                        {
+                            Id = 522,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-BMB",
+                            Name = "Bembla et Mnara"
+                        },
+                        new
+                        {
+                            Id = 523,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-MEN",
+                            Name = "Menzel Ennour"
+                        },
+                        new
+                        {
+                            Id = 524,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-MEN",
+                            Name = "منزل نور"
+                        },
+                        new
+                        {
+                            Id = 525,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-MEN",
+                            Name = "Menzel Ennour"
+                        },
+                        new
+                        {
+                            Id = 526,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-MSD",
+                            Name = "El Masdour"
+                        },
+                        new
+                        {
+                            Id = 527,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-MSD",
+                            Name = "المسدور"
+                        },
+                        new
+                        {
+                            Id = 528,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-MSD",
+                            Name = "El Masdour"
+                        },
+                        new
+                        {
+                            Id = 529,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-MKN",
+                            Name = "Moknine"
+                        },
+                        new
+                        {
+                            Id = 530,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-MKN",
+                            Name = "المكنين"
+                        },
+                        new
+                        {
+                            Id = 531,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-MKN",
+                            Name = "Moknine"
+                        },
+                        new
+                        {
+                            Id = 532,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-SDB",
+                            Name = "Sidi Bennour"
+                        },
+                        new
+                        {
+                            Id = 533,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-SDB",
+                            Name = "سيدي بنور"
+                        },
+                        new
+                        {
+                            Id = 534,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-SDB",
+                            Name = "Sidi Bennour"
+                        },
+                        new
+                        {
+                            Id = 535,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-MEZ",
+                            Name = "Menzel Fersi"
+                        },
+                        new
+                        {
+                            Id = 536,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-MEZ",
+                            Name = "منزل فارسي"
+                        },
+                        new
+                        {
+                            Id = 537,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-MEZ",
+                            Name = "Menzel Fersi"
+                        },
+                        new
+                        {
+                            Id = 538,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-AMR",
+                            Name = "Amiret El Fhoul"
+                        },
+                        new
+                        {
+                            Id = 539,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-AMR",
+                            Name = "عميرة الفحول"
+                        },
+                        new
+                        {
+                            Id = 540,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-AMR",
+                            Name = "Amiret El Fhoul"
+                        },
+                        new
+                        {
+                            Id = 541,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-AMI",
+                            Name = "Amiret Touazra"
+                        },
+                        new
+                        {
+                            Id = 542,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-AMI",
+                            Name = "عميرة التوازرة"
+                        },
+                        new
+                        {
+                            Id = 543,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-AMI",
+                            Name = "Amiret Touazra"
+                        },
+                        new
+                        {
+                            Id = 544,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-AME",
+                            Name = "Amiret Hajjaj"
+                        },
+                        new
+                        {
+                            Id = 545,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-AME",
+                            Name = "عميرة الحجاج"
+                        },
+                        new
+                        {
+                            Id = 546,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-AME",
+                            Name = "Amiret Hajjaj"
+                        },
+                        new
+                        {
+                            Id = 547,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-CHR",
+                            Name = "Cherahil"
+                        },
+                        new
+                        {
+                            Id = 548,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-CHR",
+                            Name = "الشراحيل"
+                        },
+                        new
+                        {
+                            Id = 549,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-CHR",
+                            Name = "Cherahil"
+                        },
+                        new
+                        {
+                            Id = 550,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-BKL",
+                            Name = "Bekalta"
+                        },
+                        new
+                        {
+                            Id = 551,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-BKL",
+                            Name = "البقالطة"
+                        },
+                        new
+                        {
+                            Id = 552,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-BKL",
+                            Name = "Bekalta"
+                        },
+                        new
+                        {
+                            Id = 553,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-TBL",
+                            Name = "Téboulba"
+                        },
+                        new
+                        {
+                            Id = 554,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-TBL",
+                            Name = "طبلبة"
+                        },
+                        new
+                        {
+                            Id = 555,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-TBL",
+                            Name = "Téboulba"
+                        },
+                        new
+                        {
+                            Id = 556,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-KSR",
+                            Name = "Ksar Hellal"
+                        },
+                        new
+                        {
+                            Id = 557,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-KSR",
+                            Name = "قصر هلال"
+                        },
+                        new
+                        {
+                            Id = 558,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-KSR",
+                            Name = "Ksar Hellal"
+                        },
+                        new
+                        {
+                            Id = 559,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-KSB",
+                            Name = "Ksibet El Médiouni"
+                        },
+                        new
+                        {
+                            Id = 560,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-KSB",
+                            Name = "قصيبة المديوني"
+                        },
+                        new
+                        {
+                            Id = 561,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-KSB",
+                            Name = "Ksibet El Médiouni"
+                        },
+                        new
+                        {
+                            Id = 562,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-BNN",
+                            Name = "Bennane Bodheur"
+                        },
+                        new
+                        {
+                            Id = 563,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-BNN",
+                            Name = "بنان بوضر"
+                        },
+                        new
+                        {
+                            Id = 564,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-BNN",
+                            Name = "Bennane Bodheur"
+                        },
+                        new
+                        {
+                            Id = 565,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-TOU",
+                            Name = "Touza"
+                        },
+                        new
+                        {
+                            Id = 566,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-TOU",
+                            Name = "طوزة"
+                        },
+                        new
+                        {
+                            Id = 567,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-TOU",
+                            Name = "Touza"
+                        },
+                        new
+                        {
+                            Id = 568,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-SAY",
+                            Name = "Sayada"
+                        },
+                        new
+                        {
+                            Id = 569,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-SAY",
+                            Name = "صيادة"
+                        },
+                        new
+                        {
+                            Id = 570,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-SAY",
+                            Name = "Sayada"
+                        },
+                        new
+                        {
+                            Id = 571,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-LMT",
+                            Name = "Lamta"
+                        },
+                        new
+                        {
+                            Id = 572,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-LMT",
+                            Name = "لمطة"
+                        },
+                        new
+                        {
+                            Id = 573,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-LMT",
+                            Name = "Lamta"
+                        },
+                        new
+                        {
+                            Id = 574,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-BHJ",
+                            Name = "Bouhjar"
+                        },
+                        new
+                        {
+                            Id = 575,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-BHJ",
+                            Name = "بوحجر"
+                        },
+                        new
+                        {
+                            Id = 576,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-BHJ",
+                            Name = "Bouhjar"
+                        },
+                        new
+                        {
+                            Id = 577,
+                            LanguageId = "en",
+                            LocalityId = "TN-MS-MEE",
+                            Name = "Menzel Hayet"
+                        },
+                        new
+                        {
+                            Id = 578,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MS-MEE",
+                            Name = "منزل حياة"
+                        },
+                        new
+                        {
+                            Id = 579,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MS-MEE",
+                            Name = "Menzel Hayet"
+                        },
+                        new
+                        {
+                            Id = 580,
+                            LanguageId = "en",
+                            LocalityId = "TN-MH-MHD",
+                            Name = "Mahdia"
+                        },
+                        new
+                        {
+                            Id = 581,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MH-MHD",
+                            Name = "المهدية"
+                        },
+                        new
+                        {
+                            Id = 582,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MH-MHD",
+                            Name = "Mahdia"
+                        },
+                        new
+                        {
+                            Id = 583,
+                            LanguageId = "en",
+                            LocalityId = "TN-MH-RJC",
+                            Name = "Rejiche"
+                        },
+                        new
+                        {
+                            Id = 584,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MH-RJC",
+                            Name = "رجيش"
+                        },
+                        new
+                        {
+                            Id = 585,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MH-RJC",
+                            Name = "Rejiche"
+                        },
+                        new
+                        {
+                            Id = 586,
+                            LanguageId = "en",
+                            LocalityId = "TN-MH-BMR",
+                            Name = "Bou Merdes"
+                        },
+                        new
+                        {
+                            Id = 587,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MH-BMR",
+                            Name = "بومرداس"
+                        },
+                        new
+                        {
+                            Id = 588,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MH-BMR",
+                            Name = "Bou Merdes"
+                        },
+                        new
+                        {
+                            Id = 589,
+                            LanguageId = "en",
+                            LocalityId = "TN-MH-OLD",
+                            Name = "Ouled Chamekh"
+                        },
+                        new
+                        {
+                            Id = 590,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MH-OLD",
+                            Name = "أولاد الشامخ"
+                        },
+                        new
+                        {
+                            Id = 591,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MH-OLD",
+                            Name = "Ouled Chamekh"
+                        },
+                        new
+                        {
+                            Id = 592,
+                            LanguageId = "en",
+                            LocalityId = "TN-MH-CHR",
+                            Name = "Chorbane"
+                        },
+                        new
+                        {
+                            Id = 593,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MH-CHR",
+                            Name = "شربان"
+                        },
+                        new
+                        {
+                            Id = 594,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MH-CHR",
+                            Name = "Chorbane"
+                        },
+                        new
+                        {
+                            Id = 595,
+                            LanguageId = "en",
+                            LocalityId = "TN-MH-HBR",
+                            Name = "Hebira"
+                        },
+                        new
+                        {
+                            Id = 596,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MH-HBR",
+                            Name = "هبيرة"
+                        },
+                        new
+                        {
+                            Id = 597,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MH-HBR",
+                            Name = "Hebira"
+                        },
+                        new
+                        {
+                            Id = 598,
+                            LanguageId = "en",
+                            LocalityId = "TN-MH-ESS",
+                            Name = "Essouassi"
+                        },
+                        new
+                        {
+                            Id = 599,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MH-ESS",
+                            Name = "السواسي"
+                        },
+                        new
+                        {
+                            Id = 600,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MH-ESS",
+                            Name = "Essouassi"
+                        },
+                        new
+                        {
+                            Id = 601,
+                            LanguageId = "en",
+                            LocalityId = "TN-MH-JEM",
+                            Name = "El Jem"
+                        },
+                        new
+                        {
+                            Id = 602,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MH-JEM",
+                            Name = "الجم"
+                        },
+                        new
+                        {
+                            Id = 603,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MH-JEM",
+                            Name = "El Jem"
+                        },
+                        new
+                        {
+                            Id = 604,
+                            LanguageId = "en",
+                            LocalityId = "TN-MH-KRK",
+                            Name = "Kerker"
+                        },
+                        new
+                        {
+                            Id = 605,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MH-KRK",
+                            Name = "كركر"
+                        },
+                        new
+                        {
+                            Id = 606,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MH-KRK",
+                            Name = "Kerker"
+                        },
+                        new
+                        {
+                            Id = 607,
+                            LanguageId = "en",
+                            LocalityId = "TN-MH-CHB",
+                            Name = "Chebba"
+                        },
+                        new
+                        {
+                            Id = 608,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MH-CHB",
+                            Name = "الشابة"
+                        },
+                        new
+                        {
+                            Id = 609,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MH-CHB",
+                            Name = "Chebba"
+                        },
+                        new
+                        {
+                            Id = 610,
+                            LanguageId = "en",
+                            LocalityId = "TN-MH-MLL",
+                            Name = "Melloulèche"
+                        },
+                        new
+                        {
+                            Id = 611,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MH-MLL",
+                            Name = "ملولش"
+                        },
+                        new
+                        {
+                            Id = 612,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MH-MLL",
+                            Name = "Melloulèche"
+                        },
+                        new
+                        {
+                            Id = 613,
+                            LanguageId = "en",
+                            LocalityId = "TN-MH-SDL",
+                            Name = "Sidi Alouane"
+                        },
+                        new
+                        {
+                            Id = 614,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MH-SDL",
+                            Name = "سيدي علوان"
+                        },
+                        new
+                        {
+                            Id = 615,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MH-SDL",
+                            Name = "Sidi Alouane"
+                        },
+                        new
+                        {
+                            Id = 616,
+                            LanguageId = "en",
+                            LocalityId = "TN-MH-KSR",
+                            Name = "Ksour Essef"
+                        },
+                        new
+                        {
+                            Id = 617,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MH-KSR",
+                            Name = "قصور الساف"
+                        },
+                        new
+                        {
+                            Id = 618,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MH-KSR",
+                            Name = "Ksour Essef"
+                        },
+                        new
+                        {
+                            Id = 619,
+                            LanguageId = "en",
+                            LocalityId = "TN-MH-BRA",
+                            Name = "El Bradâa"
+                        },
+                        new
+                        {
+                            Id = 620,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MH-BRA",
+                            Name = "البرادعة"
+                        },
+                        new
+                        {
+                            Id = 621,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MH-BRA",
+                            Name = "El Bradâa"
+                        },
+                        new
+                        {
+                            Id = 622,
+                            LanguageId = "en",
+                            LocalityId = "TN-MH-SDZ",
+                            Name = "Sidi Zid - Awled Moulahem"
+                        },
+                        new
+                        {
+                            Id = 623,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MH-SDZ",
+                            Name = "سيدي زيد - أولاد مولاهم"
+                        },
+                        new
+                        {
+                            Id = 624,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MH-SDZ",
+                            Name = "Sidi Zid - Awled Moulahem"
+                        },
+                        new
+                        {
+                            Id = 625,
+                            LanguageId = "en",
+                            LocalityId = "TN-MH-HKM",
+                            Name = "El Hekaima"
+                        },
+                        new
+                        {
+                            Id = 626,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MH-HKM",
+                            Name = "الحكائمة"
+                        },
+                        new
+                        {
+                            Id = 627,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MH-HKM",
+                            Name = "El Hekaima"
+                        },
+                        new
+                        {
+                            Id = 628,
+                            LanguageId = "en",
+                            LocalityId = "TN-MH-TLL",
+                            Name = "Tlelsa"
+                        },
+                        new
+                        {
+                            Id = 629,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MH-TLL",
+                            Name = "التلالسة"
+                        },
+                        new
+                        {
+                            Id = 630,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MH-TLL",
+                            Name = "Tlelsa"
+                        },
+                        new
+                        {
+                            Id = 631,
+                            LanguageId = "en",
+                            LocalityId = "TN-MH-ZLB",
+                            Name = "Zelba"
+                        },
+                        new
+                        {
+                            Id = 632,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MH-ZLB",
+                            Name = "زالبة"
+                        },
+                        new
+                        {
+                            Id = 633,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MH-ZLB",
+                            Name = "Zelba"
+                        },
+                        new
+                        {
+                            Id = 634,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-SFX",
+                            Name = "Sfax"
+                        },
+                        new
+                        {
+                            Id = 635,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-SFX",
+                            Name = "صفاقس"
+                        },
+                        new
+                        {
+                            Id = 636,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-SFX",
+                            Name = "Sfax"
+                        },
+                        new
+                        {
+                            Id = 637,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-SKT",
+                            Name = "Sakiet Ezzit"
+                        },
+                        new
+                        {
+                            Id = 638,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-SKT",
+                            Name = "ساقية الزيت"
+                        },
+                        new
+                        {
+                            Id = 639,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-SKT",
+                            Name = "Sakiet Ezzit"
+                        },
+                        new
+                        {
+                            Id = 640,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-CHH",
+                            Name = "Chihia"
+                        },
+                        new
+                        {
+                            Id = 641,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-CHH",
+                            Name = "الشيحية"
+                        },
+                        new
+                        {
+                            Id = 642,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-CHH",
+                            Name = "Chihia"
+                        },
+                        new
+                        {
+                            Id = 643,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-SAK",
+                            Name = "Sakiet Eddaïer"
+                        },
+                        new
+                        {
+                            Id = 644,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-SAK",
+                            Name = "ساقية الدائر"
+                        },
+                        new
+                        {
+                            Id = 645,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-SAK",
+                            Name = "Sakiet Eddaïer"
+                        },
+                        new
+                        {
+                            Id = 646,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-GRM",
+                            Name = "Gremda"
+                        },
+                        new
+                        {
+                            Id = 647,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-GRM",
+                            Name = "قرمدة"
+                        },
+                        new
+                        {
+                            Id = 648,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-GRM",
+                            Name = "Gremda"
+                        },
+                        new
+                        {
+                            Id = 649,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-AIN",
+                            Name = "El Aïn"
+                        },
+                        new
+                        {
+                            Id = 650,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-AIN",
+                            Name = "العين"
+                        },
+                        new
+                        {
+                            Id = 651,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-AIN",
+                            Name = "El Aïn"
+                        },
+                        new
+                        {
+                            Id = 652,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-THN",
+                            Name = "Thyna"
+                        },
+                        new
+                        {
+                            Id = 653,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-THN",
+                            Name = "طينة"
+                        },
+                        new
+                        {
+                            Id = 654,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-THN",
+                            Name = "Thyna"
+                        },
+                        new
+                        {
+                            Id = 655,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-AGR",
+                            Name = "Agareb"
+                        },
+                        new
+                        {
+                            Id = 656,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-AGR",
+                            Name = "عقارب"
+                        },
+                        new
+                        {
+                            Id = 657,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-AGR",
+                            Name = "Agareb"
+                        },
+                        new
+                        {
+                            Id = 658,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-JBN",
+                            Name = "Jebiniana"
+                        },
+                        new
+                        {
+                            Id = 659,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-JBN",
+                            Name = "جبنيانة"
+                        },
+                        new
+                        {
+                            Id = 660,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-JBN",
+                            Name = "Jebiniana"
+                        },
+                        new
+                        {
+                            Id = 661,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-HNC",
+                            Name = "El Hencha"
+                        },
+                        new
+                        {
+                            Id = 662,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-HNC",
+                            Name = "الحنشة"
+                        },
+                        new
+                        {
+                            Id = 663,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-HNC",
+                            Name = "El Hencha"
+                        },
+                        new
+                        {
+                            Id = 664,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-MNZ",
+                            Name = "Menzel Chaker"
+                        },
+                        new
+                        {
+                            Id = 665,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-MNZ",
+                            Name = "منزل شاكر"
+                        },
+                        new
+                        {
+                            Id = 666,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-MNZ",
+                            Name = "Menzel Chaker"
+                        },
+                        new
+                        {
+                            Id = 667,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-GRB",
+                            Name = "Graïba"
+                        },
+                        new
+                        {
+                            Id = 668,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-GRB",
+                            Name = "الغريبة"
+                        },
+                        new
+                        {
+                            Id = 669,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-GRB",
+                            Name = "Graïba"
+                        },
+                        new
+                        {
+                            Id = 670,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-BRL",
+                            Name = "Bir Ali Ben Khalifa"
+                        },
+                        new
+                        {
+                            Id = 671,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-BRL",
+                            Name = "بئر علي بن خليفة"
+                        },
+                        new
+                        {
+                            Id = 672,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-BRL",
+                            Name = "Bir Ali Ben Khalifa"
+                        },
+                        new
+                        {
+                            Id = 673,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-SKH",
+                            Name = "Skhira"
+                        },
+                        new
+                        {
+                            Id = 674,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-SKH",
+                            Name = "الصخيرة"
+                        },
+                        new
+                        {
+                            Id = 675,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-SKH",
+                            Name = "Skhira"
+                        },
+                        new
+                        {
+                            Id = 676,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-MHR",
+                            Name = "Mahrès"
+                        },
+                        new
+                        {
+                            Id = 677,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-MHR",
+                            Name = "المحرس"
+                        },
+                        new
+                        {
+                            Id = 678,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-MHR",
+                            Name = "Mahrès"
+                        },
+                        new
+                        {
+                            Id = 679,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-KRK",
+                            Name = "Kerkennah"
+                        },
+                        new
+                        {
+                            Id = 680,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-KRK",
+                            Name = "قرقنة"
+                        },
+                        new
+                        {
+                            Id = 681,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-KRK",
+                            Name = "Kerkennah"
+                        },
+                        new
+                        {
+                            Id = 682,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-AMR",
+                            Name = "El Amra"
+                        },
+                        new
+                        {
+                            Id = 683,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-AMR",
+                            Name = "العامرة"
+                        },
+                        new
+                        {
+                            Id = 684,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-AMR",
+                            Name = "El Amra"
+                        },
+                        new
+                        {
+                            Id = 685,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-OBD",
+                            Name = "Ouabed - Khazanet"
+                        },
+                        new
+                        {
+                            Id = 686,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-OBD",
+                            Name = "العوابد - الخزانات"
+                        },
+                        new
+                        {
+                            Id = 687,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-OBD",
+                            Name = "Ouabed - Khazanet"
+                        },
+                        new
+                        {
+                            Id = 688,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-NDH",
+                            Name = "Nadhour - Sidi Ali Ben Abed"
+                        },
+                        new
+                        {
+                            Id = 689,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-NDH",
+                            Name = "الناظور - سيدي علي بالعابد"
+                        },
+                        new
+                        {
+                            Id = 690,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-NDH",
+                            Name = "Nadhour - Sidi Ali Ben Abed"
+                        },
+                        new
+                        {
+                            Id = 691,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-HDJ",
+                            Name = "Hadjeb"
+                        },
+                        new
+                        {
+                            Id = 692,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-HDJ",
+                            Name = "الحاجب"
+                        },
+                        new
+                        {
+                            Id = 693,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-HDJ",
+                            Name = "Hadjeb"
+                        },
+                        new
+                        {
+                            Id = 694,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-HZG",
+                            Name = "Hazeg - Ellouza"
+                        },
+                        new
+                        {
+                            Id = 695,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-HZG",
+                            Name = "الحزق - اللوزة"
+                        },
+                        new
+                        {
+                            Id = 696,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-HZG",
+                            Name = "Hazeg - Ellouza"
+                        },
+                        new
+                        {
+                            Id = 697,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-ACH",
+                            Name = "El Achech"
+                        },
+                        new
+                        {
+                            Id = 698,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-ACH",
+                            Name = "العشاش"
+                        },
+                        new
+                        {
+                            Id = 699,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-ACH",
+                            Name = "El Achech"
+                        },
+                        new
+                        {
+                            Id = 700,
+                            LanguageId = "en",
+                            LocalityId = "TN-SF-NSR",
+                            Name = "El Nasr"
+                        },
+                        new
+                        {
+                            Id = 701,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SF-NSR",
+                            Name = "النصر"
+                        },
+                        new
+                        {
+                            Id = 702,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SF-NSR",
+                            Name = "El Nasr"
+                        },
+                        new
+                        {
+                            Id = 703,
+                            LanguageId = "en",
+                            LocalityId = "TN-KR-KRN",
+                            Name = "Kairouan"
+                        },
+                        new
+                        {
+                            Id = 704,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KR-KRN",
+                            Name = "القيروان"
+                        },
+                        new
+                        {
+                            Id = 705,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KR-KRN",
+                            Name = "Kairouan"
+                        },
+                        new
+                        {
+                            Id = 706,
+                            LanguageId = "en",
+                            LocalityId = "TN-KR-CHB",
+                            Name = "Chebika"
+                        },
+                        new
+                        {
+                            Id = 707,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KR-CHB",
+                            Name = "الشبيكة"
+                        },
+                        new
+                        {
+                            Id = 708,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KR-CHB",
+                            Name = "Chebika"
+                        },
+                        new
+                        {
+                            Id = 709,
+                            LanguageId = "en",
+                            LocalityId = "TN-KR-SBK",
+                            Name = "Sbikha"
+                        },
+                        new
+                        {
+                            Id = 710,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KR-SBK",
+                            Name = "السبيخة"
+                        },
+                        new
+                        {
+                            Id = 711,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KR-SBK",
+                            Name = "Sbikha"
+                        },
+                        new
+                        {
+                            Id = 712,
+                            LanguageId = "en",
+                            LocalityId = "TN-KR-OSL",
+                            Name = "Oueslatia"
+                        },
+                        new
+                        {
+                            Id = 713,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KR-OSL",
+                            Name = "الوسلاتية"
+                        },
+                        new
+                        {
+                            Id = 714,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KR-OSL",
+                            Name = "Oueslatia"
+                        },
+                        new
+                        {
+                            Id = 715,
+                            LanguageId = "en",
+                            LocalityId = "TN-KR-AND",
+                            Name = "Aïn Djeloula"
+                        },
+                        new
+                        {
+                            Id = 716,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KR-AND",
+                            Name = "عين جلولة"
+                        },
+                        new
+                        {
+                            Id = 717,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KR-AND",
+                            Name = "Aïn Djeloula"
+                        },
+                        new
+                        {
+                            Id = 718,
+                            LanguageId = "en",
+                            LocalityId = "TN-KR-HFF",
+                            Name = "Haffouz"
+                        },
+                        new
+                        {
+                            Id = 719,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KR-HFF",
+                            Name = "حفوز"
+                        },
+                        new
+                        {
+                            Id = 720,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KR-HFF",
+                            Name = "Haffouz"
+                        },
+                        new
+                        {
+                            Id = 721,
+                            LanguageId = "en",
+                            LocalityId = "TN-KR-ALA",
+                            Name = "El Alâa"
+                        },
+                        new
+                        {
+                            Id = 722,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KR-ALA",
+                            Name = "العلا"
+                        },
+                        new
+                        {
+                            Id = 723,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KR-ALA",
+                            Name = "El Alâa"
+                        },
+                        new
+                        {
+                            Id = 724,
+                            LanguageId = "en",
+                            LocalityId = "TN-KR-HJB",
+                            Name = "Hajeb El Ayoun"
+                        },
+                        new
+                        {
+                            Id = 725,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KR-HJB",
+                            Name = "حاجب العيون"
+                        },
+                        new
+                        {
+                            Id = 726,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KR-HJB",
+                            Name = "Hajeb El Ayoun"
+                        },
+                        new
+                        {
+                            Id = 727,
+                            LanguageId = "en",
+                            LocalityId = "TN-KR-NSR",
+                            Name = "Nasrallah"
+                        },
+                        new
+                        {
+                            Id = 728,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KR-NSR",
+                            Name = "نصر الله"
+                        },
+                        new
+                        {
+                            Id = 729,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KR-NSR",
+                            Name = "Nasrallah"
+                        },
+                        new
+                        {
+                            Id = 730,
+                            LanguageId = "en",
+                            LocalityId = "TN-KR-MNZ",
+                            Name = "Menzel Mehiri"
+                        },
+                        new
+                        {
+                            Id = 731,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KR-MNZ",
+                            Name = "منزل مهيري"
+                        },
+                        new
+                        {
+                            Id = 732,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KR-MNZ",
+                            Name = "Menzel Mehiri"
+                        },
+                        new
+                        {
+                            Id = 733,
+                            LanguageId = "en",
+                            LocalityId = "TN-KR-ECH",
+                            Name = "Echrarda"
+                        },
+                        new
+                        {
+                            Id = 734,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KR-ECH",
+                            Name = "الشراردة"
+                        },
+                        new
+                        {
+                            Id = 735,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KR-ECH",
+                            Name = "Echrarda"
+                        },
+                        new
+                        {
+                            Id = 736,
+                            LanguageId = "en",
+                            LocalityId = "TN-KR-BHJ",
+                            Name = "Bou Hajla"
+                        },
+                        new
+                        {
+                            Id = 737,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KR-BHJ",
+                            Name = "بوحجلة"
+                        },
+                        new
+                        {
+                            Id = 738,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KR-BHJ",
+                            Name = "Bou Hajla"
+                        },
+                        new
+                        {
+                            Id = 739,
+                            LanguageId = "en",
+                            LocalityId = "TN-KR-SSS",
+                            Name = "Sisseb - Driaat"
+                        },
+                        new
+                        {
+                            Id = 740,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KR-SSS",
+                            Name = "سيسب - الذريعات"
+                        },
+                        new
+                        {
+                            Id = 741,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KR-SSS",
+                            Name = "Sisseb - Driaat"
+                        },
+                        new
+                        {
+                            Id = 742,
+                            LanguageId = "en",
+                            LocalityId = "TN-KR-JHN",
+                            Name = "Jehina"
+                        },
+                        new
+                        {
+                            Id = 743,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KR-JHN",
+                            Name = "جهينة"
+                        },
+                        new
+                        {
+                            Id = 744,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KR-JHN",
+                            Name = "Jehina"
+                        },
+                        new
+                        {
+                            Id = 745,
+                            LanguageId = "en",
+                            LocalityId = "TN-KR-RQQ",
+                            Name = "Raqqada"
+                        },
+                        new
+                        {
+                            Id = 746,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KR-RQQ",
+                            Name = "رقادة"
+                        },
+                        new
+                        {
+                            Id = 747,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KR-RQQ",
+                            Name = "Raqqada"
+                        },
+                        new
+                        {
+                            Id = 748,
+                            LanguageId = "en",
+                            LocalityId = "TN-KR-ABD",
+                            Name = "Abida"
+                        },
+                        new
+                        {
+                            Id = 749,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KR-ABD",
+                            Name = "عبيدة"
+                        },
+                        new
+                        {
+                            Id = 750,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KR-ABD",
+                            Name = "Abida"
+                        },
+                        new
+                        {
+                            Id = 751,
+                            LanguageId = "en",
+                            LocalityId = "TN-KR-CHC",
+                            Name = "Chaouachi"
+                        },
+                        new
+                        {
+                            Id = 752,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KR-CHC",
+                            Name = "الشوايحية"
+                        },
+                        new
+                        {
+                            Id = 753,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KR-CHC",
+                            Name = "Chaouachi"
+                        },
+                        new
+                        {
+                            Id = 754,
+                            LanguageId = "en",
+                            LocalityId = "TN-KR-ANB",
+                            Name = "Aïn El Beïdha"
+                        },
+                        new
+                        {
+                            Id = 755,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KR-ANB",
+                            Name = "العين البيضاء"
+                        },
+                        new
+                        {
+                            Id = 756,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KR-ANB",
+                            Name = "Aïn El Beïdha"
+                        },
+                        new
+                        {
+                            Id = 757,
+                            LanguageId = "en",
+                            LocalityId = "TN-KR-CHR",
+                            Name = "Chraitia - Ksour"
+                        },
+                        new
+                        {
+                            Id = 758,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KR-CHR",
+                            Name = "الشرایطیة القصور"
+                        },
+                        new
+                        {
+                            Id = 759,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KR-CHR",
+                            Name = "Chraitia - Ksour"
+                        },
+                        new
+                        {
+                            Id = 760,
+                            LanguageId = "en",
+                            LocalityId = "TN-KS-KSS",
+                            Name = "Kasserine"
+                        },
+                        new
+                        {
+                            Id = 761,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KS-KSS",
+                            Name = "القصرين"
+                        },
+                        new
+                        {
+                            Id = 762,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KS-KSS",
+                            Name = "Kasserine"
+                        },
+                        new
+                        {
+                            Id = 763,
+                            LanguageId = "en",
+                            LocalityId = "TN-KS-SBT",
+                            Name = "Sbeïtla"
+                        },
+                        new
+                        {
+                            Id = 764,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KS-SBT",
+                            Name = "سبيطلة"
+                        },
+                        new
+                        {
+                            Id = 765,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KS-SBT",
+                            Name = "Sbeïtla"
+                        },
+                        new
+                        {
+                            Id = 766,
+                            LanguageId = "en",
+                            LocalityId = "TN-KS-SBB",
+                            Name = "Sbiba"
+                        },
+                        new
+                        {
+                            Id = 767,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KS-SBB",
+                            Name = "سبيبة"
+                        },
+                        new
+                        {
+                            Id = 768,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KS-SBB",
+                            Name = "Sbiba"
+                        },
+                        new
+                        {
+                            Id = 769,
+                            LanguageId = "en",
+                            LocalityId = "TN-KS-JDL",
+                            Name = "Jedelienne"
+                        },
+                        new
+                        {
+                            Id = 770,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KS-JDL",
+                            Name = "جدليان"
+                        },
+                        new
+                        {
+                            Id = 771,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KS-JDL",
+                            Name = "Jedelienne"
+                        },
+                        new
+                        {
+                            Id = 772,
+                            LanguageId = "en",
+                            LocalityId = "TN-KS-THL",
+                            Name = "Thala"
+                        },
+                        new
+                        {
+                            Id = 773,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KS-THL",
+                            Name = "تالة"
+                        },
+                        new
+                        {
+                            Id = 774,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KS-THL",
+                            Name = "Thala"
+                        },
+                        new
+                        {
+                            Id = 775,
+                            LanguageId = "en",
+                            LocalityId = "TN-KS-HDR",
+                            Name = "Haïdra"
+                        },
+                        new
+                        {
+                            Id = 776,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KS-HDR",
+                            Name = "حيدرة"
+                        },
+                        new
+                        {
+                            Id = 777,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KS-HDR",
+                            Name = "Haïdra"
+                        },
+                        new
+                        {
+                            Id = 778,
+                            LanguageId = "en",
+                            LocalityId = "TN-KS-FSS",
+                            Name = "Foussana"
+                        },
+                        new
+                        {
+                            Id = 779,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KS-FSS",
+                            Name = "فوسانة"
+                        },
+                        new
+                        {
+                            Id = 780,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KS-FSS",
+                            Name = "Foussana"
+                        },
+                        new
+                        {
+                            Id = 781,
+                            LanguageId = "en",
+                            LocalityId = "TN-KS-FRN",
+                            Name = "Fériana"
+                        },
+                        new
+                        {
+                            Id = 782,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KS-FRN",
+                            Name = "فريانة"
+                        },
+                        new
+                        {
+                            Id = 783,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KS-FRN",
+                            Name = "Fériana"
+                        },
+                        new
+                        {
+                            Id = 784,
+                            LanguageId = "en",
+                            LocalityId = "TN-KS-THE",
+                            Name = "Thélepte"
+                        },
+                        new
+                        {
+                            Id = 785,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KS-THE",
+                            Name = "تلابت"
+                        },
+                        new
+                        {
+                            Id = 786,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KS-THE",
+                            Name = "Thélepte"
+                        },
+                        new
+                        {
+                            Id = 787,
+                            LanguageId = "en",
+                            LocalityId = "TN-KS-MJL",
+                            Name = "Majel Bel Abbès"
+                        },
+                        new
+                        {
+                            Id = 788,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KS-MJL",
+                            Name = "ماجل بالعباس"
+                        },
+                        new
+                        {
+                            Id = 789,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KS-MJL",
+                            Name = "Majel Bel Abbès"
+                        },
+                        new
+                        {
+                            Id = 790,
+                            LanguageId = "en",
+                            LocalityId = "TN-KS-AYO",
+                            Name = "El Ayoun"
+                        },
+                        new
+                        {
+                            Id = 791,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KS-AYO",
+                            Name = "العيون"
+                        },
+                        new
+                        {
+                            Id = 792,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KS-AYO",
+                            Name = "El Ayoun"
+                        },
+                        new
+                        {
+                            Id = 793,
+                            LanguageId = "en",
+                            LocalityId = "TN-KS-HSS",
+                            Name = "Hassi El Ferid"
+                        },
+                        new
+                        {
+                            Id = 794,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KS-HSS",
+                            Name = "حاسي الفريد"
+                        },
+                        new
+                        {
+                            Id = 795,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KS-HSS",
+                            Name = "Hassi El Ferid"
+                        },
+                        new
+                        {
+                            Id = 796,
+                            LanguageId = "en",
+                            LocalityId = "TN-KS-EZZ",
+                            Name = "Ezzouhour"
+                        },
+                        new
+                        {
+                            Id = 797,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KS-EZZ",
+                            Name = "الزهور"
+                        },
+                        new
+                        {
+                            Id = 798,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KS-EZZ",
+                            Name = "Ezzouhour"
+                        },
+                        new
+                        {
+                            Id = 799,
+                            LanguageId = "en",
+                            LocalityId = "TN-KS-ENN",
+                            Name = "Ennour"
+                        },
+                        new
+                        {
+                            Id = 800,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KS-ENN",
+                            Name = "النور"
+                        },
+                        new
+                        {
+                            Id = 801,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KS-ENN",
+                            Name = "Ennour"
+                        },
+                        new
+                        {
+                            Id = 802,
+                            LanguageId = "en",
+                            LocalityId = "TN-KS-CHR",
+                            Name = "Chrayaa - Machrek Chams"
+                        },
+                        new
+                        {
+                            Id = 803,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KS-CHR",
+                            Name = "الشرائع - مشرق الشمس"
+                        },
+                        new
+                        {
+                            Id = 804,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KS-CHR",
+                            Name = "Chrayaa - Machrek Chams"
+                        },
+                        new
+                        {
+                            Id = 805,
+                            LanguageId = "en",
+                            LocalityId = "TN-KS-RKH",
+                            Name = "Rakhmat"
+                        },
+                        new
+                        {
+                            Id = 806,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KS-RKH",
+                            Name = "الرخمات"
+                        },
+                        new
+                        {
+                            Id = 807,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KS-RKH",
+                            Name = "Rakhmat"
+                        },
+                        new
+                        {
+                            Id = 808,
+                            LanguageId = "en",
+                            LocalityId = "TN-KS-ANK",
+                            Name = "Aïn Khmaissia"
+                        },
+                        new
+                        {
+                            Id = 809,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KS-ANK",
+                            Name = "عين الخمايسية"
+                        },
+                        new
+                        {
+                            Id = 810,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KS-ANK",
+                            Name = "Aïn Khmaissia"
+                        },
+                        new
+                        {
+                            Id = 811,
+                            LanguageId = "en",
+                            LocalityId = "TN-KS-KHM",
+                            Name = "Khmouda"
+                        },
+                        new
+                        {
+                            Id = 812,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KS-KHM",
+                            Name = "خمودة"
+                        },
+                        new
+                        {
+                            Id = 813,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KS-KHM",
+                            Name = "Khmouda"
+                        },
+                        new
+                        {
+                            Id = 814,
+                            LanguageId = "en",
+                            LocalityId = "TN-KS-BZG",
+                            Name = "Bouzguem"
+                        },
+                        new
+                        {
+                            Id = 815,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KS-BZG",
+                            Name = "بوزقام"
+                        },
+                        new
+                        {
+                            Id = 816,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KS-BZG",
+                            Name = "Bouzguem"
+                        },
+                        new
+                        {
+                            Id = 817,
+                            LanguageId = "en",
+                            LocalityId = "TN-SB-SDB",
+                            Name = "Sidi Bouzid"
+                        },
+                        new
+                        {
+                            Id = 818,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SB-SDB",
+                            Name = "سيدي بوزيد"
+                        },
+                        new
+                        {
+                            Id = 819,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SB-SDB",
+                            Name = "Sidi Bouzid"
+                        },
+                        new
+                        {
+                            Id = 820,
+                            LanguageId = "en",
+                            LocalityId = "TN-SB-JLM",
+                            Name = "Jilma"
+                        },
+                        new
+                        {
+                            Id = 821,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SB-JLM",
+                            Name = "جلمة"
+                        },
+                        new
+                        {
+                            Id = 822,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SB-JLM",
+                            Name = "Jilma"
+                        },
+                        new
+                        {
+                            Id = 823,
+                            LanguageId = "en",
+                            LocalityId = "TN-SB-CBB",
+                            Name = "Cebbala Ouled Asker"
+                        },
+                        new
+                        {
+                            Id = 824,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SB-CBB",
+                            Name = "سبالة"
+                        },
+                        new
+                        {
+                            Id = 825,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SB-CBB",
+                            Name = "Cebbala Ouled Asker"
+                        },
+                        new
+                        {
+                            Id = 826,
+                            LanguageId = "en",
+                            LocalityId = "TN-SB-BRH",
+                            Name = "Bir El Hafey"
+                        },
+                        new
+                        {
+                            Id = 827,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SB-BRH",
+                            Name = "بئر الحفي"
+                        },
+                        new
+                        {
+                            Id = 828,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SB-BRH",
+                            Name = "Bir El Hafey"
+                        },
+                        new
+                        {
+                            Id = 829,
+                            LanguageId = "en",
+                            LocalityId = "TN-SB-SDL",
+                            Name = "Sidi Ali Ben Aoun"
+                        },
+                        new
+                        {
+                            Id = 830,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SB-SDL",
+                            Name = "سيدي علي بن عون"
+                        },
+                        new
+                        {
+                            Id = 831,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SB-SDL",
+                            Name = "Sidi Ali Ben Aoun"
+                        },
+                        new
+                        {
+                            Id = 832,
+                            LanguageId = "en",
+                            LocalityId = "TN-SB-MNZ",
+                            Name = "Menzel Bouzaiane"
+                        },
+                        new
+                        {
+                            Id = 833,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SB-MNZ",
+                            Name = "منزل بوزيان"
+                        },
+                        new
+                        {
+                            Id = 834,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SB-MNZ",
+                            Name = "Menzel Bouzaiane"
+                        },
+                        new
+                        {
+                            Id = 835,
+                            LanguageId = "en",
+                            LocalityId = "TN-SB-MKN",
+                            Name = "Meknassy"
+                        },
+                        new
+                        {
+                            Id = 836,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SB-MKN",
+                            Name = "المكناسي"
+                        },
+                        new
+                        {
+                            Id = 837,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SB-MKN",
+                            Name = "Meknassy"
+                        },
+                        new
+                        {
+                            Id = 838,
+                            LanguageId = "en",
+                            LocalityId = "TN-SB-MZZ",
+                            Name = "Mezzouna"
+                        },
+                        new
+                        {
+                            Id = 839,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SB-MZZ",
+                            Name = "المزونة"
+                        },
+                        new
+                        {
+                            Id = 840,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SB-MZZ",
+                            Name = "Mezzouna"
+                        },
+                        new
+                        {
+                            Id = 841,
+                            LanguageId = "en",
+                            LocalityId = "TN-SB-RGB",
+                            Name = "Regueb"
+                        },
+                        new
+                        {
+                            Id = 842,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SB-RGB",
+                            Name = "الرقاب"
+                        },
+                        new
+                        {
+                            Id = 843,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SB-RGB",
+                            Name = "Regueb"
+                        },
+                        new
+                        {
+                            Id = 844,
+                            LanguageId = "en",
+                            LocalityId = "TN-SB-OLD",
+                            Name = "Ouled Haffouz"
+                        },
+                        new
+                        {
+                            Id = 845,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SB-OLD",
+                            Name = "أولاد حفوز"
+                        },
+                        new
+                        {
+                            Id = 846,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SB-OLD",
+                            Name = "Ouled Haffouz"
+                        },
+                        new
+                        {
+                            Id = 847,
+                            LanguageId = "en",
+                            LocalityId = "TN-SB-ESS",
+                            Name = "Essaïda"
+                        },
+                        new
+                        {
+                            Id = 848,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SB-ESS",
+                            Name = "السعيدة"
+                        },
+                        new
+                        {
+                            Id = 849,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SB-ESS",
+                            Name = "Essaïda"
+                        },
+                        new
+                        {
+                            Id = 850,
+                            LanguageId = "en",
+                            LocalityId = "TN-SB-SKJ",
+                            Name = "Souk Jedid"
+                        },
+                        new
+                        {
+                            Id = 851,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SB-SKJ",
+                            Name = "سوق الجديد"
+                        },
+                        new
+                        {
+                            Id = 852,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SB-SKJ",
+                            Name = "Souk Jedid"
+                        },
+                        new
+                        {
+                            Id = 853,
+                            LanguageId = "en",
+                            LocalityId = "TN-SB-ASS",
+                            Name = "El Assouad"
+                        },
+                        new
+                        {
+                            Id = 854,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SB-ASS",
+                            Name = "الأسودة"
+                        },
+                        new
+                        {
+                            Id = 855,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SB-ASS",
+                            Name = "El Assouad"
+                        },
+                        new
+                        {
+                            Id = 856,
+                            LanguageId = "en",
+                            LocalityId = "TN-SB-FDH",
+                            Name = "Faiedh Bennour"
+                        },
+                        new
+                        {
+                            Id = 857,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SB-FDH",
+                            Name = "الفائض بنور"
+                        },
+                        new
+                        {
+                            Id = 858,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SB-FDH",
+                            Name = "Faiedh Bennour"
+                        },
+                        new
+                        {
+                            Id = 859,
+                            LanguageId = "en",
+                            LocalityId = "TN-SB-BTN",
+                            Name = "Baten Ghzal"
+                        },
+                        new
+                        {
+                            Id = 860,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SB-BTN",
+                            Name = "باطن الغزال"
+                        },
+                        new
+                        {
+                            Id = 861,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SB-BTN",
+                            Name = "Baten Ghzal"
+                        },
+                        new
+                        {
+                            Id = 862,
+                            LanguageId = "en",
+                            LocalityId = "TN-SB-RHL",
+                            Name = "Rahal"
+                        },
+                        new
+                        {
+                            Id = 863,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SB-RHL",
+                            Name = "رحال"
+                        },
+                        new
+                        {
+                            Id = 864,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SB-RHL",
+                            Name = "Rahal"
+                        },
+                        new
+                        {
+                            Id = 865,
+                            LanguageId = "en",
+                            LocalityId = "TN-SB-MNS",
+                            Name = "Mansoura"
+                        },
+                        new
+                        {
+                            Id = 866,
+                            LanguageId = "ar",
+                            LocalityId = "TN-SB-MNS",
+                            Name = "المنصورة"
+                        },
+                        new
+                        {
+                            Id = 867,
+                            LanguageId = "fr",
+                            LocalityId = "TN-SB-MNS",
+                            Name = "Mansoura"
+                        },
+                        new
+                        {
+                            Id = 868,
+                            LanguageId = "en",
+                            LocalityId = "TN-GA-GBS",
+                            Name = "Gabès"
+                        },
+                        new
+                        {
+                            Id = 869,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GA-GBS",
+                            Name = "قابس"
+                        },
+                        new
+                        {
+                            Id = 870,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GA-GBS",
+                            Name = "Gabès"
+                        },
+                        new
+                        {
+                            Id = 871,
+                            LanguageId = "en",
+                            LocalityId = "TN-GA-CHN",
+                            Name = "Chenini Nahal"
+                        },
+                        new
+                        {
+                            Id = 872,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GA-CHN",
+                            Name = "شنني النحال"
+                        },
+                        new
+                        {
+                            Id = 873,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GA-CHN",
+                            Name = "Chenini Nahal"
+                        },
+                        new
+                        {
+                            Id = 874,
+                            LanguageId = "en",
+                            LocalityId = "TN-GA-GHN",
+                            Name = "Ghannouch"
+                        },
+                        new
+                        {
+                            Id = 875,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GA-GHN",
+                            Name = "غنوش"
+                        },
+                        new
+                        {
+                            Id = 876,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GA-GHN",
+                            Name = "Ghannouch"
+                        },
+                        new
+                        {
+                            Id = 877,
+                            LanguageId = "en",
+                            LocalityId = "TN-GA-MET",
+                            Name = "Métouia"
+                        },
+                        new
+                        {
+                            Id = 878,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GA-MET",
+                            Name = "المطوية"
+                        },
+                        new
+                        {
+                            Id = 879,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GA-MET",
+                            Name = "Métouia"
+                        },
+                        new
+                        {
+                            Id = 880,
+                            LanguageId = "en",
+                            LocalityId = "TN-GA-ODH",
+                            Name = "Oudhref"
+                        },
+                        new
+                        {
+                            Id = 881,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GA-ODH",
+                            Name = "وذرف"
+                        },
+                        new
+                        {
+                            Id = 882,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GA-ODH",
+                            Name = "Oudhref"
+                        },
+                        new
+                        {
+                            Id = 883,
+                            LanguageId = "en",
+                            LocalityId = "TN-GA-HMM",
+                            Name = "El Hamma"
+                        },
+                        new
+                        {
+                            Id = 884,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GA-HMM",
+                            Name = "الحامة"
+                        },
+                        new
+                        {
+                            Id = 885,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GA-HMM",
+                            Name = "El Hamma"
+                        },
+                        new
+                        {
+                            Id = 886,
+                            LanguageId = "en",
+                            LocalityId = "TN-GA-MTM",
+                            Name = "Matmata"
+                        },
+                        new
+                        {
+                            Id = 887,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GA-MTM",
+                            Name = "مطماطة"
+                        },
+                        new
+                        {
+                            Id = 888,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GA-MTM",
+                            Name = "Matmata"
+                        },
+                        new
+                        {
+                            Id = 889,
+                            LanguageId = "en",
+                            LocalityId = "TN-GA-NVL",
+                            Name = "Nouvelle Matmata"
+                        },
+                        new
+                        {
+                            Id = 890,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GA-NVL",
+                            Name = "مطماطة الجديدة"
+                        },
+                        new
+                        {
+                            Id = 891,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GA-NVL",
+                            Name = "Nouvelle Matmata"
+                        },
+                        new
+                        {
+                            Id = 892,
+                            LanguageId = "en",
+                            LocalityId = "TN-GA-MRT",
+                            Name = "Mareth"
+                        },
+                        new
+                        {
+                            Id = 893,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GA-MRT",
+                            Name = "مارث"
+                        },
+                        new
+                        {
+                            Id = 894,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GA-MRT",
+                            Name = "Mareth"
+                        },
+                        new
+                        {
+                            Id = 895,
+                            LanguageId = "en",
+                            LocalityId = "TN-GA-ZRT",
+                            Name = "Zarat"
+                        },
+                        new
+                        {
+                            Id = 896,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GA-ZRT",
+                            Name = "الزارات"
+                        },
+                        new
+                        {
+                            Id = 897,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GA-ZRT",
+                            Name = "Zarat"
+                        },
+                        new
+                        {
+                            Id = 898,
+                            LanguageId = "en",
+                            LocalityId = "TN-GA-MNZ",
+                            Name = "Menzel El Habib"
+                        },
+                        new
+                        {
+                            Id = 899,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GA-MNZ",
+                            Name = "منزل الحبيب"
+                        },
+                        new
+                        {
+                            Id = 900,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GA-MNZ",
+                            Name = "Menzel El Habib"
+                        },
+                        new
+                        {
+                            Id = 901,
+                            LanguageId = "en",
+                            LocalityId = "TN-GA-BCH",
+                            Name = "Bouchemma"
+                        },
+                        new
+                        {
+                            Id = 902,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GA-BCH",
+                            Name = "بوشمة"
+                        },
+                        new
+                        {
+                            Id = 903,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GA-BCH",
+                            Name = "Bouchemma"
+                        },
+                        new
+                        {
+                            Id = 904,
+                            LanguageId = "en",
+                            LocalityId = "TN-GA-TBL",
+                            Name = "Teboulbou"
+                        },
+                        new
+                        {
+                            Id = 905,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GA-TBL",
+                            Name = "تبلبو"
+                        },
+                        new
+                        {
+                            Id = 906,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GA-TBL",
+                            Name = "Teboulbou"
+                        },
+                        new
+                        {
+                            Id = 907,
+                            LanguageId = "en",
+                            LocalityId = "TN-GA-HBB",
+                            Name = "Habib Thameur Bouatouch"
+                        },
+                        new
+                        {
+                            Id = 908,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GA-HBB",
+                            Name = "الحبيب ثامر بوعطوش"
+                        },
+                        new
+                        {
+                            Id = 909,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GA-HBB",
+                            Name = "Habib Thameur Bouatouch"
+                        },
+                        new
+                        {
+                            Id = 910,
+                            LanguageId = "en",
+                            LocalityId = "TN-GA-KTT",
+                            Name = "Kettana"
+                        },
+                        new
+                        {
+                            Id = 911,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GA-KTT",
+                            Name = "كتانة"
+                        },
+                        new
+                        {
+                            Id = 912,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GA-KTT",
+                            Name = "Kettana"
+                        },
+                        new
+                        {
+                            Id = 913,
+                            LanguageId = "en",
+                            LocalityId = "TN-GA-DKH",
+                            Name = "Dkhilet Toujane"
+                        },
+                        new
+                        {
+                            Id = 914,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GA-DKH",
+                            Name = "دخيلة توجان"
+                        },
+                        new
+                        {
+                            Id = 915,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GA-DKH",
+                            Name = "Dkhilet Toujane"
+                        },
+                        new
+                        {
+                            Id = 916,
+                            LanguageId = "en",
+                            LocalityId = "TN-MD-MDN",
+                            Name = "Médenine"
+                        },
+                        new
+                        {
+                            Id = 917,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MD-MDN",
+                            Name = "مدنين"
+                        },
+                        new
+                        {
+                            Id = 918,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MD-MDN",
+                            Name = "Médenine"
+                        },
+                        new
+                        {
+                            Id = 919,
+                            LanguageId = "en",
+                            LocalityId = "TN-MD-BNK",
+                            Name = "Beni Khedache"
+                        },
+                        new
+                        {
+                            Id = 920,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MD-BNK",
+                            Name = "بني خداش"
+                        },
+                        new
+                        {
+                            Id = 921,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MD-BNK",
+                            Name = "Beni Khedache"
+                        },
+                        new
+                        {
+                            Id = 922,
+                            LanguageId = "en",
+                            LocalityId = "TN-MD-BNG",
+                            Name = "Ben Gardane"
+                        },
+                        new
+                        {
+                            Id = 923,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MD-BNG",
+                            Name = "بن قردان"
+                        },
+                        new
+                        {
+                            Id = 924,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MD-BNG",
+                            Name = "Ben Gardane"
+                        },
+                        new
+                        {
+                            Id = 925,
+                            LanguageId = "en",
+                            LocalityId = "TN-MD-ZRZ",
+                            Name = "Zarzis"
+                        },
+                        new
+                        {
+                            Id = 926,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MD-ZRZ",
+                            Name = "جرجيس"
+                        },
+                        new
+                        {
+                            Id = 927,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MD-ZRZ",
+                            Name = "Zarzis"
+                        },
+                        new
+                        {
+                            Id = 928,
+                            LanguageId = "en",
+                            LocalityId = "TN-MD-DJR",
+                            Name = "Djerba Houmt Souk"
+                        },
+                        new
+                        {
+                            Id = 929,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MD-DJR",
+                            Name = "جربة حومة السوق"
+                        },
+                        new
+                        {
+                            Id = 930,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MD-DJR",
+                            Name = "Djerba Houmt Souk"
+                        },
+                        new
+                        {
+                            Id = 931,
+                            LanguageId = "en",
+                            LocalityId = "TN-MD-DJE",
+                            Name = "Djerba Midoun"
+                        },
+                        new
+                        {
+                            Id = 932,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MD-DJE",
+                            Name = "جربة ميدون"
+                        },
+                        new
+                        {
+                            Id = 933,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MD-DJE",
+                            Name = "Djerba Midoun"
+                        },
+                        new
+                        {
+                            Id = 934,
+                            LanguageId = "en",
+                            LocalityId = "TN-MD-DJB",
+                            Name = "Djerba Ajim"
+                        },
+                        new
+                        {
+                            Id = 935,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MD-DJB",
+                            Name = "جربة أجيم"
+                        },
+                        new
+                        {
+                            Id = 936,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MD-DJB",
+                            Name = "Djerba Ajim"
+                        },
+                        new
+                        {
+                            Id = 937,
+                            LanguageId = "en",
+                            LocalityId = "TN-MD-SDM",
+                            Name = "Sidi Makhlouf"
+                        },
+                        new
+                        {
+                            Id = 938,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MD-SDM",
+                            Name = "سيدي مخلوف"
+                        },
+                        new
+                        {
+                            Id = 939,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MD-SDM",
+                            Name = "Sidi Makhlouf"
+                        },
+                        new
+                        {
+                            Id = 940,
+                            LanguageId = "en",
+                            LocalityId = "TN-MD-ZAR",
+                            Name = "Zarzis Nord"
+                        },
+                        new
+                        {
+                            Id = 941,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MD-ZAR",
+                            Name = "جرجيس الشمالية"
+                        },
+                        new
+                        {
+                            Id = 942,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MD-ZAR",
+                            Name = "Zarzis Nord"
+                        },
+                        new
+                        {
+                            Id = 943,
+                            LanguageId = "en",
+                            LocalityId = "TN-MD-BGH",
+                            Name = "Boughrara"
+                        },
+                        new
+                        {
+                            Id = 944,
+                            LanguageId = "ar",
+                            LocalityId = "TN-MD-BGH",
+                            Name = "بوغرارة"
+                        },
+                        new
+                        {
+                            Id = 945,
+                            LanguageId = "fr",
+                            LocalityId = "TN-MD-BGH",
+                            Name = "Boughrara"
+                        },
+                        new
+                        {
+                            Id = 946,
+                            LanguageId = "en",
+                            LocalityId = "TN-TT-TTN",
+                            Name = "Tataouine"
+                        },
+                        new
+                        {
+                            Id = 947,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TT-TTN",
+                            Name = "تطاوين"
+                        },
+                        new
+                        {
+                            Id = 948,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TT-TTN",
+                            Name = "Tataouine"
+                        },
+                        new
+                        {
+                            Id = 949,
+                            LanguageId = "en",
+                            LocalityId = "TN-TT-BRL",
+                            Name = "Bir Lahmar"
+                        },
+                        new
+                        {
+                            Id = 950,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TT-BRL",
+                            Name = "بئر الأحمر"
+                        },
+                        new
+                        {
+                            Id = 951,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TT-BRL",
+                            Name = "Bir Lahmar"
+                        },
+                        new
+                        {
+                            Id = 952,
+                            LanguageId = "en",
+                            LocalityId = "TN-TT-GHM",
+                            Name = "Ghomrassen"
+                        },
+                        new
+                        {
+                            Id = 953,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TT-GHM",
+                            Name = "غمراسن"
+                        },
+                        new
+                        {
+                            Id = 954,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TT-GHM",
+                            Name = "Ghomrassen"
+                        },
+                        new
+                        {
+                            Id = 955,
+                            LanguageId = "en",
+                            LocalityId = "TN-TT-DHB",
+                            Name = "Dehiba"
+                        },
+                        new
+                        {
+                            Id = 956,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TT-DHB",
+                            Name = "ذهيبة"
+                        },
+                        new
+                        {
+                            Id = 957,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TT-DHB",
+                            Name = "Dehiba"
+                        },
+                        new
+                        {
+                            Id = 958,
+                            LanguageId = "en",
+                            LocalityId = "TN-TT-RMD",
+                            Name = "Remada"
+                        },
+                        new
+                        {
+                            Id = 959,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TT-RMD",
+                            Name = "رمادة"
+                        },
+                        new
+                        {
+                            Id = 960,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TT-RMD",
+                            Name = "Remada"
+                        },
+                        new
+                        {
+                            Id = 961,
+                            LanguageId = "en",
+                            LocalityId = "TN-TT-SMR",
+                            Name = "Smâr"
+                        },
+                        new
+                        {
+                            Id = 962,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TT-SMR",
+                            Name = "الصمار"
+                        },
+                        new
+                        {
+                            Id = 963,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TT-SMR",
+                            Name = "Smâr"
+                        },
+                        new
+                        {
+                            Id = 964,
+                            LanguageId = "en",
+                            LocalityId = "TN-TT-TAT",
+                            Name = "Tataouine Sud"
+                        },
+                        new
+                        {
+                            Id = 965,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TT-TAT",
+                            Name = "تطاوين الجنوبية"
+                        },
+                        new
+                        {
+                            Id = 966,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TT-TAT",
+                            Name = "Tataouine Sud"
+                        },
+                        new
+                        {
+                            Id = 967,
+                            LanguageId = "en",
+                            LocalityId = "TN-GF-GFS",
+                            Name = "Gafsa"
+                        },
+                        new
+                        {
+                            Id = 968,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GF-GFS",
+                            Name = "قفصة"
+                        },
+                        new
+                        {
+                            Id = 969,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GF-GFS",
+                            Name = "Gafsa"
+                        },
+                        new
+                        {
+                            Id = 970,
+                            LanguageId = "en",
+                            LocalityId = "TN-GF-KSR",
+                            Name = "El Ksar"
+                        },
+                        new
+                        {
+                            Id = 971,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GF-KSR",
+                            Name = "القصر"
+                        },
+                        new
+                        {
+                            Id = 972,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GF-KSR",
+                            Name = "El Ksar"
+                        },
+                        new
+                        {
+                            Id = 973,
+                            LanguageId = "en",
+                            LocalityId = "TN-GF-MLR",
+                            Name = "Moularès"
+                        },
+                        new
+                        {
+                            Id = 974,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GF-MLR",
+                            Name = "أم العرائس"
+                        },
+                        new
+                        {
+                            Id = 975,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GF-MLR",
+                            Name = "Moularès"
+                        },
+                        new
+                        {
+                            Id = 976,
+                            LanguageId = "en",
+                            LocalityId = "TN-GF-RDF",
+                            Name = "Redeyef"
+                        },
+                        new
+                        {
+                            Id = 977,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GF-RDF",
+                            Name = "الرديف"
+                        },
+                        new
+                        {
+                            Id = 978,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GF-RDF",
+                            Name = "Redeyef"
+                        },
+                        new
+                        {
+                            Id = 979,
+                            LanguageId = "en",
+                            LocalityId = "TN-GF-MTL",
+                            Name = "Métlaoui"
+                        },
+                        new
+                        {
+                            Id = 980,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GF-MTL",
+                            Name = "المتلوي"
+                        },
+                        new
+                        {
+                            Id = 981,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GF-MTL",
+                            Name = "Métlaoui"
+                        },
+                        new
+                        {
+                            Id = 982,
+                            LanguageId = "en",
+                            LocalityId = "TN-GF-MDH",
+                            Name = "Mdhila"
+                        },
+                        new
+                        {
+                            Id = 983,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GF-MDH",
+                            Name = "المظيلة"
+                        },
+                        new
+                        {
+                            Id = 984,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GF-MDH",
+                            Name = "Mdhila"
+                        },
+                        new
+                        {
+                            Id = 985,
+                            LanguageId = "en",
+                            LocalityId = "TN-GF-GTT",
+                            Name = "El Guettar"
+                        },
+                        new
+                        {
+                            Id = 986,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GF-GTT",
+                            Name = "القطار"
+                        },
+                        new
+                        {
+                            Id = 987,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GF-GTT",
+                            Name = "El Guettar"
+                        },
+                        new
+                        {
+                            Id = 988,
+                            LanguageId = "en",
+                            LocalityId = "TN-GF-SND",
+                            Name = "Sened"
+                        },
+                        new
+                        {
+                            Id = 989,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GF-SND",
+                            Name = "السند"
+                        },
+                        new
+                        {
+                            Id = 990,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GF-SND",
+                            Name = "Sened"
+                        },
+                        new
+                        {
+                            Id = 991,
+                            LanguageId = "en",
+                            LocalityId = "TN-GF-BLK",
+                            Name = "Belkhir"
+                        },
+                        new
+                        {
+                            Id = 992,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GF-BLK",
+                            Name = "بلخير"
+                        },
+                        new
+                        {
+                            Id = 993,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GF-BLK",
+                            Name = "Belkhir"
+                        },
+                        new
+                        {
+                            Id = 994,
+                            LanguageId = "en",
+                            LocalityId = "TN-GF-SDC",
+                            Name = "Sidi Aïch"
+                        },
+                        new
+                        {
+                            Id = 995,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GF-SDC",
+                            Name = "سيدي عيش"
+                        },
+                        new
+                        {
+                            Id = 996,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GF-SDC",
+                            Name = "Sidi Aïch"
+                        },
+                        new
+                        {
+                            Id = 997,
+                            LanguageId = "en",
+                            LocalityId = "TN-GF-LLL",
+                            Name = "Lalla"
+                        },
+                        new
+                        {
+                            Id = 998,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GF-LLL",
+                            Name = "لالة"
+                        },
+                        new
+                        {
+                            Id = 999,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GF-LLL",
+                            Name = "Lalla"
+                        },
+                        new
+                        {
+                            Id = 1000,
+                            LanguageId = "en",
+                            LocalityId = "TN-GF-SDB",
+                            Name = "Sidi Boubaker"
+                        },
+                        new
+                        {
+                            Id = 1001,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GF-SDB",
+                            Name = "سيدي بوبكر"
+                        },
+                        new
+                        {
+                            Id = 1002,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GF-SDB",
+                            Name = "Sidi Boubaker"
+                        },
+                        new
+                        {
+                            Id = 1003,
+                            LanguageId = "en",
+                            LocalityId = "TN-GF-ZNN",
+                            Name = "Zannouch"
+                        },
+                        new
+                        {
+                            Id = 1004,
+                            LanguageId = "ar",
+                            LocalityId = "TN-GF-ZNN",
+                            Name = "زانوش"
+                        },
+                        new
+                        {
+                            Id = 1005,
+                            LanguageId = "fr",
+                            LocalityId = "TN-GF-ZNN",
+                            Name = "Zannouch"
+                        },
+                        new
+                        {
+                            Id = 1006,
+                            LanguageId = "en",
+                            LocalityId = "TN-TZ-TZR",
+                            Name = "Tozeur"
+                        },
+                        new
+                        {
+                            Id = 1007,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TZ-TZR",
+                            Name = "توزر"
+                        },
+                        new
+                        {
+                            Id = 1008,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TZ-TZR",
+                            Name = "Tozeur"
+                        },
+                        new
+                        {
+                            Id = 1009,
+                            LanguageId = "en",
+                            LocalityId = "TN-TZ-DGC",
+                            Name = "Degache"
+                        },
+                        new
+                        {
+                            Id = 1010,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TZ-DGC",
+                            Name = "دقاش"
+                        },
+                        new
+                        {
+                            Id = 1011,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TZ-DGC",
+                            Name = "Degache"
+                        },
+                        new
+                        {
+                            Id = 1012,
+                            LanguageId = "en",
+                            LocalityId = "TN-TZ-HMM",
+                            Name = "El Hamma du Jérid"
+                        },
+                        new
+                        {
+                            Id = 1013,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TZ-HMM",
+                            Name = "حامة الجريد"
+                        },
+                        new
+                        {
+                            Id = 1014,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TZ-HMM",
+                            Name = "El Hamma du Jérid"
+                        },
+                        new
+                        {
+                            Id = 1015,
+                            LanguageId = "en",
+                            LocalityId = "TN-TZ-NFT",
+                            Name = "Nefta"
+                        },
+                        new
+                        {
+                            Id = 1016,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TZ-NFT",
+                            Name = "نفطة"
+                        },
+                        new
+                        {
+                            Id = 1017,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TZ-NFT",
+                            Name = "Nefta"
+                        },
+                        new
+                        {
+                            Id = 1018,
+                            LanguageId = "en",
+                            LocalityId = "TN-TZ-TMR",
+                            Name = "Tamerza"
+                        },
+                        new
+                        {
+                            Id = 1019,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TZ-TMR",
+                            Name = "تمغزة"
+                        },
+                        new
+                        {
+                            Id = 1020,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TZ-TMR",
+                            Name = "Tamerza"
+                        },
+                        new
+                        {
+                            Id = 1021,
+                            LanguageId = "en",
+                            LocalityId = "TN-TZ-HAZ",
+                            Name = "Hazoua"
+                        },
+                        new
+                        {
+                            Id = 1022,
+                            LanguageId = "ar",
+                            LocalityId = "TN-TZ-HAZ",
+                            Name = "حزوة"
+                        },
+                        new
+                        {
+                            Id = 1023,
+                            LanguageId = "fr",
+                            LocalityId = "TN-TZ-HAZ",
+                            Name = "Hazoua"
+                        },
+                        new
+                        {
+                            Id = 1024,
+                            LanguageId = "en",
+                            LocalityId = "TN-KB-KBL",
+                            Name = "Kébili"
+                        },
+                        new
+                        {
+                            Id = 1025,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KB-KBL",
+                            Name = "قبلي"
+                        },
+                        new
+                        {
+                            Id = 1026,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KB-KBL",
+                            Name = "Kébili"
+                        },
+                        new
+                        {
+                            Id = 1027,
+                            LanguageId = "en",
+                            LocalityId = "TN-KB-JMN",
+                            Name = "Jemna"
+                        },
+                        new
+                        {
+                            Id = 1028,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KB-JMN",
+                            Name = "جمنة"
+                        },
+                        new
+                        {
+                            Id = 1029,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KB-JMN",
+                            Name = "Jemna"
+                        },
+                        new
+                        {
+                            Id = 1030,
+                            LanguageId = "en",
+                            LocalityId = "TN-KB-DOU",
+                            Name = "Douz"
+                        },
+                        new
+                        {
+                            Id = 1031,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KB-DOU",
+                            Name = "دوز"
+                        },
+                        new
+                        {
+                            Id = 1032,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KB-DOU",
+                            Name = "Douz"
+                        },
+                        new
+                        {
+                            Id = 1033,
+                            LanguageId = "en",
+                            LocalityId = "TN-KB-GOL",
+                            Name = "El Golâa"
+                        },
+                        new
+                        {
+                            Id = 1034,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KB-GOL",
+                            Name = "القلعة"
+                        },
+                        new
+                        {
+                            Id = 1035,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KB-GOL",
+                            Name = "El Golâa"
+                        },
+                        new
+                        {
+                            Id = 1036,
+                            LanguageId = "en",
+                            LocalityId = "TN-KB-SKL",
+                            Name = "Souk Lahad"
+                        },
+                        new
+                        {
+                            Id = 1037,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KB-SKL",
+                            Name = "سوق الأحد"
+                        },
+                        new
+                        {
+                            Id = 1038,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KB-SKL",
+                            Name = "Souk Lahad"
+                        },
+                        new
+                        {
+                            Id = 1039,
+                            LanguageId = "en",
+                            LocalityId = "TN-KB-FAO",
+                            Name = "Faouar"
+                        },
+                        new
+                        {
+                            Id = 1040,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KB-FAO",
+                            Name = "الفوار"
+                        },
+                        new
+                        {
+                            Id = 1041,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KB-FAO",
+                            Name = "Faouar"
+                        },
+                        new
+                        {
+                            Id = 1042,
+                            LanguageId = "en",
+                            LocalityId = "TN-KB-RJM",
+                            Name = "Rjim Maatoug"
+                        },
+                        new
+                        {
+                            Id = 1043,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KB-RJM",
+                            Name = "رجيم معتوق"
+                        },
+                        new
+                        {
+                            Id = 1044,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KB-RJM",
+                            Name = "Rjim Maatoug"
+                        },
+                        new
+                        {
+                            Id = 1045,
+                            LanguageId = "en",
+                            LocalityId = "TN-KB-BCH",
+                            Name = "Bechli - Blidet - Jerssin"
+                        },
+                        new
+                        {
+                            Id = 1046,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KB-BCH",
+                            Name = "بشلي - جرسين - البليدات"
+                        },
+                        new
+                        {
+                            Id = 1047,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KB-BCH",
+                            Name = "Bechli - Blidet - Jerssin"
+                        },
+                        new
+                        {
+                            Id = 1048,
+                            LanguageId = "en",
+                            LocalityId = "TN-KB-BEC",
+                            Name = "Bechri - Fatnassa"
+                        },
+                        new
+                        {
+                            Id = 1049,
+                            LanguageId = "ar",
+                            LocalityId = "TN-KB-BEC",
+                            Name = "بشري - فطناسة"
+                        },
+                        new
+                        {
+                            Id = 1050,
+                            LanguageId = "fr",
+                            LocalityId = "TN-KB-BEC",
+                            Name = "Bechri - Fatnassa"
+                        });
+                });
+
+            modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.AdministrativeArea", b =>
+                {
+                    b.HasOne("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.Country", "Country")
+                        .WithMany()
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Country");
+                });
+
+            modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.AdministrativeAreaName", b =>
+                {
+                    b.HasOne("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.AdministrativeArea", "AdministrativeArea")
+                        .WithMany("Names")
+                        .HasForeignKey("AdministrativeAreaId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.Language", "Language")
+                        .WithMany()
+                        .HasForeignKey("LanguageId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("AdministrativeArea");
+
+                    b.Navigation("Language");
+                });
+
             modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.Country", b =>
                 {
                     b.HasOne("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.Currency", "Currency")
@@ -14218,12 +25276,52 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                     b.Navigation("Language");
                 });
 
+            modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.Locality", b =>
+                {
+                    b.HasOne("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.AdministrativeArea", "AdministrativeArea")
+                        .WithMany()
+                        .HasForeignKey("AdministrativeAreaId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("AdministrativeArea");
+                });
+
+            modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.LocalityName", b =>
+                {
+                    b.HasOne("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.Language", "Language")
+                        .WithMany()
+                        .HasForeignKey("LanguageId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.Locality", "Locality")
+                        .WithMany("Names")
+                        .HasForeignKey("LocalityId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Language");
+
+                    b.Navigation("Locality");
+                });
+
+            modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.AdministrativeArea", b =>
+                {
+                    b.Navigation("Names");
+                });
+
             modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.Country", b =>
                 {
                     b.Navigation("Names");
                 });
 
             modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.Currency", b =>
+                {
+                    b.Navigation("Names");
+                });
+
+            modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.Locality", b =>
                 {
                     b.Navigation("Names");
                 });
