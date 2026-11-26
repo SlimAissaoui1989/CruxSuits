@@ -54,6 +54,7 @@ jobs:
           --no-build
           --no-restore
           --settings files.docker.runsettings
+          --logger "console;verbosity=detailed"
           --logger "trx;LogFileName=referencedatas-integration-tests.trx"
 
       - name: Run ReferenceDatas BDD tests
