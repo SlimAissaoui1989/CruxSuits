@@ -1,4 +1,5 @@
 using CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities;
+using CruxSuits.Services.Shared;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -8,7 +9,7 @@ namespace CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Confi
     {
         public void Configure(EntityTypeBuilder<Language> builder)
         {
-            DateTime defaultCreatedDate = new(2000, 1, 1);
+            DateTime defaultCreatedDate = SharedValues.DefaultCreatedDate;
 
             builder.HasData(
                 new Language

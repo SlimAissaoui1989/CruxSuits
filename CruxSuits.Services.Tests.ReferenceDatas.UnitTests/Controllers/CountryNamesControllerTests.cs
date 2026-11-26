@@ -19,6 +19,9 @@ public sealed class CountryNamesControllerTests
 {
     #region GetAll
 
+    // Success case: verifies GetAll returns ok with all names for country;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task GetAll_ReturnsOkWithAllNamesForCountry()
     {
@@ -43,6 +46,9 @@ public sealed class CountryNamesControllerTests
         countryNameService.Verify(service => service.GetAllAsync(countryId, cancellation.Token), Times.Once);
     }
 
+    // Failure case: verifies GetAll propagates not found exception when country does not exist;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Fact]
     public async Task GetAll_WhenCountryDoesNotExist_PropagatesNotFoundException()
     {
@@ -62,6 +68,9 @@ public sealed class CountryNamesControllerTests
 
     #region GetByLanguage
 
+    // Success case: verifies GetByLanguage returns ok with the requested country name;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task GetByLanguage_ReturnsOkWithTheRequestedCountryName()
     {
@@ -90,6 +99,9 @@ public sealed class CountryNamesControllerTests
             Times.Once);
     }
 
+    // Failure case: verifies GetByLanguage propagates not found exception when translation does not exist;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Fact]
     public async Task GetByLanguage_WhenTranslationDoesNotExist_PropagatesNotFoundException()
     {
@@ -113,6 +125,9 @@ public sealed class CountryNamesControllerTests
 
     #region Create
 
+    // Success case: verifies Create returns created at country name in language;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task Create_ReturnsCreatedAtCountryNameInLanguage()
     {
@@ -147,6 +162,9 @@ public sealed class CountryNamesControllerTests
         countryNameService.Verify(service => service.CreateAsync(countryId, request, cancellation.Token), Times.Once);
     }
 
+    // Failure case: verifies Create propagates conflict exception when translation already exists;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Fact]
     public async Task Create_WhenTranslationAlreadyExists_PropagatesConflictException()
     {
@@ -168,6 +186,9 @@ public sealed class CountryNamesControllerTests
         countryNameService.Verify(service => service.CreateAsync(countryId, request, CancellationToken.None), Times.Once);
     }
 
+    // Failure case: verifies Create propagates not found exception when country does not exist;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Fact]
     public async Task Create_WhenCountryDoesNotExist_PropagatesNotFoundException()
     {
@@ -192,6 +213,9 @@ public sealed class CountryNamesControllerTests
             Times.Once);
     }
 
+    // Failure case: verifies Create propagates not found exception when language does not exist;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Fact]
     public async Task Create_WhenLanguageDoesNotExist_PropagatesNotFoundException()
     {
@@ -220,6 +244,9 @@ public sealed class CountryNamesControllerTests
 
     #region Update
 
+    // Success case: verifies Update returns ok with updated country name;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task Update_ReturnsOkWithUpdatedCountryName()
     {
@@ -251,6 +278,9 @@ public sealed class CountryNamesControllerTests
         countryNameService.Verify(service => service.UpdateAsync(countryId, languageId, request, cancellation.Token), Times.Once);
     }
 
+    // Failure case: verifies Update propagates not found exception when translation does not exist;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Fact]
     public async Task Update_WhenTranslationDoesNotExist_PropagatesNotFoundException()
     {
@@ -277,6 +307,9 @@ public sealed class CountryNamesControllerTests
 
     #region Delete
 
+    // Success case: verifies Delete returns no content when translation is deleted;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task Delete_ReturnsNoContentWhenTranslationIsDeleted()
     {
@@ -292,6 +325,9 @@ public sealed class CountryNamesControllerTests
         countryNameService.Verify(service => service.RemoveAsync(countryId, languageId, cancellation.Token), Times.Once);
     }
 
+    // Failure case: verifies Delete propagates not found exception when translation does not exist;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Fact]
     public async Task Delete_WhenTranslationDoesNotExist_PropagatesNotFoundException()
     {

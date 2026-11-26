@@ -28,6 +28,9 @@ public sealed class CountryServiceTests
 
     #region GetAllAsync
 
+    // Success case: verifies GetAllAsync returns countries for requested language;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task GetAllAsync_ReturnsCountriesForRequestedLanguage()
     {
@@ -48,6 +51,9 @@ public sealed class CountryServiceTests
         _countryRepository.Verify(repository => repository.GetAllLocalizedAsync<CountryResponse>(languageId, cancellation.Token), Times.Once);
     }
 
+    // Success case: verifies GetAllAsync returns empty list when repository has no countries;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task GetAllAsync_ReturnsEmptyListWhenRepositoryHasNoCountries()
     {
@@ -66,6 +72,9 @@ public sealed class CountryServiceTests
 
     #region GetPhoneCodeOptionsAsync
 
+    // Success case: verifies GetPhoneCodeOptionsAsync returns phone code options for requested language;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task GetPhoneCodeOptionsAsync_ReturnsPhoneCodeOptionsForRequestedLanguage()
     {
@@ -86,6 +95,9 @@ public sealed class CountryServiceTests
         _countryRepository.Verify(repository => repository.GetAllLocalizedAsync<CountryPhoneCodeResponse>(languageId, cancellation.Token), Times.Once);
     }
 
+    // Success case: verifies GetPhoneCodeOptionsAsync returns empty list when repository has no options;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task GetPhoneCodeOptionsAsync_ReturnsEmptyListWhenRepositoryHasNoOptions()
     {
@@ -104,6 +116,9 @@ public sealed class CountryServiceTests
 
     #region GetByIdAsync
 
+    // Success case: verifies GetByIdAsync returns country when found;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task GetByIdAsync_ReturnsCountryWhenFound()
     {
@@ -130,6 +145,9 @@ public sealed class CountryServiceTests
             countryId, cancellation.Token), Times.Once);
     }
 
+    // Failure case: verifies GetByIdAsync throws not found when country does not exist;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Fact]
     public async Task GetByIdAsync_ThrowsNotFoundWhenCountryDoesNotExist()
     {
@@ -149,6 +167,9 @@ public sealed class CountryServiceTests
 
     #region CreateAsync
 
+    // Success case: verifies CreateAsync maps adds saves and returns country response;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task CreateAsync_MapsAddsSavesAndReturnsCountryResponse()
     {
@@ -197,6 +218,9 @@ public sealed class CountryServiceTests
 
     #region UpdateAsync
 
+    // Success case: verifies UpdateAsync maps updates saves and returns country response;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task UpdateAsync_MapsUpdatesSavesAndReturnsCountryResponse()
     {
@@ -238,6 +262,9 @@ public sealed class CountryServiceTests
         _mapper.Verify(mapper => mapper.Map<CountryResponse>(country), Times.Once);
     }
 
+    // Failure case: verifies UpdateAsync throws not found when country does not exist;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Fact]
     public async Task UpdateAsync_ThrowsNotFoundWhenCountryDoesNotExist()
     {
@@ -257,8 +284,11 @@ public sealed class CountryServiceTests
 
     #endregion
 
-    #region Validation
+    #region CreateAsyncValidation
 
+    // Failure case: verifies CreateAsync throws without adding when country data is invalid;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Theory]
     [InlineData("USA", "USA", "840", "USD")]
     [InlineData("US", "US", "840", "USD")]
@@ -277,6 +307,9 @@ public sealed class CountryServiceTests
         _unitOfWork.Verify(unitOfWork => unitOfWork.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Never);
     }
 
+    // Failure case: verifies CreateAsync throws without adding when currency does not exist;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Fact]
     public async Task CreateAsync_WhenCurrencyDoesNotExist_ThrowsWithoutAdding()
     {
@@ -294,6 +327,9 @@ public sealed class CountryServiceTests
         _unitOfWork.Verify(unitOfWork => unitOfWork.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Never);
     }
 
+    // Failure case: verifies CreateAsync throws without adding when country id already exists;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Fact]
     public async Task CreateAsync_WhenCountryIdAlreadyExists_ThrowsWithoutAdding()
     {
@@ -308,6 +344,13 @@ public sealed class CountryServiceTests
         _unitOfWork.Verify(unitOfWork => unitOfWork.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Never);
     }
 
+    #endregion
+
+    #region UpdateAsyncValidation
+
+    // Failure case: verifies UpdateAsync throws without updating when country code is invalid;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Theory]
     [InlineData("US", "840", "USD")]
     [InlineData("USA", "84A", "USD")]
@@ -330,6 +373,9 @@ public sealed class CountryServiceTests
         _unitOfWork.Verify(unitOfWork => unitOfWork.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Never);
     }
 
+    // Failure case: verifies CreateAsync throws conflict without adding when country code is already assigned;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Theory]
     [InlineData("USA", "124")]
     [InlineData("CAN", "840")]
@@ -351,6 +397,9 @@ public sealed class CountryServiceTests
         _unitOfWork.Verify(unitOfWork => unitOfWork.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Never);
     }
 
+    // Failure case: verifies UpdateAsync throws conflict without updating when country code is already assigned;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Theory]
     [InlineData("USA", "124")]
     [InlineData("CAN", "840")]
@@ -377,6 +426,9 @@ public sealed class CountryServiceTests
         _unitOfWork.Verify(unitOfWork => unitOfWork.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Never);
     }
 
+    // Failure case: verifies UpdateAsync throws without updating when currency does not exist;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Fact]
     public async Task UpdateAsync_WhenCurrencyDoesNotExist_ThrowsWithoutUpdating()
     {

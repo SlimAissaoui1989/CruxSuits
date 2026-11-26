@@ -73,7 +73,7 @@ namespace CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework
         public DbSet<Country> Countries { get; set; } = null!;
         public DbSet<CountryName> CountryNames { get; set; } = null!;
         public DbSet<Currency> Currencies { get; set; } = null!;
+        public DbSet<CurrencyName> CurrencyNames { get; set; } = null!;
         public DbSet<Language> Languages { get; set; } = null!;
-        public DbSet<LocalizedName> LocalizedNames { get; set; } = null!;
     }
 }

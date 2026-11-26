@@ -2,9 +2,9 @@ using CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities;
 
 namespace CruxSuits.Services.ReferenceDatas.Infrastructure.RepositoryPattern.Repositories
 {
-    public class LocalizedNameRepository : ReferenceDataEntityRepository<long, LocalizedName>, ILocalizedNameRepository
+    public class CurrencyNameRepository : ReferenceDataEntityRepository<int, CurrencyName>, ICurrencyNameRepository
     {
-        public LocalizedNameRepository(IReferenceDataUnitOfWork unitOfWork)
+        public CurrencyNameRepository(IReferenceDataUnitOfWork unitOfWork)
             : base(unitOfWork)
         {
         }

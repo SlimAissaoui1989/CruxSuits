@@ -21,7 +21,9 @@ public sealed class CountriesApiIntegrationTests
     [Fact]
     public async Task GetAll_ReturnsSeededCountriesForRequestedLanguage()
     {
-        using var response = await _fixture.Client.GetAsync("/api/v1/en/Countries");
+        using var request = new HttpRequestMessage(HttpMethod.Get, "/api/v1/Countries");
+        request.Headers.TryAddWithoutValidation("Accept-Language", "en");
+        using var response = await _fixture.Client.SendAsync(request);
 
         var responseBody = await response.Content.ReadAsStringAsync();
         Assert.True(response.StatusCode == HttpStatusCode.OK,
@@ -35,9 +37,21 @@ public sealed class CountriesApiIntegrationTests
     }
 
     [Fact]
+    public async Task GetAll_ReturnsNotAcceptableWhenAllLanguagesAreExcluded()
+    {
+        using var request = new HttpRequestMessage(HttpMethod.Get, "/api/v1/Countries");
+        request.Headers.TryAddWithoutValidation("Accept-Language", "*;q=0");
+        using var response = await _fixture.Client.SendAsync(request);
+
+        Assert.Equal(HttpStatusCode.NotAcceptable, response.StatusCode);
+    }
+
+    [Fact]
     public async Task GetPhoneCodeOptions_ReturnsSeededOptionsForRequestedLanguage()
     {
-        using var response = await _fixture.Client.GetAsync("/api/v1/Countries/en/phone-code-options");
+        using var request = new HttpRequestMessage(HttpMethod.Get, "/api/v1/Countries/phone-code-options");
+        request.Headers.TryAddWithoutValidation("Accept-Language", "en");
+        using var response = await _fixture.Client.SendAsync(request);
 
         var responseBody = await response.Content.ReadAsStringAsync();
         Assert.True(response.StatusCode == HttpStatusCode.OK,

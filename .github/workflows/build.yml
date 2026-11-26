@@ -43,15 +43,17 @@ jobs:
           --configuration Release
           --no-build
           --no-restore
-          --filter "FullyQualifiedName!~CountryProfileTests"
           --logger "trx;LogFileName=referencedatas-unit-tests.trx"
 
       - name: Run ReferenceDatas integration tests
+        env:
+          ConnectionStrings__DefaultConnection: Server=localhost,14333;Initial Catalog=ReferenceDataBddTests;User Id=sa;Password=${{ secrets.FILES_TEST_SQL_PASSWORD || 'CruxSuits_Local_Only!2026' }};Encrypt=False;TrustServerCertificate=True
         run: >-
           dotnet test CruxSuits.Services.Tests.ReferenceDatas.IntegrationTests/CruxSuits.Services.Tests.ReferenceDatas.IntegrationTests.csproj
           --configuration Release
           --no-build
           --no-restore
+          --settings files.docker.runsettings
           --logger "trx;LogFileName=referencedatas-integration-tests.trx"
 
       - name: Run ReferenceDatas BDD tests
@@ -62,6 +64,7 @@ jobs:
           --configuration Release
           --no-build
           --no-restore
+          --settings files.docker.runsettings
           --logger "trx;LogFileName=referencedatas-bdd-tests.trx"
 
       - name: Run Files unit tests

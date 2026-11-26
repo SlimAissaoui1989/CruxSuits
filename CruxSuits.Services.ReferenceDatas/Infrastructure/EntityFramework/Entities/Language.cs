@@ -15,7 +15,5 @@ namespace CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entit
         public string NativeName { get; set; } = null!;
 
         public bool IsRightToLeft { get; set; }
-
-        public ICollection<LocalizedName>? LocalizedNames { get; set; }
     }
 }

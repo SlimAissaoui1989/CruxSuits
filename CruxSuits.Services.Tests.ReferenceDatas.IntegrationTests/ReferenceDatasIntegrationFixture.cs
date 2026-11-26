@@ -9,6 +9,7 @@ namespace CruxSuits.Services.ReferenceDatas.Tests.IntegrationTests;
 public sealed class ReferenceDatasIntegrationFixture : IAsyncLifetime
 {
     private readonly Dictionary<string, string?> _originalEnvironmentValues = new();
+    private bool _databaseCreated;
     internal CountriesApiFactory Factory { get; private set; } = null!;
     public HttpClient Client { get; private set; } = null!;
 
@@ -24,16 +25,36 @@ public sealed class ReferenceDatasIntegrationFixture : IAsyncLifetime
 
         await using var scope = Factory.Services.CreateAsyncScope();
         var context = scope.ServiceProvider.GetRequiredService<ReferenceDataContext>();
-        await context.Database.EnsureCreatedAsync();
+        _databaseCreated = await context.Database.EnsureCreatedAsync();
     }
 
     public async Task DisposeAsync()
     {
         Client?.Dispose();
-        if (Factory is not null)
-            await Factory.DisposeAsync();
-        foreach (var (name, value) in _originalEnvironmentValues)
-            Environment.SetEnvironmentVariable(name, value);
+        try
+        {
+            if (Factory is not null)
+            {
+                try
+                {
+                    if (_databaseCreated)
+                    {
+                        await using var scope = Factory.Services.CreateAsyncScope();
+                        var context = scope.ServiceProvider.GetRequiredService<ReferenceDataContext>();
+                        await context.Database.EnsureDeletedAsync();
+                    }
+                }
+                finally
+                {
+                    await Factory.DisposeAsync();
+                }
+            }
+        }
+        finally
+        {
+            foreach (var (name, value) in _originalEnvironmentValues)
+                Environment.SetEnvironmentVariable(name, value);
+        }
     }
 
     private void SetTestEnvironmentVariable(string name, string value)

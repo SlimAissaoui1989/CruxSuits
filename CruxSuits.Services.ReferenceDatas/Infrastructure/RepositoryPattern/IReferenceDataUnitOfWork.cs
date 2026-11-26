@@ -9,7 +9,7 @@ namespace CruxSuits.Services.ReferenceDatas.Infrastructure.RepositoryPattern
         ICountryRepository Country { get; }
         ICountryNameRepository CountryName { get; }
         ICurrencyRepository Currency { get; }
+        ICurrencyNameRepository CurrencyName { get; }
         ILanguageRepository Language { get; }
-        ILocalizedNameRepository LocalizedName { get; }
     }
 }

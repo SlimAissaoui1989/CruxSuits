@@ -11,14 +11,14 @@ namespace CruxSuits.Services.ReferenceDatas.Infrastructure.RepositoryPattern
         private ICountryRepository? _country;
         private ICountryNameRepository? _countryName;
         private ICurrencyRepository? _currency;
+        private ICurrencyNameRepository? _currencyName;
         private ILanguageRepository? _language;
-        private ILocalizedNameRepository? _localizedName;
 
         public ReferenceDataUnitOfWork(ReferenceDataContext context, IServiceProvider serviceProvider)
             : base(context)
         {
 #if DEBUG
-            context.Database.EnsureCreated();
+            //context.Database.EnsureCreated();
 #endif
             _serviceProvider = serviceProvider;
         }
@@ -32,10 +32,11 @@ namespace CruxSuits.Services.ReferenceDatas.Infrastructure.RepositoryPattern
         public ICurrencyRepository Currency =>
             _currency ??= _serviceProvider.GetRequiredService<ICurrencyRepository>();
 
+        public ICurrencyNameRepository CurrencyName =>
+            _currencyName ??= _serviceProvider.GetRequiredService<ICurrencyNameRepository>();
+
         public ILanguageRepository Language =>
             _language ??= _serviceProvider.GetRequiredService<ILanguageRepository>();
 
-        public ILocalizedNameRepository LocalizedName =>
-            _localizedName ??= _serviceProvider.GetRequiredService<ILocalizedNameRepository>();
     }
 }

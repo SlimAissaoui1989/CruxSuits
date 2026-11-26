@@ -14,11 +14,11 @@ namespace CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entit
         [MaxLength(10)]
         public string? Symbol { get; set; } = null!;
 
-        public int DecimalSeparator { get; set; }
+        public char DecimalSeparator { get; set; } = '.';
 
         public byte? MinorUnit { get; set; }
 
 
-        public ICollection<long>? Names { get; set; }
+        public ICollection<CurrencyName> Names { get; set; } = new List<CurrencyName>();
     }
 }

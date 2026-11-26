@@ -37,7 +37,7 @@ internal sealed class CountryRepositoryFixture : IDisposable
         _unitOfWork.SetupGet(unitOfWork => unitOfWork.DbContext).Returns(Context);
         _unitOfWork.Setup(unitOfWork => unitOfWork.Set<Country>()).Returns(Context.Countries);
         _unitOfWork.SetupGet(unitOfWork => unitOfWork.Currency).Returns(currencyRepository.Object);
-        Context.Currencies.Add(new Currency { Id = "USD", NumericCode = "840", DecimalSeparator = 2 });
+        Context.Currencies.Add(new Currency { Id = "USD", NumericCode = "840" });
 
         Repository = new CountryRepository(_unitOfWork.Object);
     }

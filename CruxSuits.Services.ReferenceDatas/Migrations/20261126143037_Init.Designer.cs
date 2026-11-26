@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CruxSuits.Services.ReferenceDatas.Migrations
 {
     [DbContext(typeof(ReferenceDataContext))]
-    [Migration("20261119164344_Init")]
+    [Migration("20261126143037_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -8683,9 +8683,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                     b.Property<byte?>("MinorUnit")
                         .HasColumnType("tinyint");
 
-                    b.Property<string>("Names")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("NumericCode")
                         .IsRequired()
                         .HasMaxLength(3)
@@ -8710,7 +8707,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[1,2,3]",
                             NumericCode = "784"
                         },
                         new
@@ -8720,7 +8716,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[4,5,6]",
                             NumericCode = "971",
                             Symbol = "؋"
                         },
@@ -8731,7 +8726,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[7,8,9]",
                             NumericCode = "008"
                         },
                         new
@@ -8741,7 +8735,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[10,11,12]",
                             NumericCode = "051"
                         },
                         new
@@ -8751,7 +8744,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[13,14,15]",
                             NumericCode = "973"
                         },
                         new
@@ -8761,7 +8753,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[16,17,18]",
                             NumericCode = "032"
                         },
                         new
@@ -8771,7 +8762,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[19,20,21]",
                             NumericCode = "036",
                             Symbol = "$"
                         },
@@ -8782,7 +8772,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[22,23,24]",
                             NumericCode = "533",
                             Symbol = "ƒ"
                         },
@@ -8793,7 +8782,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[25,26,27]",
                             NumericCode = "944",
                             Symbol = "₼"
                         },
@@ -8804,7 +8792,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[28,29,30]",
                             NumericCode = "977"
                         },
                         new
@@ -8814,7 +8801,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[31,32,33]",
                             NumericCode = "052",
                             Symbol = "$"
                         },
@@ -8825,7 +8811,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[34,35,36]",
                             NumericCode = "050",
                             Symbol = "৳"
                         },
@@ -8836,7 +8821,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)3,
-                            Names = "[37,38,39]",
                             NumericCode = "048"
                         },
                         new
@@ -8846,7 +8830,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)0,
-                            Names = "[40,41,42]",
                             NumericCode = "108"
                         },
                         new
@@ -8856,7 +8839,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[43,44,45]",
                             NumericCode = "060",
                             Symbol = "$"
                         },
@@ -8867,7 +8849,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[46,47,48]",
                             NumericCode = "096",
                             Symbol = "$"
                         },
@@ -8878,7 +8859,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[49,50,51]",
                             NumericCode = "068"
                         },
                         new
@@ -8888,7 +8868,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[52,53,54]",
                             NumericCode = "984"
                         },
                         new
@@ -8898,7 +8877,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[55,56,57]",
                             NumericCode = "986",
                             Symbol = "$"
                         },
@@ -8909,7 +8887,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[58,59,60]",
                             NumericCode = "044",
                             Symbol = "$"
                         },
@@ -8920,7 +8897,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[61,62,63]",
                             NumericCode = "064"
                         },
                         new
@@ -8930,7 +8906,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[64,65,66]",
                             NumericCode = "072"
                         },
                         new
@@ -8940,7 +8915,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[67,68,69]",
                             NumericCode = "933"
                         },
                         new
@@ -8950,7 +8924,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[70,71,72]",
                             NumericCode = "084",
                             Symbol = "$"
                         },
@@ -8961,7 +8934,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[73,74,75]",
                             NumericCode = "124",
                             Symbol = "$"
                         },
@@ -8972,7 +8944,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[76,77,78]",
                             NumericCode = "976"
                         },
                         new
@@ -8982,7 +8953,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[79,80,81]",
                             NumericCode = "947"
                         },
                         new
@@ -8992,7 +8962,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[82,83,84]",
                             NumericCode = "756"
                         },
                         new
@@ -9002,7 +8971,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[85,86,87]",
                             NumericCode = "948"
                         },
                         new
@@ -9012,7 +8980,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)4,
-                            Names = "[88,89,90]",
                             NumericCode = "990"
                         },
                         new
@@ -9022,7 +8989,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)0,
-                            Names = "[91,92,93]",
                             NumericCode = "152",
                             Symbol = "$"
                         },
@@ -9033,7 +8999,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[94,95,96]",
                             NumericCode = "156",
                             Symbol = "¥"
                         },
@@ -9044,7 +9009,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[97,98,99]",
                             NumericCode = "170",
                             Symbol = "$"
                         },
@@ -9055,7 +9019,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[100,101,102]",
                             NumericCode = "970"
                         },
                         new
@@ -9065,7 +9028,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[103,104,105]",
                             NumericCode = "188",
                             Symbol = "₡"
                         },
@@ -9076,7 +9038,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[106,107,108]",
                             NumericCode = "192",
                             Symbol = "$"
                         },
@@ -9087,7 +9048,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[109,110,111]",
                             NumericCode = "132"
                         },
                         new
@@ -9097,7 +9057,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[112,113,114]",
                             NumericCode = "203"
                         },
                         new
@@ -9107,7 +9066,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)0,
-                            Names = "[115,116,117]",
                             NumericCode = "262"
                         },
                         new
@@ -9117,7 +9075,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[118,119,120]",
                             NumericCode = "208"
                         },
                         new
@@ -9127,7 +9084,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[121,122,123]",
                             NumericCode = "214",
                             Symbol = "$"
                         },
@@ -9138,7 +9094,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[124,125,126]",
                             NumericCode = "012"
                         },
                         new
@@ -9148,7 +9103,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[127,128,129]",
                             NumericCode = "818"
                         },
                         new
@@ -9158,7 +9112,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[130,131,132]",
                             NumericCode = "232"
                         },
                         new
@@ -9168,7 +9121,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[133,134,135]",
                             NumericCode = "230"
                         },
                         new
@@ -9178,7 +9130,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[136,137,138]",
                             NumericCode = "978",
                             Symbol = "€"
                         },
@@ -9189,7 +9140,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[139,140,141]",
                             NumericCode = "242",
                             Symbol = "$"
                         },
@@ -9200,7 +9150,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[142,143,144]",
                             NumericCode = "238"
                         },
                         new
@@ -9210,7 +9159,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[145,146,147]",
                             NumericCode = "826"
                         },
                         new
@@ -9220,7 +9168,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[148,149,150]",
                             NumericCode = "981",
                             Symbol = "₾"
                         },
@@ -9231,7 +9178,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[151,152,153]",
                             NumericCode = "936",
                             Symbol = "₵"
                         },
@@ -9242,7 +9188,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[154,155,156]",
                             NumericCode = "292"
                         },
                         new
@@ -9252,7 +9197,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[157,158,159]",
                             NumericCode = "270"
                         },
                         new
@@ -9262,7 +9206,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)0,
-                            Names = "[160,161,162]",
                             NumericCode = "324"
                         },
                         new
@@ -9272,7 +9215,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[163,164,165]",
                             NumericCode = "320"
                         },
                         new
@@ -9282,7 +9224,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[166,167,168]",
                             NumericCode = "328",
                             Symbol = "$"
                         },
@@ -9293,7 +9234,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[169,170,171]",
                             NumericCode = "344",
                             Symbol = "$"
                         },
@@ -9304,7 +9244,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[172,173,174]",
                             NumericCode = "340"
                         },
                         new
@@ -9314,7 +9253,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[175,176,177]",
                             NumericCode = "332"
                         },
                         new
@@ -9324,7 +9262,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[178,179,180]",
                             NumericCode = "348"
                         },
                         new
@@ -9334,7 +9271,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[181,182,183]",
                             NumericCode = "360"
                         },
                         new
@@ -9344,7 +9280,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[184,185,186]",
                             NumericCode = "356",
                             Symbol = "₹"
                         },
@@ -9355,7 +9290,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)3,
-                            Names = "[187,188,189]",
                             NumericCode = "368"
                         },
                         new
@@ -9365,7 +9299,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[190,191,192]",
                             NumericCode = "364"
                         },
                         new
@@ -9375,7 +9308,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)0,
-                            Names = "[193,194,195]",
                             NumericCode = "352"
                         },
                         new
@@ -9385,7 +9317,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[196,197,198]",
                             NumericCode = "388",
                             Symbol = "$"
                         },
@@ -9396,7 +9327,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)3,
-                            Names = "[199,200,201]",
                             NumericCode = "400"
                         },
                         new
@@ -9406,7 +9336,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)0,
-                            Names = "[202,203,204]",
                             NumericCode = "392",
                             Symbol = "¥"
                         },
@@ -9417,7 +9346,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[205,206,207]",
                             NumericCode = "404"
                         },
                         new
@@ -9427,7 +9355,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[208,209,210]",
                             NumericCode = "417"
                         },
                         new
@@ -9437,7 +9364,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[211,212,213]",
                             NumericCode = "116",
                             Symbol = "៛"
                         },
@@ -9448,7 +9374,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)0,
-                            Names = "[214,215,216]",
                             NumericCode = "174"
                         },
                         new
@@ -9458,7 +9383,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[217,218,219]",
                             NumericCode = "408",
                             Symbol = "₩"
                         },
@@ -9469,7 +9393,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)0,
-                            Names = "[220,221,222]",
                             NumericCode = "410",
                             Symbol = "₩"
                         },
@@ -9480,7 +9403,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)3,
-                            Names = "[223,224,225]",
                             NumericCode = "414"
                         },
                         new
@@ -9490,7 +9412,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[226,227,228]",
                             NumericCode = "136",
                             Symbol = "$"
                         },
@@ -9501,7 +9422,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[229,230,231]",
                             NumericCode = "398",
                             Symbol = "₸"
                         },
@@ -9512,7 +9432,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[232,233,234]",
                             NumericCode = "418",
                             Symbol = "₭"
                         },
@@ -9523,7 +9442,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[235,236,237]",
                             NumericCode = "422"
                         },
                         new
@@ -9533,7 +9451,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[238,239,240]",
                             NumericCode = "144"
                         },
                         new
@@ -9543,7 +9460,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[241,242,243]",
                             NumericCode = "430",
                             Symbol = "$"
                         },
@@ -9554,7 +9470,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[244,245,246]",
                             NumericCode = "426"
                         },
                         new
@@ -9564,7 +9479,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)3,
-                            Names = "[247,248,249]",
                             NumericCode = "434"
                         },
                         new
@@ -9574,7 +9488,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[250,251,252]",
                             NumericCode = "504"
                         },
                         new
@@ -9584,7 +9497,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[253,254,255]",
                             NumericCode = "498"
                         },
                         new
@@ -9594,7 +9506,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[256,257,258]",
                             NumericCode = "969"
                         },
                         new
@@ -9604,7 +9515,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[259,260,261]",
                             NumericCode = "807"
                         },
                         new
@@ -9614,7 +9524,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[262,263,264]",
                             NumericCode = "104"
                         },
                         new
@@ -9624,7 +9533,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[265,266,267]",
                             NumericCode = "496",
                             Symbol = "₮"
                         },
@@ -9635,7 +9543,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[268,269,270]",
                             NumericCode = "446"
                         },
                         new
@@ -9645,7 +9552,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[271,272,273]",
                             NumericCode = "929"
                         },
                         new
@@ -9655,7 +9561,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[274,275,276]",
                             NumericCode = "480"
                         },
                         new
@@ -9665,7 +9570,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[277,278,279]",
                             NumericCode = "462"
                         },
                         new
@@ -9675,7 +9579,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[280,281,282]",
                             NumericCode = "454"
                         },
                         new
@@ -9685,7 +9588,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[283,284,285]",
                             NumericCode = "484",
                             Symbol = "$"
                         },
@@ -9696,7 +9598,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[286,287,288]",
                             NumericCode = "979"
                         },
                         new
@@ -9706,7 +9607,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[289,290,291]",
                             NumericCode = "458"
                         },
                         new
@@ -9716,7 +9616,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[292,293,294]",
                             NumericCode = "943"
                         },
                         new
@@ -9726,7 +9625,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[295,296,297]",
                             NumericCode = "516",
                             Symbol = "$"
                         },
@@ -9737,7 +9635,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[298,299,300]",
                             NumericCode = "566",
                             Symbol = "₦"
                         },
@@ -9748,7 +9645,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[301,302,303]",
                             NumericCode = "558"
                         },
                         new
@@ -9758,7 +9654,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[304,305,306]",
                             NumericCode = "578"
                         },
                         new
@@ -9768,7 +9663,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[307,308,309]",
                             NumericCode = "524"
                         },
                         new
@@ -9778,7 +9672,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[310,311,312]",
                             NumericCode = "554",
                             Symbol = "$"
                         },
@@ -9789,7 +9682,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)3,
-                            Names = "[313,314,315]",
                             NumericCode = "512"
                         },
                         new
@@ -9799,7 +9691,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[316,317,318]",
                             NumericCode = "590"
                         },
                         new
@@ -9809,7 +9700,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[319,320,321]",
                             NumericCode = "604"
                         },
                         new
@@ -9819,7 +9709,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[322,323,324]",
                             NumericCode = "598"
                         },
                         new
@@ -9829,7 +9718,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[325,326,327]",
                             NumericCode = "608",
                             Symbol = "₱"
                         },
@@ -9840,7 +9728,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[328,329,330]",
                             NumericCode = "586",
                             Symbol = "₨"
                         },
@@ -9851,7 +9738,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[331,332,333]",
                             NumericCode = "985"
                         },
                         new
@@ -9861,7 +9747,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)0,
-                            Names = "[334,335,336]",
                             NumericCode = "600",
                             Symbol = "₲"
                         },
@@ -9872,7 +9757,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[337,338,339]",
                             NumericCode = "634"
                         },
                         new
@@ -9882,7 +9766,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[340,341,342]",
                             NumericCode = "946"
                         },
                         new
@@ -9892,7 +9775,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[343,344,345]",
                             NumericCode = "941"
                         },
                         new
@@ -9902,7 +9784,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[346,347,348]",
                             NumericCode = "643",
                             Symbol = "₽"
                         },
@@ -9913,7 +9794,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)0,
-                            Names = "[349,350,351]",
                             NumericCode = "646"
                         },
                         new
@@ -9923,7 +9803,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[352,353,354]",
                             NumericCode = "682"
                         },
                         new
@@ -9933,7 +9812,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[355,356,357]",
                             NumericCode = "090",
                             Symbol = "$"
                         },
@@ -9944,7 +9822,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[358,359,360]",
                             NumericCode = "690"
                         },
                         new
@@ -9954,7 +9831,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[361,362,363]",
                             NumericCode = "938"
                         },
                         new
@@ -9964,7 +9840,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[364,365,366]",
                             NumericCode = "752"
                         },
                         new
@@ -9974,7 +9849,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[367,368,369]",
                             NumericCode = "702",
                             Symbol = "$"
                         },
@@ -9985,7 +9859,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[370,371,372]",
                             NumericCode = "654"
                         },
                         new
@@ -9995,7 +9868,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[373,374,375]",
                             NumericCode = "925"
                         },
                         new
@@ -10005,7 +9877,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[376,377,378]",
                             NumericCode = "706"
                         },
                         new
@@ -10015,7 +9886,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[379,380,381]",
                             NumericCode = "968",
                             Symbol = "$"
                         },
@@ -10026,7 +9896,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[382,383,384]",
                             NumericCode = "728"
                         },
                         new
@@ -10036,7 +9905,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[385,386,387]",
                             NumericCode = "930"
                         },
                         new
@@ -10046,7 +9914,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[388,389,390]",
                             NumericCode = "222"
                         },
                         new
@@ -10056,7 +9923,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[391,392,393]",
                             NumericCode = "760"
                         },
                         new
@@ -10066,7 +9932,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[394,395,396]",
                             NumericCode = "748"
                         },
                         new
@@ -10076,7 +9941,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[397,398,399]",
                             NumericCode = "764",
                             Symbol = "฿"
                         },
@@ -10087,7 +9951,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[400,401,402]",
                             NumericCode = "972"
                         },
                         new
@@ -10097,7 +9960,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[403,404,405]",
                             NumericCode = "934"
                         },
                         new
@@ -10107,7 +9969,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)3,
-                            Names = "[406,407,408]",
                             NumericCode = "788"
                         },
                         new
@@ -10117,7 +9978,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[409,410,411]",
                             NumericCode = "776"
                         },
                         new
@@ -10127,7 +9987,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[412,413,414]",
                             NumericCode = "949",
                             Symbol = "₺"
                         },
@@ -10138,7 +9997,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[415,416,417]",
                             NumericCode = "780",
                             Symbol = "$"
                         },
@@ -10149,7 +10007,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[418,419,420]",
                             NumericCode = "901",
                             Symbol = "$"
                         },
@@ -10160,7 +10017,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[421,422,423]",
                             NumericCode = "834"
                         },
                         new
@@ -10170,7 +10026,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[424,425,426]",
                             NumericCode = "980",
                             Symbol = "₴"
                         },
@@ -10181,7 +10036,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)0,
-                            Names = "[427,428,429]",
                             NumericCode = "800"
                         },
                         new
@@ -10191,7 +10045,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[430,431,432]",
                             NumericCode = "840",
                             Symbol = "$"
                         },
@@ -10202,7 +10055,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[433,434,435]",
                             NumericCode = "997"
                         },
                         new
@@ -10212,7 +10064,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)0,
-                            Names = "[436,437,438]",
                             NumericCode = "940"
                         },
                         new
@@ -10222,7 +10073,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[439,440,441]",
                             NumericCode = "858",
                             Symbol = "$"
                         },
@@ -10233,7 +10083,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)4,
-                            Names = "[442,443,444]",
                             NumericCode = "927"
                         },
                         new
@@ -10243,7 +10092,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[445,446,447]",
                             NumericCode = "860"
                         },
                         new
@@ -10253,7 +10101,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[448,449,450]",
                             NumericCode = "926"
                         },
                         new
@@ -10263,7 +10110,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[451,452,453]",
                             NumericCode = "928"
                         },
                         new
@@ -10273,7 +10119,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)0,
-                            Names = "[454,455,456]",
                             NumericCode = "704",
                             Symbol = "₫"
                         },
@@ -10284,7 +10129,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)0,
-                            Names = "[457,458,459]",
                             NumericCode = "548"
                         },
                         new
@@ -10294,7 +10138,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[460,461,462]",
                             NumericCode = "882"
                         },
                         new
@@ -10304,7 +10147,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[463,464,465]",
                             NumericCode = "396"
                         },
                         new
@@ -10314,7 +10156,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)0,
-                            Names = "[466,467,468]",
                             NumericCode = "950"
                         },
                         new
@@ -10323,7 +10164,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DecimalSeparator = 0,
                             IsDeleted = false,
-                            Names = "[469,470,471]",
                             NumericCode = "961"
                         },
                         new
@@ -10332,7 +10172,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DecimalSeparator = 0,
                             IsDeleted = false,
-                            Names = "[472,473,474]",
                             NumericCode = "959"
                         },
                         new
@@ -10341,7 +10180,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DecimalSeparator = 0,
                             IsDeleted = false,
-                            Names = "[475,476,477]",
                             NumericCode = "955"
                         },
                         new
@@ -10350,7 +10188,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DecimalSeparator = 0,
                             IsDeleted = false,
-                            Names = "[478,479,480]",
                             NumericCode = "956"
                         },
                         new
@@ -10359,7 +10196,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DecimalSeparator = 0,
                             IsDeleted = false,
-                            Names = "[481,482,483]",
                             NumericCode = "957"
                         },
                         new
@@ -10368,7 +10204,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DecimalSeparator = 0,
                             IsDeleted = false,
-                            Names = "[484,485,486]",
                             NumericCode = "958"
                         },
                         new
@@ -10378,7 +10213,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[487,488,489]",
                             NumericCode = "951",
                             Symbol = "$"
                         },
@@ -10389,7 +10223,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[490,491,492]",
                             NumericCode = "532"
                         },
                         new
@@ -10398,7 +10231,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DecimalSeparator = 0,
                             IsDeleted = false,
-                            Names = "[493,494,495]",
                             NumericCode = "960"
                         },
                         new
@@ -10408,7 +10240,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)0,
-                            Names = "[496,497,498]",
                             NumericCode = "952"
                         },
                         new
@@ -10417,7 +10248,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DecimalSeparator = 0,
                             IsDeleted = false,
-                            Names = "[499,500,501]",
                             NumericCode = "964"
                         },
                         new
@@ -10427,7 +10257,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)0,
-                            Names = "[502,503,504]",
                             NumericCode = "953"
                         },
                         new
@@ -10436,7 +10265,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DecimalSeparator = 0,
                             IsDeleted = false,
-                            Names = "[505,506,507]",
                             NumericCode = "962"
                         },
                         new
@@ -10445,7 +10273,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DecimalSeparator = 0,
                             IsDeleted = false,
-                            Names = "[508,509,510]",
                             NumericCode = "994"
                         },
                         new
@@ -10454,7 +10281,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DecimalSeparator = 0,
                             IsDeleted = false,
-                            Names = "[511,512,513]",
                             NumericCode = "963"
                         },
                         new
@@ -10463,7 +10289,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DecimalSeparator = 0,
                             IsDeleted = false,
-                            Names = "[514,515,516]",
                             NumericCode = "965"
                         },
                         new
@@ -10472,7 +10297,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             CreatedDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DecimalSeparator = 0,
                             IsDeleted = false,
-                            Names = "[517,518,519]",
                             NumericCode = "999"
                         },
                         new
@@ -10482,7 +10306,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[520,521,522]",
                             NumericCode = "886"
                         },
                         new
@@ -10492,7 +10315,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[523,524,525]",
                             NumericCode = "710"
                         },
                         new
@@ -10502,7 +10324,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[526,527,528]",
                             NumericCode = "967"
                         },
                         new
@@ -10512,8 +10333,3759 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                             DecimalSeparator = 0,
                             IsDeleted = false,
                             MinorUnit = (byte)2,
-                            Names = "[529,530,531]",
                             NumericCode = "924"
+                        });
+                });
+
+            modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.CurrencyName", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CurrencyId")
+                        .IsRequired()
+                        .HasMaxLength(3)
+                        .HasColumnType("nvarchar(3)");
+
+                    b.Property<string>("LanguageId")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LanguageId");
+
+                    b.HasIndex("CurrencyId", "LanguageId")
+                        .IsUnique();
+
+                    b.ToTable("CurrencyNames");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CurrencyId = "AED",
+                            LanguageId = "en",
+                            Name = "United Arab Emirates Dirham"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CurrencyId = "AED",
+                            LanguageId = "ar",
+                            Name = "درهم إماراتي"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CurrencyId = "AED",
+                            LanguageId = "fr",
+                            Name = "dirham des Émirats arabes unis"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CurrencyId = "AFN",
+                            LanguageId = "en",
+                            Name = "Afghan Afghani"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CurrencyId = "AFN",
+                            LanguageId = "ar",
+                            Name = "أفغاني"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CurrencyId = "AFN",
+                            LanguageId = "fr",
+                            Name = "afghani afghan"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CurrencyId = "ALL",
+                            LanguageId = "en",
+                            Name = "Albanian Lek"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CurrencyId = "ALL",
+                            LanguageId = "ar",
+                            Name = "ليك ألباني"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CurrencyId = "ALL",
+                            LanguageId = "fr",
+                            Name = "lek albanais"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CurrencyId = "AMD",
+                            LanguageId = "en",
+                            Name = "Armenian Dram"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CurrencyId = "AMD",
+                            LanguageId = "ar",
+                            Name = "درام أرميني"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CurrencyId = "AMD",
+                            LanguageId = "fr",
+                            Name = "dram arménien"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CurrencyId = "AOA",
+                            LanguageId = "en",
+                            Name = "Angolan Kwanza"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CurrencyId = "AOA",
+                            LanguageId = "ar",
+                            Name = "كوانزا أنغولي"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CurrencyId = "AOA",
+                            LanguageId = "fr",
+                            Name = "kwanza angolais"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            CurrencyId = "ARS",
+                            LanguageId = "en",
+                            Name = "Argentine Peso"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CurrencyId = "ARS",
+                            LanguageId = "ar",
+                            Name = "بيزو أرجنتيني"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            CurrencyId = "ARS",
+                            LanguageId = "fr",
+                            Name = "peso argentin"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            CurrencyId = "AUD",
+                            LanguageId = "en",
+                            Name = "Australian Dollar"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            CurrencyId = "AUD",
+                            LanguageId = "ar",
+                            Name = "دولار أسترالي"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            CurrencyId = "AUD",
+                            LanguageId = "fr",
+                            Name = "dollar australien"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            CurrencyId = "AWG",
+                            LanguageId = "en",
+                            Name = "Aruban Florin"
+                        },
+                        new
+                        {
+                            Id = 23,
+                            CurrencyId = "AWG",
+                            LanguageId = "ar",
+                            Name = "فلورن أروبي"
+                        },
+                        new
+                        {
+                            Id = 24,
+                            CurrencyId = "AWG",
+                            LanguageId = "fr",
+                            Name = "florin arubais"
+                        },
+                        new
+                        {
+                            Id = 25,
+                            CurrencyId = "AZN",
+                            LanguageId = "en",
+                            Name = "Azerbaijani Manat"
+                        },
+                        new
+                        {
+                            Id = 26,
+                            CurrencyId = "AZN",
+                            LanguageId = "ar",
+                            Name = "مانات أذربيجان"
+                        },
+                        new
+                        {
+                            Id = 27,
+                            CurrencyId = "AZN",
+                            LanguageId = "fr",
+                            Name = "manat azéri"
+                        },
+                        new
+                        {
+                            Id = 28,
+                            CurrencyId = "BAM",
+                            LanguageId = "en",
+                            Name = "Bosnia-Herzegovina Convertible Mark"
+                        },
+                        new
+                        {
+                            Id = 29,
+                            CurrencyId = "BAM",
+                            LanguageId = "ar",
+                            Name = "مارك البوسنة والهرسك قابل للتحويل"
+                        },
+                        new
+                        {
+                            Id = 30,
+                            CurrencyId = "BAM",
+                            LanguageId = "fr",
+                            Name = "mark convertible bosniaque"
+                        },
+                        new
+                        {
+                            Id = 31,
+                            CurrencyId = "BBD",
+                            LanguageId = "en",
+                            Name = "Barbadian Dollar"
+                        },
+                        new
+                        {
+                            Id = 32,
+                            CurrencyId = "BBD",
+                            LanguageId = "ar",
+                            Name = "دولار بربادوسي"
+                        },
+                        new
+                        {
+                            Id = 33,
+                            CurrencyId = "BBD",
+                            LanguageId = "fr",
+                            Name = "dollar barbadien"
+                        },
+                        new
+                        {
+                            Id = 34,
+                            CurrencyId = "BDT",
+                            LanguageId = "en",
+                            Name = "Bangladeshi Taka"
+                        },
+                        new
+                        {
+                            Id = 35,
+                            CurrencyId = "BDT",
+                            LanguageId = "ar",
+                            Name = "تاكا بنغلاديشي"
+                        },
+                        new
+                        {
+                            Id = 36,
+                            CurrencyId = "BDT",
+                            LanguageId = "fr",
+                            Name = "taka bangladeshi"
+                        },
+                        new
+                        {
+                            Id = 37,
+                            CurrencyId = "BHD",
+                            LanguageId = "en",
+                            Name = "Bahraini Dinar"
+                        },
+                        new
+                        {
+                            Id = 38,
+                            CurrencyId = "BHD",
+                            LanguageId = "ar",
+                            Name = "دينار بحريني"
+                        },
+                        new
+                        {
+                            Id = 39,
+                            CurrencyId = "BHD",
+                            LanguageId = "fr",
+                            Name = "dinar bahreïni"
+                        },
+                        new
+                        {
+                            Id = 40,
+                            CurrencyId = "BIF",
+                            LanguageId = "en",
+                            Name = "Burundian Franc"
+                        },
+                        new
+                        {
+                            Id = 41,
+                            CurrencyId = "BIF",
+                            LanguageId = "ar",
+                            Name = "فرنك بروندي"
+                        },
+                        new
+                        {
+                            Id = 42,
+                            CurrencyId = "BIF",
+                            LanguageId = "fr",
+                            Name = "franc burundais"
+                        },
+                        new
+                        {
+                            Id = 43,
+                            CurrencyId = "BMD",
+                            LanguageId = "en",
+                            Name = "Bermudan Dollar"
+                        },
+                        new
+                        {
+                            Id = 44,
+                            CurrencyId = "BMD",
+                            LanguageId = "ar",
+                            Name = "دولار برمودي"
+                        },
+                        new
+                        {
+                            Id = 45,
+                            CurrencyId = "BMD",
+                            LanguageId = "fr",
+                            Name = "dollar bermudien"
+                        },
+                        new
+                        {
+                            Id = 46,
+                            CurrencyId = "BND",
+                            LanguageId = "en",
+                            Name = "Brunei Dollar"
+                        },
+                        new
+                        {
+                            Id = 47,
+                            CurrencyId = "BND",
+                            LanguageId = "ar",
+                            Name = "دولار بروناي"
+                        },
+                        new
+                        {
+                            Id = 48,
+                            CurrencyId = "BND",
+                            LanguageId = "fr",
+                            Name = "dollar brunéien"
+                        },
+                        new
+                        {
+                            Id = 49,
+                            CurrencyId = "BOB",
+                            LanguageId = "en",
+                            Name = "Bolivian Boliviano"
+                        },
+                        new
+                        {
+                            Id = 50,
+                            CurrencyId = "BOB",
+                            LanguageId = "ar",
+                            Name = "بوليفيانو بوليفي"
+                        },
+                        new
+                        {
+                            Id = 51,
+                            CurrencyId = "BOB",
+                            LanguageId = "fr",
+                            Name = "boliviano bolivien"
+                        },
+                        new
+                        {
+                            Id = 52,
+                            CurrencyId = "BOV",
+                            LanguageId = "en",
+                            Name = "Bolivian Mvdol"
+                        },
+                        new
+                        {
+                            Id = 53,
+                            CurrencyId = "BOV",
+                            LanguageId = "ar",
+                            Name = "مودفول بوليفي"
+                        },
+                        new
+                        {
+                            Id = 54,
+                            CurrencyId = "BOV",
+                            LanguageId = "fr",
+                            Name = "Mvdol bolivien"
+                        },
+                        new
+                        {
+                            Id = 55,
+                            CurrencyId = "BRL",
+                            LanguageId = "en",
+                            Name = "Brazilian Real"
+                        },
+                        new
+                        {
+                            Id = 56,
+                            CurrencyId = "BRL",
+                            LanguageId = "ar",
+                            Name = "ريال برازيلي"
+                        },
+                        new
+                        {
+                            Id = 57,
+                            CurrencyId = "BRL",
+                            LanguageId = "fr",
+                            Name = "réal brésilien"
+                        },
+                        new
+                        {
+                            Id = 58,
+                            CurrencyId = "BSD",
+                            LanguageId = "en",
+                            Name = "Bahamian Dollar"
+                        },
+                        new
+                        {
+                            Id = 59,
+                            CurrencyId = "BSD",
+                            LanguageId = "ar",
+                            Name = "دولار باهامي"
+                        },
+                        new
+                        {
+                            Id = 60,
+                            CurrencyId = "BSD",
+                            LanguageId = "fr",
+                            Name = "dollar bahaméen"
+                        },
+                        new
+                        {
+                            Id = 61,
+                            CurrencyId = "BTN",
+                            LanguageId = "en",
+                            Name = "Bhutanese Ngultrum"
+                        },
+                        new
+                        {
+                            Id = 62,
+                            CurrencyId = "BTN",
+                            LanguageId = "ar",
+                            Name = "نولتوم بوتاني"
+                        },
+                        new
+                        {
+                            Id = 63,
+                            CurrencyId = "BTN",
+                            LanguageId = "fr",
+                            Name = "ngultrum bouthanais"
+                        },
+                        new
+                        {
+                            Id = 64,
+                            CurrencyId = "BWP",
+                            LanguageId = "en",
+                            Name = "Botswanan Pula"
+                        },
+                        new
+                        {
+                            Id = 65,
+                            CurrencyId = "BWP",
+                            LanguageId = "ar",
+                            Name = "بولا بتسواني"
+                        },
+                        new
+                        {
+                            Id = 66,
+                            CurrencyId = "BWP",
+                            LanguageId = "fr",
+                            Name = "pula botswanais"
+                        },
+                        new
+                        {
+                            Id = 67,
+                            CurrencyId = "BYN",
+                            LanguageId = "en",
+                            Name = "Belarusian Ruble"
+                        },
+                        new
+                        {
+                            Id = 68,
+                            CurrencyId = "BYN",
+                            LanguageId = "ar",
+                            Name = "روبل بيلاروسي"
+                        },
+                        new
+                        {
+                            Id = 69,
+                            CurrencyId = "BYN",
+                            LanguageId = "fr",
+                            Name = "rouble biélorusse"
+                        },
+                        new
+                        {
+                            Id = 70,
+                            CurrencyId = "BZD",
+                            LanguageId = "en",
+                            Name = "Belize Dollar"
+                        },
+                        new
+                        {
+                            Id = 71,
+                            CurrencyId = "BZD",
+                            LanguageId = "ar",
+                            Name = "دولار بليزي"
+                        },
+                        new
+                        {
+                            Id = 72,
+                            CurrencyId = "BZD",
+                            LanguageId = "fr",
+                            Name = "dollar bélizéen"
+                        },
+                        new
+                        {
+                            Id = 73,
+                            CurrencyId = "CAD",
+                            LanguageId = "en",
+                            Name = "Canadian Dollar"
+                        },
+                        new
+                        {
+                            Id = 74,
+                            CurrencyId = "CAD",
+                            LanguageId = "ar",
+                            Name = "دولار كندي"
+                        },
+                        new
+                        {
+                            Id = 75,
+                            CurrencyId = "CAD",
+                            LanguageId = "fr",
+                            Name = "dollar canadien"
+                        },
+                        new
+                        {
+                            Id = 76,
+                            CurrencyId = "CDF",
+                            LanguageId = "en",
+                            Name = "Congolese Franc"
+                        },
+                        new
+                        {
+                            Id = 77,
+                            CurrencyId = "CDF",
+                            LanguageId = "ar",
+                            Name = "فرنك كونغولي"
+                        },
+                        new
+                        {
+                            Id = 78,
+                            CurrencyId = "CDF",
+                            LanguageId = "fr",
+                            Name = "franc congolais"
+                        },
+                        new
+                        {
+                            Id = 79,
+                            CurrencyId = "CHE",
+                            LanguageId = "en",
+                            Name = "WIR Euro"
+                        },
+                        new
+                        {
+                            Id = 80,
+                            CurrencyId = "CHE",
+                            LanguageId = "ar",
+                            Name = "يورو WIR"
+                        },
+                        new
+                        {
+                            Id = 81,
+                            CurrencyId = "CHE",
+                            LanguageId = "fr",
+                            Name = "euro WIR"
+                        },
+                        new
+                        {
+                            Id = 82,
+                            CurrencyId = "CHF",
+                            LanguageId = "en",
+                            Name = "Swiss Franc"
+                        },
+                        new
+                        {
+                            Id = 83,
+                            CurrencyId = "CHF",
+                            LanguageId = "ar",
+                            Name = "فرنك سويسري"
+                        },
+                        new
+                        {
+                            Id = 84,
+                            CurrencyId = "CHF",
+                            LanguageId = "fr",
+                            Name = "franc suisse"
+                        },
+                        new
+                        {
+                            Id = 85,
+                            CurrencyId = "CHW",
+                            LanguageId = "en",
+                            Name = "WIR Franc"
+                        },
+                        new
+                        {
+                            Id = 86,
+                            CurrencyId = "CHW",
+                            LanguageId = "ar",
+                            Name = "فرنك WIR"
+                        },
+                        new
+                        {
+                            Id = 87,
+                            CurrencyId = "CHW",
+                            LanguageId = "fr",
+                            Name = "franc WIR"
+                        },
+                        new
+                        {
+                            Id = 88,
+                            CurrencyId = "CLF",
+                            LanguageId = "en",
+                            Name = "Unidad de Fomento"
+                        },
+                        new
+                        {
+                            Id = 89,
+                            CurrencyId = "CLF",
+                            LanguageId = "ar",
+                            Name = "وحدة التنمية التشيلية"
+                        },
+                        new
+                        {
+                            Id = 90,
+                            CurrencyId = "CLF",
+                            LanguageId = "fr",
+                            Name = "unité de compte chilienne"
+                        },
+                        new
+                        {
+                            Id = 91,
+                            CurrencyId = "CLP",
+                            LanguageId = "en",
+                            Name = "Chilean Peso"
+                        },
+                        new
+                        {
+                            Id = 92,
+                            CurrencyId = "CLP",
+                            LanguageId = "ar",
+                            Name = "بيزو تشيلي"
+                        },
+                        new
+                        {
+                            Id = 93,
+                            CurrencyId = "CLP",
+                            LanguageId = "fr",
+                            Name = "peso chilien"
+                        },
+                        new
+                        {
+                            Id = 94,
+                            CurrencyId = "CNY",
+                            LanguageId = "en",
+                            Name = "Chinese Yuan"
+                        },
+                        new
+                        {
+                            Id = 95,
+                            CurrencyId = "CNY",
+                            LanguageId = "ar",
+                            Name = "يوان صيني"
+                        },
+                        new
+                        {
+                            Id = 96,
+                            CurrencyId = "CNY",
+                            LanguageId = "fr",
+                            Name = "yuan renminbi chinois"
+                        },
+                        new
+                        {
+                            Id = 97,
+                            CurrencyId = "COP",
+                            LanguageId = "en",
+                            Name = "Colombian Peso"
+                        },
+                        new
+                        {
+                            Id = 98,
+                            CurrencyId = "COP",
+                            LanguageId = "ar",
+                            Name = "بيزو كولومبي"
+                        },
+                        new
+                        {
+                            Id = 99,
+                            CurrencyId = "COP",
+                            LanguageId = "fr",
+                            Name = "peso colombien"
+                        },
+                        new
+                        {
+                            Id = 100,
+                            CurrencyId = "COU",
+                            LanguageId = "en",
+                            Name = "Unidad de Valor Real (UVR)"
+                        },
+                        new
+                        {
+                            Id = 101,
+                            CurrencyId = "COU",
+                            LanguageId = "ar",
+                            Name = "وحدة القيمة الحقيقية الكولومبية"
+                        },
+                        new
+                        {
+                            Id = 102,
+                            CurrencyId = "COU",
+                            LanguageId = "fr",
+                            Name = "unité de valeur réelle colombienne"
+                        },
+                        new
+                        {
+                            Id = 103,
+                            CurrencyId = "CRC",
+                            LanguageId = "en",
+                            Name = "Costa Rican Colón"
+                        },
+                        new
+                        {
+                            Id = 104,
+                            CurrencyId = "CRC",
+                            LanguageId = "ar",
+                            Name = "كولن كوستاريكي"
+                        },
+                        new
+                        {
+                            Id = 105,
+                            CurrencyId = "CRC",
+                            LanguageId = "fr",
+                            Name = "colón costaricain"
+                        },
+                        new
+                        {
+                            Id = 106,
+                            CurrencyId = "CUP",
+                            LanguageId = "en",
+                            Name = "Cuban Peso"
+                        },
+                        new
+                        {
+                            Id = 107,
+                            CurrencyId = "CUP",
+                            LanguageId = "ar",
+                            Name = "بيزو كوبي"
+                        },
+                        new
+                        {
+                            Id = 108,
+                            CurrencyId = "CUP",
+                            LanguageId = "fr",
+                            Name = "peso cubain"
+                        },
+                        new
+                        {
+                            Id = 109,
+                            CurrencyId = "CVE",
+                            LanguageId = "en",
+                            Name = "Cape Verdean Escudo"
+                        },
+                        new
+                        {
+                            Id = 110,
+                            CurrencyId = "CVE",
+                            LanguageId = "ar",
+                            Name = "اسكودو الرأس الأخضر"
+                        },
+                        new
+                        {
+                            Id = 111,
+                            CurrencyId = "CVE",
+                            LanguageId = "fr",
+                            Name = "escudo capverdien"
+                        },
+                        new
+                        {
+                            Id = 112,
+                            CurrencyId = "CZK",
+                            LanguageId = "en",
+                            Name = "Czech Koruna"
+                        },
+                        new
+                        {
+                            Id = 113,
+                            CurrencyId = "CZK",
+                            LanguageId = "ar",
+                            Name = "كرونة تشيكية"
+                        },
+                        new
+                        {
+                            Id = 114,
+                            CurrencyId = "CZK",
+                            LanguageId = "fr",
+                            Name = "couronne tchèque"
+                        },
+                        new
+                        {
+                            Id = 115,
+                            CurrencyId = "DJF",
+                            LanguageId = "en",
+                            Name = "Djiboutian Franc"
+                        },
+                        new
+                        {
+                            Id = 116,
+                            CurrencyId = "DJF",
+                            LanguageId = "ar",
+                            Name = "فرنك جيبوتي"
+                        },
+                        new
+                        {
+                            Id = 117,
+                            CurrencyId = "DJF",
+                            LanguageId = "fr",
+                            Name = "franc djiboutien"
+                        },
+                        new
+                        {
+                            Id = 118,
+                            CurrencyId = "DKK",
+                            LanguageId = "en",
+                            Name = "Danish Krone"
+                        },
+                        new
+                        {
+                            Id = 119,
+                            CurrencyId = "DKK",
+                            LanguageId = "ar",
+                            Name = "كرونة دنماركية"
+                        },
+                        new
+                        {
+                            Id = 120,
+                            CurrencyId = "DKK",
+                            LanguageId = "fr",
+                            Name = "couronne danoise"
+                        },
+                        new
+                        {
+                            Id = 121,
+                            CurrencyId = "DOP",
+                            LanguageId = "en",
+                            Name = "Dominican Peso"
+                        },
+                        new
+                        {
+                            Id = 122,
+                            CurrencyId = "DOP",
+                            LanguageId = "ar",
+                            Name = "بيزو الدومنيكان"
+                        },
+                        new
+                        {
+                            Id = 123,
+                            CurrencyId = "DOP",
+                            LanguageId = "fr",
+                            Name = "peso dominicain"
+                        },
+                        new
+                        {
+                            Id = 124,
+                            CurrencyId = "DZD",
+                            LanguageId = "en",
+                            Name = "Algerian Dinar"
+                        },
+                        new
+                        {
+                            Id = 125,
+                            CurrencyId = "DZD",
+                            LanguageId = "ar",
+                            Name = "دينار جزائري"
+                        },
+                        new
+                        {
+                            Id = 126,
+                            CurrencyId = "DZD",
+                            LanguageId = "fr",
+                            Name = "dinar algérien"
+                        },
+                        new
+                        {
+                            Id = 127,
+                            CurrencyId = "EGP",
+                            LanguageId = "en",
+                            Name = "Egyptian Pound"
+                        },
+                        new
+                        {
+                            Id = 128,
+                            CurrencyId = "EGP",
+                            LanguageId = "ar",
+                            Name = "جنيه مصري"
+                        },
+                        new
+                        {
+                            Id = 129,
+                            CurrencyId = "EGP",
+                            LanguageId = "fr",
+                            Name = "livre égyptienne"
+                        },
+                        new
+                        {
+                            Id = 130,
+                            CurrencyId = "ERN",
+                            LanguageId = "en",
+                            Name = "Eritrean Nakfa"
+                        },
+                        new
+                        {
+                            Id = 131,
+                            CurrencyId = "ERN",
+                            LanguageId = "ar",
+                            Name = "ناكفا أريتري"
+                        },
+                        new
+                        {
+                            Id = 132,
+                            CurrencyId = "ERN",
+                            LanguageId = "fr",
+                            Name = "nafka érythréen"
+                        },
+                        new
+                        {
+                            Id = 133,
+                            CurrencyId = "ETB",
+                            LanguageId = "en",
+                            Name = "Ethiopian Birr"
+                        },
+                        new
+                        {
+                            Id = 134,
+                            CurrencyId = "ETB",
+                            LanguageId = "ar",
+                            Name = "بير أثيوبي"
+                        },
+                        new
+                        {
+                            Id = 135,
+                            CurrencyId = "ETB",
+                            LanguageId = "fr",
+                            Name = "birr éthiopien"
+                        },
+                        new
+                        {
+                            Id = 136,
+                            CurrencyId = "EUR",
+                            LanguageId = "en",
+                            Name = "Euro"
+                        },
+                        new
+                        {
+                            Id = 137,
+                            CurrencyId = "EUR",
+                            LanguageId = "ar",
+                            Name = "يورو"
+                        },
+                        new
+                        {
+                            Id = 138,
+                            CurrencyId = "EUR",
+                            LanguageId = "fr",
+                            Name = "euro"
+                        },
+                        new
+                        {
+                            Id = 139,
+                            CurrencyId = "FJD",
+                            LanguageId = "en",
+                            Name = "Fijian Dollar"
+                        },
+                        new
+                        {
+                            Id = 140,
+                            CurrencyId = "FJD",
+                            LanguageId = "ar",
+                            Name = "دولار فيجي"
+                        },
+                        new
+                        {
+                            Id = 141,
+                            CurrencyId = "FJD",
+                            LanguageId = "fr",
+                            Name = "dollar fidjien"
+                        },
+                        new
+                        {
+                            Id = 142,
+                            CurrencyId = "FKP",
+                            LanguageId = "en",
+                            Name = "Falkland Islands Pound"
+                        },
+                        new
+                        {
+                            Id = 143,
+                            CurrencyId = "FKP",
+                            LanguageId = "ar",
+                            Name = "جنيه جزر فوكلاند"
+                        },
+                        new
+                        {
+                            Id = 144,
+                            CurrencyId = "FKP",
+                            LanguageId = "fr",
+                            Name = "livre des îles Malouines"
+                        },
+                        new
+                        {
+                            Id = 145,
+                            CurrencyId = "GBP",
+                            LanguageId = "en",
+                            Name = "British Pound"
+                        },
+                        new
+                        {
+                            Id = 146,
+                            CurrencyId = "GBP",
+                            LanguageId = "ar",
+                            Name = "جنيه إسترليني"
+                        },
+                        new
+                        {
+                            Id = 147,
+                            CurrencyId = "GBP",
+                            LanguageId = "fr",
+                            Name = "livre sterling"
+                        },
+                        new
+                        {
+                            Id = 148,
+                            CurrencyId = "GEL",
+                            LanguageId = "en",
+                            Name = "Georgian Lari"
+                        },
+                        new
+                        {
+                            Id = 149,
+                            CurrencyId = "GEL",
+                            LanguageId = "ar",
+                            Name = "لارى جورجي"
+                        },
+                        new
+                        {
+                            Id = 150,
+                            CurrencyId = "GEL",
+                            LanguageId = "fr",
+                            Name = "lari géorgien"
+                        },
+                        new
+                        {
+                            Id = 151,
+                            CurrencyId = "GHS",
+                            LanguageId = "en",
+                            Name = "Ghanaian Cedi"
+                        },
+                        new
+                        {
+                            Id = 152,
+                            CurrencyId = "GHS",
+                            LanguageId = "ar",
+                            Name = "سيدي غانا"
+                        },
+                        new
+                        {
+                            Id = 153,
+                            CurrencyId = "GHS",
+                            LanguageId = "fr",
+                            Name = "cédi ghanéen"
+                        },
+                        new
+                        {
+                            Id = 154,
+                            CurrencyId = "GIP",
+                            LanguageId = "en",
+                            Name = "Gibraltar Pound"
+                        },
+                        new
+                        {
+                            Id = 155,
+                            CurrencyId = "GIP",
+                            LanguageId = "ar",
+                            Name = "جنيه جبل طارق"
+                        },
+                        new
+                        {
+                            Id = 156,
+                            CurrencyId = "GIP",
+                            LanguageId = "fr",
+                            Name = "livre de Gibraltar"
+                        },
+                        new
+                        {
+                            Id = 157,
+                            CurrencyId = "GMD",
+                            LanguageId = "en",
+                            Name = "Gambian Dalasi"
+                        },
+                        new
+                        {
+                            Id = 158,
+                            CurrencyId = "GMD",
+                            LanguageId = "ar",
+                            Name = "دلاسي غامبي"
+                        },
+                        new
+                        {
+                            Id = 159,
+                            CurrencyId = "GMD",
+                            LanguageId = "fr",
+                            Name = "dalasi gambien"
+                        },
+                        new
+                        {
+                            Id = 160,
+                            CurrencyId = "GNF",
+                            LanguageId = "en",
+                            Name = "Guinean Franc"
+                        },
+                        new
+                        {
+                            Id = 161,
+                            CurrencyId = "GNF",
+                            LanguageId = "ar",
+                            Name = "فرنك غينيا"
+                        },
+                        new
+                        {
+                            Id = 162,
+                            CurrencyId = "GNF",
+                            LanguageId = "fr",
+                            Name = "franc guinéen"
+                        },
+                        new
+                        {
+                            Id = 163,
+                            CurrencyId = "GTQ",
+                            LanguageId = "en",
+                            Name = "Guatemalan Quetzal"
+                        },
+                        new
+                        {
+                            Id = 164,
+                            CurrencyId = "GTQ",
+                            LanguageId = "ar",
+                            Name = "كوتزال غواتيمالا"
+                        },
+                        new
+                        {
+                            Id = 165,
+                            CurrencyId = "GTQ",
+                            LanguageId = "fr",
+                            Name = "quetzal guatémaltèque"
+                        },
+                        new
+                        {
+                            Id = 166,
+                            CurrencyId = "GYD",
+                            LanguageId = "en",
+                            Name = "Guyanaese Dollar"
+                        },
+                        new
+                        {
+                            Id = 167,
+                            CurrencyId = "GYD",
+                            LanguageId = "ar",
+                            Name = "دولار غيانا"
+                        },
+                        new
+                        {
+                            Id = 168,
+                            CurrencyId = "GYD",
+                            LanguageId = "fr",
+                            Name = "dollar du Guyana"
+                        },
+                        new
+                        {
+                            Id = 169,
+                            CurrencyId = "HKD",
+                            LanguageId = "en",
+                            Name = "Hong Kong Dollar"
+                        },
+                        new
+                        {
+                            Id = 170,
+                            CurrencyId = "HKD",
+                            LanguageId = "ar",
+                            Name = "دولار هونغ كونغ"
+                        },
+                        new
+                        {
+                            Id = 171,
+                            CurrencyId = "HKD",
+                            LanguageId = "fr",
+                            Name = "dollar de Hong Kong"
+                        },
+                        new
+                        {
+                            Id = 172,
+                            CurrencyId = "HNL",
+                            LanguageId = "en",
+                            Name = "Honduran Lempira"
+                        },
+                        new
+                        {
+                            Id = 173,
+                            CurrencyId = "HNL",
+                            LanguageId = "ar",
+                            Name = "ليمبيرا هنداروس"
+                        },
+                        new
+                        {
+                            Id = 174,
+                            CurrencyId = "HNL",
+                            LanguageId = "fr",
+                            Name = "lempira hondurien"
+                        },
+                        new
+                        {
+                            Id = 175,
+                            CurrencyId = "HTG",
+                            LanguageId = "en",
+                            Name = "Haitian Gourde"
+                        },
+                        new
+                        {
+                            Id = 176,
+                            CurrencyId = "HTG",
+                            LanguageId = "ar",
+                            Name = "جوردى هايتي"
+                        },
+                        new
+                        {
+                            Id = 177,
+                            CurrencyId = "HTG",
+                            LanguageId = "fr",
+                            Name = "gourde haïtienne"
+                        },
+                        new
+                        {
+                            Id = 178,
+                            CurrencyId = "HUF",
+                            LanguageId = "en",
+                            Name = "Hungarian Forint"
+                        },
+                        new
+                        {
+                            Id = 179,
+                            CurrencyId = "HUF",
+                            LanguageId = "ar",
+                            Name = "فورينت هنغاري"
+                        },
+                        new
+                        {
+                            Id = 180,
+                            CurrencyId = "HUF",
+                            LanguageId = "fr",
+                            Name = "forint hongrois"
+                        },
+                        new
+                        {
+                            Id = 181,
+                            CurrencyId = "IDR",
+                            LanguageId = "en",
+                            Name = "Indonesian Rupiah"
+                        },
+                        new
+                        {
+                            Id = 182,
+                            CurrencyId = "IDR",
+                            LanguageId = "ar",
+                            Name = "روبية إندونيسية"
+                        },
+                        new
+                        {
+                            Id = 183,
+                            CurrencyId = "IDR",
+                            LanguageId = "fr",
+                            Name = "roupie indonésienne"
+                        },
+                        new
+                        {
+                            Id = 184,
+                            CurrencyId = "INR",
+                            LanguageId = "en",
+                            Name = "Indian Rupee"
+                        },
+                        new
+                        {
+                            Id = 185,
+                            CurrencyId = "INR",
+                            LanguageId = "ar",
+                            Name = "روبية هندي"
+                        },
+                        new
+                        {
+                            Id = 186,
+                            CurrencyId = "INR",
+                            LanguageId = "fr",
+                            Name = "roupie indienne"
+                        },
+                        new
+                        {
+                            Id = 187,
+                            CurrencyId = "IQD",
+                            LanguageId = "en",
+                            Name = "Iraqi Dinar"
+                        },
+                        new
+                        {
+                            Id = 188,
+                            CurrencyId = "IQD",
+                            LanguageId = "ar",
+                            Name = "دينار عراقي"
+                        },
+                        new
+                        {
+                            Id = 189,
+                            CurrencyId = "IQD",
+                            LanguageId = "fr",
+                            Name = "dinar irakien"
+                        },
+                        new
+                        {
+                            Id = 190,
+                            CurrencyId = "IRR",
+                            LanguageId = "en",
+                            Name = "Iranian Rial"
+                        },
+                        new
+                        {
+                            Id = 191,
+                            CurrencyId = "IRR",
+                            LanguageId = "ar",
+                            Name = "ريال إيراني"
+                        },
+                        new
+                        {
+                            Id = 192,
+                            CurrencyId = "IRR",
+                            LanguageId = "fr",
+                            Name = "riyal iranien"
+                        },
+                        new
+                        {
+                            Id = 193,
+                            CurrencyId = "ISK",
+                            LanguageId = "en",
+                            Name = "Icelandic Króna"
+                        },
+                        new
+                        {
+                            Id = 194,
+                            CurrencyId = "ISK",
+                            LanguageId = "ar",
+                            Name = "كرونة أيسلندية"
+                        },
+                        new
+                        {
+                            Id = 195,
+                            CurrencyId = "ISK",
+                            LanguageId = "fr",
+                            Name = "couronne islandaise"
+                        },
+                        new
+                        {
+                            Id = 196,
+                            CurrencyId = "JMD",
+                            LanguageId = "en",
+                            Name = "Jamaican Dollar"
+                        },
+                        new
+                        {
+                            Id = 197,
+                            CurrencyId = "JMD",
+                            LanguageId = "ar",
+                            Name = "دولار جامايكي"
+                        },
+                        new
+                        {
+                            Id = 198,
+                            CurrencyId = "JMD",
+                            LanguageId = "fr",
+                            Name = "dollar jamaïcain"
+                        },
+                        new
+                        {
+                            Id = 199,
+                            CurrencyId = "JOD",
+                            LanguageId = "en",
+                            Name = "Jordanian Dinar"
+                        },
+                        new
+                        {
+                            Id = 200,
+                            CurrencyId = "JOD",
+                            LanguageId = "ar",
+                            Name = "دينار أردني"
+                        },
+                        new
+                        {
+                            Id = 201,
+                            CurrencyId = "JOD",
+                            LanguageId = "fr",
+                            Name = "dinar jordanien"
+                        },
+                        new
+                        {
+                            Id = 202,
+                            CurrencyId = "JPY",
+                            LanguageId = "en",
+                            Name = "Japanese Yen"
+                        },
+                        new
+                        {
+                            Id = 203,
+                            CurrencyId = "JPY",
+                            LanguageId = "ar",
+                            Name = "ين ياباني"
+                        },
+                        new
+                        {
+                            Id = 204,
+                            CurrencyId = "JPY",
+                            LanguageId = "fr",
+                            Name = "yen japonais"
+                        },
+                        new
+                        {
+                            Id = 205,
+                            CurrencyId = "KES",
+                            LanguageId = "en",
+                            Name = "Kenyan Shilling"
+                        },
+                        new
+                        {
+                            Id = 206,
+                            CurrencyId = "KES",
+                            LanguageId = "ar",
+                            Name = "شلن كينيي"
+                        },
+                        new
+                        {
+                            Id = 207,
+                            CurrencyId = "KES",
+                            LanguageId = "fr",
+                            Name = "shilling kényan"
+                        },
+                        new
+                        {
+                            Id = 208,
+                            CurrencyId = "KGS",
+                            LanguageId = "en",
+                            Name = "Kyrgyz Som"
+                        },
+                        new
+                        {
+                            Id = 209,
+                            CurrencyId = "KGS",
+                            LanguageId = "ar",
+                            Name = "سوم قيرغستاني"
+                        },
+                        new
+                        {
+                            Id = 210,
+                            CurrencyId = "KGS",
+                            LanguageId = "fr",
+                            Name = "som kirghize"
+                        },
+                        new
+                        {
+                            Id = 211,
+                            CurrencyId = "KHR",
+                            LanguageId = "en",
+                            Name = "Cambodian Riel"
+                        },
+                        new
+                        {
+                            Id = 212,
+                            CurrencyId = "KHR",
+                            LanguageId = "ar",
+                            Name = "رييال كمبودي"
+                        },
+                        new
+                        {
+                            Id = 213,
+                            CurrencyId = "KHR",
+                            LanguageId = "fr",
+                            Name = "riel cambodgien"
+                        },
+                        new
+                        {
+                            Id = 214,
+                            CurrencyId = "KMF",
+                            LanguageId = "en",
+                            Name = "Comorian Franc"
+                        },
+                        new
+                        {
+                            Id = 215,
+                            CurrencyId = "KMF",
+                            LanguageId = "ar",
+                            Name = "فرنك جزر القمر"
+                        },
+                        new
+                        {
+                            Id = 216,
+                            CurrencyId = "KMF",
+                            LanguageId = "fr",
+                            Name = "franc comorien"
+                        },
+                        new
+                        {
+                            Id = 217,
+                            CurrencyId = "KPW",
+                            LanguageId = "en",
+                            Name = "North Korean Won"
+                        },
+                        new
+                        {
+                            Id = 218,
+                            CurrencyId = "KPW",
+                            LanguageId = "ar",
+                            Name = "وون كوريا الشمالية"
+                        },
+                        new
+                        {
+                            Id = 219,
+                            CurrencyId = "KPW",
+                            LanguageId = "fr",
+                            Name = "won nord-coréen"
+                        },
+                        new
+                        {
+                            Id = 220,
+                            CurrencyId = "KRW",
+                            LanguageId = "en",
+                            Name = "South Korean Won"
+                        },
+                        new
+                        {
+                            Id = 221,
+                            CurrencyId = "KRW",
+                            LanguageId = "ar",
+                            Name = "وون كوريا الجنوبية"
+                        },
+                        new
+                        {
+                            Id = 222,
+                            CurrencyId = "KRW",
+                            LanguageId = "fr",
+                            Name = "won sud-coréen"
+                        },
+                        new
+                        {
+                            Id = 223,
+                            CurrencyId = "KWD",
+                            LanguageId = "en",
+                            Name = "Kuwaiti Dinar"
+                        },
+                        new
+                        {
+                            Id = 224,
+                            CurrencyId = "KWD",
+                            LanguageId = "ar",
+                            Name = "دينار كويتي"
+                        },
+                        new
+                        {
+                            Id = 225,
+                            CurrencyId = "KWD",
+                            LanguageId = "fr",
+                            Name = "dinar koweïtien"
+                        },
+                        new
+                        {
+                            Id = 226,
+                            CurrencyId = "KYD",
+                            LanguageId = "en",
+                            Name = "Cayman Islands Dollar"
+                        },
+                        new
+                        {
+                            Id = 227,
+                            CurrencyId = "KYD",
+                            LanguageId = "ar",
+                            Name = "دولار جزر كيمن"
+                        },
+                        new
+                        {
+                            Id = 228,
+                            CurrencyId = "KYD",
+                            LanguageId = "fr",
+                            Name = "dollar des îles Caïmans"
+                        },
+                        new
+                        {
+                            Id = 229,
+                            CurrencyId = "KZT",
+                            LanguageId = "en",
+                            Name = "Kazakhstani Tenge"
+                        },
+                        new
+                        {
+                            Id = 230,
+                            CurrencyId = "KZT",
+                            LanguageId = "ar",
+                            Name = "تينغ كازاخستاني"
+                        },
+                        new
+                        {
+                            Id = 231,
+                            CurrencyId = "KZT",
+                            LanguageId = "fr",
+                            Name = "tenge kazakh"
+                        },
+                        new
+                        {
+                            Id = 232,
+                            CurrencyId = "LAK",
+                            LanguageId = "en",
+                            Name = "Laotian Kip"
+                        },
+                        new
+                        {
+                            Id = 233,
+                            CurrencyId = "LAK",
+                            LanguageId = "ar",
+                            Name = "كيب لاوسي"
+                        },
+                        new
+                        {
+                            Id = 234,
+                            CurrencyId = "LAK",
+                            LanguageId = "fr",
+                            Name = "kip laotien"
+                        },
+                        new
+                        {
+                            Id = 235,
+                            CurrencyId = "LBP",
+                            LanguageId = "en",
+                            Name = "Lebanese Pound"
+                        },
+                        new
+                        {
+                            Id = 236,
+                            CurrencyId = "LBP",
+                            LanguageId = "ar",
+                            Name = "جنيه لبناني"
+                        },
+                        new
+                        {
+                            Id = 237,
+                            CurrencyId = "LBP",
+                            LanguageId = "fr",
+                            Name = "livre libanaise"
+                        },
+                        new
+                        {
+                            Id = 238,
+                            CurrencyId = "LKR",
+                            LanguageId = "en",
+                            Name = "Sri Lankan Rupee"
+                        },
+                        new
+                        {
+                            Id = 239,
+                            CurrencyId = "LKR",
+                            LanguageId = "ar",
+                            Name = "روبية سريلانكية"
+                        },
+                        new
+                        {
+                            Id = 240,
+                            CurrencyId = "LKR",
+                            LanguageId = "fr",
+                            Name = "roupie srilankaise"
+                        },
+                        new
+                        {
+                            Id = 241,
+                            CurrencyId = "LRD",
+                            LanguageId = "en",
+                            Name = "Liberian Dollar"
+                        },
+                        new
+                        {
+                            Id = 242,
+                            CurrencyId = "LRD",
+                            LanguageId = "ar",
+                            Name = "دولار ليبيري"
+                        },
+                        new
+                        {
+                            Id = 243,
+                            CurrencyId = "LRD",
+                            LanguageId = "fr",
+                            Name = "dollar libérien"
+                        },
+                        new
+                        {
+                            Id = 244,
+                            CurrencyId = "LSL",
+                            LanguageId = "en",
+                            Name = "Lesotho Loti"
+                        },
+                        new
+                        {
+                            Id = 245,
+                            CurrencyId = "LSL",
+                            LanguageId = "ar",
+                            Name = "لوتي ليسوتو"
+                        },
+                        new
+                        {
+                            Id = 246,
+                            CurrencyId = "LSL",
+                            LanguageId = "fr",
+                            Name = "loti lesothan"
+                        },
+                        new
+                        {
+                            Id = 247,
+                            CurrencyId = "LYD",
+                            LanguageId = "en",
+                            Name = "Libyan Dinar"
+                        },
+                        new
+                        {
+                            Id = 248,
+                            CurrencyId = "LYD",
+                            LanguageId = "ar",
+                            Name = "دينار ليبي"
+                        },
+                        new
+                        {
+                            Id = 249,
+                            CurrencyId = "LYD",
+                            LanguageId = "fr",
+                            Name = "dinar libyen"
+                        },
+                        new
+                        {
+                            Id = 250,
+                            CurrencyId = "MAD",
+                            LanguageId = "en",
+                            Name = "Moroccan Dirham"
+                        },
+                        new
+                        {
+                            Id = 251,
+                            CurrencyId = "MAD",
+                            LanguageId = "ar",
+                            Name = "درهم مغربي"
+                        },
+                        new
+                        {
+                            Id = 252,
+                            CurrencyId = "MAD",
+                            LanguageId = "fr",
+                            Name = "dirham marocain"
+                        },
+                        new
+                        {
+                            Id = 253,
+                            CurrencyId = "MDL",
+                            LanguageId = "en",
+                            Name = "Moldovan Leu"
+                        },
+                        new
+                        {
+                            Id = 254,
+                            CurrencyId = "MDL",
+                            LanguageId = "ar",
+                            Name = "ليو مولدوفي"
+                        },
+                        new
+                        {
+                            Id = 255,
+                            CurrencyId = "MDL",
+                            LanguageId = "fr",
+                            Name = "leu moldave"
+                        },
+                        new
+                        {
+                            Id = 256,
+                            CurrencyId = "MGA",
+                            LanguageId = "en",
+                            Name = "Malagasy Ariary"
+                        },
+                        new
+                        {
+                            Id = 257,
+                            CurrencyId = "MGA",
+                            LanguageId = "ar",
+                            Name = "أرياري مدغشقر"
+                        },
+                        new
+                        {
+                            Id = 258,
+                            CurrencyId = "MGA",
+                            LanguageId = "fr",
+                            Name = "ariary malgache"
+                        },
+                        new
+                        {
+                            Id = 259,
+                            CurrencyId = "MKD",
+                            LanguageId = "en",
+                            Name = "Macedonian Denar"
+                        },
+                        new
+                        {
+                            Id = 260,
+                            CurrencyId = "MKD",
+                            LanguageId = "ar",
+                            Name = "دينار مقدوني"
+                        },
+                        new
+                        {
+                            Id = 261,
+                            CurrencyId = "MKD",
+                            LanguageId = "fr",
+                            Name = "denar macédonien"
+                        },
+                        new
+                        {
+                            Id = 262,
+                            CurrencyId = "MMK",
+                            LanguageId = "en",
+                            Name = "Myanmar Kyat"
+                        },
+                        new
+                        {
+                            Id = 263,
+                            CurrencyId = "MMK",
+                            LanguageId = "ar",
+                            Name = "كيات ميانمار"
+                        },
+                        new
+                        {
+                            Id = 264,
+                            CurrencyId = "MMK",
+                            LanguageId = "fr",
+                            Name = "kyat myanmarais"
+                        },
+                        new
+                        {
+                            Id = 265,
+                            CurrencyId = "MNT",
+                            LanguageId = "en",
+                            Name = "Mongolian Tugrik"
+                        },
+                        new
+                        {
+                            Id = 266,
+                            CurrencyId = "MNT",
+                            LanguageId = "ar",
+                            Name = "توغروغ منغولي"
+                        },
+                        new
+                        {
+                            Id = 267,
+                            CurrencyId = "MNT",
+                            LanguageId = "fr",
+                            Name = "tugrik mongol"
+                        },
+                        new
+                        {
+                            Id = 268,
+                            CurrencyId = "MOP",
+                            LanguageId = "en",
+                            Name = "Macanese Pataca"
+                        },
+                        new
+                        {
+                            Id = 269,
+                            CurrencyId = "MOP",
+                            LanguageId = "ar",
+                            Name = "باتاكا ماكاوي"
+                        },
+                        new
+                        {
+                            Id = 270,
+                            CurrencyId = "MOP",
+                            LanguageId = "fr",
+                            Name = "pataca macanaise"
+                        },
+                        new
+                        {
+                            Id = 271,
+                            CurrencyId = "MRU",
+                            LanguageId = "en",
+                            Name = "Mauritanian Ouguiya"
+                        },
+                        new
+                        {
+                            Id = 272,
+                            CurrencyId = "MRU",
+                            LanguageId = "ar",
+                            Name = "أوقية موريتانية"
+                        },
+                        new
+                        {
+                            Id = 273,
+                            CurrencyId = "MRU",
+                            LanguageId = "fr",
+                            Name = "ouguiya mauritanien"
+                        },
+                        new
+                        {
+                            Id = 274,
+                            CurrencyId = "MUR",
+                            LanguageId = "en",
+                            Name = "Mauritian Rupee"
+                        },
+                        new
+                        {
+                            Id = 275,
+                            CurrencyId = "MUR",
+                            LanguageId = "ar",
+                            Name = "روبية موريشيوسية"
+                        },
+                        new
+                        {
+                            Id = 276,
+                            CurrencyId = "MUR",
+                            LanguageId = "fr",
+                            Name = "roupie mauricienne"
+                        },
+                        new
+                        {
+                            Id = 277,
+                            CurrencyId = "MVR",
+                            LanguageId = "en",
+                            Name = "Maldivian Rufiyaa"
+                        },
+                        new
+                        {
+                            Id = 278,
+                            CurrencyId = "MVR",
+                            LanguageId = "ar",
+                            Name = "روفيه جزر المالديف"
+                        },
+                        new
+                        {
+                            Id = 279,
+                            CurrencyId = "MVR",
+                            LanguageId = "fr",
+                            Name = "rufiyaa maldivienne"
+                        },
+                        new
+                        {
+                            Id = 280,
+                            CurrencyId = "MWK",
+                            LanguageId = "en",
+                            Name = "Malawian Kwacha"
+                        },
+                        new
+                        {
+                            Id = 281,
+                            CurrencyId = "MWK",
+                            LanguageId = "ar",
+                            Name = "كواشا مالاوي"
+                        },
+                        new
+                        {
+                            Id = 282,
+                            CurrencyId = "MWK",
+                            LanguageId = "fr",
+                            Name = "kwacha malawite"
+                        },
+                        new
+                        {
+                            Id = 283,
+                            CurrencyId = "MXN",
+                            LanguageId = "en",
+                            Name = "Mexican Peso"
+                        },
+                        new
+                        {
+                            Id = 284,
+                            CurrencyId = "MXN",
+                            LanguageId = "ar",
+                            Name = "بيزو مكسيكي"
+                        },
+                        new
+                        {
+                            Id = 285,
+                            CurrencyId = "MXN",
+                            LanguageId = "fr",
+                            Name = "peso mexicain"
+                        },
+                        new
+                        {
+                            Id = 286,
+                            CurrencyId = "MXV",
+                            LanguageId = "en",
+                            Name = "Mexican Unidad de Inversión (UDI)"
+                        },
+                        new
+                        {
+                            Id = 287,
+                            CurrencyId = "MXV",
+                            LanguageId = "ar",
+                            Name = "وحدة الاستثمار المكسيكية (UDI)"
+                        },
+                        new
+                        {
+                            Id = 288,
+                            CurrencyId = "MXV",
+                            LanguageId = "fr",
+                            Name = "unité d’investissement mexicaine (UDI)"
+                        },
+                        new
+                        {
+                            Id = 289,
+                            CurrencyId = "MYR",
+                            LanguageId = "en",
+                            Name = "Malaysian Ringgit"
+                        },
+                        new
+                        {
+                            Id = 290,
+                            CurrencyId = "MYR",
+                            LanguageId = "ar",
+                            Name = "رينغيت ماليزي"
+                        },
+                        new
+                        {
+                            Id = 291,
+                            CurrencyId = "MYR",
+                            LanguageId = "fr",
+                            Name = "ringgit malais"
+                        },
+                        new
+                        {
+                            Id = 292,
+                            CurrencyId = "MZN",
+                            LanguageId = "en",
+                            Name = "Mozambican Metical"
+                        },
+                        new
+                        {
+                            Id = 293,
+                            CurrencyId = "MZN",
+                            LanguageId = "ar",
+                            Name = "متكال موزمبيقي"
+                        },
+                        new
+                        {
+                            Id = 294,
+                            CurrencyId = "MZN",
+                            LanguageId = "fr",
+                            Name = "metical mozambicain"
+                        },
+                        new
+                        {
+                            Id = 295,
+                            CurrencyId = "NAD",
+                            LanguageId = "en",
+                            Name = "Namibian Dollar"
+                        },
+                        new
+                        {
+                            Id = 296,
+                            CurrencyId = "NAD",
+                            LanguageId = "ar",
+                            Name = "دولار ناميبي"
+                        },
+                        new
+                        {
+                            Id = 297,
+                            CurrencyId = "NAD",
+                            LanguageId = "fr",
+                            Name = "dollar namibien"
+                        },
+                        new
+                        {
+                            Id = 298,
+                            CurrencyId = "NGN",
+                            LanguageId = "en",
+                            Name = "Nigerian Naira"
+                        },
+                        new
+                        {
+                            Id = 299,
+                            CurrencyId = "NGN",
+                            LanguageId = "ar",
+                            Name = "نايرا نيجيري"
+                        },
+                        new
+                        {
+                            Id = 300,
+                            CurrencyId = "NGN",
+                            LanguageId = "fr",
+                            Name = "naira nigérian"
+                        },
+                        new
+                        {
+                            Id = 301,
+                            CurrencyId = "NIO",
+                            LanguageId = "en",
+                            Name = "Nicaraguan Córdoba"
+                        },
+                        new
+                        {
+                            Id = 302,
+                            CurrencyId = "NIO",
+                            LanguageId = "ar",
+                            Name = "قرطبة نيكاراغوا"
+                        },
+                        new
+                        {
+                            Id = 303,
+                            CurrencyId = "NIO",
+                            LanguageId = "fr",
+                            Name = "córdoba oro nicaraguayen"
+                        },
+                        new
+                        {
+                            Id = 304,
+                            CurrencyId = "NOK",
+                            LanguageId = "en",
+                            Name = "Norwegian Krone"
+                        },
+                        new
+                        {
+                            Id = 305,
+                            CurrencyId = "NOK",
+                            LanguageId = "ar",
+                            Name = "كرونة نرويجية"
+                        },
+                        new
+                        {
+                            Id = 306,
+                            CurrencyId = "NOK",
+                            LanguageId = "fr",
+                            Name = "couronne norvégienne"
+                        },
+                        new
+                        {
+                            Id = 307,
+                            CurrencyId = "NPR",
+                            LanguageId = "en",
+                            Name = "Nepalese Rupee"
+                        },
+                        new
+                        {
+                            Id = 308,
+                            CurrencyId = "NPR",
+                            LanguageId = "ar",
+                            Name = "روبية نيبالي"
+                        },
+                        new
+                        {
+                            Id = 309,
+                            CurrencyId = "NPR",
+                            LanguageId = "fr",
+                            Name = "roupie népalaise"
+                        },
+                        new
+                        {
+                            Id = 310,
+                            CurrencyId = "NZD",
+                            LanguageId = "en",
+                            Name = "New Zealand Dollar"
+                        },
+                        new
+                        {
+                            Id = 311,
+                            CurrencyId = "NZD",
+                            LanguageId = "ar",
+                            Name = "دولار نيوزيلندي"
+                        },
+                        new
+                        {
+                            Id = 312,
+                            CurrencyId = "NZD",
+                            LanguageId = "fr",
+                            Name = "dollar néo-zélandais"
+                        },
+                        new
+                        {
+                            Id = 313,
+                            CurrencyId = "OMR",
+                            LanguageId = "en",
+                            Name = "Omani Rial"
+                        },
+                        new
+                        {
+                            Id = 314,
+                            CurrencyId = "OMR",
+                            LanguageId = "ar",
+                            Name = "ريال عماني"
+                        },
+                        new
+                        {
+                            Id = 315,
+                            CurrencyId = "OMR",
+                            LanguageId = "fr",
+                            Name = "riyal omanais"
+                        },
+                        new
+                        {
+                            Id = 316,
+                            CurrencyId = "PAB",
+                            LanguageId = "en",
+                            Name = "Panamanian Balboa"
+                        },
+                        new
+                        {
+                            Id = 317,
+                            CurrencyId = "PAB",
+                            LanguageId = "ar",
+                            Name = "بالبوا بنمي"
+                        },
+                        new
+                        {
+                            Id = 318,
+                            CurrencyId = "PAB",
+                            LanguageId = "fr",
+                            Name = "balboa panaméen"
+                        },
+                        new
+                        {
+                            Id = 319,
+                            CurrencyId = "PEN",
+                            LanguageId = "en",
+                            Name = "Peruvian Sol"
+                        },
+                        new
+                        {
+                            Id = 320,
+                            CurrencyId = "PEN",
+                            LanguageId = "ar",
+                            Name = "سول بيروفي"
+                        },
+                        new
+                        {
+                            Id = 321,
+                            CurrencyId = "PEN",
+                            LanguageId = "fr",
+                            Name = "sol péruvien"
+                        },
+                        new
+                        {
+                            Id = 322,
+                            CurrencyId = "PGK",
+                            LanguageId = "en",
+                            Name = "Papua New Guinean Kina"
+                        },
+                        new
+                        {
+                            Id = 323,
+                            CurrencyId = "PGK",
+                            LanguageId = "ar",
+                            Name = "كينا بابوا غينيا الجديدة"
+                        },
+                        new
+                        {
+                            Id = 324,
+                            CurrencyId = "PGK",
+                            LanguageId = "fr",
+                            Name = "kina papouan-néo-guinéen"
+                        },
+                        new
+                        {
+                            Id = 325,
+                            CurrencyId = "PHP",
+                            LanguageId = "en",
+                            Name = "Philippine Peso"
+                        },
+                        new
+                        {
+                            Id = 326,
+                            CurrencyId = "PHP",
+                            LanguageId = "ar",
+                            Name = "بيزو فلبيني"
+                        },
+                        new
+                        {
+                            Id = 327,
+                            CurrencyId = "PHP",
+                            LanguageId = "fr",
+                            Name = "peso philippin"
+                        },
+                        new
+                        {
+                            Id = 328,
+                            CurrencyId = "PKR",
+                            LanguageId = "en",
+                            Name = "Pakistani Rupee"
+                        },
+                        new
+                        {
+                            Id = 329,
+                            CurrencyId = "PKR",
+                            LanguageId = "ar",
+                            Name = "روبية باكستاني"
+                        },
+                        new
+                        {
+                            Id = 330,
+                            CurrencyId = "PKR",
+                            LanguageId = "fr",
+                            Name = "roupie pakistanaise"
+                        },
+                        new
+                        {
+                            Id = 331,
+                            CurrencyId = "PLN",
+                            LanguageId = "en",
+                            Name = "Polish Zloty"
+                        },
+                        new
+                        {
+                            Id = 332,
+                            CurrencyId = "PLN",
+                            LanguageId = "ar",
+                            Name = "زلوتي بولندي"
+                        },
+                        new
+                        {
+                            Id = 333,
+                            CurrencyId = "PLN",
+                            LanguageId = "fr",
+                            Name = "zloty polonais"
+                        },
+                        new
+                        {
+                            Id = 334,
+                            CurrencyId = "PYG",
+                            LanguageId = "en",
+                            Name = "Paraguayan Guarani"
+                        },
+                        new
+                        {
+                            Id = 335,
+                            CurrencyId = "PYG",
+                            LanguageId = "ar",
+                            Name = "غواراني باراغواي"
+                        },
+                        new
+                        {
+                            Id = 336,
+                            CurrencyId = "PYG",
+                            LanguageId = "fr",
+                            Name = "guaraní paraguayen"
+                        },
+                        new
+                        {
+                            Id = 337,
+                            CurrencyId = "QAR",
+                            LanguageId = "en",
+                            Name = "Qatari Riyal"
+                        },
+                        new
+                        {
+                            Id = 338,
+                            CurrencyId = "QAR",
+                            LanguageId = "ar",
+                            Name = "ريال قطري"
+                        },
+                        new
+                        {
+                            Id = 339,
+                            CurrencyId = "QAR",
+                            LanguageId = "fr",
+                            Name = "riyal qatari"
+                        },
+                        new
+                        {
+                            Id = 340,
+                            CurrencyId = "RON",
+                            LanguageId = "en",
+                            Name = "Romanian Leu"
+                        },
+                        new
+                        {
+                            Id = 341,
+                            CurrencyId = "RON",
+                            LanguageId = "ar",
+                            Name = "ليو روماني"
+                        },
+                        new
+                        {
+                            Id = 342,
+                            CurrencyId = "RON",
+                            LanguageId = "fr",
+                            Name = "leu roumain"
+                        },
+                        new
+                        {
+                            Id = 343,
+                            CurrencyId = "RSD",
+                            LanguageId = "en",
+                            Name = "Serbian Dinar"
+                        },
+                        new
+                        {
+                            Id = 344,
+                            CurrencyId = "RSD",
+                            LanguageId = "ar",
+                            Name = "دينار صربي"
+                        },
+                        new
+                        {
+                            Id = 345,
+                            CurrencyId = "RSD",
+                            LanguageId = "fr",
+                            Name = "dinar serbe"
+                        },
+                        new
+                        {
+                            Id = 346,
+                            CurrencyId = "RUB",
+                            LanguageId = "en",
+                            Name = "Russian Ruble"
+                        },
+                        new
+                        {
+                            Id = 347,
+                            CurrencyId = "RUB",
+                            LanguageId = "ar",
+                            Name = "روبل روسي"
+                        },
+                        new
+                        {
+                            Id = 348,
+                            CurrencyId = "RUB",
+                            LanguageId = "fr",
+                            Name = "rouble russe"
+                        },
+                        new
+                        {
+                            Id = 349,
+                            CurrencyId = "RWF",
+                            LanguageId = "en",
+                            Name = "Rwandan Franc"
+                        },
+                        new
+                        {
+                            Id = 350,
+                            CurrencyId = "RWF",
+                            LanguageId = "ar",
+                            Name = "فرنك رواندي"
+                        },
+                        new
+                        {
+                            Id = 351,
+                            CurrencyId = "RWF",
+                            LanguageId = "fr",
+                            Name = "franc rwandais"
+                        },
+                        new
+                        {
+                            Id = 352,
+                            CurrencyId = "SAR",
+                            LanguageId = "en",
+                            Name = "Saudi Riyal"
+                        },
+                        new
+                        {
+                            Id = 353,
+                            CurrencyId = "SAR",
+                            LanguageId = "ar",
+                            Name = "ريال سعودي"
+                        },
+                        new
+                        {
+                            Id = 354,
+                            CurrencyId = "SAR",
+                            LanguageId = "fr",
+                            Name = "riyal saoudien"
+                        },
+                        new
+                        {
+                            Id = 355,
+                            CurrencyId = "SBD",
+                            LanguageId = "en",
+                            Name = "Solomon Islands Dollar"
+                        },
+                        new
+                        {
+                            Id = 356,
+                            CurrencyId = "SBD",
+                            LanguageId = "ar",
+                            Name = "دولار جزر سليمان"
+                        },
+                        new
+                        {
+                            Id = 357,
+                            CurrencyId = "SBD",
+                            LanguageId = "fr",
+                            Name = "dollar des îles Salomon"
+                        },
+                        new
+                        {
+                            Id = 358,
+                            CurrencyId = "SCR",
+                            LanguageId = "en",
+                            Name = "Seychellois Rupee"
+                        },
+                        new
+                        {
+                            Id = 359,
+                            CurrencyId = "SCR",
+                            LanguageId = "ar",
+                            Name = "روبية سيشيلية"
+                        },
+                        new
+                        {
+                            Id = 360,
+                            CurrencyId = "SCR",
+                            LanguageId = "fr",
+                            Name = "roupie des Seychelles"
+                        },
+                        new
+                        {
+                            Id = 361,
+                            CurrencyId = "SDG",
+                            LanguageId = "en",
+                            Name = "Sudanese Pound"
+                        },
+                        new
+                        {
+                            Id = 362,
+                            CurrencyId = "SDG",
+                            LanguageId = "ar",
+                            Name = "جنيه سوداني"
+                        },
+                        new
+                        {
+                            Id = 363,
+                            CurrencyId = "SDG",
+                            LanguageId = "fr",
+                            Name = "livre soudanaise"
+                        },
+                        new
+                        {
+                            Id = 364,
+                            CurrencyId = "SEK",
+                            LanguageId = "en",
+                            Name = "Swedish Krona"
+                        },
+                        new
+                        {
+                            Id = 365,
+                            CurrencyId = "SEK",
+                            LanguageId = "ar",
+                            Name = "كرونة سويدية"
+                        },
+                        new
+                        {
+                            Id = 366,
+                            CurrencyId = "SEK",
+                            LanguageId = "fr",
+                            Name = "couronne suédoise"
+                        },
+                        new
+                        {
+                            Id = 367,
+                            CurrencyId = "SGD",
+                            LanguageId = "en",
+                            Name = "Singapore Dollar"
+                        },
+                        new
+                        {
+                            Id = 368,
+                            CurrencyId = "SGD",
+                            LanguageId = "ar",
+                            Name = "دولار سنغافوري"
+                        },
+                        new
+                        {
+                            Id = 369,
+                            CurrencyId = "SGD",
+                            LanguageId = "fr",
+                            Name = "dollar de Singapour"
+                        },
+                        new
+                        {
+                            Id = 370,
+                            CurrencyId = "SHP",
+                            LanguageId = "en",
+                            Name = "St. Helena Pound"
+                        },
+                        new
+                        {
+                            Id = 371,
+                            CurrencyId = "SHP",
+                            LanguageId = "ar",
+                            Name = "جنيه سانت هيلين"
+                        },
+                        new
+                        {
+                            Id = 372,
+                            CurrencyId = "SHP",
+                            LanguageId = "fr",
+                            Name = "livre de Sainte-Hélène"
+                        },
+                        new
+                        {
+                            Id = 373,
+                            CurrencyId = "SLE",
+                            LanguageId = "en",
+                            Name = "Sierra Leonean Leone"
+                        },
+                        new
+                        {
+                            Id = 374,
+                            CurrencyId = "SLE",
+                            LanguageId = "ar",
+                            Name = "ليون سيراليوني"
+                        },
+                        new
+                        {
+                            Id = 375,
+                            CurrencyId = "SLE",
+                            LanguageId = "fr",
+                            Name = "leone sierra-léonais"
+                        },
+                        new
+                        {
+                            Id = 376,
+                            CurrencyId = "SOS",
+                            LanguageId = "en",
+                            Name = "Somali Shilling"
+                        },
+                        new
+                        {
+                            Id = 377,
+                            CurrencyId = "SOS",
+                            LanguageId = "ar",
+                            Name = "شلن صومالي"
+                        },
+                        new
+                        {
+                            Id = 378,
+                            CurrencyId = "SOS",
+                            LanguageId = "fr",
+                            Name = "shilling somalien"
+                        },
+                        new
+                        {
+                            Id = 379,
+                            CurrencyId = "SRD",
+                            LanguageId = "en",
+                            Name = "Surinamese Dollar"
+                        },
+                        new
+                        {
+                            Id = 380,
+                            CurrencyId = "SRD",
+                            LanguageId = "ar",
+                            Name = "دولار سورينامي"
+                        },
+                        new
+                        {
+                            Id = 381,
+                            CurrencyId = "SRD",
+                            LanguageId = "fr",
+                            Name = "dollar surinamais"
+                        },
+                        new
+                        {
+                            Id = 382,
+                            CurrencyId = "SSP",
+                            LanguageId = "en",
+                            Name = "South Sudanese Pound"
+                        },
+                        new
+                        {
+                            Id = 383,
+                            CurrencyId = "SSP",
+                            LanguageId = "ar",
+                            Name = "جنيه جنوب السودان"
+                        },
+                        new
+                        {
+                            Id = 384,
+                            CurrencyId = "SSP",
+                            LanguageId = "fr",
+                            Name = "livre sud-soudanaise"
+                        },
+                        new
+                        {
+                            Id = 385,
+                            CurrencyId = "STN",
+                            LanguageId = "en",
+                            Name = "São Tomé & Príncipe Dobra"
+                        },
+                        new
+                        {
+                            Id = 386,
+                            CurrencyId = "STN",
+                            LanguageId = "ar",
+                            Name = "دوبرا ساو تومي وبرينسيبي"
+                        },
+                        new
+                        {
+                            Id = 387,
+                            CurrencyId = "STN",
+                            LanguageId = "fr",
+                            Name = "dobra santoméen"
+                        },
+                        new
+                        {
+                            Id = 388,
+                            CurrencyId = "SVC",
+                            LanguageId = "en",
+                            Name = "Salvadoran Colón"
+                        },
+                        new
+                        {
+                            Id = 389,
+                            CurrencyId = "SVC",
+                            LanguageId = "ar",
+                            Name = "كولون سلفادوري"
+                        },
+                        new
+                        {
+                            Id = 390,
+                            CurrencyId = "SVC",
+                            LanguageId = "fr",
+                            Name = "colón salvadorien"
+                        },
+                        new
+                        {
+                            Id = 391,
+                            CurrencyId = "SYP",
+                            LanguageId = "en",
+                            Name = "Syrian Pound"
+                        },
+                        new
+                        {
+                            Id = 392,
+                            CurrencyId = "SYP",
+                            LanguageId = "ar",
+                            Name = "ليرة سورية"
+                        },
+                        new
+                        {
+                            Id = 393,
+                            CurrencyId = "SYP",
+                            LanguageId = "fr",
+                            Name = "livre syrienne"
+                        },
+                        new
+                        {
+                            Id = 394,
+                            CurrencyId = "SZL",
+                            LanguageId = "en",
+                            Name = "Swazi Lilangeni"
+                        },
+                        new
+                        {
+                            Id = 395,
+                            CurrencyId = "SZL",
+                            LanguageId = "ar",
+                            Name = "ليلانجيني سوازيلندي"
+                        },
+                        new
+                        {
+                            Id = 396,
+                            CurrencyId = "SZL",
+                            LanguageId = "fr",
+                            Name = "lilangeni swazi"
+                        },
+                        new
+                        {
+                            Id = 397,
+                            CurrencyId = "THB",
+                            LanguageId = "en",
+                            Name = "Thai Baht"
+                        },
+                        new
+                        {
+                            Id = 398,
+                            CurrencyId = "THB",
+                            LanguageId = "ar",
+                            Name = "باخت تايلاندي"
+                        },
+                        new
+                        {
+                            Id = 399,
+                            CurrencyId = "THB",
+                            LanguageId = "fr",
+                            Name = "baht thaïlandais"
+                        },
+                        new
+                        {
+                            Id = 400,
+                            CurrencyId = "TJS",
+                            LanguageId = "en",
+                            Name = "Tajikistani Somoni"
+                        },
+                        new
+                        {
+                            Id = 401,
+                            CurrencyId = "TJS",
+                            LanguageId = "ar",
+                            Name = "سوموني طاجيكستاني"
+                        },
+                        new
+                        {
+                            Id = 402,
+                            CurrencyId = "TJS",
+                            LanguageId = "fr",
+                            Name = "somoni tadjik"
+                        },
+                        new
+                        {
+                            Id = 403,
+                            CurrencyId = "TMT",
+                            LanguageId = "en",
+                            Name = "Turkmenistani Manat"
+                        },
+                        new
+                        {
+                            Id = 404,
+                            CurrencyId = "TMT",
+                            LanguageId = "ar",
+                            Name = "مانات تركمانستان"
+                        },
+                        new
+                        {
+                            Id = 405,
+                            CurrencyId = "TMT",
+                            LanguageId = "fr",
+                            Name = "nouveau manat turkmène"
+                        },
+                        new
+                        {
+                            Id = 406,
+                            CurrencyId = "TND",
+                            LanguageId = "en",
+                            Name = "Tunisian Dinar"
+                        },
+                        new
+                        {
+                            Id = 407,
+                            CurrencyId = "TND",
+                            LanguageId = "ar",
+                            Name = "دينار تونسي"
+                        },
+                        new
+                        {
+                            Id = 408,
+                            CurrencyId = "TND",
+                            LanguageId = "fr",
+                            Name = "dinar tunisien"
+                        },
+                        new
+                        {
+                            Id = 409,
+                            CurrencyId = "TOP",
+                            LanguageId = "en",
+                            Name = "Tongan Paʻanga"
+                        },
+                        new
+                        {
+                            Id = 410,
+                            CurrencyId = "TOP",
+                            LanguageId = "ar",
+                            Name = "بانغا تونغا"
+                        },
+                        new
+                        {
+                            Id = 411,
+                            CurrencyId = "TOP",
+                            LanguageId = "fr",
+                            Name = "pa’anga tongan"
+                        },
+                        new
+                        {
+                            Id = 412,
+                            CurrencyId = "TRY",
+                            LanguageId = "en",
+                            Name = "Turkish Lira"
+                        },
+                        new
+                        {
+                            Id = 413,
+                            CurrencyId = "TRY",
+                            LanguageId = "ar",
+                            Name = "ليرة تركية"
+                        },
+                        new
+                        {
+                            Id = 414,
+                            CurrencyId = "TRY",
+                            LanguageId = "fr",
+                            Name = "livre turque"
+                        },
+                        new
+                        {
+                            Id = 415,
+                            CurrencyId = "TTD",
+                            LanguageId = "en",
+                            Name = "Trinidad & Tobago Dollar"
+                        },
+                        new
+                        {
+                            Id = 416,
+                            CurrencyId = "TTD",
+                            LanguageId = "ar",
+                            Name = "دولار ترينداد وتوباغو"
+                        },
+                        new
+                        {
+                            Id = 417,
+                            CurrencyId = "TTD",
+                            LanguageId = "fr",
+                            Name = "dollar de Trinité-et-Tobago"
+                        },
+                        new
+                        {
+                            Id = 418,
+                            CurrencyId = "TWD",
+                            LanguageId = "en",
+                            Name = "New Taiwan Dollar"
+                        },
+                        new
+                        {
+                            Id = 419,
+                            CurrencyId = "TWD",
+                            LanguageId = "ar",
+                            Name = "دولار تايواني"
+                        },
+                        new
+                        {
+                            Id = 420,
+                            CurrencyId = "TWD",
+                            LanguageId = "fr",
+                            Name = "nouveau dollar taïwanais"
+                        },
+                        new
+                        {
+                            Id = 421,
+                            CurrencyId = "TZS",
+                            LanguageId = "en",
+                            Name = "Tanzanian Shilling"
+                        },
+                        new
+                        {
+                            Id = 422,
+                            CurrencyId = "TZS",
+                            LanguageId = "ar",
+                            Name = "شلن تنزاني"
+                        },
+                        new
+                        {
+                            Id = 423,
+                            CurrencyId = "TZS",
+                            LanguageId = "fr",
+                            Name = "shilling tanzanien"
+                        },
+                        new
+                        {
+                            Id = 424,
+                            CurrencyId = "UAH",
+                            LanguageId = "en",
+                            Name = "Ukrainian Hryvnia"
+                        },
+                        new
+                        {
+                            Id = 425,
+                            CurrencyId = "UAH",
+                            LanguageId = "ar",
+                            Name = "هريفنيا أوكراني"
+                        },
+                        new
+                        {
+                            Id = 426,
+                            CurrencyId = "UAH",
+                            LanguageId = "fr",
+                            Name = "hryvnia ukrainienne"
+                        },
+                        new
+                        {
+                            Id = 427,
+                            CurrencyId = "UGX",
+                            LanguageId = "en",
+                            Name = "Ugandan Shilling"
+                        },
+                        new
+                        {
+                            Id = 428,
+                            CurrencyId = "UGX",
+                            LanguageId = "ar",
+                            Name = "شلن أوغندي"
+                        },
+                        new
+                        {
+                            Id = 429,
+                            CurrencyId = "UGX",
+                            LanguageId = "fr",
+                            Name = "shilling ougandais"
+                        },
+                        new
+                        {
+                            Id = 430,
+                            CurrencyId = "USD",
+                            LanguageId = "en",
+                            Name = "US Dollar"
+                        },
+                        new
+                        {
+                            Id = 431,
+                            CurrencyId = "USD",
+                            LanguageId = "ar",
+                            Name = "دولار أمريكي"
+                        },
+                        new
+                        {
+                            Id = 432,
+                            CurrencyId = "USD",
+                            LanguageId = "fr",
+                            Name = "dollar des États-Unis"
+                        },
+                        new
+                        {
+                            Id = 433,
+                            CurrencyId = "USN",
+                            LanguageId = "en",
+                            Name = "US Dollar (Next day)"
+                        },
+                        new
+                        {
+                            Id = 434,
+                            CurrencyId = "USN",
+                            LanguageId = "ar",
+                            Name = "دولار أمريكي (اليوم التالي)"
+                        },
+                        new
+                        {
+                            Id = 435,
+                            CurrencyId = "USN",
+                            LanguageId = "fr",
+                            Name = "dollar américain (jour suivant)"
+                        },
+                        new
+                        {
+                            Id = 436,
+                            CurrencyId = "UYI",
+                            LanguageId = "en",
+                            Name = "Uruguay Peso en Unidades Indexadas (UI)"
+                        },
+                        new
+                        {
+                            Id = 437,
+                            CurrencyId = "UYI",
+                            LanguageId = "ar",
+                            Name = "بيزو أوروغواي بوحدات مفهرسة (UI)"
+                        },
+                        new
+                        {
+                            Id = 438,
+                            CurrencyId = "UYI",
+                            LanguageId = "fr",
+                            Name = "peso uruguayen en unités indexées (UI)"
+                        },
+                        new
+                        {
+                            Id = 439,
+                            CurrencyId = "UYU",
+                            LanguageId = "en",
+                            Name = "Uruguayan Peso"
+                        },
+                        new
+                        {
+                            Id = 440,
+                            CurrencyId = "UYU",
+                            LanguageId = "ar",
+                            Name = "بيزو اوروغواي"
+                        },
+                        new
+                        {
+                            Id = 441,
+                            CurrencyId = "UYU",
+                            LanguageId = "fr",
+                            Name = "peso uruguayen"
+                        },
+                        new
+                        {
+                            Id = 442,
+                            CurrencyId = "UYW",
+                            LanguageId = "en",
+                            Name = "Unidad Previsional"
+                        },
+                        new
+                        {
+                            Id = 443,
+                            CurrencyId = "UYW",
+                            LanguageId = "ar",
+                            Name = "وحدة التقاعد الأوروغوايانية"
+                        },
+                        new
+                        {
+                            Id = 444,
+                            CurrencyId = "UYW",
+                            LanguageId = "fr",
+                            Name = "unité prévisionnelle uruguayenne"
+                        },
+                        new
+                        {
+                            Id = 445,
+                            CurrencyId = "UZS",
+                            LanguageId = "en",
+                            Name = "Uzbekistani Som"
+                        },
+                        new
+                        {
+                            Id = 446,
+                            CurrencyId = "UZS",
+                            LanguageId = "ar",
+                            Name = "سوم أوزبكستاني"
+                        },
+                        new
+                        {
+                            Id = 447,
+                            CurrencyId = "UZS",
+                            LanguageId = "fr",
+                            Name = "sum ouzbek"
+                        },
+                        new
+                        {
+                            Id = 448,
+                            CurrencyId = "VED",
+                            LanguageId = "en",
+                            Name = "Venezuelan Digital Bolívar"
+                        },
+                        new
+                        {
+                            Id = 449,
+                            CurrencyId = "VED",
+                            LanguageId = "ar",
+                            Name = "بوليفار رقمي فنزويلي"
+                        },
+                        new
+                        {
+                            Id = 450,
+                            CurrencyId = "VED",
+                            LanguageId = "fr",
+                            Name = "bolívar numérique vénézuélien"
+                        },
+                        new
+                        {
+                            Id = 451,
+                            CurrencyId = "VES",
+                            LanguageId = "en",
+                            Name = "Venezuelan Bolívar"
+                        },
+                        new
+                        {
+                            Id = 452,
+                            CurrencyId = "VES",
+                            LanguageId = "ar",
+                            Name = "بوليفار فنزويلي"
+                        },
+                        new
+                        {
+                            Id = 453,
+                            CurrencyId = "VES",
+                            LanguageId = "fr",
+                            Name = "bolivar vénézuélien"
+                        },
+                        new
+                        {
+                            Id = 454,
+                            CurrencyId = "VND",
+                            LanguageId = "en",
+                            Name = "Vietnamese Dong"
+                        },
+                        new
+                        {
+                            Id = 455,
+                            CurrencyId = "VND",
+                            LanguageId = "ar",
+                            Name = "دونج فيتنامي"
+                        },
+                        new
+                        {
+                            Id = 456,
+                            CurrencyId = "VND",
+                            LanguageId = "fr",
+                            Name = "dông vietnamien"
+                        },
+                        new
+                        {
+                            Id = 457,
+                            CurrencyId = "VUV",
+                            LanguageId = "en",
+                            Name = "Vanuatu Vatu"
+                        },
+                        new
+                        {
+                            Id = 458,
+                            CurrencyId = "VUV",
+                            LanguageId = "ar",
+                            Name = "فاتو فانواتو"
+                        },
+                        new
+                        {
+                            Id = 459,
+                            CurrencyId = "VUV",
+                            LanguageId = "fr",
+                            Name = "vatu vanuatuan"
+                        },
+                        new
+                        {
+                            Id = 460,
+                            CurrencyId = "WST",
+                            LanguageId = "en",
+                            Name = "Samoan Tala"
+                        },
+                        new
+                        {
+                            Id = 461,
+                            CurrencyId = "WST",
+                            LanguageId = "ar",
+                            Name = "تالا ساموا"
+                        },
+                        new
+                        {
+                            Id = 462,
+                            CurrencyId = "WST",
+                            LanguageId = "fr",
+                            Name = "tala samoan"
+                        },
+                        new
+                        {
+                            Id = 463,
+                            CurrencyId = "XAD",
+                            LanguageId = "en",
+                            Name = "Arab Accounting Dinar"
+                        },
+                        new
+                        {
+                            Id = 464,
+                            CurrencyId = "XAD",
+                            LanguageId = "ar",
+                            Name = "دينار محاسبي عربي"
+                        },
+                        new
+                        {
+                            Id = 465,
+                            CurrencyId = "XAD",
+                            LanguageId = "fr",
+                            Name = "dinar comptable arabe"
+                        },
+                        new
+                        {
+                            Id = 466,
+                            CurrencyId = "XAF",
+                            LanguageId = "en",
+                            Name = "Central African CFA Franc"
+                        },
+                        new
+                        {
+                            Id = 467,
+                            CurrencyId = "XAF",
+                            LanguageId = "ar",
+                            Name = "فرنك وسط أفريقي"
+                        },
+                        new
+                        {
+                            Id = 468,
+                            CurrencyId = "XAF",
+                            LanguageId = "fr",
+                            Name = "franc CFA (BEAC)"
+                        },
+                        new
+                        {
+                            Id = 469,
+                            CurrencyId = "XAG",
+                            LanguageId = "en",
+                            Name = "Silver (one troy ounce)"
+                        },
+                        new
+                        {
+                            Id = 470,
+                            CurrencyId = "XAG",
+                            LanguageId = "ar",
+                            Name = "فضة (أونصة تروي واحدة)"
+                        },
+                        new
+                        {
+                            Id = 471,
+                            CurrencyId = "XAG",
+                            LanguageId = "fr",
+                            Name = "argent (une once troy)"
+                        },
+                        new
+                        {
+                            Id = 472,
+                            CurrencyId = "XAU",
+                            LanguageId = "en",
+                            Name = "Gold (one troy ounce)"
+                        },
+                        new
+                        {
+                            Id = 473,
+                            CurrencyId = "XAU",
+                            LanguageId = "ar",
+                            Name = "ذهب (أونصة تروي واحدة)"
+                        },
+                        new
+                        {
+                            Id = 474,
+                            CurrencyId = "XAU",
+                            LanguageId = "fr",
+                            Name = "or (une once troy)"
+                        },
+                        new
+                        {
+                            Id = 475,
+                            CurrencyId = "XBA",
+                            LanguageId = "en",
+                            Name = "European Composite Unit (EURCO)"
+                        },
+                        new
+                        {
+                            Id = 476,
+                            CurrencyId = "XBA",
+                            LanguageId = "ar",
+                            Name = "وحدة أوروبية مركبة (EURCO)"
+                        },
+                        new
+                        {
+                            Id = 477,
+                            CurrencyId = "XBA",
+                            LanguageId = "fr",
+                            Name = "unité composite européenne (EURCO)"
+                        },
+                        new
+                        {
+                            Id = 478,
+                            CurrencyId = "XBB",
+                            LanguageId = "en",
+                            Name = "European Monetary Unit (EMU-6)"
+                        },
+                        new
+                        {
+                            Id = 479,
+                            CurrencyId = "XBB",
+                            LanguageId = "ar",
+                            Name = "وحدة نقدية أوروبية (EMU-6)"
+                        },
+                        new
+                        {
+                            Id = 480,
+                            CurrencyId = "XBB",
+                            LanguageId = "fr",
+                            Name = "unité monétaire européenne (EMU-6)"
+                        },
+                        new
+                        {
+                            Id = 481,
+                            CurrencyId = "XBC",
+                            LanguageId = "en",
+                            Name = "European Unit of Account 9 (EUA-9)"
+                        },
+                        new
+                        {
+                            Id = 482,
+                            CurrencyId = "XBC",
+                            LanguageId = "ar",
+                            Name = "وحدة الحساب الأوروبية 9 (EUA-9)"
+                        },
+                        new
+                        {
+                            Id = 483,
+                            CurrencyId = "XBC",
+                            LanguageId = "fr",
+                            Name = "unité de compte européenne 9 (EUA-9)"
+                        },
+                        new
+                        {
+                            Id = 484,
+                            CurrencyId = "XBD",
+                            LanguageId = "en",
+                            Name = "European Unit of Account 17 (EUA-17)"
+                        },
+                        new
+                        {
+                            Id = 485,
+                            CurrencyId = "XBD",
+                            LanguageId = "ar",
+                            Name = "وحدة الحساب الأوروبية 17 (EUA-17)"
+                        },
+                        new
+                        {
+                            Id = 486,
+                            CurrencyId = "XBD",
+                            LanguageId = "fr",
+                            Name = "unité de compte européenne 17 (EUA-17)"
+                        },
+                        new
+                        {
+                            Id = 487,
+                            CurrencyId = "XCD",
+                            LanguageId = "en",
+                            Name = "East Caribbean Dollar"
+                        },
+                        new
+                        {
+                            Id = 488,
+                            CurrencyId = "XCD",
+                            LanguageId = "ar",
+                            Name = "دولار شرق الكاريبي"
+                        },
+                        new
+                        {
+                            Id = 489,
+                            CurrencyId = "XCD",
+                            LanguageId = "fr",
+                            Name = "dollar des Caraïbes orientales"
+                        },
+                        new
+                        {
+                            Id = 490,
+                            CurrencyId = "XCG",
+                            LanguageId = "en",
+                            Name = "Caribbean Guilder"
+                        },
+                        new
+                        {
+                            Id = 491,
+                            CurrencyId = "XCG",
+                            LanguageId = "ar",
+                            Name = "غيلدر كاريبي"
+                        },
+                        new
+                        {
+                            Id = 492,
+                            CurrencyId = "XCG",
+                            LanguageId = "fr",
+                            Name = "florin caribéen"
+                        },
+                        new
+                        {
+                            Id = 493,
+                            CurrencyId = "XDR",
+                            LanguageId = "en",
+                            Name = "Special Drawing Rights"
+                        },
+                        new
+                        {
+                            Id = 494,
+                            CurrencyId = "XDR",
+                            LanguageId = "ar",
+                            Name = "حقوق السحب الخاصة"
+                        },
+                        new
+                        {
+                            Id = 495,
+                            CurrencyId = "XDR",
+                            LanguageId = "fr",
+                            Name = "droit de tirage spécial"
+                        },
+                        new
+                        {
+                            Id = 496,
+                            CurrencyId = "XOF",
+                            LanguageId = "en",
+                            Name = "West African CFA Franc"
+                        },
+                        new
+                        {
+                            Id = 497,
+                            CurrencyId = "XOF",
+                            LanguageId = "ar",
+                            Name = "فرنك غرب أفريقي"
+                        },
+                        new
+                        {
+                            Id = 498,
+                            CurrencyId = "XOF",
+                            LanguageId = "fr",
+                            Name = "franc CFA (BCEAO)"
+                        },
+                        new
+                        {
+                            Id = 499,
+                            CurrencyId = "XPD",
+                            LanguageId = "en",
+                            Name = "Palladium (one troy ounce)"
+                        },
+                        new
+                        {
+                            Id = 500,
+                            CurrencyId = "XPD",
+                            LanguageId = "ar",
+                            Name = "بلاديوم (أونصة تروي واحدة)"
+                        },
+                        new
+                        {
+                            Id = 501,
+                            CurrencyId = "XPD",
+                            LanguageId = "fr",
+                            Name = "palladium (une once troy)"
+                        },
+                        new
+                        {
+                            Id = 502,
+                            CurrencyId = "XPF",
+                            LanguageId = "en",
+                            Name = "CFP Franc"
+                        },
+                        new
+                        {
+                            Id = 503,
+                            CurrencyId = "XPF",
+                            LanguageId = "ar",
+                            Name = "فرنك سي إف بي"
+                        },
+                        new
+                        {
+                            Id = 504,
+                            CurrencyId = "XPF",
+                            LanguageId = "fr",
+                            Name = "franc CFP"
+                        },
+                        new
+                        {
+                            Id = 505,
+                            CurrencyId = "XPT",
+                            LanguageId = "en",
+                            Name = "Platinum (one troy ounce)"
+                        },
+                        new
+                        {
+                            Id = 506,
+                            CurrencyId = "XPT",
+                            LanguageId = "ar",
+                            Name = "بلاتين (أونصة تروي واحدة)"
+                        },
+                        new
+                        {
+                            Id = 507,
+                            CurrencyId = "XPT",
+                            LanguageId = "fr",
+                            Name = "platine (une once troy)"
+                        },
+                        new
+                        {
+                            Id = 508,
+                            CurrencyId = "XSU",
+                            LanguageId = "en",
+                            Name = "Sucre"
+                        },
+                        new
+                        {
+                            Id = 509,
+                            CurrencyId = "XSU",
+                            LanguageId = "ar",
+                            Name = "سوكر"
+                        },
+                        new
+                        {
+                            Id = 510,
+                            CurrencyId = "XSU",
+                            LanguageId = "fr",
+                            Name = "sucre"
+                        },
+                        new
+                        {
+                            Id = 511,
+                            CurrencyId = "XTS",
+                            LanguageId = "en",
+                            Name = "Code reserved for testing purposes"
+                        },
+                        new
+                        {
+                            Id = 512,
+                            CurrencyId = "XTS",
+                            LanguageId = "ar",
+                            Name = "رمز مخصص لأغراض الاختبار"
+                        },
+                        new
+                        {
+                            Id = 513,
+                            CurrencyId = "XTS",
+                            LanguageId = "fr",
+                            Name = "code réservé à des fins de test"
+                        },
+                        new
+                        {
+                            Id = 514,
+                            CurrencyId = "XUA",
+                            LanguageId = "en",
+                            Name = "ADB Unit of Account"
+                        },
+                        new
+                        {
+                            Id = 515,
+                            CurrencyId = "XUA",
+                            LanguageId = "ar",
+                            Name = "وحدة حساب مجموعة بنك التنمية الأفريقي"
+                        },
+                        new
+                        {
+                            Id = 516,
+                            CurrencyId = "XUA",
+                            LanguageId = "fr",
+                            Name = "unité de compte du groupe de la Banque africaine de développement"
+                        },
+                        new
+                        {
+                            Id = 517,
+                            CurrencyId = "XXX",
+                            LanguageId = "en",
+                            Name = "No currency"
+                        },
+                        new
+                        {
+                            Id = 518,
+                            CurrencyId = "XXX",
+                            LanguageId = "ar",
+                            Name = "لا توجد عملة"
+                        },
+                        new
+                        {
+                            Id = 519,
+                            CurrencyId = "XXX",
+                            LanguageId = "fr",
+                            Name = "aucune devise"
+                        },
+                        new
+                        {
+                            Id = 520,
+                            CurrencyId = "YER",
+                            LanguageId = "en",
+                            Name = "Yemeni Rial"
+                        },
+                        new
+                        {
+                            Id = 521,
+                            CurrencyId = "YER",
+                            LanguageId = "ar",
+                            Name = "ريال يمني"
+                        },
+                        new
+                        {
+                            Id = 522,
+                            CurrencyId = "YER",
+                            LanguageId = "fr",
+                            Name = "riyal yéménite"
+                        },
+                        new
+                        {
+                            Id = 523,
+                            CurrencyId = "ZAR",
+                            LanguageId = "en",
+                            Name = "South African Rand"
+                        },
+                        new
+                        {
+                            Id = 524,
+                            CurrencyId = "ZAR",
+                            LanguageId = "ar",
+                            Name = "راند جنوب أفريقيا"
+                        },
+                        new
+                        {
+                            Id = 525,
+                            CurrencyId = "ZAR",
+                            LanguageId = "fr",
+                            Name = "rand sud-africain"
+                        },
+                        new
+                        {
+                            Id = 526,
+                            CurrencyId = "ZMW",
+                            LanguageId = "en",
+                            Name = "Zambian Kwacha"
+                        },
+                        new
+                        {
+                            Id = 527,
+                            CurrencyId = "ZMW",
+                            LanguageId = "ar",
+                            Name = "كواشا زامبي"
+                        },
+                        new
+                        {
+                            Id = 528,
+                            CurrencyId = "ZMW",
+                            LanguageId = "fr",
+                            Name = "kwacha zambien"
+                        },
+                        new
+                        {
+                            Id = 529,
+                            CurrencyId = "ZWG",
+                            LanguageId = "en",
+                            Name = "Zimbabwe Gold"
+                        },
+                        new
+                        {
+                            Id = 530,
+                            CurrencyId = "ZWG",
+                            LanguageId = "ar",
+                            Name = "ذهب زيمبابوي"
+                        },
+                        new
+                        {
+                            Id = 531,
+                            CurrencyId = "ZWG",
+                            LanguageId = "fr",
+                            Name = "or zimbabwéen"
                         });
                 });
 
@@ -10600,10606 +14172,6 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.LocalizedName", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<string>("LanguageId")
-                        .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("ResourceId")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("ResourceType")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("LanguageId");
-
-                    b.HasIndex("ResourceType", "ResourceId", "LanguageId")
-                        .IsUnique();
-
-                    b.ToTable("LocalizedNames");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1L,
-                            LanguageId = "en",
-                            Name = "United Arab Emirates Dirham",
-                            ResourceId = "AED",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 2L,
-                            LanguageId = "ar",
-                            Name = "درهم إماراتي",
-                            ResourceId = "AED",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 3L,
-                            LanguageId = "fr",
-                            Name = "dirham des Émirats arabes unis",
-                            ResourceId = "AED",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 4L,
-                            LanguageId = "en",
-                            Name = "Afghan Afghani",
-                            ResourceId = "AFN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 5L,
-                            LanguageId = "ar",
-                            Name = "أفغاني",
-                            ResourceId = "AFN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 6L,
-                            LanguageId = "fr",
-                            Name = "afghani afghan",
-                            ResourceId = "AFN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 7L,
-                            LanguageId = "en",
-                            Name = "Albanian Lek",
-                            ResourceId = "ALL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 8L,
-                            LanguageId = "ar",
-                            Name = "ليك ألباني",
-                            ResourceId = "ALL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 9L,
-                            LanguageId = "fr",
-                            Name = "lek albanais",
-                            ResourceId = "ALL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 10L,
-                            LanguageId = "en",
-                            Name = "Armenian Dram",
-                            ResourceId = "AMD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 11L,
-                            LanguageId = "ar",
-                            Name = "درام أرميني",
-                            ResourceId = "AMD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 12L,
-                            LanguageId = "fr",
-                            Name = "dram arménien",
-                            ResourceId = "AMD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 13L,
-                            LanguageId = "en",
-                            Name = "Angolan Kwanza",
-                            ResourceId = "AOA",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 14L,
-                            LanguageId = "ar",
-                            Name = "كوانزا أنغولي",
-                            ResourceId = "AOA",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 15L,
-                            LanguageId = "fr",
-                            Name = "kwanza angolais",
-                            ResourceId = "AOA",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 16L,
-                            LanguageId = "en",
-                            Name = "Argentine Peso",
-                            ResourceId = "ARS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 17L,
-                            LanguageId = "ar",
-                            Name = "بيزو أرجنتيني",
-                            ResourceId = "ARS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 18L,
-                            LanguageId = "fr",
-                            Name = "peso argentin",
-                            ResourceId = "ARS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 19L,
-                            LanguageId = "en",
-                            Name = "Australian Dollar",
-                            ResourceId = "AUD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 20L,
-                            LanguageId = "ar",
-                            Name = "دولار أسترالي",
-                            ResourceId = "AUD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 21L,
-                            LanguageId = "fr",
-                            Name = "dollar australien",
-                            ResourceId = "AUD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 22L,
-                            LanguageId = "en",
-                            Name = "Aruban Florin",
-                            ResourceId = "AWG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 23L,
-                            LanguageId = "ar",
-                            Name = "فلورن أروبي",
-                            ResourceId = "AWG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 24L,
-                            LanguageId = "fr",
-                            Name = "florin arubais",
-                            ResourceId = "AWG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 25L,
-                            LanguageId = "en",
-                            Name = "Azerbaijani Manat",
-                            ResourceId = "AZN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 26L,
-                            LanguageId = "ar",
-                            Name = "مانات أذربيجان",
-                            ResourceId = "AZN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 27L,
-                            LanguageId = "fr",
-                            Name = "manat azéri",
-                            ResourceId = "AZN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 28L,
-                            LanguageId = "en",
-                            Name = "Bosnia-Herzegovina Convertible Mark",
-                            ResourceId = "BAM",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 29L,
-                            LanguageId = "ar",
-                            Name = "مارك البوسنة والهرسك قابل للتحويل",
-                            ResourceId = "BAM",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 30L,
-                            LanguageId = "fr",
-                            Name = "mark convertible bosniaque",
-                            ResourceId = "BAM",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 31L,
-                            LanguageId = "en",
-                            Name = "Barbadian Dollar",
-                            ResourceId = "BBD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 32L,
-                            LanguageId = "ar",
-                            Name = "دولار بربادوسي",
-                            ResourceId = "BBD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 33L,
-                            LanguageId = "fr",
-                            Name = "dollar barbadien",
-                            ResourceId = "BBD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 34L,
-                            LanguageId = "en",
-                            Name = "Bangladeshi Taka",
-                            ResourceId = "BDT",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 35L,
-                            LanguageId = "ar",
-                            Name = "تاكا بنغلاديشي",
-                            ResourceId = "BDT",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 36L,
-                            LanguageId = "fr",
-                            Name = "taka bangladeshi",
-                            ResourceId = "BDT",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 37L,
-                            LanguageId = "en",
-                            Name = "Bahraini Dinar",
-                            ResourceId = "BHD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 38L,
-                            LanguageId = "ar",
-                            Name = "دينار بحريني",
-                            ResourceId = "BHD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 39L,
-                            LanguageId = "fr",
-                            Name = "dinar bahreïni",
-                            ResourceId = "BHD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 40L,
-                            LanguageId = "en",
-                            Name = "Burundian Franc",
-                            ResourceId = "BIF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 41L,
-                            LanguageId = "ar",
-                            Name = "فرنك بروندي",
-                            ResourceId = "BIF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 42L,
-                            LanguageId = "fr",
-                            Name = "franc burundais",
-                            ResourceId = "BIF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 43L,
-                            LanguageId = "en",
-                            Name = "Bermudan Dollar",
-                            ResourceId = "BMD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 44L,
-                            LanguageId = "ar",
-                            Name = "دولار برمودي",
-                            ResourceId = "BMD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 45L,
-                            LanguageId = "fr",
-                            Name = "dollar bermudien",
-                            ResourceId = "BMD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 46L,
-                            LanguageId = "en",
-                            Name = "Brunei Dollar",
-                            ResourceId = "BND",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 47L,
-                            LanguageId = "ar",
-                            Name = "دولار بروناي",
-                            ResourceId = "BND",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 48L,
-                            LanguageId = "fr",
-                            Name = "dollar brunéien",
-                            ResourceId = "BND",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 49L,
-                            LanguageId = "en",
-                            Name = "Bolivian Boliviano",
-                            ResourceId = "BOB",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 50L,
-                            LanguageId = "ar",
-                            Name = "بوليفيانو بوليفي",
-                            ResourceId = "BOB",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 51L,
-                            LanguageId = "fr",
-                            Name = "boliviano bolivien",
-                            ResourceId = "BOB",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 52L,
-                            LanguageId = "en",
-                            Name = "Bolivian Mvdol",
-                            ResourceId = "BOV",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 53L,
-                            LanguageId = "ar",
-                            Name = "مودفول بوليفي",
-                            ResourceId = "BOV",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 54L,
-                            LanguageId = "fr",
-                            Name = "Mvdol bolivien",
-                            ResourceId = "BOV",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 55L,
-                            LanguageId = "en",
-                            Name = "Brazilian Real",
-                            ResourceId = "BRL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 56L,
-                            LanguageId = "ar",
-                            Name = "ريال برازيلي",
-                            ResourceId = "BRL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 57L,
-                            LanguageId = "fr",
-                            Name = "réal brésilien",
-                            ResourceId = "BRL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 58L,
-                            LanguageId = "en",
-                            Name = "Bahamian Dollar",
-                            ResourceId = "BSD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 59L,
-                            LanguageId = "ar",
-                            Name = "دولار باهامي",
-                            ResourceId = "BSD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 60L,
-                            LanguageId = "fr",
-                            Name = "dollar bahaméen",
-                            ResourceId = "BSD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 61L,
-                            LanguageId = "en",
-                            Name = "Bhutanese Ngultrum",
-                            ResourceId = "BTN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 62L,
-                            LanguageId = "ar",
-                            Name = "نولتوم بوتاني",
-                            ResourceId = "BTN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 63L,
-                            LanguageId = "fr",
-                            Name = "ngultrum bouthanais",
-                            ResourceId = "BTN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 64L,
-                            LanguageId = "en",
-                            Name = "Botswanan Pula",
-                            ResourceId = "BWP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 65L,
-                            LanguageId = "ar",
-                            Name = "بولا بتسواني",
-                            ResourceId = "BWP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 66L,
-                            LanguageId = "fr",
-                            Name = "pula botswanais",
-                            ResourceId = "BWP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 67L,
-                            LanguageId = "en",
-                            Name = "Belarusian Ruble",
-                            ResourceId = "BYN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 68L,
-                            LanguageId = "ar",
-                            Name = "روبل بيلاروسي",
-                            ResourceId = "BYN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 69L,
-                            LanguageId = "fr",
-                            Name = "rouble biélorusse",
-                            ResourceId = "BYN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 70L,
-                            LanguageId = "en",
-                            Name = "Belize Dollar",
-                            ResourceId = "BZD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 71L,
-                            LanguageId = "ar",
-                            Name = "دولار بليزي",
-                            ResourceId = "BZD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 72L,
-                            LanguageId = "fr",
-                            Name = "dollar bélizéen",
-                            ResourceId = "BZD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 73L,
-                            LanguageId = "en",
-                            Name = "Canadian Dollar",
-                            ResourceId = "CAD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 74L,
-                            LanguageId = "ar",
-                            Name = "دولار كندي",
-                            ResourceId = "CAD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 75L,
-                            LanguageId = "fr",
-                            Name = "dollar canadien",
-                            ResourceId = "CAD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 76L,
-                            LanguageId = "en",
-                            Name = "Congolese Franc",
-                            ResourceId = "CDF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 77L,
-                            LanguageId = "ar",
-                            Name = "فرنك كونغولي",
-                            ResourceId = "CDF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 78L,
-                            LanguageId = "fr",
-                            Name = "franc congolais",
-                            ResourceId = "CDF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 79L,
-                            LanguageId = "en",
-                            Name = "WIR Euro",
-                            ResourceId = "CHE",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 80L,
-                            LanguageId = "ar",
-                            Name = "يورو WIR",
-                            ResourceId = "CHE",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 81L,
-                            LanguageId = "fr",
-                            Name = "euro WIR",
-                            ResourceId = "CHE",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 82L,
-                            LanguageId = "en",
-                            Name = "Swiss Franc",
-                            ResourceId = "CHF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 83L,
-                            LanguageId = "ar",
-                            Name = "فرنك سويسري",
-                            ResourceId = "CHF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 84L,
-                            LanguageId = "fr",
-                            Name = "franc suisse",
-                            ResourceId = "CHF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 85L,
-                            LanguageId = "en",
-                            Name = "WIR Franc",
-                            ResourceId = "CHW",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 86L,
-                            LanguageId = "ar",
-                            Name = "فرنك WIR",
-                            ResourceId = "CHW",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 87L,
-                            LanguageId = "fr",
-                            Name = "franc WIR",
-                            ResourceId = "CHW",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 88L,
-                            LanguageId = "en",
-                            Name = "Unidad de Fomento",
-                            ResourceId = "CLF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 89L,
-                            LanguageId = "ar",
-                            Name = "وحدة التنمية التشيلية",
-                            ResourceId = "CLF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 90L,
-                            LanguageId = "fr",
-                            Name = "unité de compte chilienne",
-                            ResourceId = "CLF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 91L,
-                            LanguageId = "en",
-                            Name = "Chilean Peso",
-                            ResourceId = "CLP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 92L,
-                            LanguageId = "ar",
-                            Name = "بيزو تشيلي",
-                            ResourceId = "CLP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 93L,
-                            LanguageId = "fr",
-                            Name = "peso chilien",
-                            ResourceId = "CLP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 94L,
-                            LanguageId = "en",
-                            Name = "Chinese Yuan",
-                            ResourceId = "CNY",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 95L,
-                            LanguageId = "ar",
-                            Name = "يوان صيني",
-                            ResourceId = "CNY",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 96L,
-                            LanguageId = "fr",
-                            Name = "yuan renminbi chinois",
-                            ResourceId = "CNY",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 97L,
-                            LanguageId = "en",
-                            Name = "Colombian Peso",
-                            ResourceId = "COP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 98L,
-                            LanguageId = "ar",
-                            Name = "بيزو كولومبي",
-                            ResourceId = "COP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 99L,
-                            LanguageId = "fr",
-                            Name = "peso colombien",
-                            ResourceId = "COP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 100L,
-                            LanguageId = "en",
-                            Name = "Unidad de Valor Real (UVR)",
-                            ResourceId = "COU",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 101L,
-                            LanguageId = "ar",
-                            Name = "وحدة القيمة الحقيقية الكولومبية",
-                            ResourceId = "COU",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 102L,
-                            LanguageId = "fr",
-                            Name = "unité de valeur réelle colombienne",
-                            ResourceId = "COU",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 103L,
-                            LanguageId = "en",
-                            Name = "Costa Rican Colón",
-                            ResourceId = "CRC",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 104L,
-                            LanguageId = "ar",
-                            Name = "كولن كوستاريكي",
-                            ResourceId = "CRC",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 105L,
-                            LanguageId = "fr",
-                            Name = "colón costaricain",
-                            ResourceId = "CRC",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 106L,
-                            LanguageId = "en",
-                            Name = "Cuban Peso",
-                            ResourceId = "CUP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 107L,
-                            LanguageId = "ar",
-                            Name = "بيزو كوبي",
-                            ResourceId = "CUP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 108L,
-                            LanguageId = "fr",
-                            Name = "peso cubain",
-                            ResourceId = "CUP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 109L,
-                            LanguageId = "en",
-                            Name = "Cape Verdean Escudo",
-                            ResourceId = "CVE",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 110L,
-                            LanguageId = "ar",
-                            Name = "اسكودو الرأس الأخضر",
-                            ResourceId = "CVE",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 111L,
-                            LanguageId = "fr",
-                            Name = "escudo capverdien",
-                            ResourceId = "CVE",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 112L,
-                            LanguageId = "en",
-                            Name = "Czech Koruna",
-                            ResourceId = "CZK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 113L,
-                            LanguageId = "ar",
-                            Name = "كرونة تشيكية",
-                            ResourceId = "CZK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 114L,
-                            LanguageId = "fr",
-                            Name = "couronne tchèque",
-                            ResourceId = "CZK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 115L,
-                            LanguageId = "en",
-                            Name = "Djiboutian Franc",
-                            ResourceId = "DJF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 116L,
-                            LanguageId = "ar",
-                            Name = "فرنك جيبوتي",
-                            ResourceId = "DJF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 117L,
-                            LanguageId = "fr",
-                            Name = "franc djiboutien",
-                            ResourceId = "DJF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 118L,
-                            LanguageId = "en",
-                            Name = "Danish Krone",
-                            ResourceId = "DKK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 119L,
-                            LanguageId = "ar",
-                            Name = "كرونة دنماركية",
-                            ResourceId = "DKK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 120L,
-                            LanguageId = "fr",
-                            Name = "couronne danoise",
-                            ResourceId = "DKK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 121L,
-                            LanguageId = "en",
-                            Name = "Dominican Peso",
-                            ResourceId = "DOP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 122L,
-                            LanguageId = "ar",
-                            Name = "بيزو الدومنيكان",
-                            ResourceId = "DOP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 123L,
-                            LanguageId = "fr",
-                            Name = "peso dominicain",
-                            ResourceId = "DOP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 124L,
-                            LanguageId = "en",
-                            Name = "Algerian Dinar",
-                            ResourceId = "DZD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 125L,
-                            LanguageId = "ar",
-                            Name = "دينار جزائري",
-                            ResourceId = "DZD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 126L,
-                            LanguageId = "fr",
-                            Name = "dinar algérien",
-                            ResourceId = "DZD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 127L,
-                            LanguageId = "en",
-                            Name = "Egyptian Pound",
-                            ResourceId = "EGP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 128L,
-                            LanguageId = "ar",
-                            Name = "جنيه مصري",
-                            ResourceId = "EGP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 129L,
-                            LanguageId = "fr",
-                            Name = "livre égyptienne",
-                            ResourceId = "EGP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 130L,
-                            LanguageId = "en",
-                            Name = "Eritrean Nakfa",
-                            ResourceId = "ERN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 131L,
-                            LanguageId = "ar",
-                            Name = "ناكفا أريتري",
-                            ResourceId = "ERN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 132L,
-                            LanguageId = "fr",
-                            Name = "nafka érythréen",
-                            ResourceId = "ERN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 133L,
-                            LanguageId = "en",
-                            Name = "Ethiopian Birr",
-                            ResourceId = "ETB",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 134L,
-                            LanguageId = "ar",
-                            Name = "بير أثيوبي",
-                            ResourceId = "ETB",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 135L,
-                            LanguageId = "fr",
-                            Name = "birr éthiopien",
-                            ResourceId = "ETB",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 136L,
-                            LanguageId = "en",
-                            Name = "Euro",
-                            ResourceId = "EUR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 137L,
-                            LanguageId = "ar",
-                            Name = "يورو",
-                            ResourceId = "EUR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 138L,
-                            LanguageId = "fr",
-                            Name = "euro",
-                            ResourceId = "EUR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 139L,
-                            LanguageId = "en",
-                            Name = "Fijian Dollar",
-                            ResourceId = "FJD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 140L,
-                            LanguageId = "ar",
-                            Name = "دولار فيجي",
-                            ResourceId = "FJD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 141L,
-                            LanguageId = "fr",
-                            Name = "dollar fidjien",
-                            ResourceId = "FJD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 142L,
-                            LanguageId = "en",
-                            Name = "Falkland Islands Pound",
-                            ResourceId = "FKP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 143L,
-                            LanguageId = "ar",
-                            Name = "جنيه جزر فوكلاند",
-                            ResourceId = "FKP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 144L,
-                            LanguageId = "fr",
-                            Name = "livre des îles Malouines",
-                            ResourceId = "FKP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 145L,
-                            LanguageId = "en",
-                            Name = "British Pound",
-                            ResourceId = "GBP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 146L,
-                            LanguageId = "ar",
-                            Name = "جنيه إسترليني",
-                            ResourceId = "GBP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 147L,
-                            LanguageId = "fr",
-                            Name = "livre sterling",
-                            ResourceId = "GBP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 148L,
-                            LanguageId = "en",
-                            Name = "Georgian Lari",
-                            ResourceId = "GEL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 149L,
-                            LanguageId = "ar",
-                            Name = "لارى جورجي",
-                            ResourceId = "GEL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 150L,
-                            LanguageId = "fr",
-                            Name = "lari géorgien",
-                            ResourceId = "GEL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 151L,
-                            LanguageId = "en",
-                            Name = "Ghanaian Cedi",
-                            ResourceId = "GHS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 152L,
-                            LanguageId = "ar",
-                            Name = "سيدي غانا",
-                            ResourceId = "GHS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 153L,
-                            LanguageId = "fr",
-                            Name = "cédi ghanéen",
-                            ResourceId = "GHS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 154L,
-                            LanguageId = "en",
-                            Name = "Gibraltar Pound",
-                            ResourceId = "GIP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 155L,
-                            LanguageId = "ar",
-                            Name = "جنيه جبل طارق",
-                            ResourceId = "GIP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 156L,
-                            LanguageId = "fr",
-                            Name = "livre de Gibraltar",
-                            ResourceId = "GIP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 157L,
-                            LanguageId = "en",
-                            Name = "Gambian Dalasi",
-                            ResourceId = "GMD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 158L,
-                            LanguageId = "ar",
-                            Name = "دلاسي غامبي",
-                            ResourceId = "GMD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 159L,
-                            LanguageId = "fr",
-                            Name = "dalasi gambien",
-                            ResourceId = "GMD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 160L,
-                            LanguageId = "en",
-                            Name = "Guinean Franc",
-                            ResourceId = "GNF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 161L,
-                            LanguageId = "ar",
-                            Name = "فرنك غينيا",
-                            ResourceId = "GNF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 162L,
-                            LanguageId = "fr",
-                            Name = "franc guinéen",
-                            ResourceId = "GNF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 163L,
-                            LanguageId = "en",
-                            Name = "Guatemalan Quetzal",
-                            ResourceId = "GTQ",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 164L,
-                            LanguageId = "ar",
-                            Name = "كوتزال غواتيمالا",
-                            ResourceId = "GTQ",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 165L,
-                            LanguageId = "fr",
-                            Name = "quetzal guatémaltèque",
-                            ResourceId = "GTQ",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 166L,
-                            LanguageId = "en",
-                            Name = "Guyanaese Dollar",
-                            ResourceId = "GYD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 167L,
-                            LanguageId = "ar",
-                            Name = "دولار غيانا",
-                            ResourceId = "GYD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 168L,
-                            LanguageId = "fr",
-                            Name = "dollar du Guyana",
-                            ResourceId = "GYD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 169L,
-                            LanguageId = "en",
-                            Name = "Hong Kong Dollar",
-                            ResourceId = "HKD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 170L,
-                            LanguageId = "ar",
-                            Name = "دولار هونغ كونغ",
-                            ResourceId = "HKD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 171L,
-                            LanguageId = "fr",
-                            Name = "dollar de Hong Kong",
-                            ResourceId = "HKD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 172L,
-                            LanguageId = "en",
-                            Name = "Honduran Lempira",
-                            ResourceId = "HNL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 173L,
-                            LanguageId = "ar",
-                            Name = "ليمبيرا هنداروس",
-                            ResourceId = "HNL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 174L,
-                            LanguageId = "fr",
-                            Name = "lempira hondurien",
-                            ResourceId = "HNL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 175L,
-                            LanguageId = "en",
-                            Name = "Haitian Gourde",
-                            ResourceId = "HTG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 176L,
-                            LanguageId = "ar",
-                            Name = "جوردى هايتي",
-                            ResourceId = "HTG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 177L,
-                            LanguageId = "fr",
-                            Name = "gourde haïtienne",
-                            ResourceId = "HTG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 178L,
-                            LanguageId = "en",
-                            Name = "Hungarian Forint",
-                            ResourceId = "HUF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 179L,
-                            LanguageId = "ar",
-                            Name = "فورينت هنغاري",
-                            ResourceId = "HUF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 180L,
-                            LanguageId = "fr",
-                            Name = "forint hongrois",
-                            ResourceId = "HUF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 181L,
-                            LanguageId = "en",
-                            Name = "Indonesian Rupiah",
-                            ResourceId = "IDR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 182L,
-                            LanguageId = "ar",
-                            Name = "روبية إندونيسية",
-                            ResourceId = "IDR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 183L,
-                            LanguageId = "fr",
-                            Name = "roupie indonésienne",
-                            ResourceId = "IDR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 184L,
-                            LanguageId = "en",
-                            Name = "Indian Rupee",
-                            ResourceId = "INR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 185L,
-                            LanguageId = "ar",
-                            Name = "روبية هندي",
-                            ResourceId = "INR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 186L,
-                            LanguageId = "fr",
-                            Name = "roupie indienne",
-                            ResourceId = "INR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 187L,
-                            LanguageId = "en",
-                            Name = "Iraqi Dinar",
-                            ResourceId = "IQD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 188L,
-                            LanguageId = "ar",
-                            Name = "دينار عراقي",
-                            ResourceId = "IQD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 189L,
-                            LanguageId = "fr",
-                            Name = "dinar irakien",
-                            ResourceId = "IQD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 190L,
-                            LanguageId = "en",
-                            Name = "Iranian Rial",
-                            ResourceId = "IRR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 191L,
-                            LanguageId = "ar",
-                            Name = "ريال إيراني",
-                            ResourceId = "IRR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 192L,
-                            LanguageId = "fr",
-                            Name = "riyal iranien",
-                            ResourceId = "IRR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 193L,
-                            LanguageId = "en",
-                            Name = "Icelandic Króna",
-                            ResourceId = "ISK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 194L,
-                            LanguageId = "ar",
-                            Name = "كرونة أيسلندية",
-                            ResourceId = "ISK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 195L,
-                            LanguageId = "fr",
-                            Name = "couronne islandaise",
-                            ResourceId = "ISK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 196L,
-                            LanguageId = "en",
-                            Name = "Jamaican Dollar",
-                            ResourceId = "JMD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 197L,
-                            LanguageId = "ar",
-                            Name = "دولار جامايكي",
-                            ResourceId = "JMD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 198L,
-                            LanguageId = "fr",
-                            Name = "dollar jamaïcain",
-                            ResourceId = "JMD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 199L,
-                            LanguageId = "en",
-                            Name = "Jordanian Dinar",
-                            ResourceId = "JOD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 200L,
-                            LanguageId = "ar",
-                            Name = "دينار أردني",
-                            ResourceId = "JOD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 201L,
-                            LanguageId = "fr",
-                            Name = "dinar jordanien",
-                            ResourceId = "JOD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 202L,
-                            LanguageId = "en",
-                            Name = "Japanese Yen",
-                            ResourceId = "JPY",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 203L,
-                            LanguageId = "ar",
-                            Name = "ين ياباني",
-                            ResourceId = "JPY",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 204L,
-                            LanguageId = "fr",
-                            Name = "yen japonais",
-                            ResourceId = "JPY",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 205L,
-                            LanguageId = "en",
-                            Name = "Kenyan Shilling",
-                            ResourceId = "KES",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 206L,
-                            LanguageId = "ar",
-                            Name = "شلن كينيي",
-                            ResourceId = "KES",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 207L,
-                            LanguageId = "fr",
-                            Name = "shilling kényan",
-                            ResourceId = "KES",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 208L,
-                            LanguageId = "en",
-                            Name = "Kyrgyz Som",
-                            ResourceId = "KGS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 209L,
-                            LanguageId = "ar",
-                            Name = "سوم قيرغستاني",
-                            ResourceId = "KGS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 210L,
-                            LanguageId = "fr",
-                            Name = "som kirghize",
-                            ResourceId = "KGS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 211L,
-                            LanguageId = "en",
-                            Name = "Cambodian Riel",
-                            ResourceId = "KHR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 212L,
-                            LanguageId = "ar",
-                            Name = "رييال كمبودي",
-                            ResourceId = "KHR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 213L,
-                            LanguageId = "fr",
-                            Name = "riel cambodgien",
-                            ResourceId = "KHR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 214L,
-                            LanguageId = "en",
-                            Name = "Comorian Franc",
-                            ResourceId = "KMF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 215L,
-                            LanguageId = "ar",
-                            Name = "فرنك جزر القمر",
-                            ResourceId = "KMF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 216L,
-                            LanguageId = "fr",
-                            Name = "franc comorien",
-                            ResourceId = "KMF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 217L,
-                            LanguageId = "en",
-                            Name = "North Korean Won",
-                            ResourceId = "KPW",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 218L,
-                            LanguageId = "ar",
-                            Name = "وون كوريا الشمالية",
-                            ResourceId = "KPW",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 219L,
-                            LanguageId = "fr",
-                            Name = "won nord-coréen",
-                            ResourceId = "KPW",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 220L,
-                            LanguageId = "en",
-                            Name = "South Korean Won",
-                            ResourceId = "KRW",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 221L,
-                            LanguageId = "ar",
-                            Name = "وون كوريا الجنوبية",
-                            ResourceId = "KRW",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 222L,
-                            LanguageId = "fr",
-                            Name = "won sud-coréen",
-                            ResourceId = "KRW",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 223L,
-                            LanguageId = "en",
-                            Name = "Kuwaiti Dinar",
-                            ResourceId = "KWD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 224L,
-                            LanguageId = "ar",
-                            Name = "دينار كويتي",
-                            ResourceId = "KWD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 225L,
-                            LanguageId = "fr",
-                            Name = "dinar koweïtien",
-                            ResourceId = "KWD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 226L,
-                            LanguageId = "en",
-                            Name = "Cayman Islands Dollar",
-                            ResourceId = "KYD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 227L,
-                            LanguageId = "ar",
-                            Name = "دولار جزر كيمن",
-                            ResourceId = "KYD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 228L,
-                            LanguageId = "fr",
-                            Name = "dollar des îles Caïmans",
-                            ResourceId = "KYD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 229L,
-                            LanguageId = "en",
-                            Name = "Kazakhstani Tenge",
-                            ResourceId = "KZT",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 230L,
-                            LanguageId = "ar",
-                            Name = "تينغ كازاخستاني",
-                            ResourceId = "KZT",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 231L,
-                            LanguageId = "fr",
-                            Name = "tenge kazakh",
-                            ResourceId = "KZT",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 232L,
-                            LanguageId = "en",
-                            Name = "Laotian Kip",
-                            ResourceId = "LAK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 233L,
-                            LanguageId = "ar",
-                            Name = "كيب لاوسي",
-                            ResourceId = "LAK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 234L,
-                            LanguageId = "fr",
-                            Name = "kip laotien",
-                            ResourceId = "LAK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 235L,
-                            LanguageId = "en",
-                            Name = "Lebanese Pound",
-                            ResourceId = "LBP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 236L,
-                            LanguageId = "ar",
-                            Name = "جنيه لبناني",
-                            ResourceId = "LBP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 237L,
-                            LanguageId = "fr",
-                            Name = "livre libanaise",
-                            ResourceId = "LBP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 238L,
-                            LanguageId = "en",
-                            Name = "Sri Lankan Rupee",
-                            ResourceId = "LKR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 239L,
-                            LanguageId = "ar",
-                            Name = "روبية سريلانكية",
-                            ResourceId = "LKR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 240L,
-                            LanguageId = "fr",
-                            Name = "roupie srilankaise",
-                            ResourceId = "LKR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 241L,
-                            LanguageId = "en",
-                            Name = "Liberian Dollar",
-                            ResourceId = "LRD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 242L,
-                            LanguageId = "ar",
-                            Name = "دولار ليبيري",
-                            ResourceId = "LRD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 243L,
-                            LanguageId = "fr",
-                            Name = "dollar libérien",
-                            ResourceId = "LRD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 244L,
-                            LanguageId = "en",
-                            Name = "Lesotho Loti",
-                            ResourceId = "LSL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 245L,
-                            LanguageId = "ar",
-                            Name = "لوتي ليسوتو",
-                            ResourceId = "LSL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 246L,
-                            LanguageId = "fr",
-                            Name = "loti lesothan",
-                            ResourceId = "LSL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 247L,
-                            LanguageId = "en",
-                            Name = "Libyan Dinar",
-                            ResourceId = "LYD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 248L,
-                            LanguageId = "ar",
-                            Name = "دينار ليبي",
-                            ResourceId = "LYD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 249L,
-                            LanguageId = "fr",
-                            Name = "dinar libyen",
-                            ResourceId = "LYD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 250L,
-                            LanguageId = "en",
-                            Name = "Moroccan Dirham",
-                            ResourceId = "MAD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 251L,
-                            LanguageId = "ar",
-                            Name = "درهم مغربي",
-                            ResourceId = "MAD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 252L,
-                            LanguageId = "fr",
-                            Name = "dirham marocain",
-                            ResourceId = "MAD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 253L,
-                            LanguageId = "en",
-                            Name = "Moldovan Leu",
-                            ResourceId = "MDL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 254L,
-                            LanguageId = "ar",
-                            Name = "ليو مولدوفي",
-                            ResourceId = "MDL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 255L,
-                            LanguageId = "fr",
-                            Name = "leu moldave",
-                            ResourceId = "MDL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 256L,
-                            LanguageId = "en",
-                            Name = "Malagasy Ariary",
-                            ResourceId = "MGA",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 257L,
-                            LanguageId = "ar",
-                            Name = "أرياري مدغشقر",
-                            ResourceId = "MGA",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 258L,
-                            LanguageId = "fr",
-                            Name = "ariary malgache",
-                            ResourceId = "MGA",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 259L,
-                            LanguageId = "en",
-                            Name = "Macedonian Denar",
-                            ResourceId = "MKD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 260L,
-                            LanguageId = "ar",
-                            Name = "دينار مقدوني",
-                            ResourceId = "MKD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 261L,
-                            LanguageId = "fr",
-                            Name = "denar macédonien",
-                            ResourceId = "MKD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 262L,
-                            LanguageId = "en",
-                            Name = "Myanmar Kyat",
-                            ResourceId = "MMK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 263L,
-                            LanguageId = "ar",
-                            Name = "كيات ميانمار",
-                            ResourceId = "MMK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 264L,
-                            LanguageId = "fr",
-                            Name = "kyat myanmarais",
-                            ResourceId = "MMK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 265L,
-                            LanguageId = "en",
-                            Name = "Mongolian Tugrik",
-                            ResourceId = "MNT",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 266L,
-                            LanguageId = "ar",
-                            Name = "توغروغ منغولي",
-                            ResourceId = "MNT",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 267L,
-                            LanguageId = "fr",
-                            Name = "tugrik mongol",
-                            ResourceId = "MNT",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 268L,
-                            LanguageId = "en",
-                            Name = "Macanese Pataca",
-                            ResourceId = "MOP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 269L,
-                            LanguageId = "ar",
-                            Name = "باتاكا ماكاوي",
-                            ResourceId = "MOP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 270L,
-                            LanguageId = "fr",
-                            Name = "pataca macanaise",
-                            ResourceId = "MOP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 271L,
-                            LanguageId = "en",
-                            Name = "Mauritanian Ouguiya",
-                            ResourceId = "MRU",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 272L,
-                            LanguageId = "ar",
-                            Name = "أوقية موريتانية",
-                            ResourceId = "MRU",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 273L,
-                            LanguageId = "fr",
-                            Name = "ouguiya mauritanien",
-                            ResourceId = "MRU",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 274L,
-                            LanguageId = "en",
-                            Name = "Mauritian Rupee",
-                            ResourceId = "MUR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 275L,
-                            LanguageId = "ar",
-                            Name = "روبية موريشيوسية",
-                            ResourceId = "MUR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 276L,
-                            LanguageId = "fr",
-                            Name = "roupie mauricienne",
-                            ResourceId = "MUR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 277L,
-                            LanguageId = "en",
-                            Name = "Maldivian Rufiyaa",
-                            ResourceId = "MVR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 278L,
-                            LanguageId = "ar",
-                            Name = "روفيه جزر المالديف",
-                            ResourceId = "MVR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 279L,
-                            LanguageId = "fr",
-                            Name = "rufiyaa maldivienne",
-                            ResourceId = "MVR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 280L,
-                            LanguageId = "en",
-                            Name = "Malawian Kwacha",
-                            ResourceId = "MWK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 281L,
-                            LanguageId = "ar",
-                            Name = "كواشا مالاوي",
-                            ResourceId = "MWK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 282L,
-                            LanguageId = "fr",
-                            Name = "kwacha malawite",
-                            ResourceId = "MWK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 283L,
-                            LanguageId = "en",
-                            Name = "Mexican Peso",
-                            ResourceId = "MXN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 284L,
-                            LanguageId = "ar",
-                            Name = "بيزو مكسيكي",
-                            ResourceId = "MXN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 285L,
-                            LanguageId = "fr",
-                            Name = "peso mexicain",
-                            ResourceId = "MXN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 286L,
-                            LanguageId = "en",
-                            Name = "Mexican Unidad de Inversión (UDI)",
-                            ResourceId = "MXV",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 287L,
-                            LanguageId = "ar",
-                            Name = "وحدة الاستثمار المكسيكية (UDI)",
-                            ResourceId = "MXV",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 288L,
-                            LanguageId = "fr",
-                            Name = "unité d’investissement mexicaine (UDI)",
-                            ResourceId = "MXV",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 289L,
-                            LanguageId = "en",
-                            Name = "Malaysian Ringgit",
-                            ResourceId = "MYR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 290L,
-                            LanguageId = "ar",
-                            Name = "رينغيت ماليزي",
-                            ResourceId = "MYR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 291L,
-                            LanguageId = "fr",
-                            Name = "ringgit malais",
-                            ResourceId = "MYR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 292L,
-                            LanguageId = "en",
-                            Name = "Mozambican Metical",
-                            ResourceId = "MZN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 293L,
-                            LanguageId = "ar",
-                            Name = "متكال موزمبيقي",
-                            ResourceId = "MZN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 294L,
-                            LanguageId = "fr",
-                            Name = "metical mozambicain",
-                            ResourceId = "MZN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 295L,
-                            LanguageId = "en",
-                            Name = "Namibian Dollar",
-                            ResourceId = "NAD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 296L,
-                            LanguageId = "ar",
-                            Name = "دولار ناميبي",
-                            ResourceId = "NAD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 297L,
-                            LanguageId = "fr",
-                            Name = "dollar namibien",
-                            ResourceId = "NAD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 298L,
-                            LanguageId = "en",
-                            Name = "Nigerian Naira",
-                            ResourceId = "NGN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 299L,
-                            LanguageId = "ar",
-                            Name = "نايرا نيجيري",
-                            ResourceId = "NGN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 300L,
-                            LanguageId = "fr",
-                            Name = "naira nigérian",
-                            ResourceId = "NGN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 301L,
-                            LanguageId = "en",
-                            Name = "Nicaraguan Córdoba",
-                            ResourceId = "NIO",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 302L,
-                            LanguageId = "ar",
-                            Name = "قرطبة نيكاراغوا",
-                            ResourceId = "NIO",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 303L,
-                            LanguageId = "fr",
-                            Name = "córdoba oro nicaraguayen",
-                            ResourceId = "NIO",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 304L,
-                            LanguageId = "en",
-                            Name = "Norwegian Krone",
-                            ResourceId = "NOK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 305L,
-                            LanguageId = "ar",
-                            Name = "كرونة نرويجية",
-                            ResourceId = "NOK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 306L,
-                            LanguageId = "fr",
-                            Name = "couronne norvégienne",
-                            ResourceId = "NOK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 307L,
-                            LanguageId = "en",
-                            Name = "Nepalese Rupee",
-                            ResourceId = "NPR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 308L,
-                            LanguageId = "ar",
-                            Name = "روبية نيبالي",
-                            ResourceId = "NPR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 309L,
-                            LanguageId = "fr",
-                            Name = "roupie népalaise",
-                            ResourceId = "NPR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 310L,
-                            LanguageId = "en",
-                            Name = "New Zealand Dollar",
-                            ResourceId = "NZD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 311L,
-                            LanguageId = "ar",
-                            Name = "دولار نيوزيلندي",
-                            ResourceId = "NZD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 312L,
-                            LanguageId = "fr",
-                            Name = "dollar néo-zélandais",
-                            ResourceId = "NZD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 313L,
-                            LanguageId = "en",
-                            Name = "Omani Rial",
-                            ResourceId = "OMR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 314L,
-                            LanguageId = "ar",
-                            Name = "ريال عماني",
-                            ResourceId = "OMR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 315L,
-                            LanguageId = "fr",
-                            Name = "riyal omanais",
-                            ResourceId = "OMR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 316L,
-                            LanguageId = "en",
-                            Name = "Panamanian Balboa",
-                            ResourceId = "PAB",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 317L,
-                            LanguageId = "ar",
-                            Name = "بالبوا بنمي",
-                            ResourceId = "PAB",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 318L,
-                            LanguageId = "fr",
-                            Name = "balboa panaméen",
-                            ResourceId = "PAB",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 319L,
-                            LanguageId = "en",
-                            Name = "Peruvian Sol",
-                            ResourceId = "PEN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 320L,
-                            LanguageId = "ar",
-                            Name = "سول بيروفي",
-                            ResourceId = "PEN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 321L,
-                            LanguageId = "fr",
-                            Name = "sol péruvien",
-                            ResourceId = "PEN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 322L,
-                            LanguageId = "en",
-                            Name = "Papua New Guinean Kina",
-                            ResourceId = "PGK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 323L,
-                            LanguageId = "ar",
-                            Name = "كينا بابوا غينيا الجديدة",
-                            ResourceId = "PGK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 324L,
-                            LanguageId = "fr",
-                            Name = "kina papouan-néo-guinéen",
-                            ResourceId = "PGK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 325L,
-                            LanguageId = "en",
-                            Name = "Philippine Peso",
-                            ResourceId = "PHP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 326L,
-                            LanguageId = "ar",
-                            Name = "بيزو فلبيني",
-                            ResourceId = "PHP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 327L,
-                            LanguageId = "fr",
-                            Name = "peso philippin",
-                            ResourceId = "PHP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 328L,
-                            LanguageId = "en",
-                            Name = "Pakistani Rupee",
-                            ResourceId = "PKR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 329L,
-                            LanguageId = "ar",
-                            Name = "روبية باكستاني",
-                            ResourceId = "PKR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 330L,
-                            LanguageId = "fr",
-                            Name = "roupie pakistanaise",
-                            ResourceId = "PKR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 331L,
-                            LanguageId = "en",
-                            Name = "Polish Zloty",
-                            ResourceId = "PLN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 332L,
-                            LanguageId = "ar",
-                            Name = "زلوتي بولندي",
-                            ResourceId = "PLN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 333L,
-                            LanguageId = "fr",
-                            Name = "zloty polonais",
-                            ResourceId = "PLN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 334L,
-                            LanguageId = "en",
-                            Name = "Paraguayan Guarani",
-                            ResourceId = "PYG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 335L,
-                            LanguageId = "ar",
-                            Name = "غواراني باراغواي",
-                            ResourceId = "PYG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 336L,
-                            LanguageId = "fr",
-                            Name = "guaraní paraguayen",
-                            ResourceId = "PYG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 337L,
-                            LanguageId = "en",
-                            Name = "Qatari Riyal",
-                            ResourceId = "QAR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 338L,
-                            LanguageId = "ar",
-                            Name = "ريال قطري",
-                            ResourceId = "QAR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 339L,
-                            LanguageId = "fr",
-                            Name = "riyal qatari",
-                            ResourceId = "QAR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 340L,
-                            LanguageId = "en",
-                            Name = "Romanian Leu",
-                            ResourceId = "RON",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 341L,
-                            LanguageId = "ar",
-                            Name = "ليو روماني",
-                            ResourceId = "RON",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 342L,
-                            LanguageId = "fr",
-                            Name = "leu roumain",
-                            ResourceId = "RON",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 343L,
-                            LanguageId = "en",
-                            Name = "Serbian Dinar",
-                            ResourceId = "RSD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 344L,
-                            LanguageId = "ar",
-                            Name = "دينار صربي",
-                            ResourceId = "RSD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 345L,
-                            LanguageId = "fr",
-                            Name = "dinar serbe",
-                            ResourceId = "RSD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 346L,
-                            LanguageId = "en",
-                            Name = "Russian Ruble",
-                            ResourceId = "RUB",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 347L,
-                            LanguageId = "ar",
-                            Name = "روبل روسي",
-                            ResourceId = "RUB",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 348L,
-                            LanguageId = "fr",
-                            Name = "rouble russe",
-                            ResourceId = "RUB",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 349L,
-                            LanguageId = "en",
-                            Name = "Rwandan Franc",
-                            ResourceId = "RWF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 350L,
-                            LanguageId = "ar",
-                            Name = "فرنك رواندي",
-                            ResourceId = "RWF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 351L,
-                            LanguageId = "fr",
-                            Name = "franc rwandais",
-                            ResourceId = "RWF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 352L,
-                            LanguageId = "en",
-                            Name = "Saudi Riyal",
-                            ResourceId = "SAR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 353L,
-                            LanguageId = "ar",
-                            Name = "ريال سعودي",
-                            ResourceId = "SAR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 354L,
-                            LanguageId = "fr",
-                            Name = "riyal saoudien",
-                            ResourceId = "SAR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 355L,
-                            LanguageId = "en",
-                            Name = "Solomon Islands Dollar",
-                            ResourceId = "SBD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 356L,
-                            LanguageId = "ar",
-                            Name = "دولار جزر سليمان",
-                            ResourceId = "SBD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 357L,
-                            LanguageId = "fr",
-                            Name = "dollar des îles Salomon",
-                            ResourceId = "SBD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 358L,
-                            LanguageId = "en",
-                            Name = "Seychellois Rupee",
-                            ResourceId = "SCR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 359L,
-                            LanguageId = "ar",
-                            Name = "روبية سيشيلية",
-                            ResourceId = "SCR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 360L,
-                            LanguageId = "fr",
-                            Name = "roupie des Seychelles",
-                            ResourceId = "SCR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 361L,
-                            LanguageId = "en",
-                            Name = "Sudanese Pound",
-                            ResourceId = "SDG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 362L,
-                            LanguageId = "ar",
-                            Name = "جنيه سوداني",
-                            ResourceId = "SDG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 363L,
-                            LanguageId = "fr",
-                            Name = "livre soudanaise",
-                            ResourceId = "SDG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 364L,
-                            LanguageId = "en",
-                            Name = "Swedish Krona",
-                            ResourceId = "SEK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 365L,
-                            LanguageId = "ar",
-                            Name = "كرونة سويدية",
-                            ResourceId = "SEK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 366L,
-                            LanguageId = "fr",
-                            Name = "couronne suédoise",
-                            ResourceId = "SEK",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 367L,
-                            LanguageId = "en",
-                            Name = "Singapore Dollar",
-                            ResourceId = "SGD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 368L,
-                            LanguageId = "ar",
-                            Name = "دولار سنغافوري",
-                            ResourceId = "SGD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 369L,
-                            LanguageId = "fr",
-                            Name = "dollar de Singapour",
-                            ResourceId = "SGD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 370L,
-                            LanguageId = "en",
-                            Name = "St. Helena Pound",
-                            ResourceId = "SHP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 371L,
-                            LanguageId = "ar",
-                            Name = "جنيه سانت هيلين",
-                            ResourceId = "SHP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 372L,
-                            LanguageId = "fr",
-                            Name = "livre de Sainte-Hélène",
-                            ResourceId = "SHP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 373L,
-                            LanguageId = "en",
-                            Name = "Sierra Leonean Leone",
-                            ResourceId = "SLE",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 374L,
-                            LanguageId = "ar",
-                            Name = "ليون سيراليوني",
-                            ResourceId = "SLE",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 375L,
-                            LanguageId = "fr",
-                            Name = "leone sierra-léonais",
-                            ResourceId = "SLE",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 376L,
-                            LanguageId = "en",
-                            Name = "Somali Shilling",
-                            ResourceId = "SOS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 377L,
-                            LanguageId = "ar",
-                            Name = "شلن صومالي",
-                            ResourceId = "SOS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 378L,
-                            LanguageId = "fr",
-                            Name = "shilling somalien",
-                            ResourceId = "SOS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 379L,
-                            LanguageId = "en",
-                            Name = "Surinamese Dollar",
-                            ResourceId = "SRD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 380L,
-                            LanguageId = "ar",
-                            Name = "دولار سورينامي",
-                            ResourceId = "SRD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 381L,
-                            LanguageId = "fr",
-                            Name = "dollar surinamais",
-                            ResourceId = "SRD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 382L,
-                            LanguageId = "en",
-                            Name = "South Sudanese Pound",
-                            ResourceId = "SSP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 383L,
-                            LanguageId = "ar",
-                            Name = "جنيه جنوب السودان",
-                            ResourceId = "SSP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 384L,
-                            LanguageId = "fr",
-                            Name = "livre sud-soudanaise",
-                            ResourceId = "SSP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 385L,
-                            LanguageId = "en",
-                            Name = "São Tomé & Príncipe Dobra",
-                            ResourceId = "STN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 386L,
-                            LanguageId = "ar",
-                            Name = "دوبرا ساو تومي وبرينسيبي",
-                            ResourceId = "STN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 387L,
-                            LanguageId = "fr",
-                            Name = "dobra santoméen",
-                            ResourceId = "STN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 388L,
-                            LanguageId = "en",
-                            Name = "Salvadoran Colón",
-                            ResourceId = "SVC",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 389L,
-                            LanguageId = "ar",
-                            Name = "كولون سلفادوري",
-                            ResourceId = "SVC",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 390L,
-                            LanguageId = "fr",
-                            Name = "colón salvadorien",
-                            ResourceId = "SVC",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 391L,
-                            LanguageId = "en",
-                            Name = "Syrian Pound",
-                            ResourceId = "SYP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 392L,
-                            LanguageId = "ar",
-                            Name = "ليرة سورية",
-                            ResourceId = "SYP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 393L,
-                            LanguageId = "fr",
-                            Name = "livre syrienne",
-                            ResourceId = "SYP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 394L,
-                            LanguageId = "en",
-                            Name = "Swazi Lilangeni",
-                            ResourceId = "SZL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 395L,
-                            LanguageId = "ar",
-                            Name = "ليلانجيني سوازيلندي",
-                            ResourceId = "SZL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 396L,
-                            LanguageId = "fr",
-                            Name = "lilangeni swazi",
-                            ResourceId = "SZL",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 397L,
-                            LanguageId = "en",
-                            Name = "Thai Baht",
-                            ResourceId = "THB",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 398L,
-                            LanguageId = "ar",
-                            Name = "باخت تايلاندي",
-                            ResourceId = "THB",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 399L,
-                            LanguageId = "fr",
-                            Name = "baht thaïlandais",
-                            ResourceId = "THB",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 400L,
-                            LanguageId = "en",
-                            Name = "Tajikistani Somoni",
-                            ResourceId = "TJS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 401L,
-                            LanguageId = "ar",
-                            Name = "سوموني طاجيكستاني",
-                            ResourceId = "TJS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 402L,
-                            LanguageId = "fr",
-                            Name = "somoni tadjik",
-                            ResourceId = "TJS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 403L,
-                            LanguageId = "en",
-                            Name = "Turkmenistani Manat",
-                            ResourceId = "TMT",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 404L,
-                            LanguageId = "ar",
-                            Name = "مانات تركمانستان",
-                            ResourceId = "TMT",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 405L,
-                            LanguageId = "fr",
-                            Name = "nouveau manat turkmène",
-                            ResourceId = "TMT",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 406L,
-                            LanguageId = "en",
-                            Name = "Tunisian Dinar",
-                            ResourceId = "TND",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 407L,
-                            LanguageId = "ar",
-                            Name = "دينار تونسي",
-                            ResourceId = "TND",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 408L,
-                            LanguageId = "fr",
-                            Name = "dinar tunisien",
-                            ResourceId = "TND",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 409L,
-                            LanguageId = "en",
-                            Name = "Tongan Paʻanga",
-                            ResourceId = "TOP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 410L,
-                            LanguageId = "ar",
-                            Name = "بانغا تونغا",
-                            ResourceId = "TOP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 411L,
-                            LanguageId = "fr",
-                            Name = "pa’anga tongan",
-                            ResourceId = "TOP",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 412L,
-                            LanguageId = "en",
-                            Name = "Turkish Lira",
-                            ResourceId = "TRY",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 413L,
-                            LanguageId = "ar",
-                            Name = "ليرة تركية",
-                            ResourceId = "TRY",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 414L,
-                            LanguageId = "fr",
-                            Name = "livre turque",
-                            ResourceId = "TRY",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 415L,
-                            LanguageId = "en",
-                            Name = "Trinidad & Tobago Dollar",
-                            ResourceId = "TTD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 416L,
-                            LanguageId = "ar",
-                            Name = "دولار ترينداد وتوباغو",
-                            ResourceId = "TTD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 417L,
-                            LanguageId = "fr",
-                            Name = "dollar de Trinité-et-Tobago",
-                            ResourceId = "TTD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 418L,
-                            LanguageId = "en",
-                            Name = "New Taiwan Dollar",
-                            ResourceId = "TWD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 419L,
-                            LanguageId = "ar",
-                            Name = "دولار تايواني",
-                            ResourceId = "TWD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 420L,
-                            LanguageId = "fr",
-                            Name = "nouveau dollar taïwanais",
-                            ResourceId = "TWD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 421L,
-                            LanguageId = "en",
-                            Name = "Tanzanian Shilling",
-                            ResourceId = "TZS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 422L,
-                            LanguageId = "ar",
-                            Name = "شلن تنزاني",
-                            ResourceId = "TZS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 423L,
-                            LanguageId = "fr",
-                            Name = "shilling tanzanien",
-                            ResourceId = "TZS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 424L,
-                            LanguageId = "en",
-                            Name = "Ukrainian Hryvnia",
-                            ResourceId = "UAH",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 425L,
-                            LanguageId = "ar",
-                            Name = "هريفنيا أوكراني",
-                            ResourceId = "UAH",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 426L,
-                            LanguageId = "fr",
-                            Name = "hryvnia ukrainienne",
-                            ResourceId = "UAH",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 427L,
-                            LanguageId = "en",
-                            Name = "Ugandan Shilling",
-                            ResourceId = "UGX",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 428L,
-                            LanguageId = "ar",
-                            Name = "شلن أوغندي",
-                            ResourceId = "UGX",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 429L,
-                            LanguageId = "fr",
-                            Name = "shilling ougandais",
-                            ResourceId = "UGX",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 430L,
-                            LanguageId = "en",
-                            Name = "US Dollar",
-                            ResourceId = "USD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 431L,
-                            LanguageId = "ar",
-                            Name = "دولار أمريكي",
-                            ResourceId = "USD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 432L,
-                            LanguageId = "fr",
-                            Name = "dollar des États-Unis",
-                            ResourceId = "USD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 433L,
-                            LanguageId = "en",
-                            Name = "US Dollar (Next day)",
-                            ResourceId = "USN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 434L,
-                            LanguageId = "ar",
-                            Name = "دولار أمريكي (اليوم التالي)",
-                            ResourceId = "USN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 435L,
-                            LanguageId = "fr",
-                            Name = "dollar américain (jour suivant)",
-                            ResourceId = "USN",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 436L,
-                            LanguageId = "en",
-                            Name = "Uruguay Peso en Unidades Indexadas (UI)",
-                            ResourceId = "UYI",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 437L,
-                            LanguageId = "ar",
-                            Name = "بيزو أوروغواي بوحدات مفهرسة (UI)",
-                            ResourceId = "UYI",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 438L,
-                            LanguageId = "fr",
-                            Name = "peso uruguayen en unités indexées (UI)",
-                            ResourceId = "UYI",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 439L,
-                            LanguageId = "en",
-                            Name = "Uruguayan Peso",
-                            ResourceId = "UYU",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 440L,
-                            LanguageId = "ar",
-                            Name = "بيزو اوروغواي",
-                            ResourceId = "UYU",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 441L,
-                            LanguageId = "fr",
-                            Name = "peso uruguayen",
-                            ResourceId = "UYU",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 442L,
-                            LanguageId = "en",
-                            Name = "Unidad Previsional",
-                            ResourceId = "UYW",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 443L,
-                            LanguageId = "ar",
-                            Name = "وحدة التقاعد الأوروغوايانية",
-                            ResourceId = "UYW",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 444L,
-                            LanguageId = "fr",
-                            Name = "unité prévisionnelle uruguayenne",
-                            ResourceId = "UYW",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 445L,
-                            LanguageId = "en",
-                            Name = "Uzbekistani Som",
-                            ResourceId = "UZS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 446L,
-                            LanguageId = "ar",
-                            Name = "سوم أوزبكستاني",
-                            ResourceId = "UZS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 447L,
-                            LanguageId = "fr",
-                            Name = "sum ouzbek",
-                            ResourceId = "UZS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 448L,
-                            LanguageId = "en",
-                            Name = "Venezuelan Digital Bolívar",
-                            ResourceId = "VED",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 449L,
-                            LanguageId = "ar",
-                            Name = "بوليفار رقمي فنزويلي",
-                            ResourceId = "VED",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 450L,
-                            LanguageId = "fr",
-                            Name = "bolívar numérique vénézuélien",
-                            ResourceId = "VED",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 451L,
-                            LanguageId = "en",
-                            Name = "Venezuelan Bolívar",
-                            ResourceId = "VES",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 452L,
-                            LanguageId = "ar",
-                            Name = "بوليفار فنزويلي",
-                            ResourceId = "VES",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 453L,
-                            LanguageId = "fr",
-                            Name = "bolivar vénézuélien",
-                            ResourceId = "VES",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 454L,
-                            LanguageId = "en",
-                            Name = "Vietnamese Dong",
-                            ResourceId = "VND",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 455L,
-                            LanguageId = "ar",
-                            Name = "دونج فيتنامي",
-                            ResourceId = "VND",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 456L,
-                            LanguageId = "fr",
-                            Name = "dông vietnamien",
-                            ResourceId = "VND",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 457L,
-                            LanguageId = "en",
-                            Name = "Vanuatu Vatu",
-                            ResourceId = "VUV",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 458L,
-                            LanguageId = "ar",
-                            Name = "فاتو فانواتو",
-                            ResourceId = "VUV",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 459L,
-                            LanguageId = "fr",
-                            Name = "vatu vanuatuan",
-                            ResourceId = "VUV",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 460L,
-                            LanguageId = "en",
-                            Name = "Samoan Tala",
-                            ResourceId = "WST",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 461L,
-                            LanguageId = "ar",
-                            Name = "تالا ساموا",
-                            ResourceId = "WST",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 462L,
-                            LanguageId = "fr",
-                            Name = "tala samoan",
-                            ResourceId = "WST",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 463L,
-                            LanguageId = "en",
-                            Name = "Arab Accounting Dinar",
-                            ResourceId = "XAD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 464L,
-                            LanguageId = "ar",
-                            Name = "دينار محاسبي عربي",
-                            ResourceId = "XAD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 465L,
-                            LanguageId = "fr",
-                            Name = "dinar comptable arabe",
-                            ResourceId = "XAD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 466L,
-                            LanguageId = "en",
-                            Name = "Central African CFA Franc",
-                            ResourceId = "XAF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 467L,
-                            LanguageId = "ar",
-                            Name = "فرنك وسط أفريقي",
-                            ResourceId = "XAF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 468L,
-                            LanguageId = "fr",
-                            Name = "franc CFA (BEAC)",
-                            ResourceId = "XAF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 469L,
-                            LanguageId = "en",
-                            Name = "Silver (one troy ounce)",
-                            ResourceId = "XAG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 470L,
-                            LanguageId = "ar",
-                            Name = "فضة (أونصة تروي واحدة)",
-                            ResourceId = "XAG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 471L,
-                            LanguageId = "fr",
-                            Name = "argent (une once troy)",
-                            ResourceId = "XAG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 472L,
-                            LanguageId = "en",
-                            Name = "Gold (one troy ounce)",
-                            ResourceId = "XAU",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 473L,
-                            LanguageId = "ar",
-                            Name = "ذهب (أونصة تروي واحدة)",
-                            ResourceId = "XAU",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 474L,
-                            LanguageId = "fr",
-                            Name = "or (une once troy)",
-                            ResourceId = "XAU",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 475L,
-                            LanguageId = "en",
-                            Name = "European Composite Unit (EURCO)",
-                            ResourceId = "XBA",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 476L,
-                            LanguageId = "ar",
-                            Name = "وحدة أوروبية مركبة (EURCO)",
-                            ResourceId = "XBA",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 477L,
-                            LanguageId = "fr",
-                            Name = "unité composite européenne (EURCO)",
-                            ResourceId = "XBA",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 478L,
-                            LanguageId = "en",
-                            Name = "European Monetary Unit (EMU-6)",
-                            ResourceId = "XBB",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 479L,
-                            LanguageId = "ar",
-                            Name = "وحدة نقدية أوروبية (EMU-6)",
-                            ResourceId = "XBB",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 480L,
-                            LanguageId = "fr",
-                            Name = "unité monétaire européenne (EMU-6)",
-                            ResourceId = "XBB",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 481L,
-                            LanguageId = "en",
-                            Name = "European Unit of Account 9 (EUA-9)",
-                            ResourceId = "XBC",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 482L,
-                            LanguageId = "ar",
-                            Name = "وحدة الحساب الأوروبية 9 (EUA-9)",
-                            ResourceId = "XBC",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 483L,
-                            LanguageId = "fr",
-                            Name = "unité de compte européenne 9 (EUA-9)",
-                            ResourceId = "XBC",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 484L,
-                            LanguageId = "en",
-                            Name = "European Unit of Account 17 (EUA-17)",
-                            ResourceId = "XBD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 485L,
-                            LanguageId = "ar",
-                            Name = "وحدة الحساب الأوروبية 17 (EUA-17)",
-                            ResourceId = "XBD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 486L,
-                            LanguageId = "fr",
-                            Name = "unité de compte européenne 17 (EUA-17)",
-                            ResourceId = "XBD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 487L,
-                            LanguageId = "en",
-                            Name = "East Caribbean Dollar",
-                            ResourceId = "XCD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 488L,
-                            LanguageId = "ar",
-                            Name = "دولار شرق الكاريبي",
-                            ResourceId = "XCD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 489L,
-                            LanguageId = "fr",
-                            Name = "dollar des Caraïbes orientales",
-                            ResourceId = "XCD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 490L,
-                            LanguageId = "en",
-                            Name = "Caribbean Guilder",
-                            ResourceId = "XCG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 491L,
-                            LanguageId = "ar",
-                            Name = "غيلدر كاريبي",
-                            ResourceId = "XCG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 492L,
-                            LanguageId = "fr",
-                            Name = "florin caribéen",
-                            ResourceId = "XCG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 493L,
-                            LanguageId = "en",
-                            Name = "Special Drawing Rights",
-                            ResourceId = "XDR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 494L,
-                            LanguageId = "ar",
-                            Name = "حقوق السحب الخاصة",
-                            ResourceId = "XDR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 495L,
-                            LanguageId = "fr",
-                            Name = "droit de tirage spécial",
-                            ResourceId = "XDR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 496L,
-                            LanguageId = "en",
-                            Name = "West African CFA Franc",
-                            ResourceId = "XOF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 497L,
-                            LanguageId = "ar",
-                            Name = "فرنك غرب أفريقي",
-                            ResourceId = "XOF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 498L,
-                            LanguageId = "fr",
-                            Name = "franc CFA (BCEAO)",
-                            ResourceId = "XOF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 499L,
-                            LanguageId = "en",
-                            Name = "Palladium (one troy ounce)",
-                            ResourceId = "XPD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 500L,
-                            LanguageId = "ar",
-                            Name = "بلاديوم (أونصة تروي واحدة)",
-                            ResourceId = "XPD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 501L,
-                            LanguageId = "fr",
-                            Name = "palladium (une once troy)",
-                            ResourceId = "XPD",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 502L,
-                            LanguageId = "en",
-                            Name = "CFP Franc",
-                            ResourceId = "XPF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 503L,
-                            LanguageId = "ar",
-                            Name = "فرنك سي إف بي",
-                            ResourceId = "XPF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 504L,
-                            LanguageId = "fr",
-                            Name = "franc CFP",
-                            ResourceId = "XPF",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 505L,
-                            LanguageId = "en",
-                            Name = "Platinum (one troy ounce)",
-                            ResourceId = "XPT",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 506L,
-                            LanguageId = "ar",
-                            Name = "بلاتين (أونصة تروي واحدة)",
-                            ResourceId = "XPT",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 507L,
-                            LanguageId = "fr",
-                            Name = "platine (une once troy)",
-                            ResourceId = "XPT",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 508L,
-                            LanguageId = "en",
-                            Name = "Sucre",
-                            ResourceId = "XSU",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 509L,
-                            LanguageId = "ar",
-                            Name = "سوكر",
-                            ResourceId = "XSU",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 510L,
-                            LanguageId = "fr",
-                            Name = "sucre",
-                            ResourceId = "XSU",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 511L,
-                            LanguageId = "en",
-                            Name = "Code reserved for testing purposes",
-                            ResourceId = "XTS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 512L,
-                            LanguageId = "ar",
-                            Name = "رمز مخصص لأغراض الاختبار",
-                            ResourceId = "XTS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 513L,
-                            LanguageId = "fr",
-                            Name = "code réservé à des fins de test",
-                            ResourceId = "XTS",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 514L,
-                            LanguageId = "en",
-                            Name = "ADB Unit of Account",
-                            ResourceId = "XUA",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 515L,
-                            LanguageId = "ar",
-                            Name = "وحدة حساب مجموعة بنك التنمية الأفريقي",
-                            ResourceId = "XUA",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 516L,
-                            LanguageId = "fr",
-                            Name = "unité de compte du groupe de la Banque africaine de développement",
-                            ResourceId = "XUA",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 517L,
-                            LanguageId = "en",
-                            Name = "No currency",
-                            ResourceId = "XXX",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 518L,
-                            LanguageId = "ar",
-                            Name = "لا توجد عملة",
-                            ResourceId = "XXX",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 519L,
-                            LanguageId = "fr",
-                            Name = "aucune devise",
-                            ResourceId = "XXX",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 520L,
-                            LanguageId = "en",
-                            Name = "Yemeni Rial",
-                            ResourceId = "YER",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 521L,
-                            LanguageId = "ar",
-                            Name = "ريال يمني",
-                            ResourceId = "YER",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 522L,
-                            LanguageId = "fr",
-                            Name = "riyal yéménite",
-                            ResourceId = "YER",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 523L,
-                            LanguageId = "en",
-                            Name = "South African Rand",
-                            ResourceId = "ZAR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 524L,
-                            LanguageId = "ar",
-                            Name = "راند جنوب أفريقيا",
-                            ResourceId = "ZAR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 525L,
-                            LanguageId = "fr",
-                            Name = "rand sud-africain",
-                            ResourceId = "ZAR",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 526L,
-                            LanguageId = "en",
-                            Name = "Zambian Kwacha",
-                            ResourceId = "ZMW",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 527L,
-                            LanguageId = "ar",
-                            Name = "كواشا زامبي",
-                            ResourceId = "ZMW",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 528L,
-                            LanguageId = "fr",
-                            Name = "kwacha zambien",
-                            ResourceId = "ZMW",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 529L,
-                            LanguageId = "en",
-                            Name = "Zimbabwe Gold",
-                            ResourceId = "ZWG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 530L,
-                            LanguageId = "ar",
-                            Name = "ذهب زيمبابوي",
-                            ResourceId = "ZWG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 531L,
-                            LanguageId = "fr",
-                            Name = "or zimbabwéen",
-                            ResourceId = "ZWG",
-                            ResourceType = "Currency"
-                        },
-                        new
-                        {
-                            Id = 532L,
-                            LanguageId = "en",
-                            Name = "Andorra",
-                            ResourceId = "AD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 533L,
-                            LanguageId = "ar",
-                            Name = "أندورا",
-                            ResourceId = "AD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 534L,
-                            LanguageId = "fr",
-                            Name = "Andorre",
-                            ResourceId = "AD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 535L,
-                            LanguageId = "en",
-                            Name = "United Arab Emirates",
-                            ResourceId = "AE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 536L,
-                            LanguageId = "ar",
-                            Name = "الإمارات العربية المتحدة",
-                            ResourceId = "AE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 537L,
-                            LanguageId = "fr",
-                            Name = "Émirats arabes unis",
-                            ResourceId = "AE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 538L,
-                            LanguageId = "en",
-                            Name = "Afghanistan",
-                            ResourceId = "AF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 539L,
-                            LanguageId = "ar",
-                            Name = "أفغانستان",
-                            ResourceId = "AF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 540L,
-                            LanguageId = "fr",
-                            Name = "Afghanistan",
-                            ResourceId = "AF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 541L,
-                            LanguageId = "en",
-                            Name = "Antigua & Barbuda",
-                            ResourceId = "AG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 542L,
-                            LanguageId = "ar",
-                            Name = "أنتيغوا وبربودا",
-                            ResourceId = "AG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 543L,
-                            LanguageId = "fr",
-                            Name = "Antigua-et-Barbuda",
-                            ResourceId = "AG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 544L,
-                            LanguageId = "en",
-                            Name = "Anguilla",
-                            ResourceId = "AI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 545L,
-                            LanguageId = "ar",
-                            Name = "أنغويلا",
-                            ResourceId = "AI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 546L,
-                            LanguageId = "fr",
-                            Name = "Anguilla",
-                            ResourceId = "AI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 547L,
-                            LanguageId = "en",
-                            Name = "Albania",
-                            ResourceId = "AL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 548L,
-                            LanguageId = "ar",
-                            Name = "ألبانيا",
-                            ResourceId = "AL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 549L,
-                            LanguageId = "fr",
-                            Name = "Albanie",
-                            ResourceId = "AL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 550L,
-                            LanguageId = "en",
-                            Name = "Armenia",
-                            ResourceId = "AM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 551L,
-                            LanguageId = "ar",
-                            Name = "أرمينيا",
-                            ResourceId = "AM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 552L,
-                            LanguageId = "fr",
-                            Name = "Arménie",
-                            ResourceId = "AM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 553L,
-                            LanguageId = "en",
-                            Name = "Angola",
-                            ResourceId = "AO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 554L,
-                            LanguageId = "ar",
-                            Name = "أنغولا",
-                            ResourceId = "AO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 555L,
-                            LanguageId = "fr",
-                            Name = "Angola",
-                            ResourceId = "AO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 556L,
-                            LanguageId = "en",
-                            Name = "Antarctica",
-                            ResourceId = "AQ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 557L,
-                            LanguageId = "ar",
-                            Name = "أنتاركتيكا",
-                            ResourceId = "AQ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 558L,
-                            LanguageId = "fr",
-                            Name = "Antarctique",
-                            ResourceId = "AQ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 559L,
-                            LanguageId = "en",
-                            Name = "Argentina",
-                            ResourceId = "AR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 560L,
-                            LanguageId = "ar",
-                            Name = "الأرجنتين",
-                            ResourceId = "AR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 561L,
-                            LanguageId = "fr",
-                            Name = "Argentine",
-                            ResourceId = "AR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 562L,
-                            LanguageId = "en",
-                            Name = "American Samoa",
-                            ResourceId = "AS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 563L,
-                            LanguageId = "ar",
-                            Name = "ساموا الأمريكية",
-                            ResourceId = "AS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 564L,
-                            LanguageId = "fr",
-                            Name = "Samoa américaines",
-                            ResourceId = "AS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 565L,
-                            LanguageId = "en",
-                            Name = "Austria",
-                            ResourceId = "AT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 566L,
-                            LanguageId = "ar",
-                            Name = "النمسا",
-                            ResourceId = "AT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 567L,
-                            LanguageId = "fr",
-                            Name = "Autriche",
-                            ResourceId = "AT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 568L,
-                            LanguageId = "en",
-                            Name = "Australia",
-                            ResourceId = "AU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 569L,
-                            LanguageId = "ar",
-                            Name = "أستراليا",
-                            ResourceId = "AU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 570L,
-                            LanguageId = "fr",
-                            Name = "Australie",
-                            ResourceId = "AU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 571L,
-                            LanguageId = "en",
-                            Name = "Aruba",
-                            ResourceId = "AW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 572L,
-                            LanguageId = "ar",
-                            Name = "أروبا",
-                            ResourceId = "AW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 573L,
-                            LanguageId = "fr",
-                            Name = "Aruba",
-                            ResourceId = "AW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 574L,
-                            LanguageId = "en",
-                            Name = "Åland Islands",
-                            ResourceId = "AX",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 575L,
-                            LanguageId = "ar",
-                            Name = "جزر آلاند",
-                            ResourceId = "AX",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 576L,
-                            LanguageId = "fr",
-                            Name = "Îles Åland",
-                            ResourceId = "AX",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 577L,
-                            LanguageId = "en",
-                            Name = "Azerbaijan",
-                            ResourceId = "AZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 578L,
-                            LanguageId = "ar",
-                            Name = "أذربيجان",
-                            ResourceId = "AZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 579L,
-                            LanguageId = "fr",
-                            Name = "Azerbaïdjan",
-                            ResourceId = "AZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 580L,
-                            LanguageId = "en",
-                            Name = "Bosnia & Herzegovina",
-                            ResourceId = "BA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 581L,
-                            LanguageId = "ar",
-                            Name = "البوسنة والهرسك",
-                            ResourceId = "BA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 582L,
-                            LanguageId = "fr",
-                            Name = "Bosnie-Herzégovine",
-                            ResourceId = "BA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 583L,
-                            LanguageId = "en",
-                            Name = "Barbados",
-                            ResourceId = "BB",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 584L,
-                            LanguageId = "ar",
-                            Name = "بربادوس",
-                            ResourceId = "BB",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 585L,
-                            LanguageId = "fr",
-                            Name = "Barbade",
-                            ResourceId = "BB",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 586L,
-                            LanguageId = "en",
-                            Name = "Bangladesh",
-                            ResourceId = "BD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 587L,
-                            LanguageId = "ar",
-                            Name = "بنغلاديش",
-                            ResourceId = "BD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 588L,
-                            LanguageId = "fr",
-                            Name = "Bangladesh",
-                            ResourceId = "BD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 589L,
-                            LanguageId = "en",
-                            Name = "Belgium",
-                            ResourceId = "BE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 590L,
-                            LanguageId = "ar",
-                            Name = "بلجيكا",
-                            ResourceId = "BE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 591L,
-                            LanguageId = "fr",
-                            Name = "Belgique",
-                            ResourceId = "BE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 592L,
-                            LanguageId = "en",
-                            Name = "Burkina Faso",
-                            ResourceId = "BF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 593L,
-                            LanguageId = "ar",
-                            Name = "بوركينا فاسو",
-                            ResourceId = "BF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 594L,
-                            LanguageId = "fr",
-                            Name = "Burkina Faso",
-                            ResourceId = "BF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 595L,
-                            LanguageId = "en",
-                            Name = "Bulgaria",
-                            ResourceId = "BG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 596L,
-                            LanguageId = "ar",
-                            Name = "بلغاريا",
-                            ResourceId = "BG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 597L,
-                            LanguageId = "fr",
-                            Name = "Bulgarie",
-                            ResourceId = "BG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 598L,
-                            LanguageId = "en",
-                            Name = "Bahrain",
-                            ResourceId = "BH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 599L,
-                            LanguageId = "ar",
-                            Name = "البحرين",
-                            ResourceId = "BH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 600L,
-                            LanguageId = "fr",
-                            Name = "Bahreïn",
-                            ResourceId = "BH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 601L,
-                            LanguageId = "en",
-                            Name = "Burundi",
-                            ResourceId = "BI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 602L,
-                            LanguageId = "ar",
-                            Name = "بوروندي",
-                            ResourceId = "BI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 603L,
-                            LanguageId = "fr",
-                            Name = "Burundi",
-                            ResourceId = "BI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 604L,
-                            LanguageId = "en",
-                            Name = "Benin",
-                            ResourceId = "BJ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 605L,
-                            LanguageId = "ar",
-                            Name = "بنين",
-                            ResourceId = "BJ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 606L,
-                            LanguageId = "fr",
-                            Name = "Bénin",
-                            ResourceId = "BJ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 607L,
-                            LanguageId = "en",
-                            Name = "St. Barthélemy",
-                            ResourceId = "BL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 608L,
-                            LanguageId = "ar",
-                            Name = "سان بارتليمي",
-                            ResourceId = "BL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 609L,
-                            LanguageId = "fr",
-                            Name = "Saint-Barthélemy",
-                            ResourceId = "BL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 610L,
-                            LanguageId = "en",
-                            Name = "Bermuda",
-                            ResourceId = "BM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 611L,
-                            LanguageId = "ar",
-                            Name = "برمودا",
-                            ResourceId = "BM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 612L,
-                            LanguageId = "fr",
-                            Name = "Bermudes",
-                            ResourceId = "BM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 613L,
-                            LanguageId = "en",
-                            Name = "Brunei",
-                            ResourceId = "BN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 614L,
-                            LanguageId = "ar",
-                            Name = "بروناي",
-                            ResourceId = "BN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 615L,
-                            LanguageId = "fr",
-                            Name = "Brunei",
-                            ResourceId = "BN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 616L,
-                            LanguageId = "en",
-                            Name = "Bolivia",
-                            ResourceId = "BO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 617L,
-                            LanguageId = "ar",
-                            Name = "بوليفيا",
-                            ResourceId = "BO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 618L,
-                            LanguageId = "fr",
-                            Name = "Bolivie",
-                            ResourceId = "BO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 619L,
-                            LanguageId = "en",
-                            Name = "Caribbean Netherlands",
-                            ResourceId = "BQ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 620L,
-                            LanguageId = "ar",
-                            Name = "هولندا الكاريبية",
-                            ResourceId = "BQ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 621L,
-                            LanguageId = "fr",
-                            Name = "Pays-Bas caribéens",
-                            ResourceId = "BQ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 622L,
-                            LanguageId = "en",
-                            Name = "Brazil",
-                            ResourceId = "BR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 623L,
-                            LanguageId = "ar",
-                            Name = "البرازيل",
-                            ResourceId = "BR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 624L,
-                            LanguageId = "fr",
-                            Name = "Brésil",
-                            ResourceId = "BR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 625L,
-                            LanguageId = "en",
-                            Name = "Bahamas",
-                            ResourceId = "BS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 626L,
-                            LanguageId = "ar",
-                            Name = "جزر البهاما",
-                            ResourceId = "BS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 627L,
-                            LanguageId = "fr",
-                            Name = "Bahamas",
-                            ResourceId = "BS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 628L,
-                            LanguageId = "en",
-                            Name = "Bhutan",
-                            ResourceId = "BT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 629L,
-                            LanguageId = "ar",
-                            Name = "بوتان",
-                            ResourceId = "BT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 630L,
-                            LanguageId = "fr",
-                            Name = "Bhoutan",
-                            ResourceId = "BT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 631L,
-                            LanguageId = "en",
-                            Name = "Bouvet Island",
-                            ResourceId = "BV",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 632L,
-                            LanguageId = "ar",
-                            Name = "جزيرة بوفيه",
-                            ResourceId = "BV",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 633L,
-                            LanguageId = "fr",
-                            Name = "Île Bouvet",
-                            ResourceId = "BV",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 634L,
-                            LanguageId = "en",
-                            Name = "Botswana",
-                            ResourceId = "BW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 635L,
-                            LanguageId = "ar",
-                            Name = "بوتسوانا",
-                            ResourceId = "BW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 636L,
-                            LanguageId = "fr",
-                            Name = "Botswana",
-                            ResourceId = "BW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 637L,
-                            LanguageId = "en",
-                            Name = "Belarus",
-                            ResourceId = "BY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 638L,
-                            LanguageId = "ar",
-                            Name = "بيلاروس",
-                            ResourceId = "BY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 639L,
-                            LanguageId = "fr",
-                            Name = "Biélorussie",
-                            ResourceId = "BY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 640L,
-                            LanguageId = "en",
-                            Name = "Belize",
-                            ResourceId = "BZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 641L,
-                            LanguageId = "ar",
-                            Name = "بليز",
-                            ResourceId = "BZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 642L,
-                            LanguageId = "fr",
-                            Name = "Belize",
-                            ResourceId = "BZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 643L,
-                            LanguageId = "en",
-                            Name = "Canada",
-                            ResourceId = "CA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 644L,
-                            LanguageId = "ar",
-                            Name = "كندا",
-                            ResourceId = "CA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 645L,
-                            LanguageId = "fr",
-                            Name = "Canada",
-                            ResourceId = "CA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 646L,
-                            LanguageId = "en",
-                            Name = "Cocos (Keeling) Islands",
-                            ResourceId = "CC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 647L,
-                            LanguageId = "ar",
-                            Name = "جزر كوكوس (كيلينغ)",
-                            ResourceId = "CC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 648L,
-                            LanguageId = "fr",
-                            Name = "Îles Cocos",
-                            ResourceId = "CC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 649L,
-                            LanguageId = "en",
-                            Name = "Congo - Kinshasa",
-                            ResourceId = "CD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 650L,
-                            LanguageId = "ar",
-                            Name = "الكونغو - كينشاسا",
-                            ResourceId = "CD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 651L,
-                            LanguageId = "fr",
-                            Name = "Congo-Kinshasa",
-                            ResourceId = "CD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 652L,
-                            LanguageId = "en",
-                            Name = "Central African Republic",
-                            ResourceId = "CF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 653L,
-                            LanguageId = "ar",
-                            Name = "جمهورية أفريقيا الوسطى",
-                            ResourceId = "CF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 654L,
-                            LanguageId = "fr",
-                            Name = "République centrafricaine",
-                            ResourceId = "CF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 655L,
-                            LanguageId = "en",
-                            Name = "Congo - Brazzaville",
-                            ResourceId = "CG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 656L,
-                            LanguageId = "ar",
-                            Name = "الكونغو - برازافيل",
-                            ResourceId = "CG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 657L,
-                            LanguageId = "fr",
-                            Name = "Congo-Brazzaville",
-                            ResourceId = "CG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 658L,
-                            LanguageId = "en",
-                            Name = "Switzerland",
-                            ResourceId = "CH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 659L,
-                            LanguageId = "ar",
-                            Name = "سويسرا",
-                            ResourceId = "CH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 660L,
-                            LanguageId = "fr",
-                            Name = "Suisse",
-                            ResourceId = "CH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 661L,
-                            LanguageId = "en",
-                            Name = "Côte d’Ivoire",
-                            ResourceId = "CI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 662L,
-                            LanguageId = "ar",
-                            Name = "ساحل العاج",
-                            ResourceId = "CI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 663L,
-                            LanguageId = "fr",
-                            Name = "Côte d’Ivoire",
-                            ResourceId = "CI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 664L,
-                            LanguageId = "en",
-                            Name = "Cook Islands",
-                            ResourceId = "CK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 665L,
-                            LanguageId = "ar",
-                            Name = "جزر كوك",
-                            ResourceId = "CK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 666L,
-                            LanguageId = "fr",
-                            Name = "Îles Cook",
-                            ResourceId = "CK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 667L,
-                            LanguageId = "en",
-                            Name = "Chile",
-                            ResourceId = "CL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 668L,
-                            LanguageId = "ar",
-                            Name = "تشيلي",
-                            ResourceId = "CL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 669L,
-                            LanguageId = "fr",
-                            Name = "Chili",
-                            ResourceId = "CL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 670L,
-                            LanguageId = "en",
-                            Name = "Cameroon",
-                            ResourceId = "CM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 671L,
-                            LanguageId = "ar",
-                            Name = "الكاميرون",
-                            ResourceId = "CM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 672L,
-                            LanguageId = "fr",
-                            Name = "Cameroun",
-                            ResourceId = "CM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 673L,
-                            LanguageId = "en",
-                            Name = "China",
-                            ResourceId = "CN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 674L,
-                            LanguageId = "ar",
-                            Name = "الصين",
-                            ResourceId = "CN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 675L,
-                            LanguageId = "fr",
-                            Name = "Chine",
-                            ResourceId = "CN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 676L,
-                            LanguageId = "en",
-                            Name = "Colombia",
-                            ResourceId = "CO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 677L,
-                            LanguageId = "ar",
-                            Name = "كولومبيا",
-                            ResourceId = "CO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 678L,
-                            LanguageId = "fr",
-                            Name = "Colombie",
-                            ResourceId = "CO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 679L,
-                            LanguageId = "en",
-                            Name = "Costa Rica",
-                            ResourceId = "CR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 680L,
-                            LanguageId = "ar",
-                            Name = "كوستاريكا",
-                            ResourceId = "CR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 681L,
-                            LanguageId = "fr",
-                            Name = "Costa Rica",
-                            ResourceId = "CR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 682L,
-                            LanguageId = "en",
-                            Name = "Cuba",
-                            ResourceId = "CU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 683L,
-                            LanguageId = "ar",
-                            Name = "كوبا",
-                            ResourceId = "CU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 684L,
-                            LanguageId = "fr",
-                            Name = "Cuba",
-                            ResourceId = "CU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 685L,
-                            LanguageId = "en",
-                            Name = "Cape Verde",
-                            ResourceId = "CV",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 686L,
-                            LanguageId = "ar",
-                            Name = "الرأس الأخضر",
-                            ResourceId = "CV",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 687L,
-                            LanguageId = "fr",
-                            Name = "Cap-Vert",
-                            ResourceId = "CV",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 688L,
-                            LanguageId = "en",
-                            Name = "Curaçao",
-                            ResourceId = "CW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 689L,
-                            LanguageId = "ar",
-                            Name = "كوراساو",
-                            ResourceId = "CW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 690L,
-                            LanguageId = "fr",
-                            Name = "Curaçao",
-                            ResourceId = "CW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 691L,
-                            LanguageId = "en",
-                            Name = "Christmas Island",
-                            ResourceId = "CX",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 692L,
-                            LanguageId = "ar",
-                            Name = "جزيرة كريسماس",
-                            ResourceId = "CX",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 693L,
-                            LanguageId = "fr",
-                            Name = "Île Christmas",
-                            ResourceId = "CX",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 694L,
-                            LanguageId = "en",
-                            Name = "Cyprus",
-                            ResourceId = "CY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 695L,
-                            LanguageId = "ar",
-                            Name = "قبرص",
-                            ResourceId = "CY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 696L,
-                            LanguageId = "fr",
-                            Name = "Chypre",
-                            ResourceId = "CY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 697L,
-                            LanguageId = "en",
-                            Name = "Czechia",
-                            ResourceId = "CZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 698L,
-                            LanguageId = "ar",
-                            Name = "التشيك",
-                            ResourceId = "CZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 699L,
-                            LanguageId = "fr",
-                            Name = "Tchéquie",
-                            ResourceId = "CZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 700L,
-                            LanguageId = "en",
-                            Name = "Germany",
-                            ResourceId = "DE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 701L,
-                            LanguageId = "ar",
-                            Name = "ألمانيا",
-                            ResourceId = "DE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 702L,
-                            LanguageId = "fr",
-                            Name = "Allemagne",
-                            ResourceId = "DE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 703L,
-                            LanguageId = "en",
-                            Name = "Djibouti",
-                            ResourceId = "DJ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 704L,
-                            LanguageId = "ar",
-                            Name = "جيبوتي",
-                            ResourceId = "DJ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 705L,
-                            LanguageId = "fr",
-                            Name = "Djibouti",
-                            ResourceId = "DJ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 706L,
-                            LanguageId = "en",
-                            Name = "Denmark",
-                            ResourceId = "DK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 707L,
-                            LanguageId = "ar",
-                            Name = "الدانمرك",
-                            ResourceId = "DK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 708L,
-                            LanguageId = "fr",
-                            Name = "Danemark",
-                            ResourceId = "DK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 709L,
-                            LanguageId = "en",
-                            Name = "Dominica",
-                            ResourceId = "DM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 710L,
-                            LanguageId = "ar",
-                            Name = "دومينيكا",
-                            ResourceId = "DM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 711L,
-                            LanguageId = "fr",
-                            Name = "Dominique",
-                            ResourceId = "DM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 712L,
-                            LanguageId = "en",
-                            Name = "Dominican Republic",
-                            ResourceId = "DO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 713L,
-                            LanguageId = "ar",
-                            Name = "جمهورية الدومينيكان",
-                            ResourceId = "DO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 714L,
-                            LanguageId = "fr",
-                            Name = "République dominicaine",
-                            ResourceId = "DO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 715L,
-                            LanguageId = "en",
-                            Name = "Algeria",
-                            ResourceId = "DZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 716L,
-                            LanguageId = "ar",
-                            Name = "الجزائر",
-                            ResourceId = "DZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 717L,
-                            LanguageId = "fr",
-                            Name = "Algérie",
-                            ResourceId = "DZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 718L,
-                            LanguageId = "en",
-                            Name = "Ecuador",
-                            ResourceId = "EC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 719L,
-                            LanguageId = "ar",
-                            Name = "الإكوادور",
-                            ResourceId = "EC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 720L,
-                            LanguageId = "fr",
-                            Name = "Équateur",
-                            ResourceId = "EC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 721L,
-                            LanguageId = "en",
-                            Name = "Estonia",
-                            ResourceId = "EE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 722L,
-                            LanguageId = "ar",
-                            Name = "إستونيا",
-                            ResourceId = "EE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 723L,
-                            LanguageId = "fr",
-                            Name = "Estonie",
-                            ResourceId = "EE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 724L,
-                            LanguageId = "en",
-                            Name = "Egypt",
-                            ResourceId = "EG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 725L,
-                            LanguageId = "ar",
-                            Name = "مصر",
-                            ResourceId = "EG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 726L,
-                            LanguageId = "fr",
-                            Name = "Égypte",
-                            ResourceId = "EG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 727L,
-                            LanguageId = "en",
-                            Name = "Western Sahara",
-                            ResourceId = "EH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 728L,
-                            LanguageId = "ar",
-                            Name = "الصحراء الغربية",
-                            ResourceId = "EH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 729L,
-                            LanguageId = "fr",
-                            Name = "Sahara occidental",
-                            ResourceId = "EH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 730L,
-                            LanguageId = "en",
-                            Name = "Eritrea",
-                            ResourceId = "ER",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 731L,
-                            LanguageId = "ar",
-                            Name = "إريتريا",
-                            ResourceId = "ER",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 732L,
-                            LanguageId = "fr",
-                            Name = "Érythrée",
-                            ResourceId = "ER",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 733L,
-                            LanguageId = "en",
-                            Name = "Spain",
-                            ResourceId = "ES",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 734L,
-                            LanguageId = "ar",
-                            Name = "إسبانيا",
-                            ResourceId = "ES",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 735L,
-                            LanguageId = "fr",
-                            Name = "Espagne",
-                            ResourceId = "ES",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 736L,
-                            LanguageId = "en",
-                            Name = "Ethiopia",
-                            ResourceId = "ET",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 737L,
-                            LanguageId = "ar",
-                            Name = "إثيوبيا",
-                            ResourceId = "ET",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 738L,
-                            LanguageId = "fr",
-                            Name = "Éthiopie",
-                            ResourceId = "ET",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 739L,
-                            LanguageId = "en",
-                            Name = "Finland",
-                            ResourceId = "FI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 740L,
-                            LanguageId = "ar",
-                            Name = "فنلندا",
-                            ResourceId = "FI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 741L,
-                            LanguageId = "fr",
-                            Name = "Finlande",
-                            ResourceId = "FI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 742L,
-                            LanguageId = "en",
-                            Name = "Fiji",
-                            ResourceId = "FJ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 743L,
-                            LanguageId = "ar",
-                            Name = "فيجي",
-                            ResourceId = "FJ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 744L,
-                            LanguageId = "fr",
-                            Name = "Fidji",
-                            ResourceId = "FJ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 745L,
-                            LanguageId = "en",
-                            Name = "Falkland Islands (Islas Malvinas)",
-                            ResourceId = "FK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 746L,
-                            LanguageId = "ar",
-                            Name = "جزر فوكلاند - جزر مالفيناس",
-                            ResourceId = "FK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 747L,
-                            LanguageId = "fr",
-                            Name = "Îles Malouines (Îles Falkland)",
-                            ResourceId = "FK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 748L,
-                            LanguageId = "en",
-                            Name = "Micronesia",
-                            ResourceId = "FM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 749L,
-                            LanguageId = "ar",
-                            Name = "ميكرونيزيا",
-                            ResourceId = "FM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 750L,
-                            LanguageId = "fr",
-                            Name = "Micronésie",
-                            ResourceId = "FM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 751L,
-                            LanguageId = "en",
-                            Name = "Faroe Islands",
-                            ResourceId = "FO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 752L,
-                            LanguageId = "ar",
-                            Name = "جزر فارو",
-                            ResourceId = "FO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 753L,
-                            LanguageId = "fr",
-                            Name = "Îles Féroé",
-                            ResourceId = "FO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 754L,
-                            LanguageId = "en",
-                            Name = "France",
-                            ResourceId = "FR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 755L,
-                            LanguageId = "ar",
-                            Name = "فرنسا",
-                            ResourceId = "FR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 756L,
-                            LanguageId = "fr",
-                            Name = "France",
-                            ResourceId = "FR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 757L,
-                            LanguageId = "en",
-                            Name = "Gabon",
-                            ResourceId = "GA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 758L,
-                            LanguageId = "ar",
-                            Name = "الغابون",
-                            ResourceId = "GA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 759L,
-                            LanguageId = "fr",
-                            Name = "Gabon",
-                            ResourceId = "GA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 760L,
-                            LanguageId = "en",
-                            Name = "United Kingdom",
-                            ResourceId = "GB",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 761L,
-                            LanguageId = "ar",
-                            Name = "المملكة المتحدة",
-                            ResourceId = "GB",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 762L,
-                            LanguageId = "fr",
-                            Name = "Royaume-Uni",
-                            ResourceId = "GB",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 763L,
-                            LanguageId = "en",
-                            Name = "Grenada",
-                            ResourceId = "GD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 764L,
-                            LanguageId = "ar",
-                            Name = "غرينادا",
-                            ResourceId = "GD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 765L,
-                            LanguageId = "fr",
-                            Name = "Grenade",
-                            ResourceId = "GD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 766L,
-                            LanguageId = "en",
-                            Name = "Georgia",
-                            ResourceId = "GE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 767L,
-                            LanguageId = "ar",
-                            Name = "جورجيا",
-                            ResourceId = "GE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 768L,
-                            LanguageId = "fr",
-                            Name = "Géorgie",
-                            ResourceId = "GE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 769L,
-                            LanguageId = "en",
-                            Name = "French Guiana",
-                            ResourceId = "GF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 770L,
-                            LanguageId = "ar",
-                            Name = "غويانا الفرنسية",
-                            ResourceId = "GF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 771L,
-                            LanguageId = "fr",
-                            Name = "Guyane française",
-                            ResourceId = "GF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 772L,
-                            LanguageId = "en",
-                            Name = "Guernsey",
-                            ResourceId = "GG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 773L,
-                            LanguageId = "ar",
-                            Name = "غيرنزي",
-                            ResourceId = "GG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 774L,
-                            LanguageId = "fr",
-                            Name = "Guernesey",
-                            ResourceId = "GG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 775L,
-                            LanguageId = "en",
-                            Name = "Ghana",
-                            ResourceId = "GH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 776L,
-                            LanguageId = "ar",
-                            Name = "غانا",
-                            ResourceId = "GH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 777L,
-                            LanguageId = "fr",
-                            Name = "Ghana",
-                            ResourceId = "GH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 778L,
-                            LanguageId = "en",
-                            Name = "Gibraltar",
-                            ResourceId = "GI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 779L,
-                            LanguageId = "ar",
-                            Name = "جبل طارق",
-                            ResourceId = "GI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 780L,
-                            LanguageId = "fr",
-                            Name = "Gibraltar",
-                            ResourceId = "GI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 781L,
-                            LanguageId = "en",
-                            Name = "Greenland",
-                            ResourceId = "GL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 782L,
-                            LanguageId = "ar",
-                            Name = "غرينلاند",
-                            ResourceId = "GL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 783L,
-                            LanguageId = "fr",
-                            Name = "Groenland",
-                            ResourceId = "GL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 784L,
-                            LanguageId = "en",
-                            Name = "Gambia",
-                            ResourceId = "GM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 785L,
-                            LanguageId = "ar",
-                            Name = "غامبيا",
-                            ResourceId = "GM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 786L,
-                            LanguageId = "fr",
-                            Name = "Gambie",
-                            ResourceId = "GM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 787L,
-                            LanguageId = "en",
-                            Name = "Guinea",
-                            ResourceId = "GN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 788L,
-                            LanguageId = "ar",
-                            Name = "غينيا",
-                            ResourceId = "GN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 789L,
-                            LanguageId = "fr",
-                            Name = "Guinée",
-                            ResourceId = "GN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 790L,
-                            LanguageId = "en",
-                            Name = "Guadeloupe",
-                            ResourceId = "GP",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 791L,
-                            LanguageId = "ar",
-                            Name = "غوادلوب",
-                            ResourceId = "GP",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 792L,
-                            LanguageId = "fr",
-                            Name = "Guadeloupe",
-                            ResourceId = "GP",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 793L,
-                            LanguageId = "en",
-                            Name = "Equatorial Guinea",
-                            ResourceId = "GQ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 794L,
-                            LanguageId = "ar",
-                            Name = "غينيا الاستوائية",
-                            ResourceId = "GQ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 795L,
-                            LanguageId = "fr",
-                            Name = "Guinée équatoriale",
-                            ResourceId = "GQ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 796L,
-                            LanguageId = "en",
-                            Name = "Greece",
-                            ResourceId = "GR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 797L,
-                            LanguageId = "ar",
-                            Name = "اليونان",
-                            ResourceId = "GR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 798L,
-                            LanguageId = "fr",
-                            Name = "Grèce",
-                            ResourceId = "GR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 799L,
-                            LanguageId = "en",
-                            Name = "South Georgia & South Sandwich Islands",
-                            ResourceId = "GS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 800L,
-                            LanguageId = "ar",
-                            Name = "جورجيا الجنوبية وجزر ساندويتش الجنوبية",
-                            ResourceId = "GS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 801L,
-                            LanguageId = "fr",
-                            Name = "Géorgie du Sud-et-les Îles Sandwich du Sud",
-                            ResourceId = "GS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 802L,
-                            LanguageId = "en",
-                            Name = "Guatemala",
-                            ResourceId = "GT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 803L,
-                            LanguageId = "ar",
-                            Name = "غواتيمالا",
-                            ResourceId = "GT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 804L,
-                            LanguageId = "fr",
-                            Name = "Guatemala",
-                            ResourceId = "GT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 805L,
-                            LanguageId = "en",
-                            Name = "Guam",
-                            ResourceId = "GU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 806L,
-                            LanguageId = "ar",
-                            Name = "غوام",
-                            ResourceId = "GU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 807L,
-                            LanguageId = "fr",
-                            Name = "Guam",
-                            ResourceId = "GU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 808L,
-                            LanguageId = "en",
-                            Name = "Guinea-Bissau",
-                            ResourceId = "GW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 809L,
-                            LanguageId = "ar",
-                            Name = "غينيا بيساو",
-                            ResourceId = "GW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 810L,
-                            LanguageId = "fr",
-                            Name = "Guinée-Bissau",
-                            ResourceId = "GW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 811L,
-                            LanguageId = "en",
-                            Name = "Guyana",
-                            ResourceId = "GY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 812L,
-                            LanguageId = "ar",
-                            Name = "غيانا",
-                            ResourceId = "GY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 813L,
-                            LanguageId = "fr",
-                            Name = "Guyana",
-                            ResourceId = "GY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 814L,
-                            LanguageId = "en",
-                            Name = "Hong Kong",
-                            ResourceId = "HK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 815L,
-                            LanguageId = "ar",
-                            Name = "هونغ كونغ",
-                            ResourceId = "HK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 816L,
-                            LanguageId = "fr",
-                            Name = "Hong Kong",
-                            ResourceId = "HK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 817L,
-                            LanguageId = "en",
-                            Name = "Heard & McDonald Islands",
-                            ResourceId = "HM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 818L,
-                            LanguageId = "ar",
-                            Name = "جزيرة هيرد وجزر ماكدونالد",
-                            ResourceId = "HM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 819L,
-                            LanguageId = "fr",
-                            Name = "Îles Heard-et-MacDonald",
-                            ResourceId = "HM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 820L,
-                            LanguageId = "en",
-                            Name = "Honduras",
-                            ResourceId = "HN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 821L,
-                            LanguageId = "ar",
-                            Name = "هندوراس",
-                            ResourceId = "HN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 822L,
-                            LanguageId = "fr",
-                            Name = "Honduras",
-                            ResourceId = "HN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 823L,
-                            LanguageId = "en",
-                            Name = "Croatia",
-                            ResourceId = "HR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 824L,
-                            LanguageId = "ar",
-                            Name = "كرواتيا",
-                            ResourceId = "HR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 825L,
-                            LanguageId = "fr",
-                            Name = "Croatie",
-                            ResourceId = "HR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 826L,
-                            LanguageId = "en",
-                            Name = "Haiti",
-                            ResourceId = "HT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 827L,
-                            LanguageId = "ar",
-                            Name = "هايتي",
-                            ResourceId = "HT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 828L,
-                            LanguageId = "fr",
-                            Name = "Haïti",
-                            ResourceId = "HT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 829L,
-                            LanguageId = "en",
-                            Name = "Hungary",
-                            ResourceId = "HU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 830L,
-                            LanguageId = "ar",
-                            Name = "هنغاريا",
-                            ResourceId = "HU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 831L,
-                            LanguageId = "fr",
-                            Name = "Hongrie",
-                            ResourceId = "HU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 832L,
-                            LanguageId = "en",
-                            Name = "Indonesia",
-                            ResourceId = "ID",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 833L,
-                            LanguageId = "ar",
-                            Name = "إندونيسيا",
-                            ResourceId = "ID",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 834L,
-                            LanguageId = "fr",
-                            Name = "Indonésie",
-                            ResourceId = "ID",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 835L,
-                            LanguageId = "en",
-                            Name = "Ireland",
-                            ResourceId = "IE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 836L,
-                            LanguageId = "ar",
-                            Name = "أيرلندا",
-                            ResourceId = "IE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 837L,
-                            LanguageId = "fr",
-                            Name = "Irlande",
-                            ResourceId = "IE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 838L,
-                            LanguageId = "en",
-                            Name = "Isle of Man",
-                            ResourceId = "IM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 839L,
-                            LanguageId = "ar",
-                            Name = "جزيرة مان",
-                            ResourceId = "IM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 840L,
-                            LanguageId = "fr",
-                            Name = "Île de Man",
-                            ResourceId = "IM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 841L,
-                            LanguageId = "en",
-                            Name = "India",
-                            ResourceId = "IN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 842L,
-                            LanguageId = "ar",
-                            Name = "الهند",
-                            ResourceId = "IN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 843L,
-                            LanguageId = "fr",
-                            Name = "Inde",
-                            ResourceId = "IN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 844L,
-                            LanguageId = "en",
-                            Name = "British Indian Ocean Territory",
-                            ResourceId = "IO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 845L,
-                            LanguageId = "ar",
-                            Name = "الإقليم البريطاني في المحيط الهندي",
-                            ResourceId = "IO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 846L,
-                            LanguageId = "fr",
-                            Name = "Territoire britannique de l’océan Indien",
-                            ResourceId = "IO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 847L,
-                            LanguageId = "en",
-                            Name = "Iraq",
-                            ResourceId = "IQ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 848L,
-                            LanguageId = "ar",
-                            Name = "العراق",
-                            ResourceId = "IQ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 849L,
-                            LanguageId = "fr",
-                            Name = "Irak",
-                            ResourceId = "IQ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 850L,
-                            LanguageId = "en",
-                            Name = "Iran",
-                            ResourceId = "IR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 851L,
-                            LanguageId = "ar",
-                            Name = "إيران",
-                            ResourceId = "IR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 852L,
-                            LanguageId = "fr",
-                            Name = "Iran",
-                            ResourceId = "IR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 853L,
-                            LanguageId = "en",
-                            Name = "Iceland",
-                            ResourceId = "IS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 854L,
-                            LanguageId = "ar",
-                            Name = "آيسلندا",
-                            ResourceId = "IS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 855L,
-                            LanguageId = "fr",
-                            Name = "Islande",
-                            ResourceId = "IS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 856L,
-                            LanguageId = "en",
-                            Name = "Italy",
-                            ResourceId = "IT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 857L,
-                            LanguageId = "ar",
-                            Name = "إيطاليا",
-                            ResourceId = "IT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 858L,
-                            LanguageId = "fr",
-                            Name = "Italie",
-                            ResourceId = "IT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 859L,
-                            LanguageId = "en",
-                            Name = "Jersey",
-                            ResourceId = "JE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 860L,
-                            LanguageId = "ar",
-                            Name = "جيرسي",
-                            ResourceId = "JE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 861L,
-                            LanguageId = "fr",
-                            Name = "Jersey",
-                            ResourceId = "JE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 862L,
-                            LanguageId = "en",
-                            Name = "Jamaica",
-                            ResourceId = "JM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 863L,
-                            LanguageId = "ar",
-                            Name = "جامايكا",
-                            ResourceId = "JM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 864L,
-                            LanguageId = "fr",
-                            Name = "Jamaïque",
-                            ResourceId = "JM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 865L,
-                            LanguageId = "en",
-                            Name = "Jordan",
-                            ResourceId = "JO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 866L,
-                            LanguageId = "ar",
-                            Name = "الأردن",
-                            ResourceId = "JO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 867L,
-                            LanguageId = "fr",
-                            Name = "Jordanie",
-                            ResourceId = "JO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 868L,
-                            LanguageId = "en",
-                            Name = "Japan",
-                            ResourceId = "JP",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 869L,
-                            LanguageId = "ar",
-                            Name = "اليابان",
-                            ResourceId = "JP",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 870L,
-                            LanguageId = "fr",
-                            Name = "Japon",
-                            ResourceId = "JP",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 871L,
-                            LanguageId = "en",
-                            Name = "Kenya",
-                            ResourceId = "KE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 872L,
-                            LanguageId = "ar",
-                            Name = "كينيا",
-                            ResourceId = "KE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 873L,
-                            LanguageId = "fr",
-                            Name = "Kenya",
-                            ResourceId = "KE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 874L,
-                            LanguageId = "en",
-                            Name = "Kyrgyzstan",
-                            ResourceId = "KG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 875L,
-                            LanguageId = "ar",
-                            Name = "قيرغيزستان",
-                            ResourceId = "KG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 876L,
-                            LanguageId = "fr",
-                            Name = "Kirghizstan",
-                            ResourceId = "KG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 877L,
-                            LanguageId = "en",
-                            Name = "Cambodia",
-                            ResourceId = "KH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 878L,
-                            LanguageId = "ar",
-                            Name = "كمبوديا",
-                            ResourceId = "KH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 879L,
-                            LanguageId = "fr",
-                            Name = "Cambodge",
-                            ResourceId = "KH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 880L,
-                            LanguageId = "en",
-                            Name = "Kiribati",
-                            ResourceId = "KI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 881L,
-                            LanguageId = "ar",
-                            Name = "كيريباتي",
-                            ResourceId = "KI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 882L,
-                            LanguageId = "fr",
-                            Name = "Kiribati",
-                            ResourceId = "KI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 883L,
-                            LanguageId = "en",
-                            Name = "Comoros",
-                            ResourceId = "KM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 884L,
-                            LanguageId = "ar",
-                            Name = "جزر القمر",
-                            ResourceId = "KM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 885L,
-                            LanguageId = "fr",
-                            Name = "Comores",
-                            ResourceId = "KM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 886L,
-                            LanguageId = "en",
-                            Name = "St. Kitts & Nevis",
-                            ResourceId = "KN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 887L,
-                            LanguageId = "ar",
-                            Name = "سانت كيتس ونيفيس",
-                            ResourceId = "KN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 888L,
-                            LanguageId = "fr",
-                            Name = "Saint-Christophe-et-Niévès",
-                            ResourceId = "KN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 889L,
-                            LanguageId = "en",
-                            Name = "North Korea",
-                            ResourceId = "KP",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 890L,
-                            LanguageId = "ar",
-                            Name = "كوريا الشمالية",
-                            ResourceId = "KP",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 891L,
-                            LanguageId = "fr",
-                            Name = "Corée du Nord",
-                            ResourceId = "KP",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 892L,
-                            LanguageId = "en",
-                            Name = "South Korea",
-                            ResourceId = "KR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 893L,
-                            LanguageId = "ar",
-                            Name = "كوريا الجنوبية",
-                            ResourceId = "KR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 894L,
-                            LanguageId = "fr",
-                            Name = "Corée du Sud",
-                            ResourceId = "KR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 895L,
-                            LanguageId = "en",
-                            Name = "Kuwait",
-                            ResourceId = "KW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 896L,
-                            LanguageId = "ar",
-                            Name = "الكويت",
-                            ResourceId = "KW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 897L,
-                            LanguageId = "fr",
-                            Name = "Koweït",
-                            ResourceId = "KW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 898L,
-                            LanguageId = "en",
-                            Name = "Cayman Islands",
-                            ResourceId = "KY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 899L,
-                            LanguageId = "ar",
-                            Name = "جزر كايمان",
-                            ResourceId = "KY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 900L,
-                            LanguageId = "fr",
-                            Name = "Îles Caïmans",
-                            ResourceId = "KY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 901L,
-                            LanguageId = "en",
-                            Name = "Kazakhstan",
-                            ResourceId = "KZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 902L,
-                            LanguageId = "ar",
-                            Name = "كازاخستان",
-                            ResourceId = "KZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 903L,
-                            LanguageId = "fr",
-                            Name = "Kazakhstan",
-                            ResourceId = "KZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 904L,
-                            LanguageId = "en",
-                            Name = "Laos",
-                            ResourceId = "LA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 905L,
-                            LanguageId = "ar",
-                            Name = "لاوس",
-                            ResourceId = "LA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 906L,
-                            LanguageId = "fr",
-                            Name = "Laos",
-                            ResourceId = "LA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 907L,
-                            LanguageId = "en",
-                            Name = "Lebanon",
-                            ResourceId = "LB",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 908L,
-                            LanguageId = "ar",
-                            Name = "لبنان",
-                            ResourceId = "LB",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 909L,
-                            LanguageId = "fr",
-                            Name = "Liban",
-                            ResourceId = "LB",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 910L,
-                            LanguageId = "en",
-                            Name = "St. Lucia",
-                            ResourceId = "LC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 911L,
-                            LanguageId = "ar",
-                            Name = "سانت لوسيا",
-                            ResourceId = "LC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 912L,
-                            LanguageId = "fr",
-                            Name = "Sainte-Lucie",
-                            ResourceId = "LC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 913L,
-                            LanguageId = "en",
-                            Name = "Liechtenstein",
-                            ResourceId = "LI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 914L,
-                            LanguageId = "ar",
-                            Name = "ليختنشتاين",
-                            ResourceId = "LI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 915L,
-                            LanguageId = "fr",
-                            Name = "Liechtenstein",
-                            ResourceId = "LI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 916L,
-                            LanguageId = "en",
-                            Name = "Sri Lanka",
-                            ResourceId = "LK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 917L,
-                            LanguageId = "ar",
-                            Name = "سريلانكا",
-                            ResourceId = "LK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 918L,
-                            LanguageId = "fr",
-                            Name = "Sri Lanka",
-                            ResourceId = "LK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 919L,
-                            LanguageId = "en",
-                            Name = "Liberia",
-                            ResourceId = "LR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 920L,
-                            LanguageId = "ar",
-                            Name = "ليبيريا",
-                            ResourceId = "LR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 921L,
-                            LanguageId = "fr",
-                            Name = "Liberia",
-                            ResourceId = "LR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 922L,
-                            LanguageId = "en",
-                            Name = "Lesotho",
-                            ResourceId = "LS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 923L,
-                            LanguageId = "ar",
-                            Name = "ليسوتو",
-                            ResourceId = "LS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 924L,
-                            LanguageId = "fr",
-                            Name = "Lesotho",
-                            ResourceId = "LS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 925L,
-                            LanguageId = "en",
-                            Name = "Lithuania",
-                            ResourceId = "LT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 926L,
-                            LanguageId = "ar",
-                            Name = "ليتوانيا",
-                            ResourceId = "LT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 927L,
-                            LanguageId = "fr",
-                            Name = "Lituanie",
-                            ResourceId = "LT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 928L,
-                            LanguageId = "en",
-                            Name = "Luxembourg",
-                            ResourceId = "LU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 929L,
-                            LanguageId = "ar",
-                            Name = "لوكسمبورغ",
-                            ResourceId = "LU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 930L,
-                            LanguageId = "fr",
-                            Name = "Luxembourg",
-                            ResourceId = "LU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 931L,
-                            LanguageId = "en",
-                            Name = "Latvia",
-                            ResourceId = "LV",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 932L,
-                            LanguageId = "ar",
-                            Name = "لاتفيا",
-                            ResourceId = "LV",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 933L,
-                            LanguageId = "fr",
-                            Name = "Lettonie",
-                            ResourceId = "LV",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 934L,
-                            LanguageId = "en",
-                            Name = "Libya",
-                            ResourceId = "LY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 935L,
-                            LanguageId = "ar",
-                            Name = "ليبيا",
-                            ResourceId = "LY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 936L,
-                            LanguageId = "fr",
-                            Name = "Libye",
-                            ResourceId = "LY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 937L,
-                            LanguageId = "en",
-                            Name = "Morocco",
-                            ResourceId = "MA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 938L,
-                            LanguageId = "ar",
-                            Name = "المغرب",
-                            ResourceId = "MA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 939L,
-                            LanguageId = "fr",
-                            Name = "Maroc",
-                            ResourceId = "MA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 940L,
-                            LanguageId = "en",
-                            Name = "Monaco",
-                            ResourceId = "MC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 941L,
-                            LanguageId = "ar",
-                            Name = "موناكو",
-                            ResourceId = "MC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 942L,
-                            LanguageId = "fr",
-                            Name = "Monaco",
-                            ResourceId = "MC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 943L,
-                            LanguageId = "en",
-                            Name = "Moldova",
-                            ResourceId = "MD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 944L,
-                            LanguageId = "ar",
-                            Name = "مولدوفا",
-                            ResourceId = "MD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 945L,
-                            LanguageId = "fr",
-                            Name = "Moldavie",
-                            ResourceId = "MD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 946L,
-                            LanguageId = "en",
-                            Name = "Montenegro",
-                            ResourceId = "ME",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 947L,
-                            LanguageId = "ar",
-                            Name = "الجبل الأسود",
-                            ResourceId = "ME",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 948L,
-                            LanguageId = "fr",
-                            Name = "Monténégro",
-                            ResourceId = "ME",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 949L,
-                            LanguageId = "en",
-                            Name = "St. Martin",
-                            ResourceId = "MF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 950L,
-                            LanguageId = "ar",
-                            Name = "سان مارتن",
-                            ResourceId = "MF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 951L,
-                            LanguageId = "fr",
-                            Name = "Saint-Martin",
-                            ResourceId = "MF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 952L,
-                            LanguageId = "en",
-                            Name = "Madagascar",
-                            ResourceId = "MG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 953L,
-                            LanguageId = "ar",
-                            Name = "مدغشقر",
-                            ResourceId = "MG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 954L,
-                            LanguageId = "fr",
-                            Name = "Madagascar",
-                            ResourceId = "MG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 955L,
-                            LanguageId = "en",
-                            Name = "Marshall Islands",
-                            ResourceId = "MH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 956L,
-                            LanguageId = "ar",
-                            Name = "جزر مارشال",
-                            ResourceId = "MH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 957L,
-                            LanguageId = "fr",
-                            Name = "Îles Marshall",
-                            ResourceId = "MH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 958L,
-                            LanguageId = "en",
-                            Name = "North Macedonia",
-                            ResourceId = "MK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 959L,
-                            LanguageId = "ar",
-                            Name = "مقدونيا الشمالية",
-                            ResourceId = "MK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 960L,
-                            LanguageId = "fr",
-                            Name = "Macédoine du Nord",
-                            ResourceId = "MK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 961L,
-                            LanguageId = "en",
-                            Name = "Mali",
-                            ResourceId = "ML",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 962L,
-                            LanguageId = "ar",
-                            Name = "مالي",
-                            ResourceId = "ML",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 963L,
-                            LanguageId = "fr",
-                            Name = "Mali",
-                            ResourceId = "ML",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 964L,
-                            LanguageId = "en",
-                            Name = "Myanmar (Burma)",
-                            ResourceId = "MM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 965L,
-                            LanguageId = "ar",
-                            Name = "ميانمار (بورما)",
-                            ResourceId = "MM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 966L,
-                            LanguageId = "fr",
-                            Name = "Myanmar (Birmanie)",
-                            ResourceId = "MM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 967L,
-                            LanguageId = "en",
-                            Name = "Mongolia",
-                            ResourceId = "MN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 968L,
-                            LanguageId = "ar",
-                            Name = "منغوليا",
-                            ResourceId = "MN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 969L,
-                            LanguageId = "fr",
-                            Name = "Mongolie",
-                            ResourceId = "MN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 970L,
-                            LanguageId = "en",
-                            Name = "Macao",
-                            ResourceId = "MO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 971L,
-                            LanguageId = "ar",
-                            Name = "مكاو",
-                            ResourceId = "MO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 972L,
-                            LanguageId = "fr",
-                            Name = "Macao",
-                            ResourceId = "MO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 973L,
-                            LanguageId = "en",
-                            Name = "Northern Mariana Islands",
-                            ResourceId = "MP",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 974L,
-                            LanguageId = "ar",
-                            Name = "جزر ماريانا الشمالية",
-                            ResourceId = "MP",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 975L,
-                            LanguageId = "fr",
-                            Name = "Îles Mariannes du Nord",
-                            ResourceId = "MP",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 976L,
-                            LanguageId = "en",
-                            Name = "Martinique",
-                            ResourceId = "MQ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 977L,
-                            LanguageId = "ar",
-                            Name = "جزر المارتينيك",
-                            ResourceId = "MQ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 978L,
-                            LanguageId = "fr",
-                            Name = "Martinique",
-                            ResourceId = "MQ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 979L,
-                            LanguageId = "en",
-                            Name = "Mauritania",
-                            ResourceId = "MR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 980L,
-                            LanguageId = "ar",
-                            Name = "موريتانيا",
-                            ResourceId = "MR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 981L,
-                            LanguageId = "fr",
-                            Name = "Mauritanie",
-                            ResourceId = "MR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 982L,
-                            LanguageId = "en",
-                            Name = "Montserrat",
-                            ResourceId = "MS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 983L,
-                            LanguageId = "ar",
-                            Name = "مونتسرات",
-                            ResourceId = "MS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 984L,
-                            LanguageId = "fr",
-                            Name = "Montserrat",
-                            ResourceId = "MS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 985L,
-                            LanguageId = "en",
-                            Name = "Malta",
-                            ResourceId = "MT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 986L,
-                            LanguageId = "ar",
-                            Name = "مالطا",
-                            ResourceId = "MT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 987L,
-                            LanguageId = "fr",
-                            Name = "Malte",
-                            ResourceId = "MT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 988L,
-                            LanguageId = "en",
-                            Name = "Mauritius",
-                            ResourceId = "MU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 989L,
-                            LanguageId = "ar",
-                            Name = "موريشيوس",
-                            ResourceId = "MU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 990L,
-                            LanguageId = "fr",
-                            Name = "Maurice",
-                            ResourceId = "MU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 991L,
-                            LanguageId = "en",
-                            Name = "Maldives",
-                            ResourceId = "MV",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 992L,
-                            LanguageId = "ar",
-                            Name = "جزر المالديف",
-                            ResourceId = "MV",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 993L,
-                            LanguageId = "fr",
-                            Name = "Maldives",
-                            ResourceId = "MV",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 994L,
-                            LanguageId = "en",
-                            Name = "Malawi",
-                            ResourceId = "MW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 995L,
-                            LanguageId = "ar",
-                            Name = "ملاوي",
-                            ResourceId = "MW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 996L,
-                            LanguageId = "fr",
-                            Name = "Malawi",
-                            ResourceId = "MW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 997L,
-                            LanguageId = "en",
-                            Name = "Mexico",
-                            ResourceId = "MX",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 998L,
-                            LanguageId = "ar",
-                            Name = "المكسيك",
-                            ResourceId = "MX",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 999L,
-                            LanguageId = "fr",
-                            Name = "Mexique",
-                            ResourceId = "MX",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1000L,
-                            LanguageId = "en",
-                            Name = "Malaysia",
-                            ResourceId = "MY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1001L,
-                            LanguageId = "ar",
-                            Name = "ماليزيا",
-                            ResourceId = "MY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1002L,
-                            LanguageId = "fr",
-                            Name = "Malaisie",
-                            ResourceId = "MY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1003L,
-                            LanguageId = "en",
-                            Name = "Mozambique",
-                            ResourceId = "MZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1004L,
-                            LanguageId = "ar",
-                            Name = "موزمبيق",
-                            ResourceId = "MZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1005L,
-                            LanguageId = "fr",
-                            Name = "Mozambique",
-                            ResourceId = "MZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1006L,
-                            LanguageId = "en",
-                            Name = "Namibia",
-                            ResourceId = "NA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1007L,
-                            LanguageId = "ar",
-                            Name = "ناميبيا",
-                            ResourceId = "NA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1008L,
-                            LanguageId = "fr",
-                            Name = "Namibie",
-                            ResourceId = "NA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1009L,
-                            LanguageId = "en",
-                            Name = "New Caledonia",
-                            ResourceId = "NC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1010L,
-                            LanguageId = "ar",
-                            Name = "كاليدونيا الجديدة",
-                            ResourceId = "NC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1011L,
-                            LanguageId = "fr",
-                            Name = "Nouvelle-Calédonie",
-                            ResourceId = "NC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1012L,
-                            LanguageId = "en",
-                            Name = "Niger",
-                            ResourceId = "NE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1013L,
-                            LanguageId = "ar",
-                            Name = "النيجر",
-                            ResourceId = "NE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1014L,
-                            LanguageId = "fr",
-                            Name = "Niger",
-                            ResourceId = "NE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1015L,
-                            LanguageId = "en",
-                            Name = "Norfolk Island",
-                            ResourceId = "NF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1016L,
-                            LanguageId = "ar",
-                            Name = "جزيرة نورفولك",
-                            ResourceId = "NF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1017L,
-                            LanguageId = "fr",
-                            Name = "Île Norfolk",
-                            ResourceId = "NF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1018L,
-                            LanguageId = "en",
-                            Name = "Nigeria",
-                            ResourceId = "NG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1019L,
-                            LanguageId = "ar",
-                            Name = "نيجيريا",
-                            ResourceId = "NG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1020L,
-                            LanguageId = "fr",
-                            Name = "Nigeria",
-                            ResourceId = "NG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1021L,
-                            LanguageId = "en",
-                            Name = "Nicaragua",
-                            ResourceId = "NI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1022L,
-                            LanguageId = "ar",
-                            Name = "نيكاراغوا",
-                            ResourceId = "NI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1023L,
-                            LanguageId = "fr",
-                            Name = "Nicaragua",
-                            ResourceId = "NI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1024L,
-                            LanguageId = "en",
-                            Name = "Netherlands",
-                            ResourceId = "NL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1025L,
-                            LanguageId = "ar",
-                            Name = "هولندا",
-                            ResourceId = "NL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1026L,
-                            LanguageId = "fr",
-                            Name = "Pays-Bas",
-                            ResourceId = "NL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1027L,
-                            LanguageId = "en",
-                            Name = "Norway",
-                            ResourceId = "NO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1028L,
-                            LanguageId = "ar",
-                            Name = "النرويج",
-                            ResourceId = "NO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1029L,
-                            LanguageId = "fr",
-                            Name = "Norvège",
-                            ResourceId = "NO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1030L,
-                            LanguageId = "en",
-                            Name = "Nepal",
-                            ResourceId = "NP",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1031L,
-                            LanguageId = "ar",
-                            Name = "نيبال",
-                            ResourceId = "NP",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1032L,
-                            LanguageId = "fr",
-                            Name = "Népal",
-                            ResourceId = "NP",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1033L,
-                            LanguageId = "en",
-                            Name = "Nauru",
-                            ResourceId = "NR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1034L,
-                            LanguageId = "ar",
-                            Name = "ناورو",
-                            ResourceId = "NR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1035L,
-                            LanguageId = "fr",
-                            Name = "Nauru",
-                            ResourceId = "NR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1036L,
-                            LanguageId = "en",
-                            Name = "Niue",
-                            ResourceId = "NU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1037L,
-                            LanguageId = "ar",
-                            Name = "نيوي",
-                            ResourceId = "NU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1038L,
-                            LanguageId = "fr",
-                            Name = "Niue",
-                            ResourceId = "NU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1039L,
-                            LanguageId = "en",
-                            Name = "New Zealand",
-                            ResourceId = "NZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1040L,
-                            LanguageId = "ar",
-                            Name = "نيوزيلندا",
-                            ResourceId = "NZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1041L,
-                            LanguageId = "fr",
-                            Name = "Nouvelle-Zélande",
-                            ResourceId = "NZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1042L,
-                            LanguageId = "en",
-                            Name = "Oman",
-                            ResourceId = "OM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1043L,
-                            LanguageId = "ar",
-                            Name = "عُمان",
-                            ResourceId = "OM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1044L,
-                            LanguageId = "fr",
-                            Name = "Oman",
-                            ResourceId = "OM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1045L,
-                            LanguageId = "en",
-                            Name = "Panama",
-                            ResourceId = "PA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1046L,
-                            LanguageId = "ar",
-                            Name = "بنما",
-                            ResourceId = "PA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1047L,
-                            LanguageId = "fr",
-                            Name = "Panama",
-                            ResourceId = "PA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1048L,
-                            LanguageId = "en",
-                            Name = "Peru",
-                            ResourceId = "PE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1049L,
-                            LanguageId = "ar",
-                            Name = "بيرو",
-                            ResourceId = "PE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1050L,
-                            LanguageId = "fr",
-                            Name = "Pérou",
-                            ResourceId = "PE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1051L,
-                            LanguageId = "en",
-                            Name = "French Polynesia",
-                            ResourceId = "PF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1052L,
-                            LanguageId = "ar",
-                            Name = "بولينيزيا الفرنسية",
-                            ResourceId = "PF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1053L,
-                            LanguageId = "fr",
-                            Name = "Polynésie française",
-                            ResourceId = "PF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1054L,
-                            LanguageId = "en",
-                            Name = "Papua New Guinea",
-                            ResourceId = "PG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1055L,
-                            LanguageId = "ar",
-                            Name = "بابوا غينيا الجديدة",
-                            ResourceId = "PG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1056L,
-                            LanguageId = "fr",
-                            Name = "Papouasie-Nouvelle-Guinée",
-                            ResourceId = "PG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1057L,
-                            LanguageId = "en",
-                            Name = "Philippines",
-                            ResourceId = "PH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1058L,
-                            LanguageId = "ar",
-                            Name = "الفلبين",
-                            ResourceId = "PH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1059L,
-                            LanguageId = "fr",
-                            Name = "Philippines",
-                            ResourceId = "PH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1060L,
-                            LanguageId = "en",
-                            Name = "Pakistan",
-                            ResourceId = "PK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1061L,
-                            LanguageId = "ar",
-                            Name = "باكستان",
-                            ResourceId = "PK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1062L,
-                            LanguageId = "fr",
-                            Name = "Pakistan",
-                            ResourceId = "PK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1063L,
-                            LanguageId = "en",
-                            Name = "Poland",
-                            ResourceId = "PL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1064L,
-                            LanguageId = "ar",
-                            Name = "بولندا",
-                            ResourceId = "PL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1065L,
-                            LanguageId = "fr",
-                            Name = "Pologne",
-                            ResourceId = "PL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1066L,
-                            LanguageId = "en",
-                            Name = "St. Pierre & Miquelon",
-                            ResourceId = "PM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1067L,
-                            LanguageId = "ar",
-                            Name = "سان بيير ومكويلون",
-                            ResourceId = "PM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1068L,
-                            LanguageId = "fr",
-                            Name = "Saint-Pierre-et-Miquelon",
-                            ResourceId = "PM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1069L,
-                            LanguageId = "en",
-                            Name = "Pitcairn Islands",
-                            ResourceId = "PN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1070L,
-                            LanguageId = "ar",
-                            Name = "جزر بيتكيرن",
-                            ResourceId = "PN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1071L,
-                            LanguageId = "fr",
-                            Name = "Îles Pitcairn",
-                            ResourceId = "PN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1072L,
-                            LanguageId = "en",
-                            Name = "Puerto Rico",
-                            ResourceId = "PR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1073L,
-                            LanguageId = "ar",
-                            Name = "بورتوريكو",
-                            ResourceId = "PR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1074L,
-                            LanguageId = "fr",
-                            Name = "Porto Rico",
-                            ResourceId = "PR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1075L,
-                            LanguageId = "en",
-                            Name = "Palestine",
-                            ResourceId = "PS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1076L,
-                            LanguageId = "ar",
-                            Name = "فلسطين",
-                            ResourceId = "PS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1077L,
-                            LanguageId = "fr",
-                            Name = "Palestine",
-                            ResourceId = "PS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1078L,
-                            LanguageId = "en",
-                            Name = "Portugal",
-                            ResourceId = "PT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1079L,
-                            LanguageId = "ar",
-                            Name = "البرتغال",
-                            ResourceId = "PT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1080L,
-                            LanguageId = "fr",
-                            Name = "Portugal",
-                            ResourceId = "PT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1081L,
-                            LanguageId = "en",
-                            Name = "Palau",
-                            ResourceId = "PW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1082L,
-                            LanguageId = "ar",
-                            Name = "بالاو",
-                            ResourceId = "PW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1083L,
-                            LanguageId = "fr",
-                            Name = "Palaos",
-                            ResourceId = "PW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1084L,
-                            LanguageId = "en",
-                            Name = "Paraguay",
-                            ResourceId = "PY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1085L,
-                            LanguageId = "ar",
-                            Name = "باراغواي",
-                            ResourceId = "PY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1086L,
-                            LanguageId = "fr",
-                            Name = "Paraguay",
-                            ResourceId = "PY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1087L,
-                            LanguageId = "en",
-                            Name = "Qatar",
-                            ResourceId = "QA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1088L,
-                            LanguageId = "ar",
-                            Name = "قطر",
-                            ResourceId = "QA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1089L,
-                            LanguageId = "fr",
-                            Name = "Qatar",
-                            ResourceId = "QA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1090L,
-                            LanguageId = "en",
-                            Name = "Réunion",
-                            ResourceId = "RE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1091L,
-                            LanguageId = "ar",
-                            Name = "روينيون",
-                            ResourceId = "RE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1092L,
-                            LanguageId = "fr",
-                            Name = "La Réunion",
-                            ResourceId = "RE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1093L,
-                            LanguageId = "en",
-                            Name = "Romania",
-                            ResourceId = "RO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1094L,
-                            LanguageId = "ar",
-                            Name = "رومانيا",
-                            ResourceId = "RO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1095L,
-                            LanguageId = "fr",
-                            Name = "Roumanie",
-                            ResourceId = "RO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1096L,
-                            LanguageId = "en",
-                            Name = "Serbia",
-                            ResourceId = "RS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1097L,
-                            LanguageId = "ar",
-                            Name = "صربيا",
-                            ResourceId = "RS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1098L,
-                            LanguageId = "fr",
-                            Name = "Serbie",
-                            ResourceId = "RS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1099L,
-                            LanguageId = "en",
-                            Name = "Russia",
-                            ResourceId = "RU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1100L,
-                            LanguageId = "ar",
-                            Name = "روسيا",
-                            ResourceId = "RU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1101L,
-                            LanguageId = "fr",
-                            Name = "Russie",
-                            ResourceId = "RU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1102L,
-                            LanguageId = "en",
-                            Name = "Rwanda",
-                            ResourceId = "RW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1103L,
-                            LanguageId = "ar",
-                            Name = "رواندا",
-                            ResourceId = "RW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1104L,
-                            LanguageId = "fr",
-                            Name = "Rwanda",
-                            ResourceId = "RW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1105L,
-                            LanguageId = "en",
-                            Name = "Saudi Arabia",
-                            ResourceId = "SA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1106L,
-                            LanguageId = "ar",
-                            Name = "المملكة العربية السعودية",
-                            ResourceId = "SA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1107L,
-                            LanguageId = "fr",
-                            Name = "Arabie saoudite",
-                            ResourceId = "SA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1108L,
-                            LanguageId = "en",
-                            Name = "Solomon Islands",
-                            ResourceId = "SB",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1109L,
-                            LanguageId = "ar",
-                            Name = "جزر سليمان",
-                            ResourceId = "SB",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1110L,
-                            LanguageId = "fr",
-                            Name = "Îles Salomon",
-                            ResourceId = "SB",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1111L,
-                            LanguageId = "en",
-                            Name = "Seychelles",
-                            ResourceId = "SC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1112L,
-                            LanguageId = "ar",
-                            Name = "سيشل",
-                            ResourceId = "SC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1113L,
-                            LanguageId = "fr",
-                            Name = "Seychelles",
-                            ResourceId = "SC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1114L,
-                            LanguageId = "en",
-                            Name = "Sudan",
-                            ResourceId = "SD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1115L,
-                            LanguageId = "ar",
-                            Name = "السودان",
-                            ResourceId = "SD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1116L,
-                            LanguageId = "fr",
-                            Name = "Soudan",
-                            ResourceId = "SD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1117L,
-                            LanguageId = "en",
-                            Name = "Sweden",
-                            ResourceId = "SE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1118L,
-                            LanguageId = "ar",
-                            Name = "السويد",
-                            ResourceId = "SE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1119L,
-                            LanguageId = "fr",
-                            Name = "Suède",
-                            ResourceId = "SE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1120L,
-                            LanguageId = "en",
-                            Name = "Singapore",
-                            ResourceId = "SG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1121L,
-                            LanguageId = "ar",
-                            Name = "سنغافورة",
-                            ResourceId = "SG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1122L,
-                            LanguageId = "fr",
-                            Name = "Singapour",
-                            ResourceId = "SG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1123L,
-                            LanguageId = "en",
-                            Name = "St. Helena",
-                            ResourceId = "SH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1124L,
-                            LanguageId = "ar",
-                            Name = "سانت هيلينا",
-                            ResourceId = "SH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1125L,
-                            LanguageId = "fr",
-                            Name = "Sainte-Hélène",
-                            ResourceId = "SH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1126L,
-                            LanguageId = "en",
-                            Name = "Slovenia",
-                            ResourceId = "SI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1127L,
-                            LanguageId = "ar",
-                            Name = "سلوفينيا",
-                            ResourceId = "SI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1128L,
-                            LanguageId = "fr",
-                            Name = "Slovénie",
-                            ResourceId = "SI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1129L,
-                            LanguageId = "en",
-                            Name = "Svalbard & Jan Mayen",
-                            ResourceId = "SJ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1130L,
-                            LanguageId = "ar",
-                            Name = "سفالبارد وجان ماين",
-                            ResourceId = "SJ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1131L,
-                            LanguageId = "fr",
-                            Name = "Svalbard et Jan Mayen",
-                            ResourceId = "SJ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1132L,
-                            LanguageId = "en",
-                            Name = "Slovakia",
-                            ResourceId = "SK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1133L,
-                            LanguageId = "ar",
-                            Name = "سلوفاكيا",
-                            ResourceId = "SK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1134L,
-                            LanguageId = "fr",
-                            Name = "Slovaquie",
-                            ResourceId = "SK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1135L,
-                            LanguageId = "en",
-                            Name = "Sierra Leone",
-                            ResourceId = "SL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1136L,
-                            LanguageId = "ar",
-                            Name = "سيراليون",
-                            ResourceId = "SL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1137L,
-                            LanguageId = "fr",
-                            Name = "Sierra Leone",
-                            ResourceId = "SL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1138L,
-                            LanguageId = "en",
-                            Name = "San Marino",
-                            ResourceId = "SM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1139L,
-                            LanguageId = "ar",
-                            Name = "سان مارينو",
-                            ResourceId = "SM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1140L,
-                            LanguageId = "fr",
-                            Name = "Saint-Marin",
-                            ResourceId = "SM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1141L,
-                            LanguageId = "en",
-                            Name = "Senegal",
-                            ResourceId = "SN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1142L,
-                            LanguageId = "ar",
-                            Name = "السنغال",
-                            ResourceId = "SN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1143L,
-                            LanguageId = "fr",
-                            Name = "Sénégal",
-                            ResourceId = "SN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1144L,
-                            LanguageId = "en",
-                            Name = "Somalia",
-                            ResourceId = "SO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1145L,
-                            LanguageId = "ar",
-                            Name = "الصومال",
-                            ResourceId = "SO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1146L,
-                            LanguageId = "fr",
-                            Name = "Somalie",
-                            ResourceId = "SO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1147L,
-                            LanguageId = "en",
-                            Name = "Suriname",
-                            ResourceId = "SR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1148L,
-                            LanguageId = "ar",
-                            Name = "سورينام",
-                            ResourceId = "SR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1149L,
-                            LanguageId = "fr",
-                            Name = "Suriname",
-                            ResourceId = "SR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1150L,
-                            LanguageId = "en",
-                            Name = "South Sudan",
-                            ResourceId = "SS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1151L,
-                            LanguageId = "ar",
-                            Name = "جنوب السودان",
-                            ResourceId = "SS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1152L,
-                            LanguageId = "fr",
-                            Name = "Soudan du Sud",
-                            ResourceId = "SS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1153L,
-                            LanguageId = "en",
-                            Name = "São Tomé & Príncipe",
-                            ResourceId = "ST",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1154L,
-                            LanguageId = "ar",
-                            Name = "ساو تومي وبرينسيبي",
-                            ResourceId = "ST",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1155L,
-                            LanguageId = "fr",
-                            Name = "Sao Tomé-et-Principe",
-                            ResourceId = "ST",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1156L,
-                            LanguageId = "en",
-                            Name = "El Salvador",
-                            ResourceId = "SV",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1157L,
-                            LanguageId = "ar",
-                            Name = "السلفادور",
-                            ResourceId = "SV",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1158L,
-                            LanguageId = "fr",
-                            Name = "Salvador",
-                            ResourceId = "SV",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1159L,
-                            LanguageId = "en",
-                            Name = "Sint Maarten",
-                            ResourceId = "SX",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1160L,
-                            LanguageId = "ar",
-                            Name = "سانت مارتن",
-                            ResourceId = "SX",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1161L,
-                            LanguageId = "fr",
-                            Name = "Saint-Martin (partie néerlandaise)",
-                            ResourceId = "SX",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1162L,
-                            LanguageId = "en",
-                            Name = "Syria",
-                            ResourceId = "SY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1163L,
-                            LanguageId = "ar",
-                            Name = "سوريا",
-                            ResourceId = "SY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1164L,
-                            LanguageId = "fr",
-                            Name = "Syrie",
-                            ResourceId = "SY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1165L,
-                            LanguageId = "en",
-                            Name = "Eswatini",
-                            ResourceId = "SZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1166L,
-                            LanguageId = "ar",
-                            Name = "إسواتيني",
-                            ResourceId = "SZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1167L,
-                            LanguageId = "fr",
-                            Name = "Eswatini",
-                            ResourceId = "SZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1168L,
-                            LanguageId = "en",
-                            Name = "Turks & Caicos Islands",
-                            ResourceId = "TC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1169L,
-                            LanguageId = "ar",
-                            Name = "جزر توركس وكايكوس",
-                            ResourceId = "TC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1170L,
-                            LanguageId = "fr",
-                            Name = "Îles Turques-et-Caïques",
-                            ResourceId = "TC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1171L,
-                            LanguageId = "en",
-                            Name = "Chad",
-                            ResourceId = "TD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1172L,
-                            LanguageId = "ar",
-                            Name = "تشاد",
-                            ResourceId = "TD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1173L,
-                            LanguageId = "fr",
-                            Name = "Tchad",
-                            ResourceId = "TD",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1174L,
-                            LanguageId = "en",
-                            Name = "French Southern Territories",
-                            ResourceId = "TF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1175L,
-                            LanguageId = "ar",
-                            Name = "الأقاليم الجنوبية الفرنسية",
-                            ResourceId = "TF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1176L,
-                            LanguageId = "fr",
-                            Name = "Terres australes françaises",
-                            ResourceId = "TF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1177L,
-                            LanguageId = "en",
-                            Name = "Togo",
-                            ResourceId = "TG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1178L,
-                            LanguageId = "ar",
-                            Name = "توغو",
-                            ResourceId = "TG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1179L,
-                            LanguageId = "fr",
-                            Name = "Togo",
-                            ResourceId = "TG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1180L,
-                            LanguageId = "en",
-                            Name = "Thailand",
-                            ResourceId = "TH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1181L,
-                            LanguageId = "ar",
-                            Name = "تايلاند",
-                            ResourceId = "TH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1182L,
-                            LanguageId = "fr",
-                            Name = "Thaïlande",
-                            ResourceId = "TH",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1183L,
-                            LanguageId = "en",
-                            Name = "Tajikistan",
-                            ResourceId = "TJ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1184L,
-                            LanguageId = "ar",
-                            Name = "طاجيكستان",
-                            ResourceId = "TJ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1185L,
-                            LanguageId = "fr",
-                            Name = "Tadjikistan",
-                            ResourceId = "TJ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1186L,
-                            LanguageId = "en",
-                            Name = "Tokelau",
-                            ResourceId = "TK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1187L,
-                            LanguageId = "ar",
-                            Name = "توكيلاو",
-                            ResourceId = "TK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1188L,
-                            LanguageId = "fr",
-                            Name = "Tokelau",
-                            ResourceId = "TK",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1189L,
-                            LanguageId = "en",
-                            Name = "Timor-Leste",
-                            ResourceId = "TL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1190L,
-                            LanguageId = "ar",
-                            Name = "تيمور - ليشتي",
-                            ResourceId = "TL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1191L,
-                            LanguageId = "fr",
-                            Name = "Timor oriental",
-                            ResourceId = "TL",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1192L,
-                            LanguageId = "en",
-                            Name = "Turkmenistan",
-                            ResourceId = "TM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1193L,
-                            LanguageId = "ar",
-                            Name = "تركمانستان",
-                            ResourceId = "TM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1194L,
-                            LanguageId = "fr",
-                            Name = "Turkménistan",
-                            ResourceId = "TM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1195L,
-                            LanguageId = "en",
-                            Name = "Tunisia",
-                            ResourceId = "TN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1196L,
-                            LanguageId = "ar",
-                            Name = "تونس",
-                            ResourceId = "TN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1197L,
-                            LanguageId = "fr",
-                            Name = "Tunisie",
-                            ResourceId = "TN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1198L,
-                            LanguageId = "en",
-                            Name = "Tonga",
-                            ResourceId = "TO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1199L,
-                            LanguageId = "ar",
-                            Name = "تونغا",
-                            ResourceId = "TO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1200L,
-                            LanguageId = "fr",
-                            Name = "Tonga",
-                            ResourceId = "TO",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1201L,
-                            LanguageId = "en",
-                            Name = "Türkiye",
-                            ResourceId = "TR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1202L,
-                            LanguageId = "ar",
-                            Name = "تركيا",
-                            ResourceId = "TR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1203L,
-                            LanguageId = "fr",
-                            Name = "Turquie",
-                            ResourceId = "TR",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1204L,
-                            LanguageId = "en",
-                            Name = "Trinidad & Tobago",
-                            ResourceId = "TT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1205L,
-                            LanguageId = "ar",
-                            Name = "ترينيداد وتوباغو",
-                            ResourceId = "TT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1206L,
-                            LanguageId = "fr",
-                            Name = "Trinité-et-Tobago",
-                            ResourceId = "TT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1207L,
-                            LanguageId = "en",
-                            Name = "Tuvalu",
-                            ResourceId = "TV",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1208L,
-                            LanguageId = "ar",
-                            Name = "توفالو",
-                            ResourceId = "TV",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1209L,
-                            LanguageId = "fr",
-                            Name = "Tuvalu",
-                            ResourceId = "TV",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1210L,
-                            LanguageId = "en",
-                            Name = "Taiwan",
-                            ResourceId = "TW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1211L,
-                            LanguageId = "ar",
-                            Name = "تايوان",
-                            ResourceId = "TW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1212L,
-                            LanguageId = "fr",
-                            Name = "Taïwan",
-                            ResourceId = "TW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1213L,
-                            LanguageId = "en",
-                            Name = "Tanzania",
-                            ResourceId = "TZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1214L,
-                            LanguageId = "ar",
-                            Name = "تنزانيا",
-                            ResourceId = "TZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1215L,
-                            LanguageId = "fr",
-                            Name = "Tanzanie",
-                            ResourceId = "TZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1216L,
-                            LanguageId = "en",
-                            Name = "Ukraine",
-                            ResourceId = "UA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1217L,
-                            LanguageId = "ar",
-                            Name = "أوكرانيا",
-                            ResourceId = "UA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1218L,
-                            LanguageId = "fr",
-                            Name = "Ukraine",
-                            ResourceId = "UA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1219L,
-                            LanguageId = "en",
-                            Name = "Uganda",
-                            ResourceId = "UG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1220L,
-                            LanguageId = "ar",
-                            Name = "أوغندا",
-                            ResourceId = "UG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1221L,
-                            LanguageId = "fr",
-                            Name = "Ouganda",
-                            ResourceId = "UG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1222L,
-                            LanguageId = "en",
-                            Name = "U.S. Outlying Islands",
-                            ResourceId = "UM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1223L,
-                            LanguageId = "ar",
-                            Name = "جزر الولايات المتحدة النائية",
-                            ResourceId = "UM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1224L,
-                            LanguageId = "fr",
-                            Name = "Îles mineures éloignées des États-Unis",
-                            ResourceId = "UM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1225L,
-                            LanguageId = "en",
-                            Name = "United States",
-                            ResourceId = "US",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1226L,
-                            LanguageId = "ar",
-                            Name = "الولايات المتحدة",
-                            ResourceId = "US",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1227L,
-                            LanguageId = "fr",
-                            Name = "États-Unis",
-                            ResourceId = "US",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1228L,
-                            LanguageId = "en",
-                            Name = "Uruguay",
-                            ResourceId = "UY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1229L,
-                            LanguageId = "ar",
-                            Name = "أورغواي",
-                            ResourceId = "UY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1230L,
-                            LanguageId = "fr",
-                            Name = "Uruguay",
-                            ResourceId = "UY",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1231L,
-                            LanguageId = "en",
-                            Name = "Uzbekistan",
-                            ResourceId = "UZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1232L,
-                            LanguageId = "ar",
-                            Name = "أوزبكستان",
-                            ResourceId = "UZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1233L,
-                            LanguageId = "fr",
-                            Name = "Ouzbékistan",
-                            ResourceId = "UZ",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1234L,
-                            LanguageId = "en",
-                            Name = "Vatican City",
-                            ResourceId = "VA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1235L,
-                            LanguageId = "ar",
-                            Name = "الفاتيكان",
-                            ResourceId = "VA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1236L,
-                            LanguageId = "fr",
-                            Name = "État de la Cité du Vatican",
-                            ResourceId = "VA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1237L,
-                            LanguageId = "en",
-                            Name = "St. Vincent & Grenadines",
-                            ResourceId = "VC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1238L,
-                            LanguageId = "ar",
-                            Name = "سانت فنسنت وجزر غرينادين",
-                            ResourceId = "VC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1239L,
-                            LanguageId = "fr",
-                            Name = "Saint-Vincent-et-les Grenadines",
-                            ResourceId = "VC",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1240L,
-                            LanguageId = "en",
-                            Name = "Venezuela",
-                            ResourceId = "VE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1241L,
-                            LanguageId = "ar",
-                            Name = "فنزويلا",
-                            ResourceId = "VE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1242L,
-                            LanguageId = "fr",
-                            Name = "Venezuela",
-                            ResourceId = "VE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1243L,
-                            LanguageId = "en",
-                            Name = "British Virgin Islands",
-                            ResourceId = "VG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1244L,
-                            LanguageId = "ar",
-                            Name = "جزر فيرجن البريطانية",
-                            ResourceId = "VG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1245L,
-                            LanguageId = "fr",
-                            Name = "Îles Vierges britanniques",
-                            ResourceId = "VG",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1246L,
-                            LanguageId = "en",
-                            Name = "U.S. Virgin Islands",
-                            ResourceId = "VI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1247L,
-                            LanguageId = "ar",
-                            Name = "جزر فيرجن الأمريكية",
-                            ResourceId = "VI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1248L,
-                            LanguageId = "fr",
-                            Name = "Îles Vierges des États-Unis",
-                            ResourceId = "VI",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1249L,
-                            LanguageId = "en",
-                            Name = "Vietnam",
-                            ResourceId = "VN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1250L,
-                            LanguageId = "ar",
-                            Name = "فيتنام",
-                            ResourceId = "VN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1251L,
-                            LanguageId = "fr",
-                            Name = "Viêt Nam",
-                            ResourceId = "VN",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1252L,
-                            LanguageId = "en",
-                            Name = "Vanuatu",
-                            ResourceId = "VU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1253L,
-                            LanguageId = "ar",
-                            Name = "فانواتو",
-                            ResourceId = "VU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1254L,
-                            LanguageId = "fr",
-                            Name = "Vanuatu",
-                            ResourceId = "VU",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1255L,
-                            LanguageId = "en",
-                            Name = "Wallis & Futuna",
-                            ResourceId = "WF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1256L,
-                            LanguageId = "ar",
-                            Name = "جزر والس وفوتونا",
-                            ResourceId = "WF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1257L,
-                            LanguageId = "fr",
-                            Name = "Wallis-et-Futuna",
-                            ResourceId = "WF",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1258L,
-                            LanguageId = "en",
-                            Name = "Samoa",
-                            ResourceId = "WS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1259L,
-                            LanguageId = "ar",
-                            Name = "ساموا",
-                            ResourceId = "WS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1260L,
-                            LanguageId = "fr",
-                            Name = "Samoa",
-                            ResourceId = "WS",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1261L,
-                            LanguageId = "en",
-                            Name = "Yemen",
-                            ResourceId = "YE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1262L,
-                            LanguageId = "ar",
-                            Name = "اليمن",
-                            ResourceId = "YE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1263L,
-                            LanguageId = "fr",
-                            Name = "Yémen",
-                            ResourceId = "YE",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1264L,
-                            LanguageId = "en",
-                            Name = "Mayotte",
-                            ResourceId = "YT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1265L,
-                            LanguageId = "ar",
-                            Name = "مايوت",
-                            ResourceId = "YT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1266L,
-                            LanguageId = "fr",
-                            Name = "Mayotte",
-                            ResourceId = "YT",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1267L,
-                            LanguageId = "en",
-                            Name = "South Africa",
-                            ResourceId = "ZA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1268L,
-                            LanguageId = "ar",
-                            Name = "جنوب أفريقيا",
-                            ResourceId = "ZA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1269L,
-                            LanguageId = "fr",
-                            Name = "Afrique du Sud",
-                            ResourceId = "ZA",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1270L,
-                            LanguageId = "en",
-                            Name = "Zambia",
-                            ResourceId = "ZM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1271L,
-                            LanguageId = "ar",
-                            Name = "زامبيا",
-                            ResourceId = "ZM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1272L,
-                            LanguageId = "fr",
-                            Name = "Zambie",
-                            ResourceId = "ZM",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1273L,
-                            LanguageId = "en",
-                            Name = "Zimbabwe",
-                            ResourceId = "ZW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1274L,
-                            LanguageId = "ar",
-                            Name = "زيمبابوي",
-                            ResourceId = "ZW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1275L,
-                            LanguageId = "fr",
-                            Name = "Zimbabwe",
-                            ResourceId = "ZW",
-                            ResourceType = "Country"
-                        },
-                        new
-                        {
-                            Id = 1276L,
-                            LanguageId = "en",
-                            Name = "Company registration number",
-                            ResourceId = "REG",
-                            ResourceType = "CompanyLegalIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1277L,
-                            LanguageId = "ar",
-                            Name = "رقم تسجيل الشركة",
-                            ResourceId = "REG",
-                            ResourceType = "CompanyLegalIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1278L,
-                            LanguageId = "fr",
-                            Name = "Numéro d’immatriculation de l’entreprise",
-                            ResourceId = "REG",
-                            ResourceType = "CompanyLegalIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1279L,
-                            LanguageId = "en",
-                            Name = "Tax identification number",
-                            ResourceId = "TAX",
-                            ResourceType = "CompanyLegalIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1280L,
-                            LanguageId = "ar",
-                            Name = "رقم التعريف الضريبي",
-                            ResourceId = "TAX",
-                            ResourceType = "CompanyLegalIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1281L,
-                            LanguageId = "fr",
-                            Name = "Numéro d’identification fiscale",
-                            ResourceId = "TAX",
-                            ResourceType = "CompanyLegalIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1282L,
-                            LanguageId = "en",
-                            Name = "VAT registration number",
-                            ResourceId = "VAT",
-                            ResourceType = "CompanyLegalIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1283L,
-                            LanguageId = "ar",
-                            Name = "رقم التسجيل في ضريبة القيمة المضافة",
-                            ResourceId = "VAT",
-                            ResourceType = "CompanyLegalIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1284L,
-                            LanguageId = "fr",
-                            Name = "Numéro de TVA",
-                            ResourceId = "VAT",
-                            ResourceType = "CompanyLegalIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1285L,
-                            LanguageId = "en",
-                            Name = "Legal Entity Identifier",
-                            ResourceId = "LEI",
-                            ResourceType = "CompanyLegalIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1286L,
-                            LanguageId = "ar",
-                            Name = "معرّف الكيان القانوني",
-                            ResourceId = "LEI",
-                            ResourceType = "CompanyLegalIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1287L,
-                            LanguageId = "fr",
-                            Name = "Identifiant d’entité juridique",
-                            ResourceId = "LEI",
-                            ResourceType = "CompanyLegalIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1288L,
-                            LanguageId = "en",
-                            Name = "Business license number",
-                            ResourceId = "LIC",
-                            ResourceType = "CompanyLegalIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1289L,
-                            LanguageId = "ar",
-                            Name = "رقم رخصة الشركة",
-                            ResourceId = "LIC",
-                            ResourceType = "CompanyLegalIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1290L,
-                            LanguageId = "fr",
-                            Name = "Numéro de licence commerciale",
-                            ResourceId = "LIC",
-                            ResourceType = "CompanyLegalIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1291L,
-                            LanguageId = "en",
-                            Name = "Passport",
-                            ResourceId = "PASS",
-                            ResourceType = "PersonIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1292L,
-                            LanguageId = "ar",
-                            Name = "جواز السفر",
-                            ResourceId = "PASS",
-                            ResourceType = "PersonIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1293L,
-                            LanguageId = "fr",
-                            Name = "Passeport",
-                            ResourceId = "PASS",
-                            ResourceType = "PersonIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1294L,
-                            LanguageId = "en",
-                            Name = "National identity card",
-                            ResourceId = "ID",
-                            ResourceType = "PersonIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1295L,
-                            LanguageId = "ar",
-                            Name = "بطاقة الهوية الوطنية",
-                            ResourceId = "ID",
-                            ResourceType = "PersonIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1296L,
-                            LanguageId = "fr",
-                            Name = "Carte nationale d’identité",
-                            ResourceId = "ID",
-                            ResourceType = "PersonIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1297L,
-                            LanguageId = "en",
-                            Name = "Driver’s license",
-                            ResourceId = "DL",
-                            ResourceType = "PersonIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1298L,
-                            LanguageId = "ar",
-                            Name = "رخصة القيادة",
-                            ResourceId = "DL",
-                            ResourceType = "PersonIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1299L,
-                            LanguageId = "fr",
-                            Name = "Permis de conduire",
-                            ResourceId = "DL",
-                            ResourceType = "PersonIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1300L,
-                            LanguageId = "en",
-                            Name = "Residence permit",
-                            ResourceId = "RC",
-                            ResourceType = "PersonIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1301L,
-                            LanguageId = "ar",
-                            Name = "تصريح الإقامة",
-                            ResourceId = "RC",
-                            ResourceType = "PersonIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1302L,
-                            LanguageId = "fr",
-                            Name = "Titre de séjour",
-                            ResourceId = "RC",
-                            ResourceType = "PersonIdentityType"
-                        },
-                        new
-                        {
-                            Id = 1303L,
-                            LanguageId = "en",
-                            Name = "Male",
-                            ResourceId = "M",
-                            ResourceType = "Gender"
-                        },
-                        new
-                        {
-                            Id = 1304L,
-                            LanguageId = "ar",
-                            Name = "ذكر",
-                            ResourceId = "M",
-                            ResourceType = "Gender"
-                        },
-                        new
-                        {
-                            Id = 1305L,
-                            LanguageId = "fr",
-                            Name = "Masculin",
-                            ResourceId = "M",
-                            ResourceType = "Gender"
-                        },
-                        new
-                        {
-                            Id = 1306L,
-                            LanguageId = "en",
-                            Name = "Female",
-                            ResourceId = "F",
-                            ResourceType = "Gender"
-                        },
-                        new
-                        {
-                            Id = 1307L,
-                            LanguageId = "ar",
-                            Name = "أنثى",
-                            ResourceId = "F",
-                            ResourceType = "Gender"
-                        },
-                        new
-                        {
-                            Id = 1308L,
-                            LanguageId = "fr",
-                            Name = "Féminin",
-                            ResourceId = "F",
-                            ResourceType = "Gender"
-                        },
-                        new
-                        {
-                            Id = 1309L,
-                            LanguageId = "en",
-                            Name = "Mobile phone",
-                            ResourceId = "Mob",
-                            ResourceType = "PhoneType"
-                        },
-                        new
-                        {
-                            Id = 1310L,
-                            LanguageId = "ar",
-                            Name = "هاتف محمول",
-                            ResourceId = "Mob",
-                            ResourceType = "PhoneType"
-                        },
-                        new
-                        {
-                            Id = 1311L,
-                            LanguageId = "fr",
-                            Name = "Téléphone portable",
-                            ResourceId = "Mob",
-                            ResourceType = "PhoneType"
-                        },
-                        new
-                        {
-                            Id = 1312L,
-                            LanguageId = "en",
-                            Name = "Home phone",
-                            ResourceId = "Hom",
-                            ResourceType = "PhoneType"
-                        },
-                        new
-                        {
-                            Id = 1313L,
-                            LanguageId = "ar",
-                            Name = "هاتف المنزل",
-                            ResourceId = "Hom",
-                            ResourceType = "PhoneType"
-                        },
-                        new
-                        {
-                            Id = 1314L,
-                            LanguageId = "fr",
-                            Name = "Téléphone fixe",
-                            ResourceId = "Hom",
-                            ResourceType = "PhoneType"
-                        },
-                        new
-                        {
-                            Id = 1315L,
-                            LanguageId = "en",
-                            Name = "Work phone",
-                            ResourceId = "Wrk",
-                            ResourceType = "PhoneType"
-                        },
-                        new
-                        {
-                            Id = 1316L,
-                            LanguageId = "ar",
-                            Name = "هاتف العمل",
-                            ResourceId = "Wrk",
-                            ResourceType = "PhoneType"
-                        },
-                        new
-                        {
-                            Id = 1317L,
-                            LanguageId = "fr",
-                            Name = "Téléphone professionnel",
-                            ResourceId = "Wrk",
-                            ResourceType = "PhoneType"
-                        },
-                        new
-                        {
-                            Id = 1318L,
-                            LanguageId = "en",
-                            Name = "Fax",
-                            ResourceId = "Fax",
-                            ResourceType = "PhoneType"
-                        },
-                        new
-                        {
-                            Id = 1319L,
-                            LanguageId = "ar",
-                            Name = "فاكس",
-                            ResourceId = "Fax",
-                            ResourceType = "PhoneType"
-                        },
-                        new
-                        {
-                            Id = 1320L,
-                            LanguageId = "fr",
-                            Name = "Télécopieur",
-                            ResourceId = "Fax",
-                            ResourceType = "PhoneType"
-                        });
-                });
-
             modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.Country", b =>
                 {
                     b.HasOne("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.Currency", "Currency")
@@ -21230,13 +14202,21 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                     b.Navigation("Language");
                 });
 
-            modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.LocalizedName", b =>
+            modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.CurrencyName", b =>
                 {
+                    b.HasOne("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.Currency", "Currency")
+                        .WithMany("Names")
+                        .HasForeignKey("CurrencyId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.Language", "Language")
-                        .WithMany("LocalizedNames")
+                        .WithMany()
                         .HasForeignKey("LanguageId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.Navigation("Currency");
 
                     b.Navigation("Language");
                 });
@@ -21246,9 +14226,9 @@ namespace CruxSuits.Services.ReferenceDatas.Migrations
                     b.Navigation("Names");
                 });
 
-            modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.Language", b =>
+            modelBuilder.Entity("CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework.Entities.Currency", b =>
                 {
-                    b.Navigation("LocalizedNames");
+                    b.Navigation("Names");
                 });
 #pragma warning restore 612, 618
         }

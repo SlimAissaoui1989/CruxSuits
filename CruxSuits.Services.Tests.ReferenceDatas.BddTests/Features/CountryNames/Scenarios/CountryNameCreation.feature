@@ -17,7 +17,7 @@ Feature: Country name creation
     Examples:
       | language | name              | nationality |
       | en       | United States     | American    |
-      | fr       | États-Unis        | Américaine  |
+      | fr       | États Unis        | Américaine  |
       | ar       | الولايات المتحدة | أمريكي      |
 
   @country_name_creation

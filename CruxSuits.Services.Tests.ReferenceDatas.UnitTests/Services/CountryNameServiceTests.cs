@@ -16,6 +16,9 @@ public sealed class CountryNameServiceTests
 {
     #region GetAllAsync
 
+    // Failure case: verifies GetAllAsync throws not found when country does not exist;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Fact]
     public async Task GetAllAsync_WhenCountryDoesNotExist_ThrowsNotFound()
     {
@@ -29,6 +32,9 @@ public sealed class CountryNameServiceTests
             It.IsAny<CancellationToken>()), Times.Never);
     }
 
+    // Success case: verifies GetAllAsync returns empty list when country has no translations;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task GetAllAsync_WhenCountryHasNoTranslations_ReturnsEmptyList()
     {
@@ -50,6 +56,9 @@ public sealed class CountryNameServiceTests
             It.IsAny<CancellationToken>()), Times.Once);
     }
 
+    // Success case: verifies GetAllAsync returns all translations for that country when country has translations;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task GetAllAsync_WhenCountryHasTranslations_ReturnsAllTranslationsForThatCountry()
     {
@@ -94,6 +103,9 @@ public sealed class CountryNameServiceTests
 
     #region GetByLanguageAsync
 
+    // Success case: verifies GetByLanguageAsync returns that country name when translation exists;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task GetByLanguageAsync_WhenTranslationExists_ReturnsThatCountryName()
     {
@@ -128,6 +140,9 @@ public sealed class CountryNameServiceTests
             It.IsAny<CancellationToken>()), Times.Once);
     }
 
+    // Failure case: verifies GetByLanguageAsync throws not found when translation does not exist;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Fact]
     public async Task GetByLanguageAsync_WhenTranslationDoesNotExist_ThrowsNotFound()
     {
@@ -154,6 +169,9 @@ public sealed class CountryNameServiceTests
 
     #region CreateAsync
 
+    // Success case: verifies CreateAsync adds and returns country name when country language pair is new;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task CreateAsync_WhenCountryLanguagePairIsNew_AddsAndReturnsCountryName()
     {
@@ -204,6 +222,9 @@ public sealed class CountryNameServiceTests
         context.UnitOfWork.Verify(work => work.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Once);
     }
 
+    // Failure case: verifies CreateAsync throws not found without adding when country does not exist;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Fact]
     public async Task CreateAsync_WhenCountryDoesNotExist_ThrowsNotFoundWithoutAdding()
     {
@@ -226,6 +247,9 @@ public sealed class CountryNameServiceTests
         context.UnitOfWork.Verify(work => work.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Never);
     }
 
+    // Failure case: verifies CreateAsync throws bad request without adding when language does not exist;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Fact]
     public async Task CreateAsync_WhenLanguageDoesNotExist_ThrowsBadRequestWithoutAdding()
     {
@@ -253,6 +277,9 @@ public sealed class CountryNameServiceTests
         context.UnitOfWork.Verify(work => work.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Never);
     }
 
+    // Failure case: verifies CreateAsync rejects duplicate when country already has translation in language;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Fact]
     public async Task CreateAsync_WhenCountryAlreadyHasTranslationInLanguage_RejectsDuplicate()
     {
@@ -289,6 +316,9 @@ public sealed class CountryNameServiceTests
 
     #region UpdateAsync
 
+    // Success case: verifies UpdateAsync updates designations and preserves country and language when translation exists;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task UpdateAsync_WhenTranslationExists_UpdatesDesignationsAndPreservesCountryAndLanguage()
     {
@@ -349,6 +379,9 @@ public sealed class CountryNameServiceTests
         context.UnitOfWork.Verify(work => work.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Once);
     }
 
+    // Failure case: verifies UpdateAsync throws not found without updating when translation does not exist;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Fact]
     public async Task UpdateAsync_WhenTranslationDoesNotExist_ThrowsNotFoundWithoutUpdating()
     {
@@ -375,6 +408,9 @@ public sealed class CountryNameServiceTests
 
     #region RemoveAsync
 
+    // Success case: verifies RemoveAsync removes and saves it when translation exists;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task RemoveAsync_WhenTranslationExists_RemovesAndSavesIt()
     {
@@ -400,6 +436,9 @@ public sealed class CountryNameServiceTests
         context.UnitOfWork.Verify(work => work.SaveChangesAsync(cancellation.Token), Times.Once);
     }
 
+    // Failure case: verifies RemoveAsync throws not found without removing when translation does not exist;
+    // A pass confirms the invalid or missing case is handled;
+    // Failure means it was accepted or mishandled.
     [Fact]
     public async Task RemoveAsync_WhenTranslationDoesNotExist_ThrowsNotFoundWithoutRemoving()
     {

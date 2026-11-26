@@ -2,31 +2,47 @@ using CruxIT.Library.API;
 using CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework;
 using CruxSuits.Services.ReferenceDatas.Infrastructure.RepositoryPattern;
 using CruxSuits.Services.ReferenceDatas.Infrastructure.RepositoryPattern.Repositories;
+using CruxSuits.Services.ReferenceDatas.Localization;
 using CruxSuits.Services.ReferenceDatas.Profiles;
 using CruxSuits.Services.ReferenceDatas.Services;
+using CruxSuits.Services.Shared.Localization;
 using CruxSuits.Services.Shared.ServiceDefaults;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args)
-    .AddCruxSuitsServiceDefaults(serviceScope: "reference-data.api");
+    .AddCruxSuitsServiceDefaults(serviceScope: "reference-data.api")
+    .AddCruxSuitsLanguageCatalogCache();
 
 builder.Services.AddDbContext<ReferenceDataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+//Repositories
 builder.Services.AddScoped<ICountryRepository, CountryRepository>();
 builder.Services.AddScoped<ICountryNameRepository, CountryNameRepository>();
 builder.Services.AddScoped<ICurrencyRepository, CurrencyRepository>();
+builder.Services.AddScoped<ICurrencyNameRepository, CurrencyNameRepository>();
 builder.Services.AddScoped<ILanguageRepository, LanguageRepository>();
-builder.Services.AddScoped<ILocalizedNameRepository, LocalizedNameRepository>();
 builder.Services.AddScoped<IReferenceDataUnitOfWork, ReferenceDataUnitOfWork>();
+
+//Services
 builder.Services.AddScoped<ICountryService, CountryService>();
 builder.Services.AddScoped<ICountryNameService, CountryNameService>();
+builder.Services.AddScoped<ICurrencyService, CurrencyService>();
+builder.Services.AddScoped<ICurrencyNameService, CurrencyNameService>();
+builder.Services.AddScoped<ILanguageService, LanguageService>();
+
+//Localizations
+builder.Services.AddScoped<ILanguageCatalogProvider, LanguageCatalogProvider>();
+builder.Services.AddHostedService<LanguageCatalogRefreshWorker>();
 
 builder.Services.AddAutoMapper(cfg =>
 {
     cfg.AddProfile<CountryProfile>();
     cfg.AddProfile<CountryNameProfile>();
+    cfg.AddProfile<CurrencyProfile>();
+    cfg.AddProfile<CurrencyNameProfile>();
+    cfg.AddProfile<LanguageProfile>();
 });
 
 builder.Services.AddOpenApi();

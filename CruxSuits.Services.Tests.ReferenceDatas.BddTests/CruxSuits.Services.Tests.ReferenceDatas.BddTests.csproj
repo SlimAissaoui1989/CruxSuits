@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="..\CruxSuits.Services.Tests.ReferenceDatas.IntegrationTests\ReferenceDatasTestDatabase.cs" Link="ReferenceDatasTestDatabase.cs" />
     <ProjectReference Include="..\CruxSuits.Services.ReferenceDatas\CruxSuits.Services.ReferenceDatas.csproj" />
   </ItemGroup>
 

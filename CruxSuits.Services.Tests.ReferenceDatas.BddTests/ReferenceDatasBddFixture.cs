@@ -1,4 +1,6 @@
+using AutoMapper;
 using CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework;
+using CruxSuits.Services.ReferenceDatas.Localization;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,6 +29,9 @@ public sealed class ReferenceDatasBddFixture : IAsyncLifetime
         var context = scope.ServiceProvider.GetRequiredService<ReferenceDataContext>();
         await context.Database.EnsureCreatedAsync();
         _databaseCreated = true;
+
+        var languageCatalogProvider = scope.ServiceProvider.GetRequiredService<ILanguageCatalogProvider>();
+        await languageCatalogProvider.RefreshAsync();
     }
 
     public async Task DisposeAsync()

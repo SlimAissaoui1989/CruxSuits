@@ -8,6 +8,11 @@ namespace CruxSuits.Services.ReferenceDatas.Tests.UnitTests.Repositories;
 
 public sealed class CountryNameRepositoryTests
 {
+    #region CountryAndLanguagePair_HasUniqueDatabaseIndex
+
+    // Contract check: verifies CountryAndLanguagePair has unique database index;
+    // A pass confirms the declared contract;
+    // Failure means the expected contract is missing.
     [Fact]
     public void CountryAndLanguagePair_HasUniqueDatabaseIndex()
     {
@@ -21,6 +26,13 @@ public sealed class CountryNameRepositoryTests
                 .SequenceEqual([nameof(CountryName.CountryId), nameof(CountryName.LanguageId)]));
     }
 
+    #endregion
+
+    #region AddAsync
+
+    // Success case: verifies AddAsync persists the translation when country name is valid;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task AddAsync_WhenCountryNameIsValid_PersistsTheTranslation()
     {
@@ -43,4 +55,5 @@ public sealed class CountryNameRepositoryTests
         Assert.Equal("Américaine", persisted.Nationality);
     }
 
+    #endregion
 }

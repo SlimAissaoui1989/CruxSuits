@@ -3,6 +3,7 @@ using CruxIT.Library.API.Controller;
 using CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework;
 using CruxSuits.Services.ReferenceDatas.Infrastructure.RepositoryPattern;
 using CruxSuits.Services.ReferenceDatas.Services;
+using CruxSuits.Services.Shared.Localization;
 using CruxSuits.Shared.DTOs.ReferenceDatas.Country;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -15,28 +16,39 @@ namespace CruxSuits.Services.ReferenceDatas.Controllers
     public sealed class CountriesController : CxControllerBase<ReferenceDataContext, IReferenceDataUnitOfWork>
     {
         private readonly ICountryService _countryService;
+        private readonly ILanguageRequestResolver _languageRequestResolver;
 
         public CountriesController(
             IConfiguration configuration,
             ILogger<CxControllerBase<ReferenceDataContext, IReferenceDataUnitOfWork>> logger,
             IReferenceDataUnitOfWork unitOfWork,
             IMapper mapper,
-            ICountryService countryService)
+            ICountryService countryService,
+            ILanguageRequestResolver languageRequestResolver)
             : base(configuration, logger, unitOfWork, mapper)
         {
             _countryService = countryService;
+            _languageRequestResolver = languageRequestResolver;
         }
 
-        [HttpGet("~/api/v1/{languageId}/[controller]")]
+        [HttpGet]
         [ProducesResponseType(typeof(List<CountryResponse>), StatusCodes.Status200OK)]
-        public async Task<IActionResult> GetAll(string languageId,CancellationToken cancellationToken) =>
-            Ok(await _countryService.GetAllAsync(languageId, cancellationToken));
+        [ProducesResponseType(StatusCodes.Status406NotAcceptable)]
+        public async Task<IActionResult> GetAll(CancellationToken cancellationToken)
+        {
+            var languageId = await _languageRequestResolver.ResolveAsync(Request, cancellationToken);
+            return Ok(await _countryService.GetAllAsync(languageId, cancellationToken));
+        }
 
-        [HttpGet("{languageId}/phone-code-options")]
+        [HttpGet("phone-code-options")]
         [AllowAnonymous]
         [ProducesResponseType(typeof(List<CountryPhoneCodeResponse>), StatusCodes.Status200OK)]
-        public async Task<IActionResult> GetPhoneCodeOptions(string languageId, CancellationToken cancellationToken) =>
-            Ok(await _countryService.GetPhoneCodeOptionsAsync(languageId, cancellationToken));
+        [ProducesResponseType(StatusCodes.Status406NotAcceptable)]
+        public async Task<IActionResult> GetPhoneCodeOptions(CancellationToken cancellationToken)
+        {
+            var languageId = await _languageRequestResolver.ResolveAsync(Request, cancellationToken);
+            return Ok(await _countryService.GetPhoneCodeOptionsAsync(languageId, cancellationToken));
+        }
 
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(CountryDetailsResponse), StatusCodes.Status200OK)]

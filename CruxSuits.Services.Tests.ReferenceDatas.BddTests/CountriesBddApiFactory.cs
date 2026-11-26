@@ -1,14 +1,15 @@
 using CruxSuits.Services.ReferenceDatas.Infrastructure.EntityFramework;
+using CruxSuits.Services.ReferenceDatas.Localization;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
-using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
 namespace CruxSuits.Services.ReferenceDatas.Tests.BddTests;
@@ -31,6 +32,12 @@ internal sealed class CountriesBddApiFactory : WebApplicationFactory<ReferenceDa
         });
         builder.ConfigureTestServices(services =>
         {
+            var catalogRefreshWorker = services.FirstOrDefault(descriptor =>
+                descriptor.ServiceType == typeof(IHostedService) &&
+                descriptor.ImplementationType == typeof(LanguageCatalogRefreshWorker));
+            if (catalogRefreshWorker is not null)
+                services.Remove(catalogRefreshWorker);
+
             services.RemoveAll<DbContextOptions<ReferenceDataContext>>();
             services.RemoveAll<DbContextOptions>();
             services.RemoveAll<IDbContextOptionsConfiguration<ReferenceDataContext>>();
@@ -38,13 +45,7 @@ internal sealed class CountriesBddApiFactory : WebApplicationFactory<ReferenceDa
             services.AddDbContext<ReferenceDataContext>((serviceProvider, options) =>
             {
                 var configuration = serviceProvider.GetRequiredService<IConfiguration>();
-                var configuredConnectionString = configuration.GetConnectionString("DefaultConnection")
-                    ?? throw new InvalidOperationException("ConnectionStrings:DefaultConnection must be configured for the ReferenceDatas BDD tests.");
-                var testConnectionString = new SqlConnectionStringBuilder(configuredConnectionString)
-                {
-                    InitialCatalog = DatabaseName
-                }.ConnectionString;
-
+                var testConnectionString = ReferenceDatasTestDatabase.GetConnectionString(configuration, DatabaseName);
                 options.UseSqlServer(testConnectionString, sqlOptions => sqlOptions.UseCompatibilityLevel(120));
             });
 

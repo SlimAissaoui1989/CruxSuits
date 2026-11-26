@@ -37,11 +37,11 @@ public sealed partial class CountriesControllerSteps
 
     [When("the client lists countries in language \"(.*)\"")]
     public Task WhenClientListsCountries(string languageId) =>
-        SendAsync(HttpMethod.Get, $"/api/v1/{languageId}/Countries");
+        SendAsync(HttpMethod.Get, "/api/v1/Countries", acceptLanguage: languageId);
 
     [When("the client lists phone-code options in language \"(.*)\"")]
     public Task WhenClientListsPhoneCodeOptions(string languageId) =>
-        SendAsync(HttpMethod.Get, $"/api/v1/Countries/{languageId}/phone-code-options");
+        SendAsync(HttpMethod.Get, "/api/v1/Countries/phone-code-options", acceptLanguage: languageId);
 
     [When("the client requests country \"(.*)\"")]
     public Task WhenClientRequestsCountry(string countryId) =>

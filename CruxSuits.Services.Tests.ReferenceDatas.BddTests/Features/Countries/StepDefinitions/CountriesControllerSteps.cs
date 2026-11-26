@@ -1,5 +1,6 @@
 using System.Net.Http.Json;
 using System.Text.Json;
+using CruxSuits.Shared.Constants;
 using Reqnroll;
 
 namespace CruxSuits.Services.ReferenceDatas.Tests.BddTests.Features.Countries.StepDefinitions;
@@ -26,12 +27,14 @@ public sealed partial class CountriesControllerSteps
             await _fixture.DisposeAsync();
     }
 
-    private async Task SendAsync(HttpMethod method, string uri, object? body = null)
+    private async Task SendAsync(HttpMethod method, string uri, object? body = null, string? acceptLanguage = null)
     {
         _response?.Dispose();
         using var request = new HttpRequestMessage(method, uri);
         if (body is not null)
             request.Content = JsonContent.Create(body, options: new JsonSerializerOptions { PropertyNamingPolicy = null });
+        if (!string.IsNullOrWhiteSpace(acceptLanguage))
+            request.Headers.TryAddWithoutValidation(HttpHeaderNames.AcceptLanguage, acceptLanguage);
         _response = await _fixture.Client.SendAsync(request);
     }
 

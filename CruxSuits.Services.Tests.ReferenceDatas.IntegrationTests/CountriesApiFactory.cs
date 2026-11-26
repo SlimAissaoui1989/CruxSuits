@@ -34,7 +34,12 @@ internal sealed class CountriesApiFactory : WebApplicationFactory<ReferenceDataC
             services.RemoveAll<DbContextOptions>();
             services.RemoveAll<IDbContextOptionsConfiguration<ReferenceDataContext>>();
             services.RemoveAll<ReferenceDataContext>();
-            services.AddDbContext<ReferenceDataContext>(options => options.UseInMemoryDatabase(_databaseName));
+            services.AddDbContext<ReferenceDataContext>((serviceProvider, options) =>
+            {
+                var configuration = serviceProvider.GetRequiredService<IConfiguration>();
+                var connectionString = ReferenceDatasTestDatabase.GetConnectionString(configuration, _databaseName);
+                options.UseSqlServer(connectionString, sqlOptions => sqlOptions.UseCompatibilityLevel(120));
+            });
 
             services.AddAuthentication(options =>
                 {

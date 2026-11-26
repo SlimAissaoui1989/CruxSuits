@@ -77,7 +77,7 @@ public sealed class CountryNamesApiIntegrationTests
     {
         await EnsureCountryWithoutTranslationsExistsAsync();
 
-        using var response = await _fixture.Client.GetAsync("/api/v1/Countries/QX/names");
+        using var response = await _fixture.Client.GetAsync("/api/v1/Countries/QJ/names");
 
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         using var json = JsonDocument.Parse(await response.Content.ReadAsStringAsync());
@@ -89,7 +89,7 @@ public sealed class CountryNamesApiIntegrationTests
     {
         await EnsureCountryWithoutTranslationsExistsAsync();
 
-        using var response = await _fixture.Client.GetAsync("/api/v1/Countries/QX/names/fr");
+        using var response = await _fixture.Client.GetAsync("/api/v1/Countries/QJ/names/fr");
 
         Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
     }
@@ -105,7 +105,7 @@ public sealed class CountryNamesApiIntegrationTests
         };
 
         using var response = await _fixture.Client.PutAsJsonAsync(
-            "/api/v1/Countries/QX/names/en",
+            "/api/v1/Countries/QJ/names/en",
             request,
             new JsonSerializerOptions { PropertyNamingPolicy = null });
 
@@ -117,8 +117,8 @@ public sealed class CountryNamesApiIntegrationTests
 
         await using var scope = _fixture.Factory.Services.CreateAsyncScope();
         var context = scope.ServiceProvider.GetRequiredService<ReferenceDataContext>();
-        var updated = await context.CountryNames.SingleAsync(name => name.CountryId == "QX" && name.LanguageId == "en");
-        Assert.Equal("QX", updated.CountryId);
+        var updated = await context.CountryNames.SingleAsync(name => name.CountryId == "QJ" && name.LanguageId == "en");
+        Assert.Equal("QJ", updated.CountryId);
         Assert.Equal("en", updated.LanguageId);
         Assert.Equal(request.Name, updated.Name);
         Assert.Equal(request.Nationality, updated.Nationality);
@@ -135,7 +135,7 @@ public sealed class CountryNamesApiIntegrationTests
         };
 
         using var response = await _fixture.Client.PutAsJsonAsync(
-            "/api/v1/Countries/QX/names/en",
+            "/api/v1/Countries/QJ/names/en",
             request,
             new JsonSerializerOptions { PropertyNamingPolicy = null });
 
@@ -147,10 +147,10 @@ public sealed class CountryNamesApiIntegrationTests
     {
         await EnsureCountryTranslationExistsAsync();
 
-        using var response = await _fixture.Client.DeleteAsync("/api/v1/Countries/QX/names/en");
+        using var response = await _fixture.Client.DeleteAsync("/api/v1/Countries/QJ/names/en");
 
         Assert.Equal(HttpStatusCode.NoContent, response.StatusCode);
-        using var getResponse = await _fixture.Client.GetAsync("/api/v1/Countries/QX/names/en");
+        using var getResponse = await _fixture.Client.GetAsync("/api/v1/Countries/QJ/names/en");
         Assert.Equal(HttpStatusCode.NotFound, getResponse.StatusCode);
     }
 
@@ -159,7 +159,7 @@ public sealed class CountryNamesApiIntegrationTests
     {
         await EnsureCountryWithoutTranslationsExistsAsync();
 
-        using var response = await _fixture.Client.DeleteAsync("/api/v1/Countries/QX/names/en");
+        using var response = await _fixture.Client.DeleteAsync("/api/v1/Countries/QJ/names/en");
 
         Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
     }
@@ -171,7 +171,7 @@ public sealed class CountryNamesApiIntegrationTests
         var context = scope.ServiceProvider.GetRequiredService<ReferenceDataContext>();
         context.CountryNames.Add(new CountryName
         {
-            CountryId = "QX",
+            CountryId = "QJ",
             LanguageId = "en",
             Name = "Testland",
             Nationality = "Tester"
@@ -183,18 +183,18 @@ public sealed class CountryNamesApiIntegrationTests
     {
         await using var scope = _fixture.Factory.Services.CreateAsyncScope();
         var context = scope.ServiceProvider.GetRequiredService<ReferenceDataContext>();
-        if (!await context.Countries.AnyAsync(country => country.Id == "QX"))
+        if (!await context.Countries.AnyAsync(country => country.Id == "QJ"))
         {
             context.Countries.Add(new Country
             {
-                Id = "QX",
-                Alpha3Code = "QXZ",
-                NumericCode = "997",
+                Id = "QJ",
+                Alpha3Code = "QJZ",
+                NumericCode = "995",
                 CurrencyId = "USD"
             });
         }
 
-        var translations = await context.CountryNames.Where(name => name.CountryId == "QX").ToListAsync();
+        var translations = await context.CountryNames.Where(name => name.CountryId == "QJ").ToListAsync();
         context.CountryNames.RemoveRange(translations);
         await context.SaveChangesAsync();
     }

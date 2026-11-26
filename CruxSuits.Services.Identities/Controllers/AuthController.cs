@@ -3,11 +3,12 @@ using CruxIT.Library.API.Controller;
 using CruxSuits.Services.Identities.Infrastructure.EntityFramework;
 using CruxSuits.Services.Identities.Infrastructure.RepositoryPattern;
 using CruxSuits.Services.Identities.Services;
-using CruxSuits.Shared;
+using CruxSuits.Shared.Constants;
 using CruxSuits.Shared.DTOs.Identities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic;
 
 namespace CruxSuits.Services.Identities.Controllers
 {
@@ -29,7 +30,7 @@ namespace CruxSuits.Services.Identities.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Login(LoginRequest request)
         {
-            if (!Request.Headers.TryGetValue(SharedValues.DeviceIdHeaderTag, out var deviceIdStr)
+            if (!Request.Headers.TryGetValue(HttpHeaderNames.DeviceIdHeaderTag, out var deviceIdStr)
                 || string.IsNullOrEmpty(deviceIdStr)
                 || !Guid.TryParse(deviceIdStr, out Guid deviceId))
                 return BadRequest();

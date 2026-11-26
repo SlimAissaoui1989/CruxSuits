@@ -370,3 +370,4 @@ FodyWeavers.xsd
 **/UploadedFiles/
 **/secrets.json
 **/secrets.*.json
+*.ps1

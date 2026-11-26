@@ -5,6 +5,11 @@ namespace CruxSuits.Services.ReferenceDatas.Tests.UnitTests.Repositories;
 
 public sealed class CountryRepositoryTests
 {
+    #region AddAsync
+
+    // Success case: verifies AddAsync adds and tracks country;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task AddAsync_AddsAndTracksCountry()
     {
@@ -17,6 +22,13 @@ public sealed class CountryRepositoryTests
         Assert.Equal(EntityState.Added, fixture.Context.Entry(country).State);
     }
 
+    #endregion
+
+    #region UpdateAsync
+
+    // Success case: verifies UpdateAsync updates and tracks country;
+    // A pass confirms the expected result;
+    // Failure signals a behavior regression.
     [Fact]
     public async Task UpdateAsync_UpdatesAndTracksCountry()
     {
@@ -33,4 +45,6 @@ public sealed class CountryRepositoryTests
         Assert.Equal("841", existing.NumericCode);
         Assert.Equal(EntityState.Modified, fixture.Context.Entry(existing).State);
     }
+
+    #endregion
 }

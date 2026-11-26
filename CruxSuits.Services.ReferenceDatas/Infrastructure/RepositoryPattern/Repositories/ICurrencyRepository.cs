@@ -4,5 +4,6 @@ namespace CruxSuits.Services.ReferenceDatas.Infrastructure.RepositoryPattern.Rep
 {
     public interface ICurrencyRepository : IReferenceDataEntityRepository<string, Currency>
     {
+        Task<List<TResult>> GetAllLocalizedAsync<TResult>(string languageId, CancellationToken cancellationToken = default);
     }
 }
